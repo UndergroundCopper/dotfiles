@@ -1,0 +1,110 @@
+2021-11-22 12:49:21	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #weechat
+2021-11-22 12:49:21	--	Topic for #weechat is "https://weechat.org/ | Latest stable version: 3.3 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2021-11-22 12:49:21	--	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 19 Sep 2021 13:35:12
+2021-11-22 12:49:22	--	Channel #weechat: 621 nicks (3 ops, 1 voice, 617 normals)
+2021-11-22 12:49:22	--	PvNotice(ChanServ): Welcome to WeeChat English support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2021-11-22 12:49:23	--	Channel created on Wed, 19 May 2021 15:19:51
+2021-11-22 12:49:28	Velkorx	how can i change tabs in weechat
+2021-11-22 12:49:51	<--	solaraquarion (~solaraqua@pool-141-157-225-211.nycmny.fios.verizon.net) has quit (Remote host closed the connection)
+2021-11-22 12:50:16	-->	solaraquarion (~solaraqua@pool-141-157-225-211.nycmny.fios.verizon.net) has joined #weechat
+2021-11-24 15:25:22	-->	Velkorq (~Velkorq@user/velkorumx) has joined #weechat
+2021-11-24 15:25:22	--	Topic for #weechat is "https://weechat.org/ | Latest stable version: 3.3 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2021-11-24 15:25:22	--	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 19 Sep 2021 13:35:12
+2021-11-24 15:25:22	--	Channel #weechat: 610 nicks (3 ops, 1 voice, 606 normals)
+2021-11-24 15:25:22	--	PvNotice(ChanServ): Welcome to WeeChat English support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2021-11-24 15:25:24	--	Channel created on Wed, 19 May 2021 15:19:51
+2021-11-24 15:25:32	Velkorq	how can i scroll the nick list on the right
+2021-11-24 15:25:43	Velkorq	i use pgup and pgdown for main chat window
+2021-11-24 15:28:14	Night_Elf	Velkorq: What I do, is first i issue  "/mouse enable"  and click and hold on the nicklist, drag down holding, then release. Drag down scrolls down, drag up, scrolls up
+2021-11-24 15:33:38	Velkorq	is there a default keybinding to scroll the list?
+2021-11-24 15:34:42	<--	wuseman (~wuseman@user/wuseman) has quit (Ping timeout: 256 seconds)
+2021-11-24 15:35:25	@FlashCode	Velkorq: yes, F11/F12
+2021-11-24 15:35:28	-->	Szadek (~Szadek@185.209.196.180) has joined #weechat
+2021-11-24 15:35:38	@FlashCode	!keys
+2021-11-24 15:35:38	+weebot	WeeChat default keys: https://weechat.org/doc/user#key_bindings
+2021-11-24 15:37:54	Velkorq	f11 maximizes
+2021-11-24 15:38:05	Velkorq	seems the wm uses it
+2021-11-24 15:38:15	<--	monokrome (~monokrome@50.215.11.140) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:38:39	<--	ano (~ano@user/ano) has quit (Remote host closed the connection)
+2021-11-24 15:38:44	Night_Elf	ok. I managed to modify the color of the action text (ie using /me ). I modified a trigger line for that. While it works, I really don't fully understand what do the several fields and symbols mean in that line. Can someone please explain, if possible?
+2021-11-24 15:39:02	-->	ano (~ano@user/ano) has joined #weechat
+2021-11-24 15:39:02	Night_Elf	The line I used is this one:   /trigger addreplace irc_action modifier weechat_print "${tg_tags} =~ ,irc_action," "/.*/${tg_prefix}\t${color:magenta}${tg_message_nocolor}"
+2021-11-24 15:39:22	@FlashCode	Velkorq: you can either bind new keys, or use the mouse, if enabled in weechat
+2021-11-24 15:39:44	@FlashCode	or disable F11 key in your terminal or window manager
+2021-11-24 15:39:59	<--	qyliss (~qyliss@2001-ba8-1f1-f0bc-0-0-0-2.autov6rev.bitfolk.space) has quit (Quit: bye)
+2021-11-24 15:40:31	Velkorq	thanks
+2021-11-24 15:41:26	-->	qyliss (~qyliss@atuin.qyliss.net) has joined #weechat
+2021-11-24 15:44:15	<--	iomari891 (~iomari891@129.205.113.32) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:46:03	<--	luigibu (~luigibu@80.30.201.209) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:46:50	-->	luigibu (~luigibu@80.30.201.209) has joined #weechat
+2021-11-24 15:47:27	-->	iomari891 (~iomari891@105.112.138.38) has joined #weechat
+2021-11-24 15:47:54	<--	blackbeard420_ (blackbeard@2600:3c03::f03c:91ff:fe92:3f2a) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-24 15:48:05	-->	blackbeard420 (blackbeard@2600:3c03::f03c:91ff:fe92:3f2a) has joined #weechat
+2021-11-24 15:50:15	<--	Andrynet (~Andrynet@190.152.206.99) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:51:45	-->	Andrynet (~Andrynet@190.152.206.99) has joined #weechat
+2021-11-24 15:56:35	<--	iomari891 (~iomari891@105.112.138.38) has quit (Quit: WeeChat 3.3)
+2021-11-24 15:58:20	mgedmin	it would be very forward for the window manager to steal f11 from applications, but some terminal emulators (gnome-terminal) do have an f11 bound to fullscreen by default, fixable in terminal settings
+2021-11-24 16:01:59	ksu	not always fixable in terminal settings :)
+2021-11-24 16:02:10	<--	Sauvin (~sauvin@about/linux/staff/sauvin) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:02:51	-->	Sauvin (~sauvin@about/linux/staff/sauvin) has joined #weechat
+2021-11-24 16:03:07	<--	asj (~asj@2a02:2350:18:1006:2470:bde3:fd68:93b2) has quit (Ping timeout: 250 seconds)
+2021-11-24 16:03:35	-->	bloody (~bloody@user/bloody) has joined #weechat
+2021-11-24 16:03:37	mgedmin	I'd love to know what terminal steals f11 from terminal apps without having a way to reconfigure its keybindings
+2021-11-24 16:03:55	<--	Night_Elf (~uid8205@176.223.143.94) has quit (Quit: Connection timeout)
+2021-11-24 16:04:24	grawity	people with tiling WMs do like to define all kinds of weird shortcuts
+2021-11-24 16:05:19	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #weechat
+2021-11-24 16:05:33	-->	alex11 (~alex11@user/alex11) has joined #weechat
+2021-11-24 16:08:56	ksu	mgedmin: xfce4-terminal, some shortcuts can be disabled, but not this one
+2021-11-24 16:12:40	-->	kib (~kib@user/kib) has joined #weechat
+2021-11-24 16:13:28	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #weechat
+2021-11-24 16:14:30	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 16:17:09	<--	catman (~catman@user/catman) has quit (Quit: WeeChat 3.4-dev)
+2021-11-24 16:17:56	-->	catman (~catman@user/catman) has joined #weechat
+2021-11-24 16:21:49	-->	ublx (~ublx@user/ublx) has joined #weechat
+2021-11-24 16:22:48	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Quit: ZNC 1.8.2+deb2+b1 - https://znc.in)
+2021-11-24 16:23:32	-->	sherm (~shorton@pool-108-26-147-200.bstnma.fios.verizon.net) has joined #weechat
+2021-11-24 16:28:31	<--	Andrynet (~Andrynet@190.152.206.99) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:30:15	-->	Andrynet (~Andrynet@190.152.206.99) has joined #weechat
+2021-11-24 16:36:43	<--	kib (~kib@user/kib) has quit (Quit: WeeChat 3.3)
+2021-11-24 16:38:46	<--	progenyx (progenyx@gateway/vpn/airvpn/progenyx) has quit (Ping timeout: 268 seconds)
+2021-11-24 16:41:38	-->	kib (~kib@user/kib) has joined #weechat
+2021-11-24 16:43:00	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #weechat
+2021-11-24 16:51:01	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #weechat
+2021-11-24 16:53:19	-->	sudoforge (~sudoforge@wireguard/tunneler/sudoforge) has joined #weechat
+2021-11-24 17:12:42	Khaytsus	https://superuser.com/questions/1297692/disable-f11-fullscreen-in-xfce-terminal
+2021-11-24 17:12:46	Khaytsus	You certainly can disable that.
+2021-11-24 17:14:01	-->	benr (~benr@161.38.220.114) has joined #weechat
+2021-11-24 17:14:25	-->	guido (~guido@host-82-51-186-164.retail.telecomitalia.it) has joined #weechat
+2021-11-24 17:16:55	-->	nyuszika7h_ (nyuszika7h@lykos/dev/nyuszika7h) has joined #weechat
+2021-11-24 17:18:38	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:19:48	--	nyuszika7h_ is now known as nyuszika7h
+2021-11-24 17:23:32	-->	aloo_shu (~aloo_shu@79.116.93.208) has joined #weechat
+2021-11-24 17:24:46	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:28:34	<--	Flow (~none@gentoo/developer/flow) has quit (Quit: WeeChat 3.2)
+2021-11-24 17:33:11	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #weechat
+2021-11-24 17:40:50	-->	zer0bitz (~zer0bitz@2001:2003:f6bc:f00:4c2d:8074:ff8b:55dd) has joined #weechat
+2021-11-24 17:50:02	-->	jacklsw (~jacklsw@user/jacklsw) has joined #weechat
+2021-11-24 17:50:21	<--	rsaavedra (~rodrigo@user/rsaavedra) has quit (Quit: WeeChat 3.3)
+2021-11-24 17:50:42	-->	codex__ (~codex@user/codex/x-6136475) has joined #weechat
+2021-11-24 17:53:02	<--	cyphertite (~cyphertit@wireguard/tunneler/cyphertite) has quit (Remote host closed the connection)
+2021-11-24 17:53:49	-->	asj (~asj@188-182-150-233-dynamic.dk.customer.tdc.net) has joined #weechat
+2021-11-24 17:53:51	<--	codex (~codex@user/codex) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:54:07	-->	cyphertite (~cyphertit@wireguard/tunneler/cyphertite) has joined #weechat
+2021-11-24 17:58:23	<--	asj (~asj@188-182-150-233-dynamic.dk.customer.tdc.net) has quit (Ping timeout: 250 seconds)
+2021-11-24 18:00:27	<--	cyphertite (~cyphertit@wireguard/tunneler/cyphertite) has quit (Ping timeout: 276 seconds)
+2021-11-24 18:03:02	<--	Andrynet (~Andrynet@190.152.206.99) has quit (Ping timeout: 260 seconds)
+2021-11-24 18:03:44	-->	cyphertite (~cyphertit@wireguard/tunneler/cyphertite) has joined #weechat
+2021-11-24 18:04:51	-->	Andrynet (~Andrynet@190.152.206.99) has joined #weechat
+2021-11-24 18:05:58	Velkorq	how can i list the number of people in a channel
+2021-11-24 18:06:02	Velkorq	with weechat
+2021-11-24 18:07:58	keir	Velkorq: /names is a standard IRC command
+2021-11-24 18:08:04	--	Nicks #weechat: [@FlashCode @kolter @nils_2 +weebot \ _________ _Lucy_ _xor A_Dragon acidsys acro adnidor adsr af Affliction agrajag ajak akspecs__ alden alex11 Allfather aloo_shu Ampera AmyMalik anddam andreas303 AndrewPH AndrewYu Andrynet andy| ano anorthall_ another| aplund arielch Armageddon arooni artlogic Arw arza asdflkj_sh asmodai atluxity auronandace b0b baakeydow banditkroot barbarossa93 Barnerd basilgohar3 bdju Beastie Belial ben benaiah Benett benr bin bindu birkoff bitblit blabber blackbeard420 BlackBishop_ BlackDex blinux bloody bob_x2 Brando753 BrandonArnold brentaarnold bss bunny burakcank bwidawsk capn casastorta cashew catbeard catman cawfee cbmuser Centrixx chemsmith Chex chilledfrogs chymera ckie clavi cmm11 cn cnsvc CodeGeek codex__ cole Colgate computerquip Conjuro copygirl cp- crab crem croccydile CRThaze1 Cueball cyphertite Cyrus daddy dale damyan Dan39 DaNeenjah dank Dark darkphoenix darkstardevx dbasinge de-vri-es Death_Syn deepy defjam demure denisse dermato dfg digital_mystik DixieFlatline DJ-ArcAngel DjSlash DK3 dld dmalteseknight dmk dnkl dormito downtrip dragonmaster drbean drocan dschk dsrt^ dutch dx earnestly earthbre- eau Echoz_ ectospasm edenist eggbean eggy Ekho elastic_dog eldritch_ eletrotupi emacsomancer emanuele6 emptynine endre endtro englishman enick_958 enkrypt enyc EpicKitty ERROH erry ExEsPi explodes Exterminador f00b4r fab23 farn feliix42 feriman Ferus ff0x fiet fingercomp finsternis FiXato forell foxxx0 Freneticks Freso Frogging101 frojnd frumious_ Furai Furna_ Fusl gabin- gatherer gdd genevino Gerlo GermainZ gildarts gioyik gknux glider global_elites gnoirzox gnoo go4godvin goduck Gosha goz gravndal grawity grosjean grumble Guest1120 guido gyrow haaja haasn hackdash Hackerpcs hamess haritz haskl[error] haste Helmholtz hendry hggdh higuita hinderaker Hobby Hobbyboy hpyc9 hsp HumanG33k Hyralak ianmacd ihabunek ilmais1n immae incertia Ingvix introom Irydacea isene ivanbu jacklsw JayC jcbjoe2021 Jefren1 jelly jesse jessicant jidar jinxd jinxed jlu5 joeDoe Johann Jokler JollyRgrs jonher jpwgarrison jsatk jsto JTL judabuda juliank justache jwheare k-man Kagee kashike Kays keir KenjiE20 keypusher Khaytsus kib Kiowa kiska knolle KnownSyntax KokaKiwi kolcon koobs koolazer Koragg kplant kraem KramerC kristianpaul kron kronicmage kryten ksu kuhilas kulak kunst kvn Lafe Lamperi launchd LazarUS lazycat lazywalker leah2 lechner lemonzest lgc liam_ libussa Linkandzelda littlepap LogicAside lonjil lord| lorenz lucerne luigibu luk3yx m1dnight m3Lith m4v M9d0cd7d2[m] mabi mahlon maknho mal mave Maxattax mayli2 mboehn mcint MDingas- meicceli meingtsla meks MentalExcuse meowray met meta-system mgedmin Miblo MikachuPi mjorgensen mkoskar ml| modin moon-child moritzdietz moviuro moxie MrC MrElendig mrpond mumixam mva mz` n8chan Namigator Nei nemith neoandroid Netboy3 NeuroWinter nickel8448 nicoo niko ninjabuf- nixpulvis njt nmz nmz1 nobaudy noctux noddy noex NoGare[m] Noisytoot Nothing4You NP-Hardass nrg ntdll ntwk nuala nucleargrave nurupo nyuszika7h obiwahn odrling okflo Olen omero OnkelBlade opcode ops orkim ormaaj osse PantelicGR2 Pauli1 pdx PeGaSuS peng0in perrierjouet Phil21 phlux phryk Piece_Maker PiRATA Pixi Plan_IX pocketprotector polve pooby poorboy Poorchop po||ux prg prime ptitlouis PublicWiFi pvoigt pyre queue- quitman qwerdy qyliss r3m r4v51 raimondi rain0r Raito_Bezarius Ram-Z_ raspbeguy Ratler Rayke rb rcf rdrg109 reset Retro64XYZ Rhvs rich riddle riksteri ringo__ rndusr robje Rockj\ roniez ryanbw ryzokuken s1b1 s8ori sa SAL9000 sam113101 samir sander Santzes Saphire saribro satanist saucyfox Sauvin Scarecr0w ScrumpyJack Scy seds Seirdy selckin sgn shailangsa shan sharktamer Shaxine ShellcatZero2 sherm shiza shored shr2 shrysr sim642 simonpatapon sjas skill sleo_ SnowCode SnowCode_ soifou Soliton soltys somlis southey speakertomeat[m] spicyChickatrice Spydar007 sss1 staceee starblue StarlitGhost stephan48 steven_saus stevoo__ stfn stkrdknmibalz stnevans Strom strudl Strykar sudoforge sunyibo swebb swimmer sybariten Szadek tak talisein Tamwyn Tashtari` tastenquaeler_ TauPan tchan Te[u]K` Techman Telvana terps Texou Tharre thecliguy ThePink Thermoriax2 ThiefMaster ThomasJ thorre Throgkt Timvde tinloaf tirps TJ- Togra tomboy64 TonCherAmi Tonux Tonux[m] topcat001 torh torps torque TortillaSandwich torv ToxicFrog tp Trevinho tribut tris trisk trn trygveaa tsp ttkap tuxifreund twaapo u4t ublx ugjka unaimed Unhammer Uritual uther V Vagrant val vectr0n vectr0n_cloud vee Velkorq very_sneaky VIA viddy Voldenet Vonter vort3 vulpine VxJasonxV w0ng wbewl wd webvictim Widdershins winny WinterStar withersh1 wof wyre x10 xcm_ Xe Xelnor XeR xkey xx xybre yano yar YellowSuB yeti Yonle yosafbridge yourfate yuta zamba zaz\ zer0bitz ZeroKnight Zongva]
+2021-11-24 18:08:04	--	Channel #weechat: 616 nicks (3 ops, 1 voice, 612 normals)
+2021-11-24 18:08:10	Velkorq	oh i see
+2021-11-24 18:08:25	<--	cyphertite (~cyphertit@wireguard/tunneler/cyphertite) has quit (Remote host closed the connection)
+2021-11-24 18:08:26	Velkorq	how can i list all irc commands
+2021-11-24 18:08:51	keir	Velkorq: it will list all names in the channel, followed by a could of ops, voiced, and normals
+2021-11-24 18:08:57	keir	Velkorq: /help
+2021-11-24 18:09:05	Velkorq	doesnt seem to do anything
+2021-11-24 18:09:43	keir	Velkorq: it will print in your weechat buffer
+2021-11-24 18:10:31	Velkorq	oh thanks!

@@ -1,0 +1,1076 @@
+2021-11-22 12:52:31	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #debian
+2021-11-22 12:52:31	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-22 12:52:31	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-22 12:52:31	--	Channel #debian: 740 nicks (1 op, 0 voices, 739 normals)
+2021-11-22 12:52:31	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-22 12:52:31	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 12:53:20	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #debian
+2021-11-22 12:53:20	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-22 12:53:20	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-22 12:53:20	--	Channel #debian: 740 nicks (1 op, 0 voices, 739 normals)
+2021-11-22 12:53:21	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-22 12:53:21	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 12:53:39	<--	codex__ (~codex@user/codex/x-6136475) has quit (Quit: Leaving)
+2021-11-22 12:54:09	shad	nicoz-: also you mentionned it being a VM, did you check your VM engine networking properties, eg; NAT ? Bridge ?
+2021-11-22 12:54:28	Khepra	well let's take this one step at a time
+2021-11-22 12:54:30	nicoz-	i removed iface enp0s2 inet6 static on /etc/network/interface now work
+2021-11-22 12:54:32	<--	sinaowolabi (~SinaOwola@102.134.114.1) has quit (Ping timeout: 240 seconds)
+2021-11-22 12:54:32	nicoz-	:)
+2021-11-22 12:54:50	nicoz-	solved sorry for the inconvenience
+2021-11-22 12:54:57	Khepra	nicoz-: what was the issue?
+2021-11-22 12:55:02	-->	Brigo (~Brigo@40.181.60.213.dynamic.reverse-mundo-r.com) has joined #debian
+2021-11-22 12:55:32	Khepra	oh, you said.... so you have another, dhcp perhaps, enp0s2 stanza in interfaaces?
+2021-11-22 12:55:34	nicoz-	https://imgur.com/qBvQHnd.png
+2021-11-22 12:55:47	nicoz-	the third line of interfaces
+2021-11-22 12:55:54	nicoz-	is bad
+2021-11-22 12:56:02	nicoz-	iface enp0s2 inet6 static
+2021-11-22 12:56:06	Khepra	ah yes, that's a syntax issue.
+2021-11-22 13:32:59	-->	Velkorq (~Velkorq@ppp-94-66-136-181.home.otenet.gr) has joined #debian
+2021-11-22 13:32:59	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-22 13:32:59	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-22 13:32:59	--	Channel #debian: 744 nicks (1 op, 0 voices, 743 normals)
+2021-11-22 13:32:59	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-22 13:32:59	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 13:33:56	dadinn	I am trying to install EFI GRUB during manual install from Live Bullseye USB, but my problem is that `modprobe efivars` says that Module efivars not found in /lib/modules/5.10.0-8-amd64
+2021-11-22 13:34:49	dadinn	yet, the /sys/firmware/efi directory exists...
+2021-11-22 15:25:03	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-22 15:25:03	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-22 15:25:03	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-22 15:25:03	--	Channel #debian: 743 nicks (1 op, 0 voices, 742 normals)
+2021-11-22 15:25:03	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-22 15:25:03	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 15:25:51	msk`	glibc versions are different; so that's one thing that stands out
+2021-11-22 15:26:17	msk`	Haohmaru yes some C++ code that depends on the mainline build.
+2021-11-22 15:26:55	Haohmaru	just let it build and go drink a long coffee ;P~
+2021-11-22 15:27:08	Haohmaru	or a long long coffee
+2021-11-22 15:27:19	Haohmaru	long long double coffee
+2021-11-22 15:27:36	msk`	:D hehe
+2021-11-22 15:28:55	msk`	how do i solve this (Debian GLIBC 2.31-13+deb11u2) 2.31 ?
+2021-11-22 15:29:12	msk`	can i get glibc to upgrade to 2.32
+2021-11-22 15:29:38	Haohmaru	:/
+2021-11-22 15:29:59	Haohmaru	maybe it could be just simpler to get debian-next for this one operation
+2021-11-22 15:30:10	Haohmaru	,v glibc
+2021-11-22 15:30:11	judd	No package named 'glibc' was found in amd64.
+2021-11-22 15:30:28	msk`	yepp
+2021-11-22 15:30:31	idioterna	that's going to be a very difficult thing to do, it's best to just update to bookworm if you need a gcc that recent
+2021-11-22 15:31:13	idioterna	just about everything depends on glibc so
+2021-11-22 15:31:16	msk`	idioterna yes
+2021-11-22 15:31:42	idioterna	change sources lists to bookworm and do dist upgrade
+2021-11-22 15:32:01	idioterna	but only if this is a testing machine where you can afford something like that
+2021-11-22 15:32:30	msk`	unfortunately no.
+2021-11-22 15:32:56	Haohmaru	if this is a short-term thing, then perhaps install debian-next in another partition or even just run it off of a USB stick
+2021-11-22 15:33:14	-->	Fausto (~dante@gateway/tor-sasl/filohuhum) has joined #debian
+2021-11-22 15:33:25	Khepra	this is why containers were invented
+2021-11-22 15:33:46	 *	Haohmaru doesn't schprachen ze containers
+2021-11-22 15:34:02	msk`	Haohmaru let me think. all good ideas.
+2021-11-22 15:34:44	idioterna	i'd recommend a docker image of the bookworm
+2021-11-22 15:34:54	Khepra	msk`: make your life easier. debootstrap and chroot or systemd-nspawn; build and run your software in that namespace
+2021-11-22 15:34:59	idioterna	if one already exists, you can experiment inside a docker shell
+2021-11-22 15:35:18	idioterna	if it doesn't, you can do the dist upgrade inside a bullseye docker
+2021-11-22 15:35:37	idioterna	or that
+2021-11-22 15:35:52	idioterna	i haven't played with systemd-nspawn, i should
+2021-11-22 15:36:06	Khepra	docker is not really the first (or at all) containerization tool I'd recommend. it's designed for single application use. people abuse it as a "VM" with shell and ssh access
+2021-11-22 15:36:21	msk`	the C++ program manipulates the cgroups and namespaces. so running it inside a container, mmm.
+2021-11-22 15:36:48	Khepra	this is literally as simple as:    `debootstrap bookworm /path/to/a/dir/where/you/wanna/put/it ; systemd-nspawn -D /that/path`
+2021-11-22 15:36:55	msk`	Khepra in the general scenario what you write makes a lot of sense.
+2021-11-22 15:37:06	Khepra	vary for actual functionality needed, like binding paths or devices, capabilities, etc...
+2021-11-22 15:37:52	-->	void^0 (~void^0@p5b2bcce9.dip0.t-ipconnect.de) has joined #debian
+2021-11-22 15:39:17	<--	void^0 (~void^0@p5b2bcce9.dip0.t-ipconnect.de) has quit (Client Quit)
+2021-11-22 15:39:44	Khepra	msk`: namespaces can be nested; which is even more of a reason not to abuse docker; ultimately maybe run in a VM, and see if you can port/adapt it to run in your native environment
+2021-11-22 15:39:52	-->	void^0 (~void^0@p5b2bcce9.dip0.t-ipconnect.de) has joined #debian
+2021-11-22 15:40:13	<--	zamuro (~Samantha@62.83.255.182.dyn.user.ono.com) has quit (Quit: [IRSSI])
+2021-11-22 15:40:23	Khepra	it's technically possible to soname glibc differently and package it up as a separate dependency for your software, if you need it to build and run natively on bullseye.
+2021-11-22 15:40:25	<--	void^0 (~void^0@p5b2bcce9.dip0.t-ipconnect.de) has quit (Client Quit)
+2021-11-22 15:42:17	<--	Nex8192 (~Nex8192@user/nex8192) has quit (Quit: Don't watch me die)
+2021-11-22 15:42:20	-->	paulgrmn_ (~paulgrmn@user/paulgrmn) has joined #debian
+2021-11-22 15:42:39	-->	Nex8192 (~Nex8192@user/nex8192) has joined #debian
+2021-11-22 15:42:49	msk`	yes.
+2021-11-22 15:44:01	-->	sveva65 (~sveva65@user/sveva65) has joined #debian
+2021-11-22 15:47:55	-->	vakera_pingveno (~dan@107-209-165-75.lightspeed.hstntx.sbcglobal.net) has joined #debian
+2021-11-22 15:50:48	<--	vakera_pingveno (~dan@107-209-165-75.lightspeed.hstntx.sbcglobal.net) has quit (Client Quit)
+2021-11-22 15:51:26	-->	judsmapp (~user94830@189.1.56.234) has joined #debian
+2021-11-22 15:51:32	<--	hollowman_ (~hollowman@user/hollowman) has quit (Quit: Konversation terminated!)
+2021-11-22 15:52:23	<--	shokohsc8618 (~shokohsc@161.88.195.77.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-22 15:53:15	<--	ftobich (~ftobich@debian/ftobich) has quit (Quit: Leaving)
+2021-11-22 15:54:49	<--	henko (~henko@62-178-187-35.cable.dynamic.surfer.at) has quit (Quit: WeeChat 3.3)
+2021-11-22 15:55:18	<--	Texou (~Texou@37.170.120.4) has quit (Ping timeout: 260 seconds)
+2021-11-22 16:00:29	<--	go4godvin (~go4godvin@user/go4godvin) has quit (Quit: Reconnecting)
+2021-11-22 16:00:31	-->	Afroboy (~afroboy@154.121.54.111) has joined #debian
+2021-11-22 16:00:41	-->	mcope (~matt@user/mcope) has joined #debian
+2021-11-22 16:00:50	-->	go4godvin (~go4godvin@user/go4godvin) has joined #debian
+2021-11-22 16:01:57	-->	blackout69 (~blackout6@net-31-156-121-187.cust.vodafonedsl.it) has joined #debian
+2021-11-22 16:02:14	<--	blackout69 (~blackout6@net-31-156-121-187.cust.vodafonedsl.it) has quit (Remote host closed the connection)
+2021-11-22 16:03:16	-->	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has joined #debian
+2021-11-22 16:05:01	<--	Fausto (~dante@gateway/tor-sasl/filohuhum) has quit (Remote host closed the connection)
+2021-11-22 16:05:27	<--	flynn (~mcbloch@user/flynn) has quit (Quit: Ping timeout (120 seconds))
+2021-11-22 16:05:50	-->	flynn (~mcbloch@user/flynn) has joined #debian
+2021-11-22 16:06:53	-->	tieinv (~tieinv@user/tieinv) has joined #debian
+2021-11-22 16:09:03	-->	Texou (~Texou@37.166.216.78) has joined #debian
+2021-11-22 16:15:03	<--	judabuda (kowbunga@user/judabuda) has quit (Quit: Gone.)
+2021-11-22 16:17:34	<--	n4dir (~user@i5E86C535.versanet.de) has quit (Remote host closed the connection)
+2021-11-22 16:17:40	<--	silly_ (~silly@user/silly) has quit (Read error: Connection reset by peer)
+2021-11-22 16:18:18	-->	silly_ (~silly@user/silly) has joined #debian
+2021-11-22 16:20:54	<--	brutex (~brutex@user/brutex) has quit (Remote host closed the connection)
+2021-11-22 16:20:59	<--	auth (~auth@user/auth) has quit (Quit: Leaving)
+2021-11-22 16:21:21	-->	brutex (~brutex@user/brutex) has joined #debian
+2021-11-22 16:28:49	-->	ccallahan (~quassel@redhat/ccallahan) has joined #debian
+2021-11-22 16:39:03	<--	brutex (~brutex@user/brutex) has quit (Remote host closed the connection)
+2021-11-22 16:39:30	-->	brutex (~brutex@user/brutex) has joined #debian
+2021-11-22 16:40:40	-->	p_quarles (~pquarles@c-71-231-200-50.hsd1.wa.comcast.net) has joined #debian
+2021-11-22 16:48:09	-->	brutex_ (~brutex@user/brutex) has joined #debian
+2021-11-22 16:49:03	<--	brutex (~brutex@user/brutex) has quit (Ping timeout: 264 seconds)
+2021-11-22 16:50:12	-->	idego (~idego@user/idego) has joined #debian
+2021-11-22 16:52:38	Velkorq	hello
+2021-11-22 16:52:48	Velkorq	how many years of support does debian lts offer?
+2021-11-22 16:53:17	Haohmaru	!lts
+2021-11-22 16:53:17	dpkg	Debian Long Term Support (LTS) is a project to extend the lifetime of all Debian stable releases to (at least) 5 years.  Debian LTS is not handled by the Debian security team, but by a separate group of volunteers and companies.  Ask me about <jessie-lts> and <stretch-lts> and see https://wiki.debian.org/LTS for more information.  #debian-lts on irc.oftc.net.
+2021-11-22 16:53:41	Velkorq	Haohmaru: HOW DO I ENABLE IT?
+2021-11-22 16:53:45	Velkorq	sorry for caps
+2021-11-22 16:53:47	-->	tizef (~tizef@202.153.80.9) has joined #debian
+2021-11-22 16:53:59	Haohmaru	uhm, i don't think you.. enable.. it
+2021-11-22 16:54:01	Velkorq	is it enabled by default or i have to enable another repo?
+2021-11-22 16:54:17	Haohmaru	generally, you should use the stable release
+2021-11-22 16:54:31	Velkorq	so the 5 years ubuntu offers for ubuntu LTS releases, are basically what debian offers. its not their own work
+2021-11-22 16:54:56	Haohmaru	ubuntu has a company behind it pulling the strings
+2021-11-22 16:55:28	Velkorq	yeah but since they use debian as base, the 5 years of support for lts comes from debian people
+2021-11-22 16:55:40	Velkorq	its not a special thing of ubuntu specifically
+2021-11-22 16:55:44	Haohmaru	no, i wouldn't think so
+2021-11-22 16:56:18	Haohmaru	first of all, ubuntu takes packages from debian (but not from debian stable exactly), opens them up, sh*ts in them, then repackages them
+2021-11-22 16:56:36	Haohmaru	roughly speaking ;P~
+2021-11-22 16:56:39	Velkorq	basically i want to install either debian or ubuntu on a family member's laptop and i want something which has many years of support like 5
+2021-11-22 16:56:49	<--	tizef (~tizef@202.153.80.9) has quit (Client Quit)
+2021-11-22 16:56:51	Velkorq	and i was looking how many years debian and ubuntu offer for lts
+2021-11-22 16:56:59	Haohmaru	so put debian stable, and just keep it updated
+2021-11-22 16:57:27	Velkorq	the only good thing ubuntu offers for noobs, is do-release-upgrade. can take you from one lts to the next
+2021-11-22 16:57:29	Haohmaru	right now debian11 came out recently, so when debian12 comes out - upgrade that machine to 12
+2021-11-22 16:57:34	Velkorq	debian needs changing sources for that
+2021-11-22 16:57:39	Velkorq	and following manuals
+2021-11-22 16:57:43	Haohmaru	yeah
+2021-11-22 16:58:41	Velkorq	Haohmaru: is it a good idea to use debian on laptop/desktop? wont packages be outdated, i thought it was suited more for a server
+2021-11-22 16:58:54	Velkorq	or should i just get newer packages from flatpak or something
+2021-11-22 16:59:58	Haohmaru	newer versions of mostly popular things often are available into debian stable from the so called "backports"
+2021-11-22 17:00:59	Velkorq	Haohmaru: i do use backports, but its kind of hard to find which is available on backports from command line
+2021-11-22 17:01:14	Velkorq	since i can't just enable backports repo in general
+2021-11-22 17:01:16	Haohmaru	yeah, i use synaptic
+2021-11-22 17:01:39	Haohmaru	eh, why can't you?
+2021-11-22 17:02:09	Haohmaru	i mean, you add backports into sources.list
+2021-11-22 17:02:16	Velkorq	i was advised not to enable backports globally, but just take specific packages. apt-get -t backports whatever
+2021-11-22 17:02:23	Haohmaru	yeah
+2021-11-22 17:02:49	Haohmaru	you can probably make the backports stuff have "priority" over the "normal" stuff, but i wouldn't
+2021-11-22 17:02:52	Velkorq	also i need a gui package manager for beginners. synaptic or gnome-software?
+2021-11-22 17:03:01	Velkorq	Haohmaru: yes thats what i mean
+2021-11-22 17:03:06	Haohmaru	i have only a few things i need really new versions of
+2021-11-22 17:03:24	Haohmaru	i hate gnome, so i can't say about that
+2021-11-22 17:03:35	Velkorq	i wanted to install budgie desktop not gnome really
+2021-11-22 17:03:36	Haohmaru	my DE comes with synaptic, it's fine
+2021-11-22 17:03:43	Velkorq	but i think they use something similar
+2021-11-22 17:03:54	Velkorq	budgie on debian, or ubuntu budgie flavor
+2021-11-22 17:04:07	Haohmaru	don't even know what that is
+2021-11-22 17:04:22	Velkorq	its the DE of the solus project. quite clean and modern
+2021-11-22 17:04:24	-->	TomyWork (~TomyLobo@p200300e80f0f270049e924565c7edb8a.dip0.t-ipconnect.de) has joined #debian
+2021-11-22 17:04:24	<--	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has quit (Ping timeout: 276 seconds)
+2021-11-22 17:04:33	Velkorq	should be the default for ubuntu imo
+2021-11-22 17:04:37	Velkorq	instead of that gnome bs
+2021-11-22 17:05:00	Velkorq	gtk-based but looks good
+2021-11-22 17:05:00	-->	Noisytoot (~noisytoot@sourcehut/user/noisytoot) has joined #debian
+2021-11-22 17:05:02	Haohmaru	gnome is also default for debian
+2021-11-22 17:05:19	Velkorq	thankfully debian has no defaults. you just netinstall
+2021-11-22 17:05:36	-->	grobi (~grobi@user/grobi) has joined #debian
+2021-11-22 17:05:44	Haohmaru	more like, the installer lets you choose
+2021-11-22 17:05:56	<--	deadpixel (~deadpixel@l00pback-s2slmey.ws.skroutz.gr) has quit (Quit: Leaving)
+2021-11-22 17:05:57	Haohmaru	so i uncheck the nasty gnome and choose LXDE
+2021-11-22 17:06:20	Velkorq	does the installer have budgie? i know its in the debian repos 
+2021-11-22 17:07:39	-->	zitter (~danilodim@93-57-35-194.ip162.fastwebnet.it) has joined #debian
+2021-11-22 17:07:40	<--	idego (~idego@user/idego) has left #debian
+2021-11-22 17:07:50	-->	brutex (~brutex@user/brutex) has joined #debian
+2021-11-22 17:07:55	<--	brutex_ (~brutex@user/brutex) has quit (Ping timeout: 268 seconds)
+2021-11-22 17:08:07	<--	brutex (~brutex@user/brutex) has quit (Remote host closed the connection)
+2021-11-22 17:09:16	<--	aaro (aaro@user/aaro) has quit (Quit: "")
+2021-11-22 17:09:43	<--	puke (~brrrrrrr@user/puke) has quit
+2021-11-22 17:13:11	<--	nuala (~nuala@user/nuala) has quit (Ping timeout: 265 seconds)
+2021-11-22 17:13:46	<--	mixfix41 (~homefame@user/mixfix41) has quit (Ping timeout: 260 seconds)
+2021-11-22 17:15:13	-->	aaro (aaro@user/aaro) has joined #debian
+2021-11-22 17:15:41	Haohmaru	Velkorq last debian i installed was debian10, and i don't remember seeing that
+2021-11-22 17:15:55	Haohmaru	there's gnome, kde, lxde, xfce, and maybe a few more
+2021-11-22 17:16:03	<--	Lope (~lope@user/lope) has quit (Ping timeout: 264 seconds)
+2021-11-22 17:16:40	-->	zodd (~zodd@84-106-80-107.cable.dynamic.v4.ziggo.nl) has joined #debian
+2021-11-22 17:16:59	Haohmaru	,v budgie-desktop
+2021-11-22 17:17:00	judd	Package: budgie-desktop on amd64 -- stretch: 10.2.9-2; buster: 10.5-1; bullseye: 10.5.2-4; bookworm: 10.5.3-4; sid: 10.5.3-4
+2021-11-22 17:17:20	Haohmaru	it's not like you have to install it from the installer, you can install it afterwards
+2021-11-22 17:17:36	-->	hitest (~hitest@user/hitest) has joined #debian
+2021-11-22 17:17:38	zodd	It has been ages since I tried installing 32-bit sw on 64-bit. Multiarch is no longer a thing so it seems. How do I install ia32-libs on Debian Buster please?
+2021-11-22 17:17:54	Haohmaru	there's a screenshot, a filemanager is visible, it looks gnomey
+2021-11-22 17:20:10	zodd	hmm. Maybe better to use docker
+2021-11-22 17:21:02	<--	Colt (~Colt@user/colt) has quit (Ping timeout: 240 seconds)
+2021-11-22 17:21:37	menace	if anyone knows a .gitlab-ci.yml example, where some signs changes/deb files with some imported/injected gpg key, i would be very glad
+2021-11-22 17:21:39	XileX	zodd: Is multiarch no longer supported?
+2021-11-22 17:21:46	-->	mtn (~mtn@98.97.127.52) has joined #debian
+2021-11-22 17:22:43	zodd	XileX, yes, I read something on the net which was quite old which stated this. Jessie/Wheezy days
+2021-11-22 17:23:00	zodd	could be wrong though
+2021-11-22 17:23:10	-->	nuala (~nuala@user/nuala) has joined #debian
+2021-11-22 17:24:59	zodd	I am surprised though as apt seems to fetch a i386 repo index
+2021-11-22 17:25:25	-->	mixfix41 (~homefame@user/mixfix41) has joined #debian
+2021-11-22 17:28:43	<--	tieinv (~tieinv@user/tieinv) has quit (Quit: Out!)
+2021-11-22 17:29:00	XileX	Multiarch is still used. At least steam needs it
+2021-11-22 17:29:11	-->	kveroneau (~kveroneau@node1.veroneau.net) has joined #debian
+2021-11-22 17:29:12	Khepra	zodd: multiarch is still very much supported. if that's originally a pure 64-bit installation, you just need to enable the i386 arch.  dpkg --add-architecture i386
+2021-11-22 17:29:47	-->	auth (~auth@user/auth) has joined #debian
+2021-11-22 17:32:38	zodd	did so. Ran into trouble. But that is mostly related to very toght diskspace
+2021-11-22 17:32:45	-->	wasutton (~wasutton3@75-46-236-127.lightspeed.tukrga.sbcglobal.net) has joined #debian
+2021-11-22 17:33:27	wasutton	so i've got some bullseye servers that use some HP hardware. Recently they've been complaining about the "ssa" package, specifically that it can't find "hpssad" in /etc/init.d
+2021-11-22 17:33:46	wasutton	I'm not sure which package would provide that on their end, nor what it would look like
+2021-11-22 17:34:29	<--	grobi (~grobi@user/grobi) has quit (Read error: No route to host)
+2021-11-22 17:35:17	-->	KNERD (~KNERD@user/knerd) has joined #debian
+2021-11-22 17:35:49	-->	System_Error (~SystemErr@user/systemerror) has joined #debian
+2021-11-22 17:35:56	<--	auth (~auth@user/auth) has quit (Quit: Leaving)
+2021-11-22 17:36:42	wasutton	it looks like it was last in the strech repositiory and belongs in whatever forum hp enterprise exists
+2021-11-22 17:37:17	<--	javabean (~javabean@user/javabean) has quit (Ping timeout: 256 seconds)
+2021-11-22 17:38:00	PerfDave	Not even seeing it in Stretch's packages. what does it do?
+2021-11-22 17:40:10	-->	zamuro (~Samantha@62.83.255.182.dyn.user.ono.com) has joined #debian
+2021-11-22 17:43:09	CarlFK	I want to rebuild my kernel, I'm reading  https://kernel-team.pages.debian.net/kernel-handbook/ch-common-tasks.html
+2021-11-22 17:43:09	CarlFK	fakeroot debian/rules binary "To build all possible packages..."  sounds like it builds more than I need?
+2021-11-22 17:43:43	PerfDave	CarlFK: Is there a particular reason you want to rebuild your kernel?
+2021-11-22 17:45:41	-->	srv (~cmd@user/srv) has joined #debian
+2021-11-22 17:47:04	-->	xx (~xx@user/xx) has joined #debian
+2021-11-22 17:48:32	<--	Afroboy (~afroboy@154.121.54.111) has quit (Quit: Leaving)
+2021-11-22 17:49:20	<--	xet7 (~xet7@user/xet7) has quit (Remote host closed the connection)
+2021-11-22 17:50:24	<--	profitlich2 (~profitlic@p579590d9.dip0.t-ipconnect.de) has quit (Ping timeout: 265 seconds)
+2021-11-22 17:50:28	-->	xet7 (~xet7@user/xet7) has joined #debian
+2021-11-22 17:52:56	<--	codex__ (~codex@user/codex/x-6136475) has quit (Ping timeout: 268 seconds)
+2021-11-22 17:53:22	CarlFK	"building [html]: targets for 2695 source files..."  how do I skip that?
+2021-11-22 17:53:32	-->	codex__ (~codex@user/codex/x-6136475) has joined #debian
+2021-11-22 17:54:33	-->	Xaldafax (~xaldafax@cpe-198-72-160-101.socal.res.rr.com) has joined #debian
+2021-11-22 17:56:39	-->	ghenry (~ghenry@ghenry.plus.com) has joined #debian
+2021-11-22 17:56:51	<--	ghenry (~ghenry@ghenry.plus.com) has left #debian (SureVoIP: http://www.surevoip.co.uk)
+2021-11-22 17:59:46	-->	badbadpants_ (~smuxi@205.175.118.94) has joined #debian
+2021-11-22 18:00:23	<--	badbadpants (~smuxi@205.175.118.94) has quit (Ping timeout: 264 seconds)
+2021-11-22 18:04:05	-->	vxwarlock (~Darkcodex@user/vxwarlock) has joined #debian
+2021-11-24 11:11:55	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-24 11:11:55	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-24 11:11:55	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-24 11:11:55	--	Channel #debian: 726 nicks (1 op, 0 voices, 725 normals)
+2021-11-24 11:11:55	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-24 11:11:55	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-24 11:14:24	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-24 11:14:24	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-24 11:14:24	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-24 11:14:24	--	Channel #debian: 726 nicks (1 op, 0 voices, 725 normals)
+2021-11-24 11:14:25	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-24 11:14:26	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-24 11:15:39	-->	blackout69 (~blackout6@net-31-156-121-187.cust.vodafonedsl.it) has joined #debian
+2021-11-24 11:18:22	Velkorq	does ubuntu lts track debian stable repos only? or testing as well
+2021-11-24 11:18:49	Velkorq	i want to install one of those to a family member's pc, but want to have stability + recent packages if possible
+2021-11-24 11:19:26	<--	silhouette (~silhouett@unixjulian.de) has quit (Quit: leaving)
+2021-11-24 11:21:01	-->	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has joined #debian
+2021-11-24 11:22:03	<--	knidos (~knidos@85.98.20.202) has quit (Ping timeout: 264 seconds)
+2021-11-24 11:22:55	-->	mavhq (~quassel@mapp-14-b2-v4wan-161519-cust401.vm15.cable.virginm.net) has joined #debian
+2021-11-24 11:23:09	-->	Haudegen (~quassel@178.115.237.87.static.drei.at) has joined #debian
+2021-11-24 11:24:09	shtrb	!ubuntu
+2021-11-24 11:24:09	dpkg	Ubuntu is based on Debian, but it is not Debian.  Only Debian is supported on #debian.  Use #ubuntu on irc.libera.chat instead.  Even if the channel happens to be less helpful, support for distributions other than Debian is offtopic on #debian.  See also <based on debian> and <ubuntuirc>.
+2021-11-24 11:24:12	shtrb	Velkorq, ^
+2021-11-24 11:25:21	<--	Wikiwide (~Wikiwide@user/wikiwide) has quit (Ping timeout: 245 seconds)
+2021-11-24 11:26:49	<--	amacater_ (~amacater@77.97.174.253) has quit (Ping timeout: 265 seconds)
+2021-11-24 11:27:23	Velkorq	debian needs to implement something like do-release-upgrade ubuntu has, to auto upgrade from one release to the next. noobs can't easily do the migration
+2021-11-24 11:28:56	rk4	in such a scheme i imagine no one reads release notes, particularly the upgrading from previous version bits?
+2021-11-24 11:30:27	Velkorq	i mean i use debian personally, but i am not a total beginner. if i install it on a noob's pc probably it will stay on that version past the 5 years of support debian offers
+2021-11-24 11:30:45	Velkorq	ubuntu has this tool to migrate automatically and also sends gui notifications, can be run from gui
+2021-11-24 11:31:04	somiaj	You can use 'stable' as the release name, and this will automatically upgrade
+2021-11-24 11:31:17	Velkorq	somiaj: is this safe to do?
+2021-11-24 11:31:22	jelly	somiaj, that's a bad idea, please don't suggest it
+2021-11-24 11:31:25	somiaj	It isn't suggested and I have had ubuntu's auto upgrade feature break enough I don't trust it
+2021-11-24 11:31:26	rk4	i do not advocate debian to 'noobs' personally
+2021-11-24 11:31:51	Velkorq	rk4: what do you install for noobs?
+2021-11-24 11:32:07	Velkorq	i used to install mxlinux, but it has annoying bugs
+2021-11-24 11:32:17	rk4	tbh, since they don't give a shit about FLOSS, i suggest chromebooks
+2021-11-24 11:32:45	Velkorq	i mean on a laptop that runs windows.
+2021-11-24 11:32:59	rk4	at least then i can be semi confident their bank account can only be emptied by browser extensions, not random programs they installed
+2021-11-24 11:33:00	Velkorq	somiaj: so auto upgrade can't be trusted?
+2021-11-24 11:33:29	somiaj	I wouldn't trust it, one should upgrade at the time they choose.
+2021-11-24 11:33:53	Velkorq	somiaj: it upgrades when you tell it to. just notifies you, unless they changed that. haven't used ubuntu in 10 years
+2021-11-24 11:34:02	somiaj	I did try to install ubuntu on my parents machine, they liked it until one day it broke. It was the auto upgrade between releases that broke it
+2021-11-24 11:34:04	rk4	if a 'noob' has a laptop running windows, i'm not sure if i'm doing them a favor replacing that with a *nix
+2021-11-24 11:34:10	jelly	Velkorq, the thing with automatic upgrades is they do not exist because it's a hard problem, can genuinely be problematic and break things.  You can make it work if your users have a specific subset of packages and you iterate testing the upgrade procedure
+2021-11-24 11:34:20	Velkorq	somiaj: maybe the interrupted it, or shutdown the pc.
+2021-11-24 11:34:49	-->	p0indexter (~alpha@user/p0indexter) has joined #debian
+2021-11-24 11:35:06	somiaj	Or it is just a hard feature to get right all the time, note this was 15 years ago, but I don't put *nix on machines I don't want to admin anymore
+2021-11-24 11:35:54	Velkorq	jelly: so its dafe as long as you stay within their repos, that they can test
+2021-11-24 11:35:59	rk4	if i were interested in such things though, fedora silverblue looks promising, maybe it'll become [or is?] a good option for people who do zero maintainance and just don't care
+2021-11-24 11:36:06	Velkorq	also i kind of hate snaps
+2021-11-24 11:36:36	Velkorq	rk4: don't know that, i remember normal fedora, that was debian sid territory
+2021-11-24 11:36:40	jelly	Velkorq, no, it's not safe even if you only use debian.org repos
+2021-11-24 11:36:49	somiaj	Debian releases only happen every two years and oldstable is supported for a year. You could just help with the upgrade every 2 years or so.
+2021-11-24 11:37:02	jelly	Velkorq, the safe thing is to read the release notes.
+2021-11-24 11:37:23	rk4	silverblue is an immutable desktop, so similar to jelly's comment about if you have a known set of packages
+2021-11-24 11:37:24	Velkorq	rk4: i will check out fedora you said about, and maybe opensuse leap, or something.
+2021-11-24 11:37:27	somiaj	And upgrade at a time of the admin's choosing so they can be around to deal with any hiccups
+2021-11-24 11:38:15	-->	enoq (~enoq@2a05:1141:1f5:5600:b9c9:721a:599:bfe7) has joined #debian
+2021-11-24 11:38:36	Velkorq	somiaj: i was looking more for something that runs without an admin
+2021-11-24 11:39:22	Velkorq	normally i use rolling release distros for desktops, but in my experience they are easier to break
+2021-11-24 11:39:27	jelly	I don't think there's a desktop Linux you can run _and keep up to date_ without an admin
+2021-11-24 11:40:01	jelly	Microsoft has tens of thousands of engineers and they can't keep their OS from breaking on upgrades, either
+2021-11-24 11:40:21	rk4	my sound after every windows update :'(
+2021-11-24 11:40:32	Velkorq	jelly: nixOS probably, even if you interrupt upgrade process nothing breaks. it changes symlinks after the upgrade
+2021-11-24 11:40:43	Velkorq	but i have not much experience setting it up
+2021-11-24 11:41:25	<--	grobi (~grobi@user/grobi) has quit (Quit: ᗧ•··ᗣ·ｂａｂｙ·🍒·•ｉ＇ｍ·♝··•ｂｏｒｅｄ·🍍·•··♞··ᗤ ᗣᗣᗣᗣ▀▄)
+2021-11-24 11:42:14	Velkorq	by the way does debian stable offer 2 or 5 years of support?
+2021-11-24 11:42:26	Velkorq	somewhere i read 2, on debian lts i read 5
+2021-11-24 11:42:31	Velkorq	i am confused
+2021-11-24 11:42:55	somiaj	for desktop support 3 years (2 years stable + 1 year oldstable)
+2021-11-24 11:43:02	somiaj	lts gives 2 more years for server side stuff
+2021-11-24 11:43:17	Velkorq	so if i use it on desktop i get 3 years basically
+2021-11-24 11:43:18	somiaj	though usually the browser support is dropped about 1/2 a year into old stable
+2021-11-24 11:43:31	rk4	the problem with using debian for 20 years...is hey i thought we didn't have LTS, neat
+2021-11-24 11:43:37	somiaj	I would go more about 2.5 due to browser support being dropped, or install your browser from another method.
+2021-11-24 11:44:52	Velkorq	ubuntu lts is 5 years. mmm might install that so i can have my mind peaceful for 5 years. they will probably change laptop in 5 years, won't have to upgrade to next release once
+2021-11-24 11:45:34	Khepra	browsers on ubuntu are snaps. you can snap them on debian too, if that's a concern.
+2021-11-24 11:45:58	-->	lsrtl_ (~lsrtl@user/lsrtl) has joined #debian
+2021-11-24 11:47:27	<--	yetkind (~yetkind@user/yetkind) has quit (Ping timeout: 256 seconds)
+2021-11-24 11:48:43	jelly	Debian has LTS now but not all packages are covered.
+2021-11-24 11:48:44	Velkorq	snaps are a bit weird. half of my packages are deb the rest snaps on ubuntu. kind of weird imo
+2021-11-24 11:48:58	Velkorq	jelly: so debian lts is for servers only?
+2021-11-24 11:49:15	jelly	,v firefox-esr
+2021-11-24 11:49:16	judd	Package: firefox-esr on amd64 -- stretch-updates: 60.6.3esr-1~deb9u1; stretch: 68.10.0esr-1~deb9u1; stretch-proposed-updates: 68.10.0esr-1~deb9u1; stretch-security: 68.10.0esr-1~deb9u1; buster: 78.14.0esr-1~deb10u1; bullseye: 78.14.0esr-1~deb11u1; bookworm: 78.14.0esr-1+b1; buster-security: 78.15.0esr-1~deb10u1; bullseye-proposed-updates: 78.15.0esr-1~deb11u1; bullseye-security:
+2021-11-24 11:49:17	judd	78.15.0esr-1~deb11u1; experimental: 91.1.0esr-1; sid: 91.3.0esr-1
+2021-11-24 11:49:27	jelly	heh, bad example
+2021-11-24 11:49:31	jelly	,v thunderbird
+2021-11-24 11:49:32	judd	Package: thunderbird on amd64 -- stretch-proposed-updates: 1:68.9.0-1~deb9u1; stretch: 1:68.10.0-1~deb9u1; stretch-security: 1:68.10.0-1~deb9u1; buster: 1:78.14.0-1~deb10u1; buster-security: 1:78.14.0-1~deb10u1; bullseye: 1:78.14.0-1~deb11u1; bullseye-security: 1:78.14.0-1~deb11u1; bookworm: 1:78.14.0-1+b2; sid: 1:91.3.2-1
+2021-11-24 11:49:44	-->	tesseract (~tesseract@user/tesseract) has joined #debian
+2021-11-24 11:50:03	-->	binaryhermit (uid462772@id-462772.helmsley.irccloud.com) has joined #debian
+2021-11-24 11:50:05	jelly	Velkorq, thunderbird is a GUI mail client, not a server tool
+2021-11-24 11:50:22	Velkorq	i see so debian lts is for a subset of packages
+2021-11-24 11:50:56	jelly	not much different from ubuntu, which promises security updates only for stuff in main
+2021-11-24 11:51:16	Khepra	just like ubuntu LTS really. Or ubuntu anything if you consider that Universe is a community effort and not a Canonical obligation
+2021-11-24 11:51:30	jelly	(and no clue how they expose security promises for snaps)
+2021-11-24 11:51:38	Khepra	they don't at all
+2021-11-24 11:51:58	Khepra	the whole point of snaps is that it's hands off for Canonical. Vendor's responsibility. whatever the vendor is doing. Canonical's is only for snapd itself.
+2021-11-24 11:52:06	Velkorq	jelly: isn't main the usual stuff we use on desktop?
+2021-11-24 11:52:06	jelly	so... how do I know whether gnome-3-28 will have fixes or not
+2021-11-24 11:52:20	-->	sinaowolabi_ (~SinaOwola@102.134.114.1) has joined #debian
+2021-11-24 11:52:30	<--	sinaowolabi (~SinaOwola@102.134.114.1) has quit (Ping timeout: 260 seconds)
+2021-11-24 11:52:35	jelly	Khepra, sometimes the vendor is still Canonical
+2021-11-24 11:52:41	Khepra	you ask the vendor.  however ... canonical is incidentally the vendor for some snaps, but that's just a tangential coincidence, ie. it's not part of "ubuntu" offering, it's part of "Canonical snaps" offering.
+2021-11-24 11:52:54	Khepra	jelly: shush, get out of my head and lemme finish my sentences ;)
+2021-11-24 11:53:05	jelly	Velkorq, main is some 2-3k packages, not all desktop, not all server
+2021-11-24 11:53:16	Velkorq	i see
+2021-11-24 11:53:22	Khepra	the point here being that those snaps have the same security promises regardless of distro that has tehm installable on
+2021-11-24 11:53:23	Velkorq	so mostly security stuff for 5 years
+2021-11-24 11:53:25	jelly	(talking about ubuntu)
+2021-11-24 11:54:20	-->	Wikiwide_ (~Wikiwide@user/wikiwide) has joined #debian
+2021-11-24 11:55:22	-->	yetkind (~yetkind@user/yetkind) has joined #debian
+2021-11-24 11:55:59	Khepra	"linux desktop" is really a sucky experience that no corporation has in standard offering, with the exception of RedHat and "GNOME for WorkGroups". Canonical implied recently (few years back) they're effectively giving up on desktop and concentrating on server and the cloud. They did so by nuking their desktop specific products like mir and unity. And I think Shuttleworth even spelled it out literally, in
+2021-11-24 11:55:59	shtrb	Anyone have a clue how to pass mic redirect in xrdp/krdp (like in remmina) ?
+2021-11-24 11:56:05	Khepra	one of the interviews.
+2021-11-24 11:56:17	<--	via_c7 (~orangeext@user/orangeextract) has quit (Quit: Leaving)
+2021-11-24 11:56:23	<--	cosimone (~user@2001:b07:ae5:db26:a7aa:8027:6b4e:2fb3) has quit (Remote host closed the connection)
+2021-11-24 11:56:37	-->	cosimone (~user@2001:b07:ae5:db26:a7aa:8027:6b4e:2fb3) has joined #debian
+2021-11-24 11:56:47	Haohmaru	crab if i had to do all the things i do on this "CAD" machine on crapdows, my swearing rate would have been x10
+2021-11-24 11:56:51	shtrb	Khepra, I dissagree plasma has  very nice touch and is OKish in corporate settings if the users are not idiots
+2021-11-24 11:57:06	Khepra	shtrb: plasma is not backed up by any corp
+2021-11-24 11:57:12	shtrb	Haohmaru, long live solidworks !
+2021-11-24 11:57:33	Haohmaru	shtrb not that kind of CAD
+2021-11-24 11:57:34	shtrb	Khepra, even gnome is useable if I the users are willing to learn
+2021-11-24 11:57:40	crab	Haohmaru: i can undertand that and its great it works for you.
+2021-11-24 11:57:52	crab	fortunately the only gui app my job really needs is a browser. :)
+2021-11-24 11:58:01	Khepra	GNOME is official, supported offering in RHEL and thus RH's product. Canonical had Mir and Unity until they dropped it. SuSE had tangential interest in KDE but unless I'm mistaken, that's no longer the case
+2021-11-24 11:58:13	<--	liuliancao (~liulianca@122.225.193.170) has quit (Ping timeout: 256 seconds)
+2021-11-24 11:58:21	crab	i used to be a linux on the desktop guy for what its worth, but i wanted a daw for my music hobby and never found one that worked for me on linux.
+2021-11-24 11:58:34	crab	had i done so, maybe id have tolerated things like that hibernation debacle.
+2021-11-24 11:58:49	Khepra	shtrb: gnome an usable in the same sentence. you wanna kill me? is that it? you want me to laugh so hard I drown in my own coffee?
+2021-11-24 11:59:01	crab	heh...
+2021-11-24 11:59:18	crab	see when i *am* forced to use linux on the desktop i use gnome! :P
+2021-11-24 11:59:57	shtrb	Khepra, coffee is bad for you, but gnome is not that bad (I use plasma , but I was a gnome user for some time )
+2021-11-24 12:00:00	Haohmaru	i have the daw problem too
+2021-11-24 12:00:57	Khepra	audio is one of those linux stepchilds that's there, struggling to survive in the coal mines, but nobody cares about it. the parents might get monthly foster care cheques from the state, but the kid sees not a cent of it.
+2021-11-24 12:01:27	Haohmaru	* dramatization
+2021-11-24 12:01:51	Khepra	from time to time some "benefator" comes along and dresses the child in new Pulseaudio clothes, that soon get torn in the mines. Then another comes along and dresses him in Pipewire outfit but you just wait and see what coal does to that in a few years.
+2021-11-24 12:02:26	shtrb	And all was good with alsa/oss :P
+2021-11-24 12:02:47	Haohmaru	pulseaudio afaik is meant for the non-advanced audio users
+2021-11-24 12:02:50	Khepra	RHEL will pat the kid in front of cameras but as light go out, the kid is again alone, cold, starving, lungs filled with coal dust, coughing with short latency audio buffers because no kernel wants it around.
+2021-11-24 12:04:19	Haohmaru	you want jack for that
+2021-11-24 12:04:32	Haohmaru	plus that kernel mod i forgot
+2021-11-24 12:04:45	Khepra	it's still a bit messy and inconsistent
+2021-11-24 12:04:51	Haohmaru	sure
+2021-11-24 12:05:08	Khepra	esp. either-or with pulseaudio ... dunno if pipewire will or has changed something in that department.
+2021-11-24 12:06:41	Haohmaru	i don't even know what this pipewire is about
+2021-11-24 12:15:27	<--	cosimone (~user@2001:b07:ae5:db26:a7aa:8027:6b4e:2fb3) has quit (Ping timeout: 268 seconds)
+2021-11-24 12:15:42	<--	Miles8of9 (~obrien@93-34-146-223.ip50.fastwebnet.it) has quit (Read error: Connection reset by peer)
+2021-11-24 12:22:30	-->	pingpongball (~pingpongb@user/pingpongball) has joined #debian
+2021-11-24 12:22:41	pingpongball	Hey guys
+2021-11-24 12:22:56	pingpongball	that audacity, is it available in debian. Yes it is.
+2021-11-24 12:23:09	-->	Brigo (~Brigo@40.181.60.213.dynamic.reverse-mundo-r.com) has joined #debian
+2021-11-24 12:23:13	pingpongball	that spyware is included in debian?
+2021-11-24 12:23:21	Haohmaru	that depends on the version
+2021-11-24 12:23:24	Haohmaru	,v audacity
+2021-11-24 12:23:25	judd	Package: audacity on amd64 -- stretch: 2.1.2-2; buster: 2.2.2-1+b1; bookworm: 2.4.2~dfsg0-5; bullseye: 2.4.2~dfsg0-5; sid: 2.4.2~dfsg0-5; stretch-multimedia: 1:2.1.3-dmo1+deb9u1; buster-multimedia: 1:2.3.2-dmo2+deb10u1; bullseye-multimedia: 1:2.4.2-dmo3; sid-multimedia: 1:2.4.2-dmo3
+2021-11-24 12:23:38	Haohmaru	iirc the spyware was somewhere in v4
+2021-11-24 12:23:40	Haohmaru	* v3
+2021-11-24 12:23:49	Haohmaru	but check for yourself
+2021-11-24 12:24:12	Haohmaru	"telemetry" crapware
+2021-11-24 12:24:39	-->	CandyAngel (~candyange@li761-35.members.linode.com) has joined #debian
+2021-11-24 12:25:03	pingpongball	yep , thank god i've only 64 crap that i cant uninstall, like intel microcode..... , nvidia .
+2021-11-24 12:25:14	pingpongball	well i can but
+2021-11-24 12:25:38	<--	emilsp (~emilsp@libera/staff/emilsp) has quit (Ping timeout: 608 seconds)
+2021-11-24 12:25:45	-->	nafnarfr (~narfnarfr@user/nafnarfr) has joined #debian
+2021-11-24 12:25:49	Haohmaru	aww, crapvidia, my condolences
+2021-11-24 12:26:02	Haohmaru	blobvidia
+2021-11-24 12:26:48	<--	crabbedhaloablut (~crabbedha@user/crabbedhaloablut) has quit (Remote host closed the connection)
+2021-11-24 12:27:04	-->	crabbedhaloablut (~crabbedha@user/crabbedhaloablut) has joined #debian
+2021-11-24 12:28:42	-->	emilsp (~emilsp@libera/staff/emilsp) has joined #debian
+2021-11-24 12:31:18	-->	puke (~puke@user/puke) has joined #debian
+2021-11-24 12:32:13	shtrb	Is there "telemetry" in nvidia tools too ?
+2021-11-24 12:33:33	Haohmaru	who knows
+2021-11-24 12:34:09	Khepra	the "spyware" is very much optional and compiled out of the debian package, afaik. In fact, it's not compiled IN.
+2021-11-24 12:34:12	Haohmaru	i heard the driver includes a "nodejs engine" or something
+2021-11-24 12:34:35	Haohmaru	Khepra for audacity, i'll be eyeballing the forks
+2021-11-24 12:35:02	Khepra	Poe's law strikes again here with nvidia
+2021-11-24 12:35:10	Khepra	Haohmaru: just don't hold your breath :)
+2021-11-24 12:35:15	Haohmaru	i'm not
+2021-11-24 12:36:58	<--	nyuszika7h (~nyuszika7@lykos/dev/nyuszika7h) has quit (Quit: ZNC 1.8.2+deb2+b1 - https://znc.in)
+2021-11-24 12:37:15	shtrb	Haohmaru, which driver include nodejs ?!
+2021-11-24 12:37:53	<--	shokohsc8618 (~shokohsc@161.88.195.77.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 12:38:20	Haohmaru	iirc there was some scheme where you could get infected from some silly webpage via the presence of nodejs in nvidia drivers, but maybe it was windows-specific
+2021-11-24 12:38:27	pingpongball	In debian official free packages, do you guys , inspect all codes inside all software to be packaged.
+2021-11-24 12:40:05	Haohmaru	forget what i said, i myself will prefer to not have blobvidia for now
+2021-11-24 12:40:08	Khepra	Okay guys, this is unfunny. Please stop with the nvidia nodejs FUD.
+2021-11-24 12:40:37	 *	Haohmaru hides
+2021-11-24 12:41:06	Khepra	there's reasons to one-finger salute nvidia, but no need to make fake ones :)
+2021-11-24 12:41:06	-->	calm-steam (~calm-stea@2a02:810a:980:1400::7674) has joined #debian
+2021-11-24 12:41:36	Haohmaru	actually, this very machine here, has an nvidia gpu, some old one, the fans start spinning at max right from grub and never stop
+2021-11-24 12:42:42	Haohmaru	but i mostly use crapdows7 here, and it's not my machine, so "no problem"
+2021-11-24 12:46:20	-->	mihaiadrian (~Thunderbi@82.76.223.244) has joined #debian
+2021-11-24 12:48:27	pingpongball	I've messaged jensen huang, in linkedin to make nvidia drivers opensource
+2021-11-24 12:48:29	pingpongball	I hope.
+2021-11-24 12:49:02	Haohmaru	what did he say? "kek" ?
+2021-11-24 12:49:42	pingpongball	that great ceo would never reply me like backward shit
+2021-11-24 12:49:47	pingpongball	those high profile.
+2021-11-24 12:49:58	pingpongball	But i hope he atleast would look subject .
+2021-11-24 12:49:59	pingpongball	:)
+2021-11-24 12:50:46	Haohmaru	"yo dawg, i heard ur the CEO of nvidia, pls opensource the driver, thx bai"
+2021-11-24 12:50:55	<--	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has quit (Remote host closed the connection)
+2021-11-24 12:51:12	Haohmaru	i forgot to sprinkle some "lol"s
+2021-11-24 12:51:16	pingpongball	=L
+2021-11-24 12:54:06	<--	pingpongball (~pingpongb@user/pingpongball) has quit (Quit: Client closed)
+2021-11-24 12:55:03	-->	rsx (~dummy@ppp-188-174-133-225.dynamic.mnet-online.de) has joined #debian
+2021-11-24 12:56:37	<--	zitter (~danilodim@93-57-35-194.ip162.fastwebnet.it) has quit (Quit: Leaving)
+2021-11-24 12:57:42	<--	luuuciano (~luuuciano@user/luuuciano) has quit (Remote host closed the connection)
+2021-11-24 12:58:16	<--	inhetep (~lepke@user/lepke) has quit (Remote host closed the connection)
+2021-11-24 12:59:01	-->	kirk781 (~doors_1@2402:3a80:b43:45e:7c29:f5f:169e:4925) has joined #debian
+2021-11-24 12:59:27	-->	lepke (~lepke@user/lepke) has joined #debian
+2021-11-24 13:00:40	-->	Fausto (~dante@gateway/tor-sasl/filohuhum) has joined #debian
+2021-11-24 13:00:52	-->	pingpongball (~pingpongb@user/pingpongball) has joined #debian
+2021-11-24 13:02:25	-->	i0e (~is0ke3@user/is0ke3) has joined #debian
+2021-11-24 13:03:19	-->	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has joined #debian
+2021-11-24 13:03:54	-->	codex (~codex@user/codex) has joined #debian
+2021-11-24 13:05:13	<--	pingpongball (~pingpongb@user/pingpongball) has quit (Client Quit)
+2021-11-24 13:05:18	<--	nafnarfr (~narfnarfr@user/nafnarfr) has quit (Ping timeout: 260 seconds)
+2021-11-24 13:05:20	-->	stateless (~Thunderbi@2603:9000:7100:dda3:0:946e:fb6:cd71) has joined #debian
+2021-11-24 13:05:52	-->	nafnarfr (~narfnarfr@user/nafnarfr) has joined #debian
+2021-11-24 13:06:00	<--	Fausto (~dante@gateway/tor-sasl/filohuhum) has quit (Ping timeout: 276 seconds)
+2021-11-24 13:07:17	-->	lunc (lunc@user/lunc) has joined #debian
+2021-11-24 13:07:57	-->	lucad111 (~lucad111@51-148-40-1.dsl.zen.co.uk) has joined #debian
+2021-11-24 13:09:54	<--	codex (~codex@user/codex) has quit (Quit: Leaving)
+2021-11-24 13:10:01	<--	dselect (~dselect@debian/bot/dselect) has quit (Quit: ouch... that hurt)
+2021-11-24 13:11:07	-->	dselect (~dselect@debian/bot/dselect) has joined #debian
+2021-11-24 13:11:37	<--	diiirt (~diiirt@user/diiirt) has quit (Remote host closed the connection)
+2021-11-24 13:11:53	-->	diiirt (~diiirt@user/diiirt) has joined #debian
+2021-11-24 13:12:59	<--	kirk781 (~doors_1@2402:3a80:b43:45e:7c29:f5f:169e:4925) has quit (Quit: Leaving)
+2021-11-24 13:13:03	<--	mihaiadrian (~Thunderbi@82.76.223.244) has quit (Read error: Connection reset by peer)
+2021-11-24 13:13:20	-->	mihaiadrian (~Thunderbi@82.76.223.244) has joined #debian
+2021-11-24 13:13:30	-->	voltron (~voltrin_@ip4d16bdc6.dynamic.kabel-deutschland.de) has joined #debian
+2021-11-24 13:15:27	<--	Texou (~Texou@2a01:e0a:1ef:5350:8e45:2d5:e1aa:5deb) has quit (Ping timeout: 264 seconds)
+2021-11-24 13:18:31	<--	voltron (~voltrin_@ip4d16bdc6.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2021-11-24 13:23:52	<--	Cienisty (Cienisty@user/cienisty) has quit (Quit: Error 606 | Demon not found)
+2021-11-24 13:24:30	-->	Cienisty (Cienisty@user/cienisty) has joined #debian
+2021-11-24 13:24:43	-->	Iamthehuman1 (~noname@user/iamthehuman) has joined #debian
+2021-11-24 13:24:55	shtrb	Haohmaru, I believed you !
+2021-11-24 13:28:41	<--	CEP (~CEP@user/cep) has quit (Ping timeout: 245 seconds)
+2021-11-24 13:28:55	-->	Texou (~Texou@2a01:e0a:1ef:5350:8f58:4486:5a03:2204) has joined #debian
+2021-11-24 13:41:00	-->	thiras (~thiras@user/thiras) has joined #debian
+2021-11-24 13:43:16	<--	shtrb (~shtrb@user/shtrb) has quit (Quit: Leaving)
+2021-11-24 13:47:08	<--	yetkind (~yetkind@user/yetkind) has quit (Remote host closed the connection)
+2021-11-24 13:47:32	-->	yetkind (~yetkind@user/yetkind) has joined #debian
+2021-11-24 13:52:12	<--	lepke (~lepke@user/lepke) has quit (Remote host closed the connection)
+2021-11-24 13:52:35	-->	lepke (~lepke@user/lepke) has joined #debian
+2021-11-24 13:54:43	<--	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Remote host closed the connection)
+2021-11-24 13:55:27	-->	knidos (~knidos@85.98.20.202) has joined #debian
+2021-11-24 13:56:46	-->	blei (~blei@209.201.38.106) has joined #debian
+2021-11-24 13:57:16	<--	lepke (~lepke@user/lepke) has quit (Remote host closed the connection)
+2021-11-24 13:59:15	-->	lepke (~lepke@user/lepke) has joined #debian
+2021-11-24 13:59:33	-->	computerfarmer (~thomas@p200300ca0731e082c2af6a98d0061411.dip0.t-ipconnect.de) has joined #debian
+2021-11-24 14:00:32	-->	DaNeenjah (~jake@adsl-74-230-8-177.hsv.bellsouth.net) has joined #debian
+2021-11-24 14:00:39	<--	Hiccup (cHoy@user/hiccup) has quit (Remote host closed the connection)
+2021-11-24 14:01:31	<--	Strykar (~wakka@signald/Strykar) has left #debian
+2021-11-24 14:04:31	-->	xet7_ (~xet7@user/xet7) has joined #debian
+2021-11-24 14:05:01	<--	dpkg (~dpkg@debian/bot/dpkg) has quit (Quit: buh bye!)
+2021-11-24 14:05:44	-->	dpkg (~dpkg@debian/bot/dpkg) has joined #debian
+2021-11-24 14:06:38	-->	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-24 14:06:44	<--	Haudegen (~quassel@178.115.237.87.static.drei.at) has quit (Read error: Connection reset by peer)
+2021-11-24 14:07:05	<--	jhutchins (~jonathan@136.34.196.147) has quit (Ping timeout: 268 seconds)
+2021-11-24 14:07:46	<--	xet7 (~xet7@user/xet7) has quit (Ping timeout: 260 seconds)
+2021-11-24 14:09:31	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 245 seconds)
+2021-11-24 14:11:49	-->	i0e (~is0ke3@user/is0ke3) has joined #debian
+2021-11-24 14:17:11	<--	KashinKoji (~kashinkoj@bl21-61-150.dsl.telepac.pt) has quit (Ping timeout: 250 seconds)
+2021-11-24 14:17:14	-->	yupthatguy (~Thunderbi@herocloudhosting.com) has joined #debian
+2021-11-24 14:17:24	<--	wvdakker1 (~wvdakker@mail.wilsoft.nl) has quit (Quit: WeeChat 3.0.1)
+2021-11-24 14:17:37	-->	wvdakker (~wvdakker@mail.wilsoft.nl) has joined #debian
+2021-11-24 14:18:20	<--	wvdakker (~wvdakker@mail.wilsoft.nl) has quit (Client Quit)
+2021-11-24 14:18:42	-->	paulgrmn_ (~paulgrmn@user/paulgrmn) has joined #debian
+2021-11-24 14:19:18	-->	wvdakker (~wvdakker@mail.wilsoft.nl) has joined #debian
+2021-11-24 14:19:34	-->	KashinKoji (~kashinkoj@bl21-61-150.dsl.telepac.pt) has joined #debian
+2021-11-24 14:24:27	<--	berkhan (~berkhan@159.146.43.44) has quit (Ping timeout: 264 seconds)
+2021-11-24 14:25:39	-->	_ganapathi_ (~ganapathi@27.5.120.215) has joined #debian
+2021-11-24 14:27:43	_ganapathi_	i don't know this is the rgt place for this question or not. i have single HD from RAID 1 array and its shows RAID member. how to access this single HD on new debian system
+2021-11-24 14:34:27	-->	berkhan (~berkhan@159.146.43.44) has joined #debian
+2021-11-24 14:35:07	<--	betelgeuse (~betelgeus@94-225-47-8.access.telenet.be) has quit (Read error: Connection reset by peer)
+2021-11-24 14:36:15	-->	betelgeuse (~betelgeus@94-225-47-8.access.telenet.be) has joined #debian
+2021-11-24 14:40:57	<--	p0indexter (~alpha@user/p0indexter) has quit (Quit: ars longa vita brevis)
+2021-11-24 14:41:10	<--	nafnarfr (~narfnarfr@user/nafnarfr) has quit (Read error: Connection reset by peer)
+2021-11-24 14:41:26	-->	nafnarfr (~narfnarfr@user/nafnarfr) has joined #debian
+2021-11-24 14:42:07	<--	yetkind (~yetkind@user/yetkind) has quit (Quit: Leaving)
+2021-11-24 14:42:30	Khepra	_ganapathi_: via corresponding /dev/md<number>   or /dev/md/<its name>
+2021-11-24 14:42:38	<--	nafnarfr (~narfnarfr@user/nafnarfr) has quit (Remote host closed the connection)
+2021-11-24 14:42:59	Khepra	_ganapathi_: however, it's possible the md is not set up because you need to assemble the degraded array
+2021-11-24 14:43:07	<--	brunoramoslu (~brunoramo@94.252.121.151) has quit (Ping timeout: 256 seconds)
+2021-11-24 14:44:12	<--	ihristov (~ihristov@85.187.46.226) has quit (Quit: Connection closed)
+2021-11-24 14:44:19	<--	blackout69 (~blackout6@net-31-156-121-187.cust.vodafonedsl.it) has left #debian
+2021-11-24 14:44:49	<--	digilink (~digilink@user/digilink) has quit (Ping timeout: 256 seconds)
+2021-11-24 14:45:08	_ganapathi_	however assemble the array again but partition not detected for root partition array
+2021-11-24 14:45:16	_ganapathi_	but its working for boot partition.
+2021-11-24 14:45:27	_ganapathi_	lsblk -f not shows partition for root
+2021-11-24 14:47:31	-->	digilink (~digilink@user/digilink) has joined #debian
+2021-11-24 14:49:34	-->	loomes (~loomes@178.162.194.66) has joined #debian
+2021-11-24 14:49:59	<--	loomes_ (~loomes@178.162.194.66) has quit (Ping timeout: 260 seconds)
+2021-11-24 14:51:46	<--	computerfarmer (~thomas@p200300ca0731e082c2af6a98d0061411.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2021-11-24 14:51:52	-->	Hawker (~Hawker@user/hawker) has joined #debian
+2021-11-24 14:52:02	enoq	hi, I've got a maintenance project that uses java 7
+2021-11-24 14:52:09	-->	computerfarmer (~thomas@p200300ca0731e082c2af6a98d0061411.dip0.t-ipconnect.de) has joined #debian
+2021-11-24 14:52:21	enoq	so now I'm wondering how I should actually work on it
+2021-11-24 14:52:39	<--	digilink (~digilink@user/digilink) has quit (Ping timeout: 264 seconds)
+2021-11-24 14:52:49	enoq	official java images on dockerhub start at java 8
+2021-11-24 14:53:49	-->	digilink (~digilink@user/digilink) has joined #debian
+2021-11-24 14:53:59	enoq	debian also only seems to ship 8+ https://packages.debian.org/search?keywords=jdk&searchon=names&suite=stable&section=all
+2021-11-24 14:54:22	enoq	locally on arch linux I'm using the official package which is in the default repo
+2021-11-24 14:54:27	<--	cybiko123 (~cybiko123@2601:5c4:4300:ac60:a027:9c7:c155:ab04) has quit (Ping timeout: 250 seconds)
+2021-11-24 14:55:35	<--	y0sh_ (~y0sh@072-189-235-113.res.spectrum.com) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-24 14:56:36	-->	shokohsc8618 (~shokohsc@161.88.195.77.rev.sfr.net) has joined #debian
+2021-11-24 14:57:09	-->	brunoramoslu (~brunoramo@94.252.122.142) has joined #debian
+2021-11-24 14:58:13	Haohmaru	do you clone sdb to sdc (two SD cards, same capacity) using "cp" ?
+2021-11-24 14:58:18	Haohmaru	or should i "dd"
+2021-11-24 14:58:40	enoq	dd also writes hd meta information like the boot records
+2021-11-24 14:58:56	Haohmaru	so dd then
+2021-11-24 15:00:07	-->	noidea_ (~noidea@66.10.247.251) has joined #debian
+2021-11-24 15:00:53	<--	blei (~blei@209.201.38.106) has quit (Quit: Client closed)
+2021-11-24 15:00:57	<--	noidea_ (~noidea@66.10.247.251) has quit (Read error: Connection reset by peer)
+2021-11-24 15:01:13	-->	noidea_ (~noidea@66.10.247.251) has joined #debian
+2021-11-24 15:01:43	Khepra	_ganapathi_: what do you mean "root partition"? are you in a rescue environment?
+2021-11-24 15:02:25	-->	y0sh_ (~y0sh@072-189-235-113.res.spectrum.com) has joined #debian
+2021-11-24 15:03:27	<--	guiverc (~guiverc@ubuntu/member/guiverc) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:03:39	Khepra	Haohmaru: if you dd, don't forget to shuffle UUIDs, or else you'll confuzzle teh kernel
+2021-11-24 15:03:55	Haohmaru	eh?
+2021-11-24 15:04:09	Haohmaru	i would unplug them both afterwards
+2021-11-24 15:04:15	Khepra	if you clone with dd, all the filesystems and partitions will retain same lables and more importantly UUIDs
+2021-11-24 15:04:32	Khepra	okay if you just dd and eject. but if you attempt to mount, hilarity will ensue.
+2021-11-24 15:04:43	Haohmaru	nonono, i won't be mounting them
+2021-11-24 15:04:49	Khepra	STILL ... my OCD would never let me sleep knowing there's two SD cards with same UUIDs  :)
+2021-11-24 15:05:10	<--	mauregato (~mauregato@146.red-81-45-26.staticip.rima-tde.net) has quit (Quit: Client closed)
+2021-11-24 15:08:11	sussudio	Khepra: reminds me of a series of chinese rtl8139 nics that all had the same mac address.
+2021-11-24 15:08:20	-->	cybiko123 (~cybiko123@2601:5c4:4300:ac60:4477:8149:160e:131b) has joined #debian
+2021-11-24 15:08:52	Haohmaru	aww
+2021-11-24 15:11:00	-->	codex (~codex@user/codex) has joined #debian
+2021-11-24 15:11:40	<--	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Remote host closed the connection)
+2021-11-24 15:12:22	-->	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-24 15:16:39	<--	lunc (lunc@user/lunc) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:18:13	-->	n4dir (~user@mue-88-130-56-009.dsl.tropolys.de) has joined #debian
+2021-11-24 15:19:04	-->	john1_ (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-24 15:22:03	<--	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:25:39	PerfDave	Duplicate MAC addresses still happen with pre-release hardware in my world :/
+2021-11-24 15:26:46	-->	deadrom (~mccoy@pd9e3f2e3.dip0.t-ipconnect.de) has joined #debian
+2021-11-24 15:26:51	deadrom	hi all
+2021-11-24 15:27:15	<--	john1_ (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Remote host closed the connection)
+2021-11-24 15:27:16	-->	cdown_ (~cdown@163.114.131.1) has joined #debian
+2021-11-24 15:28:13	-->	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-24 15:28:55	deadrom	usb drive with corrupted NTFS, I ddrescued the partition onto HDD, most sectors readable, I expect good recovery rates. What I miss is a recovey tool. scrounge-ntfs seems to exepct a phys drive instead of a dd and I don't want to go through 9h disk nibbling again. . Can someone recommend a tool that I can run on the partition image?
+2021-11-24 15:29:57	-->	nos0u1 (nosoul@gateway/vpn/protonvpn/nosoul) has joined #debian
+2021-11-24 15:30:09	<--	cdown (~cdown@89.32.122.5) has quit (Ping timeout: 256 seconds)
+2021-11-24 15:30:20	--	cdown_ is now known as cdown
+2021-11-24 15:30:47	-->	han-solo (~hanish@user/han-solo) has joined #debian
+2021-11-24 15:32:47	<--	Ypszilon (~Ypszilon@user/ypszilon) has quit (Remote host closed the connection)
+2021-11-24 15:34:42	-->	Ypszilon (~Ypszilon@user/ypszilon) has joined #debian
+2021-11-24 15:35:24	<--	computerfarmer (~thomas@p200300ca0731e082c2af6a98d0061411.dip0.t-ipconnect.de) has quit (Quit: Konversation terminated!)
+2021-11-24 15:39:24	<--	beelzebuzz (~rasputin@gateway/tor-sasl/beelzebuzz) has quit (Ping timeout: 276 seconds)
+2021-11-24 15:39:27	lowin	I want debootstrap to use a dvd image as mirror to bootstrap a debian install, but it complains about the lack of an "InRelease" file, I checked the disk and only "Release" exists. Am I doing something wrong?
+2021-11-24 15:41:14	_ganapathi_	Khepra: No. my running OS is working fine and trying to recover disk 2nd HD as a additional disk which was running from different server
+2021-11-24 15:44:53	deadrom	scratch that, had to fool scrounge into taking the dump for a disk. working now.
+2021-11-24 15:45:03	-->	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has joined #debian
+2021-11-24 15:49:47	-->	Elzington (~Elzington@68.235.43.172) has joined #debian
+2021-11-24 15:50:43	<--	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Remote host closed the connection)
+2021-11-24 15:50:49	-->	CEP (~CEP@user/cep) has joined #debian
+2021-11-24 15:51:55	<--	s0mbra (~jd@45.86.201.69) has quit (Ping timeout: 268 seconds)
+2021-11-24 15:53:24	-->	s0mbra (~jd@45.86.201.53) has joined #debian
+2021-11-24 15:53:51	<--	Hawker (~Hawker@user/hawker) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:54:59	-->	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-24 15:55:31	-->	Hawker (~Hawker@user/hawker) has joined #debian
+2021-11-24 15:59:18	-->	lunc (~lunc@user/lunc) has joined #debian
+2021-11-24 16:00:45	<--	mihaiadrian (~Thunderbi@82.76.223.244) has quit (Quit: mihaiadrian)
+2021-11-24 16:01:30	-->	mihaiadrian (~Thunderbi@82.76.223.244) has joined #debian
+2021-11-24 16:02:26	<--	berkhan (~berkhan@159.146.43.44) has quit (Ping timeout: 245 seconds)
+2021-11-24 16:04:56	<--	sinaowolabi_ (~SinaOwola@102.134.114.1) has quit (Ping timeout: 245 seconds)
+2021-11-24 16:05:32	-->	alex11 (~alex11@user/alex11) has joined #debian
+2021-11-24 16:09:48	<--	Linux77 (~Linux_77@186.233.179.193) has quit (Remote host closed the connection)
+2021-11-24 16:12:18	<--	mihaiadrian (~Thunderbi@82.76.223.244) has quit (Quit: mihaiadrian)
+2021-11-24 16:13:25	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #debian
+2021-11-24 16:17:09	<--	catman (~catman@user/catman) has quit (Quit: WeeChat 3.4-dev)
+2021-11-24 16:17:56	-->	catman (~catman@user/catman) has joined #debian
+2021-11-24 16:19:33	<--	knidos (~knidos@85.98.20.202) has quit (Quit: WeeChat 3.3)
+2021-11-24 16:20:10	-->	sinaowolabi (~SinaOwola@41.58.247.249) has joined #debian
+2021-11-24 16:21:09	-->	Linux77 (~Linux_77@186.233.179.193) has joined #debian
+2021-11-24 16:22:48	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Quit: ZNC 1.8.2+deb2+b1 - https://znc.in)
+2021-11-24 16:26:02	<--	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Remote host closed the connection)
+2021-11-24 16:28:18	f8e4	does debian have matrix room?
+2021-11-24 16:31:30	<--	calm-steam (~calm-stea@2a02:810a:980:1400::7674) has quit (Quit: Leaving)
+2021-11-24 16:32:17	-->	Atlas667 (~Atlas667@94.198.42.62) has joined #debian
+2021-11-24 16:39:18	-->	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-24 16:40:47	-->	section1 (~section1@181.23.195.170) has joined #debian
+2021-11-24 16:42:58	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #debian
+2021-11-24 16:44:20	Khepra	_ganapathi_: well there's only one option here. Either mdadm assembles it automatically, or you have to assemble it manually. with degraded arrays it's more likely you'll have to --assemble it manually. then it becomes a /dev/md<number> device which you can mount somewhere under /mnt/ for example and work with that
+2021-11-24 16:47:16	<--	_ganapathi_ (~ganapathi@27.5.120.215) has quit (Quit: Leaving.)
+2021-11-24 16:47:56	-->	luuuciano (~luuuciano@user/luuuciano) has joined #debian
+2021-11-24 16:48:17	-->	mauregato (~mauregato@146.red-81-45-26.staticip.rima-tde.net) has joined #debian
+2021-11-24 16:51:01	<--	n4dir (~user@mue-88-130-56-009.dsl.tropolys.de) has quit (Remote host closed the connection)
+2021-11-24 16:52:57	<--	revolt112 (~revolt112@gw.thefirewall.de) has quit (Ping timeout: 250 seconds)
+2021-11-24 16:56:57	-->	auth (~auth@user/auth) has joined #debian
+2021-11-24 16:59:06	<--	auth (~auth@user/auth) has quit (Client Quit)
+2021-11-24 16:59:41	<--	Linux77 (~Linux_77@186.233.179.193) has quit (Quit: Leaving)
+2021-11-24 17:02:26	-->	revolt112 (~revolt112@gw.thefirewall.de) has joined #debian
+2021-11-24 17:02:55	-->	via_c7 (~orangeext@user/orangeextract) has joined #debian
+2021-11-24 17:05:42	<--	Shadur (~Rens@2001:981:9a5e:1:a8d5:1974:f073:ac3d) has quit (Quit: Leaving)
+2021-11-24 17:06:30	<--	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has quit (Ping timeout: 276 seconds)
+2021-11-24 17:07:06	-->	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has joined #debian
+2021-11-24 17:12:08	-->	kveroneau (kveroneau@node1.veroneau.net) has joined #debian
+2021-11-24 17:12:22	f8e4	@admins: please open team to matrix users
+2021-11-24 17:12:42	f8e4	i get: Reason: IRC error on #debian: err_needreggednick ; from matrix client
+2021-11-24 17:13:37	Haohmaru	f8e4 this channel requires you to be logged-in to NickServ in order to join
+2021-11-24 17:13:41	Haohmaru	channel mode +r
+2021-11-24 17:14:07	f8e4	Haohmaru why do you fence content, i hate this. at least readonly
+2021-11-24 17:14:15	<--	yupthatguy (~Thunderbi@herocloudhosting.com) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:14:37	Haohmaru	not me
+2021-11-24 17:15:01	-->	Damni (~daniele@user/damni) has joined #debian
+2021-11-24 17:15:12	-->	tieinv (~tieinv@user/tieinv) has joined #debian
+2021-11-24 17:15:15	Haohmaru	read-only would be if it was +q$~a instead of +r, which i've advertised multiple times already
+2021-11-24 17:15:42	Haohmaru	they don't want to change it..
+2021-11-24 17:16:02	-->	Hurricane (~Hawker@user/hawker) has joined #debian
+2021-11-24 17:16:10	 *	f8e4 is on [m]arix now and loves it
+2021-11-24 17:16:12	Haohmaru	f8e4 you need to register a libera.chat account and you gotta be logged in with it
+2021-11-24 17:16:36	f8e4	Haohmaru where to login via element-desktop?
+2021-11-24 17:16:54	-->	nyuszika7h_ (nyuszika7h@lykos/dev/nyuszika7h) has joined #debian
+2021-11-24 17:16:58	Haohmaru	uhm, don't think this has anything to do with your desktop
+2021-11-24 17:17:53	<--	Damni (~daniele@user/damni) has quit (Client Quit)
+2021-11-24 17:18:00	-->	Linux77 (~Linux_77@186.233.179.193) has joined #debian
+2021-11-24 17:18:01	Haohmaru	this channel originates from IRC, from the libera.chat IRC network, the rules come from here, you would need to come over to the real world (IRC) register a nickname, and then i have zero clue how you deal with the matrix side of things
+2021-11-24 17:18:38	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:18:41	<--	Hawker (~Hawker@user/hawker) has quit (Ping timeout: 245 seconds)
+2021-11-24 17:18:51	Haohmaru	or you could also cry about the +r situation on themill's shoulder, like me ;P~
+2021-11-24 17:19:29	Haohmaru	but i did it recently so i'll wait some more
+2021-11-24 17:19:48	--	nyuszika7h_ is now known as nyuszika7h
+2021-11-24 17:20:23	-->	idego (~idego@user/idego) has joined #debian
+2021-11-24 17:20:29	<--	hudo (~hhudo_@mail.allm-elektro.de) has quit (Ping timeout: 250 seconds)
+2021-11-24 17:24:22	<--	sputnik (kli0rf@user/kli0rf) has quit (Quit: leaving)
+2021-11-24 17:24:42	<--	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has quit (Ping timeout: 276 seconds)
+2021-11-24 17:24:46	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:25:50	f8e4	#debian please get listed https://matrix-org.github.io/matrix-appservice-irc/latest/bridged_networks.html
+2021-11-24 17:27:07	Haohmaru	do also note that this is sorta an unofficial user support channel in libera.chat, the official channels are on another IRC network (OFTC), including dev channels
+2021-11-24 17:27:22	-->	mtn (~mtn@98.97.127.52) has joined #debian
+2021-11-24 17:27:22	Haohmaru	this channel is for "waaah i broke my debian, halp!"
+2021-11-24 17:27:35	Haohmaru	tho you should try to NOT break your debian
+2021-11-24 17:28:05	<--	mauregato (~mauregato@146.red-81-45-26.staticip.rima-tde.net) has quit (Quit: Client closed)
+2021-11-24 17:28:36	<--	totenkoph (~scythe@user/totenkoph) has quit (Ping timeout: 276 seconds)
+2021-11-24 17:29:00	-->	Xaldafax (~xaldafax@cpe-198-72-160-101.socal.res.rr.com) has joined #debian
+2021-11-24 17:29:38	Khepra	this is spar^W IRC, not matrix. IRC rules apply. matrices, discords and other things pls host elsewhere kthnxbai.
+2021-11-24 17:29:48	-->	sputnik (~sputnik@user/kli0rf) has joined #debian
+2021-11-24 17:30:46	Haohmaru	(i still vote for swapping +r for the +q version)
+2021-11-24 17:30:58	 *	Haohmaru hides
+2021-11-24 17:31:08	<--	sputnik (~sputnik@user/kli0rf) has quit (Client Quit)
+2021-11-24 17:31:21	-->	sputnik (kli0rf@user/kli0rf) has joined #debian
+2021-11-24 17:31:27	Khepra	plus arr is fine. don't touch the arr. stay away from the plus arr.
+2021-11-24 17:32:20	Haohmaru	<dramatic_sad_kitten.jpg>
+2021-11-24 17:33:09	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #debian
+2021-11-24 17:36:13	-->	flashd[m] (~flashdmat@2001:470:69fc:105::1:3d0b) has joined #debian
+2021-11-24 17:36:19	 *	flashd[m] loves debiannn
+2021-11-24 17:37:01	Haohmaru	you need to prove it with actions
+2021-11-24 17:38:33	flashd[m]	https://github.com/matrix-org/matrix-appservice-irc/wiki/Guide:-How-to-use-Matrix-to-participate-in-IRC-rooms
+2021-11-24 17:39:23	f8e4	pm NickServ:libera.chat + REGISTER password email
+2021-11-24 17:40:14	<--	binaryhermit (uid462772@id-462772.helmsley.irccloud.com) has quit (Quit: Connection closed for inactivity)
+2021-11-24 17:40:50	-->	zer0bitz (~zer0bitz@2001:2003:f6bc:f00:4c2d:8074:ff8b:55dd) has joined #debian
+2021-11-24 17:41:52	-->	mauregato (~mauregato@146.red-81-45-26.staticip.rima-tde.net) has joined #debian
+2021-11-24 17:42:28	f8e4	folks, howto join a telegram room ?
+2021-11-24 17:42:31	--	Hurricane is now known as Hawker
+2021-11-24 17:43:51	Haohmaru	*shrug*
+2021-11-24 17:44:14	<--	deadrom (~mccoy@pd9e3f2e3.dip0.t-ipconnect.de) has quit (Quit: Leaving)
+2021-11-24 17:48:22	-->	_ganapathi_ (~ganapathi@27.5.120.215) has joined #debian
+2021-11-24 17:49:51	-->	swk (~swk@user/swk) has joined #debian
+2021-11-24 17:50:42	-->	codex__ (~codex@user/codex/x-6136475) has joined #debian
+2021-11-24 17:51:32	<--	f8e4 (~user@159.89.21.45) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:51:54	<--	_ganapathi_ (~ganapathi@27.5.120.215) has left #debian
+2021-11-24 17:52:36	Khepra	you call your telco. stop. you order a telegram service. stop. you dictate. stop. they send. stop.
+2021-11-24 17:53:28	<--	Misotauros (~Misotauro@193-181-35-206.cust.norisab.com) has quit (Read error: Connection reset by peer)
+2021-11-24 17:53:51	<--	codex (~codex@user/codex) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:54:51	Haohmaru	tut tuduut tuut tut tuut
+2021-11-24 17:56:30	-->	beelzebuzz (~rasputin@gateway/tor-sasl/beelzebuzz) has joined #debian
+2021-11-24 17:56:53	Khepra	dot dot dash dash dot dash ? uhh... UK?
+2021-11-24 17:57:50	<--	tieinv (~tieinv@user/tieinv) has left #debian (Gone!)
+2021-11-24 18:00:30	-->	nssy2 (~nssy@user/nssy) has joined #debian
+2021-11-24 18:02:10	-->	knidos (~knidos@85.98.20.202) has joined #debian
+2021-11-24 18:03:03	Haohmaru	Khepra i made that up
+2021-11-24 18:03:19	<--	rdz (~rdz@2001:620:120:1::12) has quit (Read error: Connection reset by peer)
+2021-11-24 18:03:34	<--	profitlich (~profitlic@p200300e62713a70070b8c03097f2429e.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2021-11-24 18:03:52	-->	profitlich (~profitlic@p200300e62713a70070b8c03097f2429e.dip0.t-ipconnect.de) has joined #debian
+2021-11-24 18:07:36	<--	beelzebuzz (~rasputin@gateway/tor-sasl/beelzebuzz) has quit (Ping timeout: 276 seconds)
+2021-11-24 18:08:41	<--	z8z (~x@ac255238.ppp.asahi-net.or.jp) has quit (Ping timeout: 245 seconds)
+2021-11-24 18:10:23	-->	rdz (~rdz@2001:620:120:1::12) has joined #debian
+2021-11-25 11:39:47	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-25 11:39:47	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-25 11:39:47	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-25 11:39:47	--	Channel #debian: 741 nicks (1 op, 0 voices, 740 normals)
+2021-11-25 11:39:47	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-25 11:39:53	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-25 11:41:05	-->	AceSlash (~slash@cosium-fo-152-18.fib.nerim.net) has joined #debian
+2021-11-25 11:42:44	ocb	jelly: https://termbin.com/4dng the install is with lxde completely fresh without a single file changed, except 'interfaces' after i noticed networking does not work. during the netinstall networking worked without issues. tried disabling avahi in the meantime and removed isc-dhcp-{common,client} just to make sure it isn't dhcp doing its thing for whatever reason.
+2021-11-25 11:44:16	ocb	once i do 'service networking stop' and 'start' again, connection works for ~30 seconds until the 169.x ip route and address are added to ens3 interface
+2021-11-25 11:45:46	jelly	you don't need a netmask line if you said /29 in address line
+2021-11-25 11:46:05	jelly	this is weird: > default dev ens3 scope link
+2021-11-25 11:46:33	jelly	link-local setup isn't supposed to create a default route, I think
+2021-11-25 11:47:04	jelly	ocb, does network work again if you "ip r del default dev ens3 scope link" ?
+2021-11-25 11:47:49	ocb	tried already, the command doesnt delete the route
+2021-11-25 11:48:02	ocb	it stays there whatever i do
+2021-11-25 11:48:20	ocb	it also stays there after 'ip r flush all'
+2021-11-25 11:49:09	ocb	the same issue happens with debian-11.1.0-i386-netinst.iso and debian-11.1.0-amd64-netinst.iso
+2021-11-25 11:50:31	ocb	'service networking stop' removes the route ^^
+2021-11-25 11:51:44	-->	codex (~codex@user/codex) has joined #debian
+2021-11-25 11:52:00	ocb	i've removed netmask from interfaces as per your suggestion - restarted networking - same thing. networking works for ~30 seconds and 169 is added again
+2021-11-25 11:53:31	<--	codex (~codex@user/codex) has quit (Client Quit)
+2021-11-25 11:54:20	ocb	there is another 'debian-11.1.0-i386-netinst.iso' install from this morning without X. and the exact same 'interfaces' file works there without issue. i haven't done diff 'dpkg -l' on both systems yet not sure if it would help at all.
+2021-11-25 11:54:59	-->	pingpongball (~pingpongb@user/pingpongball) has joined #debian
+2021-11-25 11:55:30	jelly	so presumably the cause is something that gets installed with lxde
+2021-11-25 11:56:44	jelly	ocb, are you able to pastebin output of "systemctl" and "ps -fe"
+2021-11-25 11:56:52	ocb	sure, moment
+2021-11-25 11:58:39	ocb	https://termbin.com/jwkg
+2021-11-25 11:59:25	-->	via_c7 (~orangeext@user/orangeextract) has joined #debian
+2021-11-25 12:02:13	-->	fcinq (~irc@46.105.34.51) has joined #debian
+2021-11-25 12:02:27	<--	zumba_addict (~zumba_add@2601:240:4500:8320:224:1dff:fec8:64f6) has quit (Quit: Client closed)
+2021-11-25 12:05:10	<--	fcinq (~irc@46.105.34.51) has quit (Remote host closed the connection)
+2021-11-25 12:05:41	-->	fcinq (~irc@46.105.34.51) has joined #debian
+2021-11-25 12:05:42	ocb	it seems it is avahi-daemon adding the IP, i will try to make it -x and see what happens
+2021-11-25 12:06:33	ocb	because even with stopped avahi-daemon the ip 169 and route were added.
+2021-11-25 12:09:27	<--	luuuciano (~luuuciano@user/luuuciano) has quit (Remote host closed the connection)
+2021-11-25 12:11:11	ocb	jelly: re-enabled avahi-daemon, disabled connman and the issue is gone. networking works.
+2021-11-25 12:15:12	jelly	interesting that connman gets installed and enabled with lxde
+2021-11-25 12:16:17	jelly	!win ocb
+2021-11-25 12:16:17	dpkg	Congratulations, ocb!  You have won the US presidency!
+2021-11-25 12:16:45	Khepra	"oh see biden"!
+2021-11-25 12:18:32	Haohmaru	what's connman?
+2021-11-25 12:18:40	ocb	sorry for taking your time jelly. haven't used debian in years. last time i had to manually enable services which i want to run.
+2021-11-25 12:19:08	ocb	network management daemon ^
+2021-11-25 12:19:15	-->	GreyArea (~GreyArea@164.8.7.51.dyn.plus.net) has joined #debian
+2021-11-25 12:24:32	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 240 seconds)
+2021-11-25 12:24:39	ocb	i feel so ashamed.
+2021-11-25 12:24:52	ocb	thank you for the help, have a good day.
+2021-11-25 12:25:07	<--	samuelbernardo (~samuelber@nata01.lip.pt) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-25 12:25:22	-->	samuelbernardo (~samuelber@nata01.lip.pt) has joined #debian
+2021-11-25 12:26:43	-->	i0e (~is0ke3@user/is0ke3) has joined #debian
+2021-11-25 12:27:02	jelly	ocb, no need for shame, it's a support channel and you needed support
+2021-11-25 12:27:17	ocb	:-)
+2021-11-25 12:28:42	jelly	NetworkManager on Debian knows better than to touch devices configured in /e/n/interfaces.  connman apparently doesn't have that kind of exception.
+2021-11-25 12:29:49	jelly	so we have 5+ ways to configure network, ifupdown, NetworkManager, systemd-networkd, connman... I wonder
+2021-11-25 12:29:59	jelly	,v netplan.io
+2021-11-25 12:30:00	judd	Package: netplan.io on amd64 -- buster: 0.95-2; bullseye: 0.101-4; bookworm: 0.103-3; sid: 0.103-3
+2021-11-25 12:30:35	Khepra	and using `ip` manually or in any of hacky .service units or init.d scripts :)
+2021-11-25 12:30:46	Khepra	NoJoke(tm), seen machines set up... like.... that.
+2021-11-25 12:31:11	jelly	if you count that, then you have to count ip and ifconfig+route separately
+2021-11-25 12:31:27	jelly	,v net-tools
+2021-11-25 12:31:28	judd	Package: net-tools on amd64 -- stretch: 1.60+git20161116.90da8a0-1; buster: 1.60+git20180626.aebd88e-1; bookworm: 1.60+git20181103.0eebece-1; bullseye: 1.60+git20181103.0eebece-1; sid: 1.60+git20181103.0eebece-1
+2021-11-25 12:35:26	-->	blei (~blei@209.201.38.106) has joined #debian
+2021-11-25 12:36:31	-->	tesseract (~tesseract@user/tesseract) has joined #debian
+2021-11-25 12:49:08	-->	hqdruxn08_ (~hqdruxn08@cpe-66-68-166-214.austin.res.rr.com) has joined #debian
+2021-11-25 12:50:09	<--	falk689 (~falk689-q@gateway/tor-sasl/falk689) has quit (Ping timeout: 276 seconds)
+2021-11-25 12:51:04	<--	grobi (~grobi@user/grobi) has quit (Quit: "baby i'm bored ♞▀▄▀▄♝▀")
+2021-11-25 12:51:28	-->	grobi (~grobi@user/grobi) has joined #debian
+2021-11-25 12:53:03	-->	driib25 (~driib@185.195.233.168) has joined #debian
+2021-11-25 12:53:37	<--	hqdruxn08__ (~hqdruxn08@cpe-66-68-166-214.austin.res.rr.com) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:54:10	<--	sinaowolabi_ (~SinaOwola@102.134.114.1) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:54:26	<--	berkhan (~berkhan@159.146.43.44) has quit (Quit: Leaving for now. See you next time.)
+2021-11-25 12:54:47	<--	sharperguy (~sharpergu@88.130.217.96) has quit (Ping timeout: 256 seconds)
+2021-11-25 12:54:47	<--	sinaowolabi (~SinaOwola@41.58.61.92) has quit (Ping timeout: 256 seconds)
+2021-11-25 12:55:10	<--	driib2 (~driib@185.65.135.232) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:55:10	--	driib25 is now known as driib2
+2021-11-25 12:56:35	-->	sharperguy (~sharpergu@fnord.cryptophone.de) has joined #debian
+2021-11-25 12:57:57	-->	mauregato (~mauregato@146.red-81-45-26.staticip.rima-tde.net) has joined #debian
+2021-11-25 13:11:15	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-25 13:11:15	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-25 13:11:15	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-25 13:11:15	--	Channel #debian: 742 nicks (1 op, 0 voices, 741 normals)
+2021-11-25 13:11:15	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-25 13:11:17	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-25 13:11:18	-->	dselect (~dselect@debian/bot/dselect) has joined #debian
+2021-11-25 13:11:57	<--	blei (~blei@209.201.38.106) has quit (Quit: Client closed)
+2021-11-25 13:13:22	-->	dez (uid92154@user/dez) has joined #debian
+2021-11-25 13:16:13	<--	cybiko123 (~cybiko123@2601:5c4:4300:ac60:4477:8149:160e:131b) has quit (Remote host closed the connection)
+2021-11-25 13:20:20	<--	Cihan (uid286286@helmsley.irccloud.com) has quit
+2021-11-25 13:22:29	<--	Hiccup (cHoy@user/hiccup) has quit (Remote host closed the connection)
+2021-11-25 13:23:14	-->	gggp (~gggp@li1760-14.members.linode.com) has joined #debian
+2021-11-25 13:26:00	<--	pingpongball (~pingpongb@user/pingpongball) has quit (Quit: Client closed)
+2021-11-25 13:28:38	<--	blackout69 (~blackout6@net-31-156-121-187.cust.vodafonedsl.it) has quit (Quit: Leaving.)
+2021-11-25 13:29:16	-->	han-solo (~hanish@user/han-solo) has joined #debian
+2021-11-25 13:29:31	-->	RhinosF1 (uid339563@miraheze/RhinosF1) has joined #debian
+2021-11-25 13:30:26	-->	p0indexter (~alpha@user/p0indexter) has joined #debian
+2021-11-25 13:32:51	<--	Clarth (~Clarth@68.235.36.109) has quit (Ping timeout: 245 seconds)
+2021-11-25 13:34:28	-->	cadmio (~cadmio@151.25.132.255) has joined #debian
+2021-11-25 13:34:36	cadmio	Hello
+2021-11-25 13:34:42	cadmio	How can I install debug symbols for GLib and GTK?
+2021-11-25 13:36:13	-->	Iamthehuman1 (~noname@user/iamthehuman) has joined #debian
+2021-11-25 13:38:23	-->	NeoCron (~NeoCron@p200300c4cf1ab200146a93e8f94739c9.dip0.t-ipconnect.de) has joined #debian
+2021-11-25 13:38:56	<--	madage (~madage@user/madage) has quit (Remote host closed the connection)
+2021-11-25 13:39:16	-->	madage (~madage@user/madage) has joined #debian
+2021-11-25 13:39:19	wez	cadmio: With apt or apt-get
+2021-11-25 13:40:56	cadmio	there'd be a package like libgtk-3-0-dbgsym
+2021-11-25 13:42:06	wez	apt-cache search glib
+2021-11-25 13:46:23	cadmio	I think it's this package here https://packages.debian.org/sid/libgtk-3-0-dbgsym
+2021-11-25 13:47:19	cadmio	but I can't install it with apt-get
+2021-11-25 13:49:13	<--	i0e (~is0ke3@user/is0ke3) has quit (Quit: WeeChat 3.3)
+2021-11-25 13:54:41	<--	madage (~madage@user/madage) has quit (Remote host closed the connection)
+2021-11-25 13:54:53	-->	madage (~madage@user/madage) has joined #debian
+2021-11-25 13:58:11	wez	what error are you seeing?
+2021-11-25 13:59:58	cadmio	E: Unable to locate package libgtk-3-0-dbgsym
+2021-11-25 14:00:49	PerfDave	,v libgtk-3-0-dbgsym
+2021-11-25 14:00:50	judd	Package: libgtk-3-0-dbgsym on amd64 -- stretch-debug: 3.22.11-1; buster-debug: 3.24.5-1; bullseye-debug: 3.24.24-4; bookworm-debug: 3.24.30-3; sid-debug: 3.24.30-3
+2021-11-25 14:02:25	<--	fcinq (~irc@46.105.34.51) has quit (Ping timeout: 250 seconds)
+2021-11-25 14:02:58	cadmio	maybe I need to add a repository?
+2021-11-25 14:04:01	jelly	!dbgsym
+2021-11-25 14:04:01	dpkg	Packages that end in '*-dbgsym' contain the symbols required for debugging executables and libraries. The dbgsym packages are automatically generated packages that are in a separate archive; add a line like "deb https://deb.debian.org/debian-debug/ bullseye-debug main" to your sources.list. See also https://wiki.debian.org/HowToGetABacktrace
+2021-11-25 14:04:49	-->	i0e (~is0ke3@user/is0ke3) has joined #debian
+2021-11-25 14:04:51	-->	diogenes_ (~diogenes_@user-5-173-99-71.play-internet.pl) has joined #debian
+2021-11-25 14:05:01	<--	dpkg (~dpkg@debian/bot/dpkg) has quit (Quit: buh bye!)
+2021-11-25 14:05:11	jelly	so yes, you need to add a separate repo cadmio ^
+2021-11-25 14:05:44	-->	dpkg (~dpkg@debian/bot/dpkg) has joined #debian
+2021-11-25 14:06:16	-->	nos0u1 (nosoul@gateway/vpn/protonvpn/nosoul) has joined #debian
+2021-11-25 14:06:39	cadmio	in /etc/apt/sources.list right?
+2021-11-25 14:07:16	wez	yup
+2021-11-25 14:07:21	wez	no
+2021-11-25 14:07:57	cadmio	?
+2021-11-25 14:07:58	jelly	sure, or a separate file matching /etc/apt/sources.list.d/*.list, both work
+2021-11-25 14:08:39	wez	yes
+2021-11-25 14:08:43	wez	jelly knows what i meant
+2021-11-25 14:09:24	-->	Aeilxyz (uid391113@user/aeilxyz) has joined #debian
+2021-11-25 14:10:12	cadmio	and to update?
+2021-11-25 14:10:14	cadmio	the repo
+2021-11-25 14:11:36	-->	enoq (~enoq@2a05:1141:1f5:5600:b9c9:721a:599:bfe7) has joined #debian
+2021-11-25 14:12:19	-->	Miles8of9 (~obrien@93-34-146-223.ip50.fastwebnet.it) has joined #debian
+2021-11-25 14:12:51	jelly	cadmio, do an "apt update" every time you add or change something in sources.list
+2021-11-25 14:13:29	-->	silly (~silly@user/silly) has joined #debian
+2021-11-25 14:13:39	<--	silly_ (~silly@user/silly) has quit (Read error: Connection reset by peer)
+2021-11-25 14:14:06	cadmio	I've added "deb https://deb.debian.org/debian-debug/ bullseye-debug main" do I need to add a deb-src too?
+2021-11-25 14:15:06	<--	JJones (~JJones@user/jjones) has quit (Quit: Leaving)
+2021-11-25 14:15:09	jelly	do what dpkg said.
+2021-11-25 14:15:31	<--	magic_ninja (~sparkie1@ip24-255-219-188.ks.ks.cox.net) has quit (Read error: Connection reset by peer)
+2021-11-25 14:16:18	<--	grobi (~grobi@user/grobi) has quit (Quit: "baby i'm bored ♞▀▄▀▄♝▀")
+2021-11-25 14:16:23	-->	magic_ninja (~sparkie1@ip24-255-219-188.ks.ks.cox.net) has joined #debian
+2021-11-25 14:17:34	-->	codex (~codex@user/codex) has joined #debian
+2021-11-25 14:18:12	-->	cruncher (~cruncher@90.68.118.49) has joined #debian
+2021-11-25 14:18:31	<--	p0indexter (~alpha@user/p0indexter) has quit (Quit: ars longa vita brevis)
+2021-11-25 14:26:02	-->	grobi (~grobi@user/grobi) has joined #debian
+2021-11-25 14:28:10	<--	cadmio (~cadmio@151.25.132.255) has quit (Quit: WeeChat 3.0)
+2021-11-25 14:29:30	-->	computerfarmer (~thomas@p200300ca0731e082ddfabc8d986a35ef.dip0.t-ipconnect.de) has joined #debian
+2021-11-25 14:33:54	<--	computerfarmer (~thomas@p200300ca0731e082ddfabc8d986a35ef.dip0.t-ipconnect.de) has quit (Client Quit)
+2021-11-25 14:33:57	<--	|3ean (~|3ean@user/3ean/x-1246637) has quit (Ping timeout: 256 seconds)
+2021-11-25 14:34:39	-->	|3ean (~|3ean@user/3ean/x-1246637) has joined #debian
+2021-11-25 14:35:45	-->	Deknos (~someone@user/menace) has joined #debian
+2021-11-25 14:37:04	<--	cryptikulous (~cryptikul@gateway/tor-sasl/cryptikulous) has quit (Remote host closed the connection)
+2021-11-25 14:37:30	-->	cryptikulous (~cryptikul@gateway/tor-sasl/cryptikulous) has joined #debian
+2021-11-25 14:39:32	<--	mauregato (~mauregato@146.red-81-45-26.staticip.rima-tde.net) has quit (Quit: Client closed)
+2021-11-29 12:02:45	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-29 12:02:45	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-29 12:02:45	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-29 12:02:45	--	Channel #debian: 722 nicks (1 op, 0 voices, 721 normals)
+2021-11-29 12:02:46	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-29 12:02:47	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 12:03:02	-->	akaWolf (~akaWolf@akawolf.org) has joined #debian
+2021-11-29 12:03:54	--	Lord_of_Life_ is now known as Lord_of_Life
+2021-11-29 12:04:06	<--	TheCreeper1 (~TheCreepe@user/thecreeper) has quit (Ping timeout: 245 seconds)
+2021-11-29 12:05:05	<--	dan_berg_pub (2c6463a49d@2604:bf00:561:2000::1c) has quit (Remote host closed the connection)
+2021-11-29 12:05:06	<--	ddevault (e7b4bb6755@sourcehut/staff/ddevault) has quit (Remote host closed the connection)
+2021-11-29 12:05:27	-->	tomg (~tomg@user/tomg) has joined #debian
+2021-11-29 12:05:44	-->	dan_berg_pub (2c6463a49d@2604:bf00:561:2000::1c) has joined #debian
+2021-11-29 12:05:47	-->	ddevault (e7b4bb6755@sourcehut/staff/ddevault) has joined #debian
+2021-11-29 12:10:42	<--	knidos (~knidos@85.98.19.38) has quit (Quit: WeeChat 3.3)
+2021-11-29 12:11:00	-->	yuta (~pi@user/yuta) has joined #debian
+2021-11-29 12:14:29	-->	x-x (~x@user/x-x) has joined #debian
+2021-11-29 12:16:49	-->	ftobich (~ftobich@debian/ftobich) has joined #debian
+2021-11-29 12:20:22	--	NoSQL is now known as SQL
+2021-11-29 12:20:29	<--	luuuciano (~luuuciano@user/luuuciano) has quit (Remote host closed the connection)
+2021-11-29 12:24:23	<--	craigevil (craig@user/craigevil) has quit (Ping timeout: 265 seconds)
+2021-11-29 12:27:39	-->	Brigo (~Brigo@40.181.60.213.dynamic.reverse-mundo-r.com) has joined #debian
+2021-11-29 12:31:18	-->	prompt32 (~kapad@user/kapad) has joined #debian
+2021-11-29 12:31:53	<--	samuelbernardo (~samuelber@nata01.lip.pt) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-29 12:35:11	<--	prompt32 (~kapad@user/kapad) has quit (Client Quit)
+2021-11-29 12:36:06	-->	prompt32 (~kapad@user/kapad) has joined #debian
+2021-11-29 12:37:38	-->	samuelbernardo (~samuelber@nata01.lip.pt) has joined #debian
+2021-11-29 12:39:14	<--	msk (~msk@103.213.213.70) has quit (Ping timeout: 252 seconds)
+2021-11-29 12:41:22	<--	arahael (~arahael@125-209-128-15.tpgi.com.au) has quit (Ping timeout: 256 seconds)
+2021-11-29 12:44:58	<--	Colt (~Colt@user/colt) has quit (Quit: Leaving)
+2021-11-29 12:49:25	<--	prompt32 (~kapad@user/kapad) has quit (Quit: Leaving)
+2021-11-29 12:49:59	-->	prompt32 (~kapad@user/kapad) has joined #debian
+2021-11-29 12:52:52	<--	blackout69 (~blackout6@net-31-156-121-187.cust.vodafonedsl.it) has quit (Quit: Leaving.)
+2021-11-29 12:59:21	-->	Colt (~Colt@user/colt) has joined #debian
+2021-11-29 12:59:31	<--	madage (~madage@user/madage) has quit (Remote host closed the connection)
+2021-11-29 12:59:45	-->	madage (~madage@user/madage) has joined #debian
+2021-11-29 13:01:09	<--	grobi (~grobi@user/grobi) has quit (Quit: "baby i'm bored ♞▀▄▀▄♝▀")
+2021-11-29 13:02:44	-->	lucad111 (~lucad111@51-148-40-1.dsl.zen.co.uk) has joined #debian
+2021-11-29 13:02:57	<--	p_quarles (~pquarles@c-71-231-200-50.hsd1.wa.comcast.net) has quit (Quit: Lawlbai)
+2021-11-29 13:03:56	<--	profitlich1 (~profitlic@p200300e6271ebb00d068438a006dd0b7.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2021-11-29 13:05:48	-->	p_quarles (~pquarles@c-71-231-200-50.hsd1.wa.comcast.net) has joined #debian
+2021-11-29 13:05:49	-->	profitlich (~profitlic@p200300e6271ebb00f59aeb1e608aa1f7.dip0.t-ipconnect.de) has joined #debian
+2021-11-29 13:06:29	Khepra	viric: are kind of answer are you looking for?
+2021-11-29 13:06:50	Khepra	whoops! wrong chan, wrong date, wrong person, wrong keybind...
+2021-11-29 13:07:03	-->	tesseract (~tesseract@user/tesseract) has joined #debian
+2021-11-29 13:07:06	Haohmaru	so much wrong
+2021-11-29 13:08:20	Khepra	Wong... on so many Levels.
+2021-11-29 13:09:51	Khepra	I accidentally arrow up'ed instead of meta shift k up'ed to move teh window
+2021-11-29 13:10:02	<--	dselect (~dselect@debian/bot/dselect) has quit (Quit: ouch... that hurt)
+2021-11-29 13:11:28	-->	dselect (~dselect@debian/bot/dselect) has joined #debian
+2021-11-29 13:11:49	<--	prompt32 (~kapad@user/kapad) has quit (Quit: Leaving)
+2021-11-29 13:12:29	-->	prompt32 (~kapad@user/kapad) has joined #debian
+2021-11-29 13:14:54	-->	stateless (~Thunderbi@2603:9000:7100:dda3:0:946e:fb6:cd71) has joined #debian
+2021-11-29 14:37:01	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-29 14:37:01	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-29 14:37:01	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-29 14:37:01	--	Channel #debian: 723 nicks (1 op, 0 voices, 722 normals)
+2021-11-29 14:37:02	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-29 14:37:03	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 14:38:08	-->	berkhan (~berkhan@159.146.42.78) has joined #debian
+2021-11-29 14:39:04	-->	justache (~justache@user/justache) has joined #debian
+2021-11-29 14:39:04	<--	justache (~justache@user/justache) has quit (Excess Flood)
+2021-11-29 14:42:33	-->	justache (~justache@user/justache) has joined #debian
+2021-11-29 14:43:45	<--	stateless (~Thunderbi@2603:9000:7100:dda3:0:946e:fb6:cd71) has quit (Quit: stateless)
+2021-11-29 14:47:07	<--	justache (~justache@user/justache) has quit (Ping timeout: 256 seconds)
+2021-11-29 14:48:29	Khepra	;)
+2021-11-29 14:52:12	-->	justache (~justache@user/justache) has joined #debian
+2021-11-29 14:52:20	<--	prompt32 (~kapad@user/kapad) has quit (Ping timeout: 252 seconds)
+2021-11-29 14:54:29	-->	ddsys (~ddsys@user/ddsys) has joined #debian
+2021-11-29 14:55:19	<--	x-x (~x@user/x-x) has quit (Quit: leaving)
+2021-11-29 14:55:58	-->	Cihan (uid286286@id-286286.helmsley.irccloud.com) has joined #debian
+2021-11-29 14:55:59	<--	tieinv (~tieinv@user/tieinv) has left #debian (Gone!)
+2021-11-29 14:56:40	<--	justache (~justache@user/justache) has quit (Ping timeout: 264 seconds)
+2021-11-29 15:00:09	berkhan	when preping a Debian package, am I required to paste the whole license text in copyright file or just saying it was BSD-3-Clause will be enough?
+2021-11-29 15:02:16	randall	berkhan: Are you packaging software for the Debian archive? Then there are specific rules outlined in https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+2021-11-29 15:02:45	-->	justache (~justache@user/justache) has joined #debian
+2021-11-29 15:05:22	<--	dan_berg_pub (2c6463a49d@2604:bf00:561:2000::1c) has quit (Remote host closed the connection)
+2021-11-29 15:05:23	<--	ddevault (e7b4bb6755@sourcehut/staff/ddevault) has quit (Remote host closed the connection)
+2021-11-29 15:05:45	-->	dan_berg_pub (2c6463a49d@2604:bf00:561:2000::1c) has joined #debian
+2021-11-29 15:05:47	-->	ddevault (e7b4bb6755@sourcehut/staff/ddevault) has joined #debian
+2021-11-29 15:07:11	<--	justache (~justache@user/justache) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:07:41	-->	luuuciano (~luuuciano@user/luuuciano) has joined #debian
+2021-11-29 15:08:06	-->	vqueiroz (uid340368@id-340368.hampstead.irccloud.com) has joined #debian
+2021-11-29 15:12:01	<--	mosh3k21 (~mosh3k21@user/mosh3k21) has quit (Ping timeout: 268 seconds)
+2021-11-29 15:16:12	-->	justache (~justache@user/justache) has joined #debian
+2021-11-29 15:16:23	-->	cdown_ (~cdown@163.114.131.1) has joined #debian
+2021-11-29 15:19:28	<--	cdown (~cdown@188.214.11.14) has quit (Ping timeout: 264 seconds)
+2021-11-29 15:19:40	--	cdown_ is now known as cdown
+2021-11-29 15:22:10	<--	cruncher (~cruncher@90.68.118.49) has quit (Ping timeout: 260 seconds)
+2021-11-29 15:23:46	-->	Kruppt (~Kruppt@50-111-48-108.drhm.nc.frontiernet.net) has joined #debian
+2021-11-29 15:23:59	-->	tomg_ (~tomg@user/tomg) has joined #debian
+2021-11-29 15:24:10	-->	ddsys_ (~ddsys@user/ddsys) has joined #debian
+2021-11-29 15:24:12	<--	tomg (~tomg@user/tomg) has quit (Read error: Connection reset by peer)
+2021-11-29 15:25:46	<--	matrixbot_bartab (~matrixbot@155.210.31.93.rev.sfr.net) has quit (Read error: Connection timed out)
+2021-11-29 15:57:04	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-11-29 15:57:04	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-11-29 15:57:04	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-11-29 15:57:04	--	Channel #debian: 733 nicks (1 op, 0 voices, 732 normals)
+2021-11-29 15:57:04	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-11-29 15:57:06	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 16:00:03	<--	matrixbot_bartab (~matrixbot@155.210.31.93.rev.sfr.net) has quit (Read error: Connection timed out)
+2021-11-29 16:00:53	<--	locrian9 (~mike@99-153-255-194.lightspeed.irvnca.sbcglobal.net) has quit (Quit: Lost terminal)
+2021-11-29 16:05:05	-->	aderchox_ (~aderchox@5.233.170.5) has joined #debian
+2021-11-29 16:05:12	<--	aderchox_ (~aderchox@5.233.170.5) has left #debian
+2021-11-29 16:05:53	<--	janubo (~janubo@189.1.56.234) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:06:02	-->	aderchox_ (~aderchox@5.233.170.5) has joined #debian
+2021-11-29 16:06:17	<--	s0berage (~s0berage@135-23-213-77.cpe.pppoe.ca) has quit (Quit: Leaving)
+2021-11-29 16:09:54	<--	vxwarlock (~Darkcodex@user/vxwarlock) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:11:42	-->	srv (~cmd@user/srv) has joined #debian
+2021-11-29 16:16:01	<--	zamuro (~Samantha@213.194.146.39) has quit (Remote host closed the connection)
+2021-11-29 16:16:01	<--	john1_ (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Remote host closed the connection)
+2021-11-29 16:16:06	-->	matrixbot_bartab (~matrixbot@155.210.31.93.rev.sfr.net) has joined #debian
+2021-11-29 16:17:06	-->	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-29 16:17:13	-->	prompt32 (~kapad@user/kapad) has joined #debian
+2021-11-29 16:18:39	-->	vakera_pingveno (~dan@107-209-165-75.lightspeed.hstntx.sbcglobal.net) has joined #debian
+2021-11-29 16:19:26	-->	zamuro (~Samantha@213.194.146.39) has joined #debian
+2021-11-29 16:19:32	<--	zamuro (~Samantha@213.194.146.39) has quit (Client Quit)
+2021-11-29 16:23:49	<--	madage (~madage@user/madage) has quit (Remote host closed the connection)
+2021-11-29 16:24:08	-->	madage (~madage@user/madage) has joined #debian
+2021-11-29 16:28:30	<--	grobi (~grobi@user/grobi) has quit (Quit: "baby i'm bored ♞▀▄▀▄♝▀")
+2021-11-29 16:29:58	<--	aderchox_ (~aderchox@5.233.170.5) has quit (Quit: leaving)
+2021-11-29 16:30:15	-->	aderchox (~aderchox@5.233.170.5) has joined #debian
+2021-11-29 16:30:47	<--	srv (~cmd@user/srv) has quit (Quit: Leaving)
+2021-11-29 16:31:39	<--	xet7 (~xet7@user/xet7) has quit (Quit: Leaving)
+2021-11-29 16:32:37	-->	craigevil (craig@user/craigevil) has joined #debian
+2021-11-29 16:32:46	-->	xet7 (~xet7@user/xet7) has joined #debian
+2021-11-29 16:33:31	<--	aderchox (~aderchox@5.233.170.5) has quit (Client Quit)
+2021-11-29 16:33:47	-->	aderchox (~aderchox@5.233.170.5) has joined #debian
+2021-11-29 16:33:59	<--	timahvo1 (~rogue@105.163.2.171) has quit (Remote host closed the connection)
+2021-11-29 16:38:57	<--	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Read error: Connection reset by peer)
+2021-11-29 16:39:06	-->	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has joined #debian
+2021-11-29 16:39:16	<--	varighet (~varighet@d8D875A6A.access.telenet.be) has quit (Ping timeout: 265 seconds)
+2021-11-29 16:40:32	<--	JohnML (~JohnML@ip-37-201-129-30.hsi13.unitymediagroup.de) has quit (Remote host closed the connection)
+2021-11-29 16:41:36	-->	varighet (~varighet@d8D875A6A.access.telenet.be) has joined #debian
+2021-11-29 16:43:28	<--	lsrtl__ (~lsrtl@user/lsrtl) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:43:35	-->	jasper1378 (~jasper137@bras-base-toroon0628w-grc-47-142-112-142-77.dsl.bell.ca) has joined #debian
+2021-11-29 16:43:40	hegemoOn	is there any way to remove a dependancy for a package ?
+2021-11-29 16:43:57	hegemoOn	in buster python-repoze.who is dependant of python-sphinx
+2021-11-29 16:44:10	hegemoOn	doesn't seems to be justified
+2021-11-29 16:44:28	-->	Haudegen (~quassel@91.114.49.10) has joined #debian
+2021-11-29 16:46:27	<--	craigevil (craig@user/craigevil) has quit (Quit: leaving)
+2021-11-29 16:47:40	-->	lsrtl__ (~lsrtl@user/lsrtl) has joined #debian
+2021-11-29 16:49:49	ShorTie	probily just file a bug
+2021-11-29 16:51:12	jelly	,v python-repoze.who
+2021-11-29 16:51:13	judd	Package: python-repoze.who on amd64 -- buster: 2.2-3; stretch: 2.2-3
+2021-11-29 16:51:37	jelly	filing a bug against a package that was already removed from Debian probably isn't going to be too useful
+2021-11-29 16:52:07	-->	zer0bitz (~zer0bitz@dsl-hkibng31-54fabc-15.dhcp.inet.fi) has joined #debian
+2021-11-29 16:57:25	ShorTie	the python-sphinx control files a tweek'n it sounds like, bug
+2021-11-29 16:58:09	-->	AlexLikeRock (~AlexLikeR@200.68.180.191) has joined #debian
+2021-11-29 16:58:54	sussudio	https://tracker.debian.org/pkg/python-repoze.who
+2021-11-29 16:59:35	sussudio	looks like it's been neglected?
+2021-11-29 17:00:29	jelly	I suppose it's gone with the rest of python2-only stuff
+2021-11-29 17:01:03	<--	aderchox (~aderchox@5.233.170.5) has quit (Quit: leaving)
+2021-11-29 17:01:07	-->	AimHere (~David@vpn-fn-230.net.ed.ac.uk) has joined #debian
+2021-11-29 17:01:18	-->	aderchox (~aderchox@5.233.170.5) has joined #debian
+2021-11-29 17:01:46	jelly	,v python3-repoze.who
+2021-11-29 17:01:47	judd	Package: python3-repoze.who on amd64 -- buster: 2.2-3; stretch: 2.2-3; bookworm: 2.2-4; bullseye: 2.2-4; sid: 2.2-4
+2021-11-29 17:01:58	jelly	,depends python3-repoze.who
+2021-11-29 17:01:59	judd	Package python3-repoze.who in bullseye/amd64 -- depends: python3-paste, python3-pkg-resources, python3-sphinx, python3-webob, python3-zope.interface, python3:any.
+2021-11-29 17:02:00	<--	aderchox (~aderchox@5.233.170.5) has quit (Client Quit)
+2021-11-29 17:02:13	jelly	sphinx still there
+2021-11-29 17:02:17	-->	aderchox (~aderchox@5.233.170.5) has joined #debian
+2021-11-29 17:02:24	-->	anessen97 (~Anessen97@host-79-41-170-37.retail.telecomitalia.it) has joined #debian
+2021-11-29 17:02:46	sussudio	sphinx has been there for like 4000 years, it's not going anywhere
+2021-12-02 13:29:40	-->	Velkorq (~Velkorq@user/velkorumx) has joined #debian
+2021-12-02 13:29:40	--	Topic for #debian is "Current release: Debian 11.1 "bullseye" /msg dpkg bullseye | oldstable, Debian 10 /msg dpkg buster | Stretch (Debian 9) is on limited LTS support: /msg dpkg stretch-lts | NO FLOOD: /msg dpkg paste | offtopic: #debian-offtopic | testing/unstable: #debian-next @ irc.oftc.net | Community expectations: http://deb.li/conduct"
+2021-12-02 13:29:40	--	Topic set by themill (~stuart@debian/stuart) on Mon, 11 Oct 2021 05:55:18
+2021-12-02 13:29:40	--	Channel #debian: 749 nicks (1 op, 0 voices, 748 normals)
+2021-12-02 13:29:40	--	PvNotice(ChanServ): Welcome to #Debian. This is a support channel; if you have a question about stable releases of Debian GNU/Linux, ask and we will try our best to answer it. Please do not paste in the channel; use https://paste.debian.net instead. Developers and specialist channels are mostly at irc.debian.org / irc.oftc.net. Community expectations: https://www.debian.org/code_of_conduct
+2021-12-02 13:29:43	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-12-02 13:32:29	<--	Hiccup (cHoy@user/hiccup) has quit (Remote host closed the connection)
+2021-12-02 13:33:01	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:33:36	-->	i0e (~is0ke3@user/is0ke3) has joined #debian
+2021-12-02 13:35:02	-->	jess (~jess@libera/staff/jess) has joined #debian
+2021-12-02 13:37:25	<--	GhostInTheShell (~melkor@chaosgate.angband.eu) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:39:57	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 256 seconds)
+2021-12-02 13:40:01	<--	yagi (~smonichi@user/yagi) has quit (Ping timeout: 256 seconds)
+2021-12-02 13:40:10	-->	GhostInTheShell (~melkor@chaosgate.angband.eu) has joined #debian
+2021-12-02 13:40:26	-->	phylaz (~phylaz@219.92-221-176.customer.lyse.net) has joined #debian
+2021-12-02 13:40:37	-->	yagi (~smonichi@user/yagi) has joined #debian
+2021-12-02 13:41:56	-->	i0e (~is0ke3@user/is0ke3) has joined #debian
+2021-12-02 13:43:17	<--	fcinq (~irc@46.105.34.51) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:51:27	<--	catman (~catman@user/catman) has quit (Quit: WeeChat 3.4-dev)
+2021-12-02 13:56:29	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:58:21	-->	i0e (~is0ke3@user/is0ke3) has joined #debian
+2021-12-02 14:03:33	-->	mad_moses (~mad_moses@2a02:6d40:2348:4601:45fa:7f79:ff69:372d) has joined #debian
+2021-12-02 14:03:45	<--	x-x (~x@user/x-x) has quit (Ping timeout: 256 seconds)
+2021-12-02 14:05:01	<--	dpkg (~dpkg@debian/bot/dpkg) has quit (Quit: buh bye!)

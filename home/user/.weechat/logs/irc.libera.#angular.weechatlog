@@ -1,0 +1,27 @@
+2021-11-24 11:20:36	-->	Velkorq (~Velkorq@user/velkorumx) has joined #angular
+2021-11-24 11:20:36	--	Topic for #angular is "Channel for both AngularJS and Angular | Useful resources: https://ngirc.js.org | Latest releases: 1.8.2 / 13.0.0 | Help Templates: Angular (≥2; https://stackblitz.com/edit/angular-irc-starter-6e3acc) AngularJS (https://stackblitz.com/edit/angularjs-irc-starter) | off topic chat in #angular-ot | Be polite! ☃"
+2021-11-24 11:20:36	--	Topic set by pupskuchen on Thu, 04 Nov 2021 10:03:42
+2021-11-24 11:20:36	--	Channel #angular: 37 nicks (1 op, 0 voices, 36 normals)
+2021-11-24 11:20:36	--	URL for #angular: https://angular.io/
+2021-11-24 11:20:38	--	Channel created on Wed, 19 May 2021 17:40:41
+2021-11-24 11:39:57	-->	Tazy (~Tazmainia@102.182.87.5) has joined #angular
+2021-11-24 14:53:38	<--	desolski (~nick@host86-130-219-192.range86-130.btcentralplus.com) has quit (Quit: Konversation terminated!)
+2021-11-24 15:30:35	-->	han-solo (~hanish@user/han-solo) has joined #angular
+2021-11-24 16:05:32	cxl	Hey all
+2021-11-24 16:05:43	cxl	it's cadabrax, how are you everyone?
+2021-11-24 16:11:23	pupskuchen	sup
+2021-11-24 16:11:38	pupskuchen	you'll probably have more luck in #angular-ot :D
+2021-11-24 16:24:05	cxl	I keep forgetting!
+2021-11-24 16:44:31	<--	letscircleback (~yourg@IN-84-15-189-079.bitemobile.lt) has quit (Ping timeout: 245 seconds)
+2021-11-24 17:01:59	-->	letscircleback (~yourg@IN-84-15-189-199.bitemobile.lt) has joined #angular
+2021-11-24 17:11:01	<--	letscircleback (~yourg@IN-84-15-189-199.bitemobile.lt) has quit (Ping timeout: 256 seconds)
+2021-11-24 17:12:23	<--	hassoon (hassoon@user/hassoon) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:23:16	<--	acidjnk (~acidjnk@p200300d0c7271e75119700900401854f.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2021-11-24 17:33:46	-->	hassoon (hassoon@grape.ircnow.org) has joined #angular
+2021-11-24 17:35:59	-->	letscircleback (~yourg@IN-84-15-189-199.bitemobile.lt) has joined #angular
+2021-11-24 17:41:40	<--	letscircleback (~yourg@IN-84-15-189-199.bitemobile.lt) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:47:54	-->	letscircleback (~yourg@IN-84-15-189-199.bitemobile.lt) has joined #angular
+2021-11-24 17:48:31	<--	vincent (~vincent@user/vincent) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 17:49:41	-->	vincent (~vincent@user/vincent) has joined #angular
+2021-11-24 17:55:21	<--	letscircleback (~yourg@IN-84-15-189-199.bitemobile.lt) has quit (Ping timeout: 250 seconds)
+2021-11-24 18:04:35	-->	letscircleback (~yourg@IN-84-15-189-199.bitemobile.lt) has joined #angular

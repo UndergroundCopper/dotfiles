@@ -1,0 +1,644 @@
+2021-11-24 15:24:02	-->	Velkorq (~Velkorq@user/velkorumx) has joined ##programming
+2021-11-24 15:24:02	--	Topic for ##programming is "Programming/Computer Science Discussion & Community Chat | Be respectful and friendly. Full channel rules: https://libera-programming.github.io | Put pastes in a pastebin, e.g. https://bpaste.net https://ideone.com"
+2021-11-24 15:24:02	--	Topic set by InPhase (~InPhase@openscad/inphase) on Fri, 09 Jul 2021 15:57:37
+2021-11-24 15:24:02	--	Channel ##programming: 663 nicks (2 ops, 0 voices, 661 normals)
+2021-11-24 15:24:04	--	Channel created on Wed, 19 May 2021 15:12:33
+2021-11-24 15:24:05	Velkorq	hey
+2021-11-24 15:24:17	-->	cm007magnum (~Rheanna@61.171.69.141) has joined ##programming
+2021-11-24 15:24:22	Velkorq	do you consider web developers programmers?
+2021-11-24 15:24:40	Velkorq	or is it all markup crap
+2021-11-24 15:24:53	<--	gargus (~user@124.171.34.222) has quit (Quit: Leaving)
+2021-11-24 15:26:00	davve	if they code javascript sure
+2021-11-24 15:26:05	davve	that is indeed programming
+2021-11-24 15:26:07	pyzozord	what do you mean by "programmers"?
+2021-11-24 15:26:17	<--	BravoSlo (BravoSlo@gateway/vpn/airvpn/bravoslo) has quit (Quit: Leaving)
+2021-11-24 15:26:23	pyzozord	or rather what do you mean by "to program"
+2021-11-24 15:26:39	Velkorq	pyzozord: by programmers i mean richard stallman
+2021-11-24 15:26:49	<--	gerwand (~gerwand@89-79-181-52.dynamic.chello.pl) has quit (Quit: Leaving)
+2021-11-24 15:26:55	arahael	depending on context, this is probably gatekeeping?
+2021-11-24 15:26:56	pyzozord	ok than noone is a programmer except him :P
+2021-11-24 15:27:17	<--	taha (~taha@94.177.246.243) has quit (Ping timeout: 256 seconds)
+2021-11-24 15:28:01	marduk	Velkorq: I worked as a "web developer" a couple of jobs back. There's about 3 different groups. One group does all the mockups/design.. they probably don't consider themselve web designers though. Then there's a "front-end" group who mostly work with node, react, stuff like that. They build "components" and then there's the group that I worked in
+2021-11-24 15:28:01	marduk	that mostly worked on backend stuff, some front and (using the afore-mentioned components). I think all but the first I would consider programmers but even the first group didn't consider themselves programmers.
+2021-11-24 15:28:02	Velkorq	i mean pure javascript isn't used that much. they use things like angular and react as frameworks
+2021-11-24 15:28:15	Velkorq	is this considered programming? its not in the usual sense
+2021-11-24 15:29:07	-->	gerwand (~gerwand@89-79-181-52.dynamic.chello.pl) has joined ##programming
+2021-11-24 15:29:42	pyzozord	by wikipedia A computer programmer is a person who creates computer software.
+2021-11-24 15:29:47	-->	BravoSlo (BravoSlo@gateway/vpn/airvpn/bravoslo) has joined ##programming
+2021-11-24 15:30:15	pyzozord	but I'm not sure how much I adhere to that definition since there are generators that let you create computer software and I wouldn't call people who use those programmers
+2021-11-24 15:30:17	<--	tafa (~tafa@tafa.xyz) has quit (Quit: ZNC - https://znc.in)
+2021-11-24 15:30:22	Velkorq	yeah i mean its not like writting c programs
+2021-11-24 15:30:26	-->	tafa (~tafa@tafa.xyz) has joined ##programming
+2021-11-24 15:30:27	marduk	In the end though it I don't think it mattered. All 3 groups were needed.
+2021-11-24 15:30:40	sjmulder	if you write code you're a programmer.. even when it's not the main thing you do
+2021-11-24 15:30:41	pyzozord	for me programmer needs to write code, understand what a variable and a loop is and write lots of them
+2021-11-24 15:30:50	<--	Nselm (~Nselm@p200300d56f0dd27991c77759d1a6858b.dip0.t-ipconnect.de) has quit (Quit: Client closed)
+2021-11-24 15:31:13	pyzozord	maybe not even lots, at least few
+2021-11-24 15:31:44	marduk	I mean the labels didn't matter. But all three groups were necessary. Coz I don't like doing the component stuff. The component people aren't necessarily good at design and the design people aren't necessarily good at coding.
+2021-11-24 15:31:57	-->	hoochmonger (~hoochmong@user/hoochmonger) has joined ##programming
+2021-11-24 15:32:08	sjmulder	what bothers me a bit is the notion that one is either a 'front end' or 'backend person', as if all the programming world is just either end of an HTTP pipe
+2021-11-24 15:32:19	Velkorq	marduk: aren't those groups referred to as developers nowadays?
+2021-11-24 15:33:00	ThePhilgrim	Watching a tutorial on sending data to server with fetch(). The guys says one can use either formData object, or by content type url encoded string. Any pros and cons I should consider between these two options?
+2021-11-24 15:33:29	marduk	Velkorq: I think if you asked the design people they would not say they are developers. Because they spend 90% of their time using wireframing apps. I'm sure all/most of them know a bit of JavaScript/HTML but they don't spend the majority of their time coding.  We never called them developers. We called them "the design team"
+2021-11-24 15:33:30	pyzozord	Velkorq: I think the latest term is "engineers"
+2021-11-24 15:33:37	<--	tafa (~tafa@tafa.xyz) has quit (Remote host closed the connection)
+2021-11-24 15:33:41	-->	rtypo (~alex@user/rtypo) has joined ##programming
+2021-11-24 15:33:46	-->	tafa (~tafa@tafa.xyz) has joined ##programming
+2021-11-24 15:33:54	-->	Bou (sid274843@user/bou) has joined ##programming
+2021-11-24 15:34:06	ThePhilgrim	Sorry guys, meant to post in #javascript
+2021-11-24 15:34:38	<--	Kake (~Kake_Fisk@62.73.202.194) has quit (Ping timeout: 268 seconds)
+2021-11-24 15:34:44	Velkorq	mostly my question comes from all the frameworks i see
+2021-11-24 15:35:04	<--	xtolid (~xtolid@ec2-18-218-218-162.us-east-2.compute.amazonaws.com) has left ##programming
+2021-11-24 15:35:09	Velkorq	like react etc. you write javascript using that, but it doesn't seem like the old way
+2021-11-24 15:35:17	marduk	Ultimately if they want to call themselves developers I don't care. Heck, programmers have been calling themselves "engineers" for years and I don't consider (most of) them engineers. In the end it's just a label. Most of us know what we're talking about.
+2021-11-24 15:36:52	Velkorq	marduk: so when they ask you in every day life, whats your job. how do you refer yourself to
+2021-11-24 15:37:07	-->	inky_ (~inky@5.77.222.175) has joined ##programming
+2021-11-24 15:37:14	<--	rany (~rany@user/rany) has quit (Remote host closed the connection)
+2021-11-24 15:37:39	<--	namkeleser (~namkelese@101.179.132.178) has quit (Quit: Client closed)
+2021-11-24 15:37:57	marduk	Velkorq: I say I work in "IT" or "cyber security". I don't usually say I'm a programmer/developer or whatever because most lay people don't even know what that means anyway lol.
+2021-11-24 15:37:58	pyzozord	my current official title is "Software Developer" so I guess I am one :P
+2021-11-24 15:38:01	marduk	Most people don't know/care.
+2021-11-24 15:38:34	marduk	I think my "official" title doesn't even have "developer", "coder", "programmer" or "engineer" in it.
+2021-11-24 15:38:41	Velkorq	marduk: when they hear IT, do they call you to put the channels on the tv in the correct order?
+2021-11-24 15:38:45	-->	Kake (~Kake_Fisk@62.73.202.194) has joined ##programming
+2021-11-24 15:39:18	marduk	Velkorq: No, I usually ask them to do that lol
+2021-11-24 15:40:33	Bou	"putting channels in the correct order", wow that takes me back... I don't think my TV even lets me reorder channels now
+2021-11-24 15:40:44	marduk	I usually just tell them what industry I'm in, e.g. "education" because that's something they can at least relate to more.
+2021-11-24 15:41:52	marduk	Or the ubiquitous "I work for a dotcom"
+2021-11-24 15:42:08	pyzozord	I say "I just make buttons here"
+2021-11-24 15:42:52	pyzozord	big small, red, green, I can make any button you need
+2021-11-24 15:42:56	marduk	Oh so you work in the textile industry?
+2021-11-24 15:42:58	-->	jamea (~jamea@187.185.190.209) has joined ##programming
+2021-11-24 15:43:11	pyzozord	kind of, there is involvement of webs
+2021-11-24 15:43:21	marduk	Hehehe
+2021-11-24 15:43:59	<--	tafa (~tafa@tafa.xyz) has quit (Changing host)
+2021-11-24 15:43:59	-->	tafa (~tafa@user/tafa) has joined ##programming
+2021-11-24 15:44:38	marduk	A long time ago I got "promoted" to "Networked Systems Security Admin" I told my mother that I got promoted to security. She asked "Oh, so do you get to carry a gun now?"
+2021-11-24 15:45:31	pyzozord	aww :)
+2021-11-24 15:46:53	marduk	These people have no clue! I was at a conference. A Google guy was speaking and he said one day he called in sick. And he was talking to his grandma or something and when she discovered he called in sick she was like "well if you're out who's gonna answer all the questions when someone types in the search box?" or something to that effect.
+2021-11-24 15:47:17	Bou	https://xkcd.com/2501/
+2021-11-24 15:47:17	@bayaz	Title: Average Familiarity
+2021-11-24 15:47:50	pyzozord	hahah
+2021-11-24 15:48:27	marduk	I need to ask my boss if I can request service gun.
+2021-11-24 15:51:52	-->	wovixo (~wovixo@128.104.205.49) has joined ##programming
+2021-11-24 15:52:30	marduk	Maybe I should do that in standup today.
+2021-11-24 15:55:53	pyzozord	I think that guns in hands of software developers are more danagerous than in hands of general population
+2021-11-24 15:56:06	pyzozord	we're crazy and often grumpy
+2021-11-24 15:56:34	-->	wedr (~wedr@pool-108-20-128-8.bstnma.fios.verizon.net) has joined ##programming
+2021-11-24 15:57:20	<--	herjazz (~herjazz@p6758124-ipngn30801marunouchi.tokyo.ocn.ne.jp) has quit (Quit: leaving)
+2021-11-24 15:57:30	-->	saltysoul (~saltysoul@user/sebmont) has joined ##programming
+2021-11-24 15:57:59	<--	saltysoul (~saltysoul@user/sebmont) has quit (Client Quit)
+2021-11-24 15:58:29	--	Guest7530 is now known as viSanctus
+2021-11-24 15:58:31	-->	Nselm (~Nselm@p200300d56f0dd27991c77759d1a6858b.dip0.t-ipconnect.de) has joined ##programming
+2021-11-24 15:58:34	pyzozord	that reminds of that movie I never watched with a normal dude who has a bad day and starts shooting people in mcdonalds
+2021-11-24 15:58:35	<--	viSanctus (~viaSanctu@d5152c2f0.static.telenet.be) has quit (Changing host)
+2021-11-24 15:58:35	-->	viSanctus (~viaSanctu@user/viasanctus) has joined ##programming
+2021-11-24 15:58:41	pyzozord	i need to watch that movie
+2021-11-24 15:58:50	-->	rickybob (rickybob@gateway/vpn/protonvpn/rickybob) has joined ##programming
+2021-11-24 15:59:49	pyzozord	Falling Down
+2021-11-24 16:00:15	pyzozord	They Live was pretty amazing
+2021-11-24 16:00:23	sillymob[m]	it's a good movie
+2021-11-24 16:00:51	<--	viSanctus (~viaSanctu@user/viasanctus) has quit (Quit: Leaving)
+2021-11-24 16:01:03	marduk	I remember a scene from that movie being played in a meeting for some job I had. I can't even remember why they played that movie/scene.
+2021-11-24 16:01:38	sillymob[m]	did you work for an alien syndicate?
+2021-11-24 16:01:58	marduk	No
+2021-11-24 16:02:10	<--	Sauvin (~sauvin@about/linux/staff/sauvin) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:02:11	marduk	I've actually never seen the movie. Just that one scene.
+2021-11-24 16:02:42	marduk	I think they were trying to tell us to "do a good job" or something like that.
+2021-11-24 16:02:51	-->	Sauvin (~sauvin@about/linux/staff/sauvin) has joined ##programming
+2021-11-24 16:03:18	marduk	Like "don't be a lazy McDonald's worker" or something to that effect.
+2021-11-24 16:04:20	marduk	(No offense to McDonald's employees)
+2021-11-24 16:05:19	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined ##programming
+2021-11-24 16:06:59	<--	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:07:18	<--	Enitin (~Enitin@82.102.22.84) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:09:51	-->	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has joined ##programming
+2021-11-24 16:11:03	-->	Enitin (~Enitin@82.102.22.86) has joined ##programming
+2021-11-24 16:11:28	-->	sonny (~sonny@bras-base-london1483w-grc-39-65-95-42-44.dsl.bell.ca) has joined ##programming
+2021-11-24 16:11:38	<--	BUSY (~BUSY@user/busy) has quit (Ping timeout: 268 seconds)
+2021-11-24 16:11:46	<--	cm007magnum (~Rheanna@61.171.69.141) has quit (Remote host closed the connection)
+2021-11-24 16:12:56	<--	Atque (~Atque@user/atque) has quit (Quit: ...)
+2021-11-24 16:13:12	pyzozord	I just want to see a good movie about normal guy who got so pissed off he went berserk. I feel it vert cathartic movie for a lot of programmers
+2021-11-24 16:14:02	pyzozord	god so nice to just be productive for a day
+2021-11-24 16:14:30	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 16:14:30	-->	cm007magnum (~Rheanna@218.78.79.129) has joined ##programming
+2021-11-24 16:14:55	<--	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:15:00	-->	gggpkm (~jack@111.63.44.9) has joined ##programming
+2021-11-24 16:15:53	wedr	Question about Java / Spring web development: Has anyone ever tried doing what is called a "shared user session" between two WAR webapp modules back in 2008-ish era?
+2021-11-24 16:16:06	wedr	This is a throw-in-the-dark-room situation for me
+2021-11-24 16:16:23	wedr	Or throw and see what sticks on the wall situation.
+2021-11-24 16:17:51	<--	cool1337 (~cool333@bzq-79-176-167-143.red.bezeqint.net) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:20:24	[itchyjunk]	I have not.
+2021-11-24 16:20:34	[itchyjunk]	Hope you found that input valuable. :D
+2021-11-24 16:20:35	<--	gggpkm (~jack@111.63.44.9) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:20:51	<--	mattallmill (~mattallmi@ip68-103-132-187.ks.ok.cox.net) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:22:26	-->	rany (~rany@user/rany) has joined ##programming
+2021-11-24 16:24:04	[itchyjunk]	Java question, my professor is using .get on a Array of Points but the docs seems to not tell em where that comes from
+2021-11-24 16:24:21	[itchyjunk]	doh nm
+2021-11-24 16:24:26	[itchyjunk]	i was looking at Points doc
+2021-11-24 16:24:32	[itchyjunk]	i need to look at Array doc :(
+2021-11-24 16:25:03	InPhase	Rubber ducking successful.
+2021-11-24 16:26:49	-->	corn266 (~corn266@ec2-18-217-219-218.us-east-2.compute.amazonaws.com) has joined ##programming
+2021-11-24 16:26:58	-->	synapse26_ (~synapse26@2a09:bac0:23::815:b64) has joined ##programming
+2021-11-24 16:27:09	[itchyjunk]	whats rubber ducking?
+2021-11-24 16:27:16	[itchyjunk]	argh, my eclipse is stil complaining
+2021-11-24 16:27:29	[itchyjunk]	"Cannot invoke get(int) on the array type Point[]"
+2021-11-24 16:27:33	corn266	is there a good standard way of publishing libraries to share across multiple projects?
+2021-11-24 16:27:34	[itchyjunk]	Not sure what that means
+2021-11-24 16:27:48	InPhase	[itchyjunk]: https://en.wikipedia.org/wiki/Rubber_duck_debugging
+2021-11-24 16:27:49	@bayaz	Title: Rubber duck debugging - Wikipedia
+2021-11-24 16:27:58	<--	tia (~sidy@nat.esu3.org) has quit (Quit: Leaving)
+2021-11-24 16:28:09	corn266	your Point[] array doesn't have a get(int) method
+2021-11-24 16:28:14	-->	sidy (~sidy@user/sidy) has joined ##programming
+2021-11-24 16:28:30	corn266	ie, you need to access Point[] array items via index instead of a getter method
+2021-11-24 16:28:32	<--	Klinda (~superleag@user/klinda) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:29:10	-->	reumeth (~reumeth@user/reumeth) has joined ##programming
+2021-11-24 16:29:12	<--	sonny (~sonny@bras-base-london1483w-grc-39-65-95-42-44.dsl.bell.ca) has quit (Quit: Client closed)
+2021-11-24 16:29:30	[itchyjunk]	https://www.geeksforgeeks.org/array-get-method-in-java/
+2021-11-24 16:29:30	@bayaz	Title: Array get() Method in Java - GeeksforGeeks
+2021-11-24 16:29:37	[itchyjunk]	but this suggests Array has a .get() no?
+2021-11-24 16:29:49	corn266	does Point[] have a .get()?
+2021-11-24 16:29:59	-->	BUSY (~BUSY@user/busy) has joined ##programming
+2021-11-24 16:30:15	[itchyjunk]	it's just an array
+2021-11-24 16:30:27	<--	synapse26 (~synapse26@2001:ee0:4fcd:d00:707e:c533:f087:7dd3) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:30:28	[itchyjunk]	if all arrays have .get and Point[] is an array
+2021-11-24 16:30:32	[itchyjunk]	should it have .get() ?
+2021-11-24 16:30:37	[itchyjunk]	shouldn't*
+2021-11-24 16:30:43	corn266	does it inherit from the Array class?
+2021-11-24 16:30:57	-->	cthulchu (~Cthulchu@69-172-160-196.cable.teksavvy.com) has joined ##programming
+2021-11-24 16:31:00	InPhase	[itchyjunk]: Is import java.lang.reflect.Array; at the top of this file?
+2021-11-24 16:31:15	corn266	or is Array an interface which relies on you to implement the .get() method?
+2021-11-24 16:31:29	[itchyjunk]	it's not an interface
+2021-11-24 16:31:47	[itchyjunk]	InPhase, no but i've been using Point[] in the class the whole time
+2021-11-24 16:32:05	[itchyjunk]	Array is inbuild or however you call it afaik
+2021-11-24 16:32:16	-->	Atlas667 (~Atlas667@94.198.42.62) has joined ##programming
+2021-11-24 16:32:29	-->	zaher_ (~zaher@37.48.156.242) has joined ##programming
+2021-11-24 16:33:03	<--	emf (~emf@163.114.132.7) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:34:00	corn266	we recently converted some libraries to conan so we could publish packages usable across projects, but we're worried about the possibility that it's a wrong use case. we are considering vcpackage but we don't know what we don't know regarding it and i'd like to know if there's a standard way for publishing those libraries that we are overlooking
+2021-11-24 16:34:11	<--	zaher (~zaher@37.48.181.231) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:34:22	InPhase	[itchyjunk]: You might be misreading something again.  Go back and check the types carefully up the chain for the thing that get is being called on.
+2021-11-24 16:34:29	corn266	[itchyjunk] you always could just implement the .get() method. it's like 5 lines of code
+2021-11-24 16:35:00	-->	synapse26__ (~synapse26@2001:ee0:4fcd:d00:707e:c533:f087:7dd3) has joined ##programming
+2021-11-24 16:35:24	[itchyjunk]	yes but that doesn't teach me about hte language
+2021-11-24 16:35:31	[itchyjunk]	i'll go back up the chain
+2021-11-24 16:36:13	InPhase	[itchyjunk]: Don't trap yourself in bottom-up assumption errors.  Go up the chain to the origin where an explicit type appears, and then work your way back down before assuming what things are.
+2021-11-24 16:36:25	-->	src (~src@user/src) has joined ##programming
+2021-11-24 16:36:39	Bombe	Arrays in Java do not have a .get() method.
+2021-11-24 16:36:55	corn266	static arrays don't, which Point[] seems like it is
+2021-11-24 16:37:06	Bombe	There are no static arrays in Java.
+2021-11-24 16:37:33	-->	emf (~emf@2620:10d:c091:480::1:8be1) has joined ##programming
+2021-11-24 16:37:33	corn266	String[] tmp = new String[<some num>];
+2021-11-24 16:37:33	[itchyjunk]	wait, arrays don't have .get() ?
+2021-11-24 16:37:35	[itchyjunk]	hmm
+2021-11-24 16:37:45	Bombe	[itchyjunk], not in Java, no.
+2021-11-24 16:37:46	corn266	the fuck you mean there are no static arrays in java
+2021-11-24 16:37:48	[itchyjunk]	what's a static array?
+2021-11-24 16:37:55	Bombe	Unless that method has evaded me for 25 years.
+2021-11-24 16:37:59	Bombe	Possible but unlikely. :)
+2021-11-24 16:38:09	Bombe	corn266, the concept “static array” does not have any meaning in Java.
+2021-11-24 16:38:15	InPhase	[itchyjunk]: Hence, go up the chain and back down.  An assumption error was made.  :)
+2021-11-24 16:38:26	corn266	i can instantiate a static array in java in 2 different ways
+2021-11-24 16:38:35	Bombe	You have static inner classes or methods but not static arrays.
+2021-11-24 16:38:42	<--	sub0 (~bc8165b6@217.29.117.252) has quit (Quit: http://www.okay.uz/ (Ping timeout))
+2021-11-24 16:38:46	<--	synapse26_ (~synapse26@2a09:bac0:23::815:b64) has quit (Ping timeout: 268 seconds)
+2021-11-24 16:38:48	Bombe	You’re probably thinking of static variables that are an array.
+2021-11-24 16:38:53	Bombe	But that’s not a static array.
+2021-11-24 16:39:00	Bombe	Because there’s no such thing.
+2021-11-24 16:39:04	corn266	wait how are you using the term static
+2021-11-24 16:39:29	Bombe	The way the JLS uses it.
+2021-11-24 16:40:00	[itchyjunk]	I definately don't know hwat static array mean and which language does or doesn't have :D
+2021-11-24 16:40:11	[itchyjunk]	but yeah, not using non existant .get will solve this issue
+2021-11-24 16:40:18	corn266	cause if i instantiate a variable by: Type[] var_name = new Type[<some_int>]; then i have var_name which represents an array of some length and type
+2021-11-24 16:40:41	Bombe	corn266, sure but nothing about that is static.
+2021-11-24 16:40:48	[itchyjunk]	so far so good, that's how i declare it too
+2021-11-24 16:40:57	corn266	i can't change the length, so it's static
+2021-11-24 16:41:05	Bombe	That’s not what “static” means in Java.
+2021-11-24 16:41:07	[itchyjunk]	that's the only type of array in java
+2021-11-24 16:41:19	[itchyjunk]	you need List to have things that changes size
+2021-11-24 16:41:22	[itchyjunk]	Like ArrayList
+2021-11-24 16:41:25	corn266	ArrayList and LinkedList are dynamic array types
+2021-11-24 16:41:29	-->	jkk (~jkk@213.180.39.162) has joined ##programming
+2021-11-24 16:41:29	Bombe	You can’t change any array’s length in Java so the classifier “static” is meaningless.
+2021-11-24 16:41:34	[itchyjunk]	no they are lists
+2021-11-24 16:41:35	[itchyjunk]	not arrays
+2021-11-24 16:41:35	Bombe	corn266, no, they are not arrays at all.
+2021-11-24 16:41:52	corn266	i feel like we're splitting hairs
+2021-11-24 16:41:58	Bombe	No, absolutely not.
+2021-11-24 16:41:59	[itchyjunk]	I don't think so
+2021-11-24 16:42:06	Bombe	An array and a List are two _very_ different things.
+2021-11-24 16:42:09	[itchyjunk]	array you can do array[x] = blah
+2021-11-24 16:42:13	[itchyjunk]	with lists, you can't
+2021-11-24 16:42:18	jkk	Bombe yep
+2021-11-24 16:42:20	[itchyjunk]	though i don't know why or how
+2021-11-24 16:42:42	corn266	because an array is indexed by the offset of some multiple of the size of the data type
+2021-11-24 16:42:42	Bombe	[itchyjunk], Java doesn’t offer the necessary syntactic sugar; Kotlin does. :)
+2021-11-24 16:42:51	<--	zwr (~zwr@2804:d45:b966:fb00:8853:5f49:ed58:b880) has quit (Ping timeout: 245 seconds)
+2021-11-24 16:42:53	Bombe	corn266, no?
+2021-11-24 16:42:55	Bombe	Holy crap.
+2021-11-24 16:42:55	corn266	yes?
+2021-11-24 16:43:01	corn266	have you never used an array before?
+2021-11-24 16:43:08	[itchyjunk]	array is contigent memory (block of memory) or somesuch
+2021-11-24 16:43:08	Bombe	The index of an array in Java has nothing to do with the size of the type!
+2021-11-24 16:43:11	[itchyjunk]	Lists are not (i think)
+2021-11-24 16:43:25	-->	Klinda (~superleag@user/klinda) has joined ##programming
+2021-11-24 16:43:34	Bombe	corn266, are you sure you are talking about Java?
+2021-11-24 16:43:36	<--	frost (~frost@user/frost) has quit (Quit: Connection closed)
+2021-11-24 16:43:46	corn266	then how do you calculate the offset of an index in an array of java (not a list)
+2021-11-24 16:43:47	Bombe	Because your ideas about Java are… weird.
+2021-11-24 16:43:58	-->	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has joined ##programming
+2021-11-24 16:44:06	<--	wovixo (~wovixo@128.104.205.49) has quit (Quit: Leaving)
+2021-11-24 16:44:06	Bombe	corn266, why would I need to calculate an index?
+2021-11-24 16:44:19	Bombe	The index is the index. It’s the number of the element I want to have.
+2021-11-24 16:44:29	Bombe	That is completely independent of the size of the type.
+2021-11-24 16:44:36	Bombe	Which you can’t really get in Java, anyway.
+2021-11-24 16:44:45	-->	zaher (~zaher@37.48.145.111) has joined ##programming
+2021-11-24 16:45:00	[itchyjunk]	all this detail is what breaks me :(
+2021-11-24 16:45:05	-->	vinleod (~vdamewood@fedora/vdamewood) has joined ##programming
+2021-11-24 16:45:15	[itchyjunk]	anyways, points[0] is the doh obvious way to do what i want
+2021-11-24 16:45:23	Bombe	Yes, exactly.
+2021-11-24 16:45:27	Bombe	And it works that for every array.
+2021-11-24 16:45:32	[itchyjunk]	turns out my professor changes his array to ArrayList which apparently does have a .get()
+2021-11-24 16:45:46	Bombe	Indeed it does.
+2021-11-24 16:45:48	corn266	because an array is a block of memory instantiated as such that each index is a multiple of the size of the datatype
+2021-11-24 16:45:57	Bombe	corn266, that’s not Java.
+2021-11-24 16:45:57	[itchyjunk]	:< hard to follow along when he changes code in home
+2021-11-24 16:46:07	corn266	yea it's c/c++
+2021-11-24 16:46:09	InPhase	[itchyjunk]: Debugging skills obtained.  Good work.  :)
+2021-11-24 16:46:15	[itchyjunk]	lol, thanks
+2021-11-24 16:46:19	Bombe	corn266, congratulations, nobody ever mentioned that.
+2021-11-24 16:46:23	-->	emf_ (~emf@2620:10d:c090:400::5:2b81) has joined ##programming
+2021-11-24 16:46:25	<--	vdamewood (~vdamewood@fedora/vdamewood) has quit (Read error: Connection reset by peer)
+2021-11-24 16:46:30	Bombe	Also, with C/C++ it’s still not correct.
+2021-11-24 16:46:33	corn266	it's how i've based my understanding of arrays going forward
+2021-11-24 16:46:42	Bombe	You still use index 3, the compiler does the size-of-type math for you.
+2021-11-24 16:46:50	corn266	correct
+2021-11-24 16:46:51	jkk	we could have a bot to assign a point each time person shows master level of understanding
+2021-11-24 16:47:03	Bombe	corn266, that’s literally the opposite of what you said two minutes ago.
+2021-11-24 16:47:08	[itchyjunk]	"The name is a reference to a story in the book The Pragmatic Programmer in which a programmer would carry around a rubber duck and debug their code by forcing themselves to explain it, line-by-line, to the duck"
+2021-11-24 16:47:13	<--	zaher_ (~zaher@37.48.156.242) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:47:14	corn266	it's literally not
+2021-11-24 16:47:31	corn266	i never said that _you_ have to do the size-of-type math
+2021-11-24 16:47:51	<--	emf (~emf@2620:10d:c091:480::1:8be1) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:47:54	Bombe	You said the multiple of the size is part of the index. The index is what you use in the source code.
+2021-11-24 16:48:07	Bombe	Which implies that you have to do the math in source.
+2021-11-24 16:48:13	[itchyjunk]	how do you rubber duck in public?
+2021-11-24 16:48:28	corn266	[itchyjunk] you walk up to random people and start babbling
+2021-11-24 16:48:37	Bombe	[itchyjunk], same way, really. Post the code somewhere, walk them through it.
+2021-11-24 16:48:46	<--	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:49:02	InPhase	jkk: To your earlier comment, I of course do use almost exclusively open source software, where the licenses are much better.  But notably, open source licenses are not EULAs.  They impact distribution, and do not restrict usage, and thus do not actually require any assertion of agreement.  Usage falls under existing rights for a legally obtained copy where obtaining a legal copy is a matter of
+2021-11-24 16:49:08	InPhase	distribution rights.
+2021-11-24 16:49:50	InPhase	jkk: No agreement is required for the distribution aspects of open source licenses to apply either, because you have no right to distribute a copyrighted work unless granted one by a license, so it is only under the terms of that license that you can distribute open source software.
+2021-11-24 16:50:16	corn266	Bombe I think you thought too far into it. That's how it's calculated but you only provide 1 parameter. In either case, the array type doesn't provide the .get() method
+2021-11-24 16:50:36	<--	Nselm (~Nselm@p200300d56f0dd27991c77759d1a6858b.dip0.t-ipconnect.de) has quit (Quit: Client closed)
+2021-11-24 16:51:01	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined ##programming
+2021-11-24 16:51:21	Bombe	corn266, of course it doesn’t. We now know the professor is an idiot who likes to hide important information from the students.
+2021-11-24 16:52:00	corn266	oh, well i just joined to see if y'all knew a good way of publishing libraries for use across multiple projects without having to build them for each project
+2021-11-24 16:52:12	[itchyjunk]	well he updated his code. students who "fall behind" get to copy his code and start from there
+2021-11-24 16:52:23	[itchyjunk]	i haden't fallen behind to most of my code is mine @_@
+2021-11-24 16:52:32	-->	probableUser (~probableU@2a02:8388:1a08:4680:aceb:9cc0:41:ae4a) has joined ##programming
+2021-11-24 16:52:47	-->	bud (~bud@user/bud) has joined ##programming
+2021-11-24 16:54:59	<--	DnzAtWrk (~DnzAtWrk@mobile-access-56737b-238.dhcp.inet.fi) has quit (Read error: Connection reset by peer)
+2021-11-24 16:56:40	<--	viaSanctus (~viaSanctu@user/viasanctus) has quit (Quit: Leaving)
+2021-11-24 16:57:15	<--	amigojapan (uid86330@id-86330.helmsley.irccloud.com) has quit
+2021-11-24 16:57:20	<--	leduyquang753 (~leduyquan@user/leduyquang753) has quit (Quit: Gotta go, see you guys later.)
+2021-11-24 16:58:20	jkk	ideal code . in lol
+2021-11-24 16:58:21	<--	rustyshackleford (uid236774@id-236774.helmsley.irccloud.com) has quit (Quit: Connection closed for inactivity)
+2021-11-24 17:00:19	-->	DnzAtWrk (~DnzAtWrk@mobile-access-56737b-238.dhcp.inet.fi) has joined ##programming
+2021-11-24 17:00:46	<--	rickybob (rickybob@gateway/vpn/protonvpn/rickybob) has quit (Ping timeout: 245 seconds)
+2021-11-24 17:04:39	<--	zaher (~zaher@37.48.145.111) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:06:30	<--	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has quit (Ping timeout: 276 seconds)
+2021-11-24 17:07:06	-->	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has joined ##programming
+2021-11-24 17:08:58	<--	Inline (~Inline@2a02:908:1252:7a80:24d7:18e7:aec6:a72d) has quit (Remote host closed the connection)
+2021-11-24 17:09:19	-->	Inline (~Inline@2a02:908:1252:7a80:7363:e82d:2c27:f888) has joined ##programming
+2021-11-24 17:09:36	-->	Thedarkb-Desktop (~Thedarkb@2001:bb6:b403:e042:5c1f:24ac:2bd1:228) has joined ##programming
+2021-11-24 17:10:58	<--	Inline (~Inline@2a02:908:1252:7a80:7363:e82d:2c27:f888) has quit (Remote host closed the connection)
+2021-11-24 17:11:19	-->	Inline (~Inline@2a02:908:1252:7a80:3233:dedc:9ad8:36c3) has joined ##programming
+2021-11-24 17:11:25	-->	ma123 (~ma123@p549ea82e.dip0.t-ipconnect.de) has joined ##programming
+2021-11-24 17:11:32	ma123	Good Afternoon
+2021-11-24 17:12:08	-->	kveroneau (kveroneau@node1.veroneau.net) has joined ##programming
+2021-11-24 17:13:27	-->	magla (~gelignite@55d4df7d.access.ecotel.net) has joined ##programming
+2021-11-24 17:14:34	-->	ca123 (~ca123@host-87-9-239-246.retail.telecomitalia.it) has joined ##programming
+2021-11-24 17:14:37	ca123	hi
+2021-11-24 17:14:42	ma123	hi
+2021-11-24 17:15:00	ma123	Is there an easy way for a mac user to share their screen with a linux user?
+2021-11-24 17:15:01	-->	password2 (~password8@user/password2) has joined ##programming
+2021-11-24 17:16:28	<--	tafa (~tafa@user/tafa) has quit (Quit: ZNC - https://znc.in)
+2021-11-24 17:16:41	jwillia3	ma123, Zoom.
+2021-11-24 17:16:42	-->	tafa (~tafa@user/tafa) has joined ##programming
+2021-11-24 17:17:01	<--	Inline (~Inline@2a02:908:1252:7a80:3233:dedc:9ad8:36c3) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:17:03	ma123	jwillia3: Can the Linux user Zoom without installing it?
+2021-11-24 17:17:14	jwillia3	ma123, no.
+2021-11-24 17:17:28	ma123	jwillia3: I see. Then it's not an option.
+2021-11-24 17:17:54	corn266	aren't there vs code extensions that let you pair program, or is that only on intelliJ?
+2021-11-24 17:18:17	jwillia3	ma123, livestream on YouTube or Twitch.
+2021-11-24 17:18:38	Jck_true	https://remotedesktop.google.com/?pli=1 ?
+2021-11-24 17:18:39	@bayaz	Title: Chrome Remote Desktop
+2021-11-24 17:20:36	Jck_true	I think you need to install a Chrome plugin on the desktop that is sharing. And you can view from any Chrome browser.
+2021-11-24 17:20:46	Jck_true	But I haven't used it in ages.
+2021-11-24 17:20:47	ma123	Jck_true: That plugin is written by Google?
+2021-11-24 17:21:07	Jck_true	Yeah it's a Google Chrome "feature"
+2021-11-24 17:21:24	sillymob[m]	@ma123: chrome remote desktop
+2021-11-24 17:21:47	-->	AbleBacon (~AbleBacon@user/AbleBacon) has joined ##programming
+2021-11-24 17:21:50	ma123	sillymob[m]: Yeah, Jck_true mentioned it. Thanks.
+2021-11-24 17:21:57	<--	ixil (~ixil@mpp-cp1-natpool-1-005.ethz.ch) has quit (Remote host closed the connection)
+2021-11-24 17:22:09	corn266	google chrome desktop pretty solid, but idk how it is from a privacy standpoint
+2021-11-24 17:22:32	dob1	there is chromium too
+2021-11-24 17:22:41	corn266	erm, sorry i mean chrome remote desktop**
+2021-11-24 17:22:51	dob1	ah sorry
+2021-11-24 17:23:46	ma123	corn266: Thanks
+2021-11-24 17:24:06	sillymob[m]	there is, there is a live coding extension you can get that requires github logins
+2021-11-24 17:24:20	<--	cm007magnum (~Rheanna@218.78.79.129) has quit (Remote host closed the connection)
+2021-11-24 17:24:22	Jck_true	Live Share in Visual Studio
+2021-11-24 17:24:23	sillymob[m]	ma123: google's remote desktop solution just requires chrome....
+2021-11-24 17:24:42	<--	Fauto_ (~dante@gateway/tor-sasl/filohuhum) has quit (Ping timeout: 276 seconds)
+2021-11-24 17:24:46	ma123	sillymob[m]: Does that github thing requires you to install software?
+2021-11-24 17:25:15	sillymob[m]	Jck_true: yes
+2021-11-24 17:25:22	sillymob[m]	it does work with linux/mac/windows
+2021-11-24 17:25:52	corn266	sillymob[m] did you mean to @ma123?
+2021-11-24 17:26:55	corn266	can you not install additional software ma123?
+2021-11-24 17:26:57	sillymob[m]	corn266: privacy not found :)
+2021-11-24 17:27:07	-->	cm007magnum (~Rheanna@61.171.69.141) has joined ##programming
+2021-11-24 17:27:18	Jck_true	I run an instance of code-server (VS Code in the browser) and it actually kinda lets you edit and debug at the same time
+2021-11-24 17:27:18	sillymob[m]	there are self-hosted ways to share screen, but not as easy / convenient as just using google's solution
+2021-11-24 17:27:25	sillymob[m]	so if you want the quick fix, use chrome, if you want to fiddle, DIY
+2021-11-24 17:28:03	corn266	pffft. i just give everyone my admin password and we fight over write locks
+2021-11-24 17:28:36	-->	sonny (~sonny@bras-base-london1483w-grc-39-65-95-42-44.dsl.bell.ca) has joined ##programming
+2021-11-24 17:28:45	-->	Xaldafax (~xaldafax@cpe-198-72-160-101.socal.res.rr.com) has joined ##programming
+2021-11-24 17:28:52	sillymob[m]	ma123: you will need vscode + the live code extension
+2021-11-24 17:28:59	Jck_true	Need to find something for my parents. 3 laptops. All windows starting to get a little painful to remote support
+2021-11-24 17:29:17	sillymob[m]	ma123: i think for any given desktop sharing solution you will need to install "something". unless your client truly can't do anything, in which case you'll have to do youtube or something
+2021-11-24 17:29:24	[itchyjunk]	Oh are we talking computers?
+2021-11-24 17:29:27	corn266	sillymob[m] i don't think we know the entirety of his circumstances
+2021-11-24 17:29:30	[itchyjunk]	I wanted to ask about a good chromebook.
+2021-11-24 17:29:34	[itchyjunk]	Any ideas?
+2021-11-24 17:29:38	corn266	none
+2021-11-24 17:29:55	Jck_true	The Duet 5 just got release with decent reviews I think
+2021-11-24 17:30:02	sillymob[m]	i think so
+2021-11-24 17:30:18	sillymob[m]	"that github thing" = vscode live code?
+2021-11-24 17:30:28	Jck_true	[itchyjunk]: https://www.pcmag.com/reviews/lenovo-ideapad-duet-5-chromebook
+2021-11-24 17:30:29	@bayaz	Title: Lenovo IdeaPad Duet 5 Chromebook Review
+2021-11-24 17:30:48	corn266	has lenovo fixed their backdoor shenanigans?
+2021-11-24 17:32:00	sillymob[m]	Jck_true: I use chrome remote desktop for this exact use-case
+2021-11-24 17:32:05	-->	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has joined ##programming
+2021-11-24 17:32:20	-->	Inline (~Inline@2a02:908:1252:7a80:4ac:ef70:daee:408f) has joined ##programming
+2021-11-24 17:32:25	Jck_true	sillymob[m]: Parental IT support? :P
+2021-11-24 17:32:46	sillymob[m]	one of my fiddle projects would be getting a chromebook and shoving linux on it instead of ChromeOS
+2021-11-24 17:33:05	sillymob[m]	corn266: I doubt it, that's one of their revenue streams :)
+2021-11-24 17:33:07	<--	hoochmonger (~hoochmong@user/hoochmonger) has quit (Read error: Connection reset by peer)
+2021-11-24 17:33:17	[itchyjunk]	qualcomm snapdragon?
+2021-11-24 17:33:22	[itchyjunk]	isn't that a phone processor?
+2021-11-24 17:33:33	[itchyjunk]	how does that compare to say i3 or somesuch that acer and friends offer?
+2021-11-24 17:33:40	Jck_true	[itchyjunk]: Cheap, Good. Pick one
+2021-11-24 17:33:46	corn266	:( i wanted a laptop i could run a few VMs off of but dells are expensive af
+2021-11-24 17:33:48	[itchyjunk]	cheap and good
+2021-11-24 17:34:13	jkk	corn266 which shenanigans?
+2021-11-24 17:34:21	[itchyjunk]	lenovo duet is ~$300 and acer thingy is ~$350
+2021-11-24 17:34:28	sillymob[m]	Jck_true: yes
+2021-11-24 17:34:38	jkk	also if you work you can afford 2,000 + laptop
+2021-11-24 17:34:56	corn266	jkk they backdoored add services to serve you lenovo adds
+2021-11-24 17:35:01	corn266	lemme see if i can find a link
+2021-11-24 17:35:05	jkk	backored how
+2021-11-24 17:35:15	corn266	https://www.techworm.net/2015/08/lenovo-pcs-and-laptops-seem-to-have-a-bios-level-backdoor.html
+2021-11-24 17:35:16	@bayaz	Title: Lenovo PCs and Laptops seem to have a BIOS level backdoor
+2021-11-24 17:35:21	corn266	it's an old article
+2021-11-24 17:35:24	jkk	flush bios
+2021-11-24 17:35:45	-->	zwr (~zwr@2804:d45:b966:fb00:143e:d40:ce1d:b6a4) has joined ##programming
+2021-11-24 17:36:05	jkk	re write lenovo bios software
+2021-11-24 17:36:11	[itchyjunk]	I don't work :D
+2021-11-24 17:36:18	corn266	yea just rewrite lenovo bios
+2021-11-24 17:36:28	corn266	lemme get back to you in 5
+2021-11-24 17:36:36	<--	temy (~tem@wikimedia-commons/pandakekok9) has quit (Remote host closed the connection)
+2021-11-24 17:36:42	[itchyjunk]	wait, lenovo pushes ads?
+2021-11-24 17:36:48	[itchyjunk]	f, not getting lenovo then
+2021-11-24 17:37:00	jkk	chinese
+2021-11-24 17:37:12	jkk	they put backdoors everywhere
+2021-11-24 17:37:26	corn266	US DoD doesn't allow you to use lenovo btw
+2021-11-24 17:37:29	jkk	also jews was hacking apple phones
+2021-11-24 17:37:34	jkk	were
+2021-11-24 17:37:46	jkk	apple is taking them to court
+2021-11-24 17:37:54	[itchyjunk]	Argh, i need to get a fairly decent chromebook for someone.
+2021-11-24 17:37:56	corn266	if you work for them or are a contractor and are using lenovo then you should report it
+2021-11-24 17:38:00	-->	wovixo (~wovixo@128.104.205.49) has joined ##programming
+2021-11-24 17:38:07	corn266	what is their use case [itchyjunk]
+2021-11-24 17:38:07	jkk	corn i think every country backdoors hardware
+2021-11-24 17:38:23	corn266	jkk that's why i use firewalls from every country in sequence
+2021-11-24 17:38:29	jkk	?
+2021-11-24 17:38:33	-->	temy (~tem@wikimedia-commons/pandakekok9) has joined ##programming
+2021-11-24 17:38:38	corn266	it's a joke
+2021-11-24 17:38:38	jkk	??
+2021-11-24 17:38:43	[itchyjunk]	They mostly use webbrowsers to pay for utility and do some basic shopping.
+2021-11-24 17:38:44	jkk	fail
+2021-11-24 17:38:44	<--	wovixo (~wovixo@128.104.205.49) has quit (Read error: Connection reset by peer)
+2021-11-24 17:38:48	[itchyjunk]	They also watch youtube and such.
+2021-11-24 17:38:53	[itchyjunk]	Facebook and such.
+2021-11-24 17:38:57	[itchyjunk]	That's about it
+2021-11-24 17:39:05	corn266	legit any basic model of chromebook will suit them
+2021-11-24 17:39:06	[itchyjunk]	99% browser based usage
+2021-11-24 17:39:30	[itchyjunk]	I tried some old chromebook and it struggled with youtube + a few tabs
+2021-11-24 17:39:34	[itchyjunk]	about 4-5 years ago :s
+2021-11-24 17:39:37	-->	Krufu (~AnCELASTR@186.189.239.67) has joined ##programming
+2021-11-24 17:39:49	corn266	unless they're doing programmer level browser tabs then they should be fine
+2021-11-24 17:39:49	jkk	corn266 why not to use open source router - that in theory should  block calls home
+2021-11-24 17:39:50	[itchyjunk]	That's why i am a bit scared
+2021-11-24 17:39:58	jkk	0 trust policy
+2021-11-24 17:40:01	[itchyjunk]	They have at most 10 tabs
+2021-11-24 17:40:09	--	nullkit is now known as nullkit-
+2021-11-24 17:40:10	<--	gerwand (~gerwand@89-79-181-52.dynamic.chello.pl) has quit (Quit: gerwand)
+2021-11-24 17:40:13	--	nullkit- is now known as nullkit
+2021-11-24 17:40:28	corn266	i have a dhcp and dns server locally hosted, the router i couldn't give 2 shits about
+2021-11-24 17:40:29	[itchyjunk]	what is considered a basic model? does the qualcomm handle all this?
+2021-11-24 17:40:38	sillymob[m]	[itchyjunk]: chromebook, hands down. they will be almost unable to break it. if they do, spend another $150, log in with google and all their settings download
+2021-11-24 17:40:39	jkk	corn266 why
+2021-11-24 17:40:41	sillymob[m]	[itchyjunk]: chromebooks have gotten a lot better
+2021-11-24 17:40:50	-->	zer0bitz (~zer0bitz@2001:2003:f6bc:f00:4c2d:8074:ff8b:55dd) has joined ##programming
+2021-11-24 17:40:52	corn266	why not?
+2021-11-24 17:41:01	sillymob[m]	jkk: no way, what are you going to do, block all HTTPS?
+2021-11-24 17:41:10	[itchyjunk]	sillymob[m], i see. but how do i decide? i have a budget of at most ~$300 since i am a vagrant
+2021-11-24 17:41:14	corn266	i'd rather block shit at the domain name than kill routes to every bull shit thing i found
+2021-11-24 17:41:32	jkk	sillymob filter outgoing traffic by a destination ip
+2021-11-24 17:41:56	sillymob[m]	[itchyjunk]: if there is a store near you, they usually have shelves of chromebooks you can poke and try out
+2021-11-24 17:42:05	jkk	simply leave it on and log all calls home
+2021-11-24 17:42:06	sillymob[m]	jkk: please give me a list of all "bad" IPs so i can block them
+2021-11-24 17:42:26	[itchyjunk]	jesus these are all so expensive https://www.linuxmadesimple.info/2019/08/all-chromebooks-with-arm-processors-in.html
+2021-11-24 17:42:27	@bayaz	Title: All Chromebooks with ARM Processors in 2021
+2021-11-24 17:42:30	<--	temy (~tem@wikimedia-commons/pandakekok9) has quit (Remote host closed the connection)
+2021-11-24 17:42:43	[itchyjunk]	who drops a grand on chromebook?
+2021-11-24 17:42:45	corn266	jkk sillymob[m] just geographically block all those legitimate geographis that are used as proxies
+2021-11-24 17:42:49	[itchyjunk]	i thought the whole point was cheap @_@
+2021-11-24 17:42:52	sillymob[m]	jkk: you will spend all day reading logs and still not conclusively block data from getting out
+2021-11-24 17:42:55	jkk	sillymobs easy - whitelist only libera irc, distro updates servers and duckduck go
+2021-11-24 17:43:00	jkk	wrong
+2021-11-24 17:43:12	corn266	rip my stackoverflow
+2021-11-24 17:43:14	sillymob[m]	jkk: give it a shot and let me know how it goes
+2021-11-24 17:43:33	sillymob[m]	[itchyjunk]: someone who wants a nicer laptop that is tricky to break and easy to update
+2021-11-24 17:44:00	[itchyjunk]	oh they are that durable?
+2021-11-24 17:44:08	[itchyjunk]	lenovo thinkpads used to be durable
+2021-11-24 17:44:17	corn266	120GB storage + 16GB RAM is a waste on a glorified web browser screen
+2021-11-24 17:44:21	sillymob[m]	[itchyjunk]: i mean in the software sense... your average user is unable to brick them. physical durability isn't remarkable.
+2021-11-24 17:44:30	jkk	corn266 to really firewall one have to use an open source hardware or check change of state in software loades
+2021-11-24 17:44:31	[itchyjunk]	ahh
+2021-11-24 17:44:34	sillymob[m]	corn266: depends how many tabs you have open :)
+2021-11-24 17:44:41	[itchyjunk]	what type of processor should i be looking at?
+2021-11-24 17:44:46	corn266	sillymob[m] yea i meant for a non-dev
+2021-11-24 17:44:47	[itchyjunk]	i3 ? Arm? Quallcom ?
+2021-11-24 17:44:56	jkk	0 trust, check everything
+2021-11-24 17:44:59	sillymob[m]	[itchyjunk]: doesn't matter much with chromeOS.
+2021-11-24 17:45:20	sillymob[m]	[itchyjunk]: if your use case is youtube, try to actually put hands on a candidate device and see how it performs.
+2021-11-24 17:45:24	corn266	jkk you're forgetting about the RMF model
+2021-11-24 17:45:35	corn266	you don't have to catch _everything_
+2021-11-24 17:45:41	corn266	just high risk items of interest
+2021-11-24 17:45:59	[itchyjunk]	I don't have a car so going around to look for one is a bit hard ;_;
+2021-11-24 17:46:11	corn266	use your phone...?
+2021-11-24 17:46:12	[itchyjunk]	I was thinking maybe shit gets cheaper around black friday
+2021-11-24 17:46:25	corn266	just call them
+2021-11-24 17:46:32	[itchyjunk]	how does my phone help me put my hands on a candidate device?
+2021-11-24 17:46:52	corn266	oic
+2021-11-24 17:47:04	[itchyjunk]	:D
+2021-11-24 17:47:22	corn266	get a car, then?
+2021-11-24 17:47:37	[itchyjunk]	Maybe in next 10 years.
+2021-11-24 17:47:39	corn266	or tell the end use to do the testing? idfk
+2021-11-24 17:47:45	jkk	rmf is a joke
+2021-11-24 17:48:09	Jck_true	[itchyjunk]: Find a youtube review where they do some browsing. I have a 2016 UX305FA (That's running a 1.4Ghz Intel Core M) And it's more than fast enough for webbrowsing.
+2021-11-24 17:48:09	jkk	it's just a red tape for contractors
+2021-11-24 17:48:09	corn266	rmf seems pretty solid to me
+2021-11-24 17:48:33	corn266	you don't properly know the red tape for contractors if you think rmf is the problem
+2021-11-24 17:48:40	sillymob[m]	[itchyjunk]: it doesn't. do you have a costco or anything nearby you can actually walk into?
+2021-11-24 17:48:41	jkk	corn266 how rmf protects from bios backdoors?
+2021-11-24 17:48:44	jkk	Xd
+2021-11-24 17:49:03	Jck_true	[itchyjunk]: But seriously. Chromebooks. You'll thank yourself with the future support you'll have to give that person
+2021-11-24 17:49:10	corn266	rmf is a contingency plan, not an absolution of attacks
+2021-11-24 17:49:23	jkk	so rmf is a bs
+2021-11-24 17:49:41	<--	trace987 (~trace@ip5b429941.dynamic.kabel-deutschland.de) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:49:45	sillymob[m]	in the case where a user TRULY only needs a browser, a chromebook is a godsend
+2021-11-24 17:49:50	[itchyjunk]	ah says UX305FA is an asus
+2021-11-24 17:49:53	corn266	i honestly think it's a legitimate response to the potentially inevitable
+2021-11-24 17:49:58	jkk	no
+2021-11-24 17:50:01	corn266	yea
+2021-11-24 17:50:04	jkk	no
+2021-11-24 17:50:05	sillymob[m]	for more complex cases, they don't necessarily win
+2021-11-24 17:50:10	Jck_true	[itchyjunk]: Oh right ASUS. Potato Potato
+2021-11-24 17:50:17	[itchyjunk]	i have a costco but no costco card
+2021-11-24 17:50:21	corn266	it seeks to reduce risk by mitigating exploits
+2021-11-24 17:50:23	Jck_true	[itchyjunk]: I got it because it was fanless.
+2021-11-24 17:50:30	[itchyjunk]	lol nice
+2021-11-24 17:50:36	jkk	no gov policy will address - their own covert hardware backdoors
+2021-11-24 17:50:37	[itchyjunk]	did it work well without fan?
+2021-11-24 17:50:40	Jck_true	[itchyjunk]: You just go there to poke one. Feel the build quality and try the browser
+2021-11-24 17:50:44	jkk	it is a res tape
+2021-11-24 17:50:48	jkk	red
+2021-11-24 17:50:50	corn266	again
+2021-11-24 17:50:56	sillymob[m]	[itchyjunk]: if you just need to poke them that's fine. go in, test drive one, leave the store and buy one on your phone.
+2021-11-24 17:50:57	corn266	if you think rmf is the red tape
+2021-11-24 17:50:58	Jck_true	[itchyjunk]: It was a fucking godsend. I love that thing. Dead quiet - always
+2021-11-24 17:51:01	jkk	0 diplomacy in code
+2021-11-24 17:51:02	corn266	then you're sorely mistaken
+2021-11-24 17:51:06	jkk	its 0 or 1
+2021-11-24 17:51:07	sillymob[m]	Jck_true: apparently we both like poking
+2021-11-24 17:51:33	corn266	you legitimately don't understand how the accredidation process works jkk
+2021-11-24 17:51:35	sillymob[m]	jkk: if you are lucky
+2021-11-24 17:51:41	<--	cm007magnum (~Rheanna@61.171.69.141) has quit (Remote host closed the connection)
+2021-11-24 17:51:42	jkk	its a) addressing hardware backdoors or b) not
+2021-11-24 17:51:51	<--	sonny (~sonny@bras-base-london1483w-grc-39-65-95-42-44.dsl.bell.ca) has quit (Quit: Client closed)
+2021-11-24 17:52:08	<--	mrig (~AdiIRC@user/mrig) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2021-11-24 17:52:14	corn266	it _accounts_ for unexpected backdoors or at the very least _expects_ them to occur
+2021-11-24 17:52:23	corn266	so you mitigate the risk through other means
+2021-11-24 17:52:29	sillymob[m]	Intel ME is the only hardware backdoor I need 😁
+2021-11-24 17:52:45	jkk	corn why other means are not in rmf
+2021-11-24 17:52:48	jkk	;)
+2021-11-24 17:52:59	corn266	what does that even mean
+2021-11-24 17:53:03	jkk	see
+2021-11-24 17:53:18	jkk	fake red tape bs
+2021-11-24 17:53:33	[itchyjunk]	Provided i find a model i like, where does one make purchases these days?
+2021-11-24 17:53:34	-->	rickybob (rickybob@gateway/vpn/protonvpn/rickybob) has joined ##programming
+2021-11-24 17:53:39	Thedarkb-Desktop	I bet I could continue working as a backend web developer using a laptop with a Pentium M
+2021-11-24 17:53:43	[itchyjunk]	last thing i bought was 10 years ago on newegg
+2021-11-24 17:53:43	-->	cm007magnum (~Rheanna@61.171.69.141) has joined ##programming
+2021-11-24 17:53:45	jkk	real data security does not beat around a bush
+2021-11-24 17:53:49	[itchyjunk]	do kids still use newegg?
+2021-11-24 17:53:50	sillymob[m]	[itchyjunk]: amazon, newegg
+2021-11-24 17:53:56	[itchyjunk]	ah cool
+2021-11-24 17:54:09	sillymob[m]	[itchyjunk]: i'm not a kid so YMMV
+2021-11-24 17:54:13	jkk	it mitigates hardware backdoors before they can be used
+2021-11-24 17:54:14	corn266	fake red tape bs == beauracracy
+2021-11-24 17:54:23	sillymob[m]	i think they buy stuff on fortnite now while dabbing
+2021-11-24 17:54:23	corn266	that's literally it
+2021-11-24 17:54:31	Jck_true	Thedarkb-Desktop: I tried to do FPGA stuff on it... That was not great. 8-10 minutes for any synthesis
+2021-11-24 17:54:31	Gamah	"real data security" lol
+2021-11-24 17:54:35	jkk	yes
+2021-11-24 17:54:40	jkk	real
+2021-11-24 17:54:45	jkk	unhackable
+2021-11-24 17:54:54	Gamah	"unhackable" lol
+2021-11-24 17:54:57	jkk	yes
+2021-11-24 17:54:58	corn266	yea give me an unhackable machine
+2021-11-24 17:55:01	corn266	fucking dolt
+2021-11-24 17:55:03	jkk	easy
+2021-11-24 17:55:04	Thedarkb-Desktop	Hmm, never messed around with an FPGA.
+2021-11-24 17:55:10	Thedarkb-Desktop	Might be fun to give it a try some day.
+2021-11-24 17:55:10	corn266	it's a welded shut lock
+2021-11-24 17:55:12	jkk	pay and i will ;)
+2021-11-24 17:55:25	Gamah	natanz was air gapped
+2021-11-24 17:55:38	corn266	you need to remove a sizable portion of your head from your ass jkk
+2021-11-24 17:55:48	Thedarkb-Desktop	Find me a lock that can withstand the efforts of an angle grinder and oxy-acetylene...
+2021-11-24 17:55:54	sillymob[m]	corn266: unplug your network cable and desolder wifi + bluetooth
+2021-11-24 17:56:03	corn266	ugh
+2021-11-24 17:56:06	corn266	<.<
+2021-11-24 17:56:10	corn266	>.>
+2021-11-24 17:56:11	<--	hexingb (~hexingb@103.37.140.36) has quit (Ping timeout: 245 seconds)
+2021-11-24 17:56:20	corn266	that didn't happen at my last job
+2021-11-24 17:56:31	jkk	natanz was not hacked they bribed facility workers
+2021-11-24 17:56:42	jkk	israel cant hack much
+2021-11-24 17:56:45	-->	hexingb (~hexingb@2409:8900:2700:f3cf:2d08:1d90:4650:6202) has joined ##programming
+2021-11-24 17:56:56	-->	mrig (~mrig@user/mrig) has joined ##programming
+2021-11-24 17:56:57	jkk	they buy most of tools from usa etc
+2021-11-24 17:57:13	sillymob[m]	jkk: tthat's a hack, just not of software
+2021-11-24 17:57:50	-->	trace987 (~trace@ip5b429941.dynamic.kabel-deutschland.de) has joined ##programming
+2021-11-24 17:57:59	<--	Kake (~Kake_Fisk@62.73.202.194) has quit (Quit: Leaving)
+2021-11-24 17:58:08	jkk	also corn266 it is reasonable to assume that all bios is backdoored unless proven otherwise
+2021-11-24 17:58:16	jkk	and deal with it
+2021-11-24 17:58:27	jkk	not just lenovo
+2021-11-24 17:58:51	-->	extern (~archer@213.137.70.119) has joined ##programming
+2021-11-24 17:58:57	jkk	it could well be that apple itself 'leaked info' to make pegasus
+2021-11-24 17:58:58	mrig	http://users.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf
+2021-11-24 17:58:59	@bayaz	Type: application/pdf Size: 225.0 kB
+2021-11-24 17:59:04	jkk	trust no one
+2021-11-24 17:59:19	-->	adder (~adder@user/adder) has joined ##programming
+2021-11-24 17:59:24	mrig	trust wisely
+2021-11-24 17:59:31	jkk	hello mrig lol
+2021-11-24 17:59:38	mrig	hello jkk :)
+2021-11-24 18:00:08	<--	Inline (~Inline@2a02:908:1252:7a80:4ac:ef70:daee:408f) has quit (Remote host closed the connection)
+2021-11-24 18:00:29	-->	Inline (~Inline@2a02:908:1252:7a80:17ed:d02:7ca7:bad1) has joined ##programming
+2021-11-24 18:00:38	corn266	jkk "it is reasonable to assume a negative"
+2021-11-24 18:00:50	<--	absc (~absc@81.31.144.28) has quit (Quit: Leaving)
+2021-11-24 18:00:53	-->	sonny (~sonny@bras-base-london1483w-grc-39-65-95-42-44.dsl.bell.ca) has joined ##programming
+2021-11-24 18:00:54	corn266	to an extent yes, and to another extent no
+2021-11-24 18:01:01	<--	trevors (~trevors@c-65-96-171-157.hsd1.ma.comcast.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2021-11-24 18:01:21	<--	jwillia3 (~jwillia3_@205.178.41.133) has quit (Quit: Leaving)
+2021-11-24 18:01:27	<--	jamea (~jamea@187.185.190.209) has quit (Ping timeout: 256 seconds)
+2021-11-24 18:01:57	extern	hi GeDaMo
+2021-11-24 18:02:41	-->	Twipply (~Twipply@user/twipply) has joined ##programming
+2021-11-24 18:02:47	-->	coolchrome (~cool333@bzq-79-176-167-143.red.bezeqint.net) has joined ##programming
+2021-11-24 18:03:16	-->	molt (~molt@178-222-245-206.static.isp.telekom.rs) has joined ##programming
+2021-11-24 18:03:46	Jck_true	Thedarkb-Desktop: Don't. It messes with your brain to see what *almost* looks like C code but only every single line of verilog happens at once. :| It's creepy
+2021-11-24 18:04:55	GeDaMo	Hi extern :)
+2021-11-24 18:04:58	jkk	https://www.google.com/amp/s/amp.theguardian.com/world/2021/apr/17/iran-names-suspect-in-natanz-nuclear-plant-attack
+2021-11-24 18:04:59	coolchrome	hexchat users, what does a green circle next to someone's name in users list mean?
+2021-11-24 18:04:59	@bayaz	Title: Iran names suspect in Natanz nuclear plant attack
+2021-11-24 18:05:12	jkk	bribed some dude
+2021-11-24 18:05:18	<--	sonny (~sonny@bras-base-london1483w-grc-39-65-95-42-44.dsl.bell.ca) has left ##programming
+2021-11-24 18:06:13	coolchrome	do you see this message?
+2021-11-24 18:06:27	<--	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 264 seconds)
+2021-11-24 18:06:48	jkk	also there is a uk documentary proving links between some malware producers in russia and state, same as in every country
+2021-11-24 18:06:55	[itchyjunk]	I can't tell if 2 items are identical or not.
+2021-11-24 18:07:01	adder	coolchrome, it means the user is an op
+2021-11-24 18:07:07	<--	sjmulder (~sjmulder@2a02-a443-33e5-1-2350-80b0-9528-295b.fixed6.kpn.net) has quit (Quit: Leaving)
+2021-11-24 18:07:12	[itchyjunk]	https://www.newegg.com/lenovo-flex-5-13iml05/p/2S3-0005-001U6?Description=lenovo%20chromebook%20flex%205&cm_re=lenovo_chromebook%20flex%205-_-2S3-0005-001U6-_-Product
+2021-11-24 18:07:12	@bayaz	Title: Refurbished: Lenovo Chromebook Flex 5 13IML05 13.3" Touch 4GB 128GB, Graphite Grey - Newegg.com
+2021-11-24 18:07:22	[itchyjunk]	https://www.newegg.com/grey-lenovo-chromebook-flex-5-everyday-value/p/1TS-000E-0M543?Description=lenovo%20chromebook%20flex%205&cm_re=lenovo_chromebook%20flex%205-_-1TS-000E-0M543-_-Product
+2021-11-24 18:07:22	@bayaz	Title: Lenovo Chromebook Flex 5 13" Laptop, FHD (1920 x 1080) Touch Display, Intel Core i3-10110U Processor, 4GB DDR4 OnBoard RAM, 64GB SSD, Intel Integrated Graphics, Chrome OS, 82B80006UX, Graphite Grey - Newegg.com
+2021-11-24 18:07:26	coolchrome	adder thx, i assume that means operator? like moderator
+2021-11-24 18:07:37	adder	coolchrome, yes
+2021-11-24 18:07:42	[itchyjunk]	Why is it to hard to tell if they are both the same or not?
+2021-11-24 18:08:06	<--	Buttercat (~Buttercat@user/buttercat) has quit (Ping timeout: 260 seconds)
+2021-11-24 18:08:33	Thedarkb-Desktop	Jck_true, concurrency is confusing enough to begin with...
+2021-11-24 18:08:47	[itchyjunk]	I think they are the same :| infact the cheaper one has more storage somehow
+2021-11-24 18:09:02	-->	zaher (~zaher@37.48.145.111) has joined ##programming
+2021-11-24 18:09:42	<--	penguino (~mrpenguin@user/mrpenguin) has quit (Remote host closed the connection)

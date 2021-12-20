@@ -1,0 +1,16 @@
+2021-11-22 16:52:18	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu-devel
+2021-11-22 16:52:18	--	Topic for #ubuntu-devel is "Archive: Jammy open! | Devel of Ubuntu (not support) | Build failures: http://qa.ubuntuwire.com/ftbfs/ | #ubuntu for support and discussion of Bionic-Impish | If you can't send messages here, authenticate to NickServ first | Patch Pilots:"
+2021-11-22 16:52:18	--	Topic set by vorlon (~vorlon@tunnel256259-pt.tunnel.tserv14.sea1.ipv6.he.net) on Mon, 18 Oct 2021 19:50:15
+2021-11-22 16:52:18	--	Channel #ubuntu-devel: 191 nicks (2 ops, 0 voices, 189 normals)
+2021-11-22 16:52:18	--	PvNotice(ChanServ): Welcome to #ubuntu-devel. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-22 16:52:20	--	Channel created on Wed, 19 May 2021 17:43:59
+2021-11-22 16:52:31	Velkorq	hey i am banned in #ubuntu for some reason. can someone unban me?
+2021-11-22 16:57:39	-->	jmbl (~jmbl@2600:1700:8c60:9f0:1dd8:4ad1:3489:9b62) has joined #ubuntu-devel
+2021-11-22 17:01:19	cpaelzer	ginggs: looking at ldc now
+2021-11-22 17:17:38	oerheks	Velkorq, join #ubuntu-ops for that
+2021-11-22 17:19:09	<--	handsome_feng (uid428458@id-428458.ilkley.irccloud.com) has quit (Quit: Connection closed for inactivity)
+2021-11-22 17:43:13	cpaelzer	ginggs: I see you have ~10 days ago submitted a bunch of no-change-rebuilds for netcdf but this still has various problems
+2021-11-22 17:43:48	cpaelzer	ginggs: like FTBFS of libpdl-netcdf-perl ferret-vis vtk6 - since you did the NCR did you look into those builds fails already?
+2021-11-22 17:44:05	cpaelzer	secondary this also seems to have some autopkgtest fails
+2021-11-22 17:54:43	ginggs	cpaelzer: sure, i can look at those
+2021-11-22 18:02:27	-->	hellsworth (~hellswort@2601:281:d080:72a0:2fad:1033:4b0b:6d71) has joined #ubuntu-devel

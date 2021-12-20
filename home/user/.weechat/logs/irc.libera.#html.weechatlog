@@ -1,0 +1,13 @@
+2021-12-02 13:30:30	-->	Velkorq (~Velkorq@user/velkorumx) has joined #html
+2021-12-02 13:30:30	--	Topic for #html is "HyperText Markup Language | Welcome! | https://html.spec.whatwg.org | #css for styling | No WYSIWYGs | Validate first: http://validator.nu | HTML reference: say e.g. `html div | Paste links, not code: `paste"
+2021-12-02 13:30:30	--	Topic set by lilmonkey (~lilmonkey@user/lilmonkey) on Fri, 21 May 2021 01:47:54
+2021-12-02 13:30:30	--	Channel #html: 61 nicks (0 ops, 0 voices, 61 normals)
+2021-12-02 13:30:32	--	Channel created on Wed, 19 May 2021 15:27:07
+2021-12-02 13:30:32	Velkorq	hello
+2021-12-02 13:30:49	Velkorq	i am using img tag to load an svg and it doesnt work. am i doing something wrong?
+2021-12-02 13:30:52	Velkorq	<img src="../../../assets/images/content-image.svg" alt="content image" width="500" height="600" >
+2021-12-02 13:32:36	-->	jplejacq (~jplejacq@24.224.90.176) has joined #html
+2021-12-02 13:38:20	<--	jeffrey (~jeffrey@145.107.161.215) has quit (Quit: Client quit)
+2021-12-02 13:38:53	<--	guenhael (~Thunderbi@193.52.208.98) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:50:15	<--	WishBoy (~WishBoy@user/wishboy) has quit
+2021-12-02 13:54:34	-->	guenhael (~Thunderbi@aaubervilliers-652-1-290-168.w82-121.abo.wanadoo.fr) has joined #html

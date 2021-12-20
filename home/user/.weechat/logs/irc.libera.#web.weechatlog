@@ -1,0 +1,11 @@
+2021-12-02 13:31:53	-->	Velkorq (~Velkorq@user/velkorumx) has joined #web
+2021-12-02 13:31:53	--	Topic for #web is "General Web Development talk | JS/HTML/CSS problem? Create a testcase on https://jsfiddle.net or https://jsbin.com | #web-social for social chat | Channel Rules https://git.io/v20lo | Use !ops to alert channel ops"
+2021-12-02 13:31:53	--	Topic set by Buck (~Price@86-94-115-100.fixed.kpn.net) on Thu, 20 May 2021 14:56:58
+2021-12-02 13:31:53	--	Channel #web: 130 nicks (1 op, 1 voice, 128 normals)
+2021-12-02 13:31:55	--	Channel created on Wed, 19 May 2021 15:12:42
+2021-12-02 13:32:11	Velkorq	hello i try to load an svg using the img tag. and it doesnt work
+2021-12-02 13:32:12	Velkorq	<img src="../../../assets/images/content-image.svg" alt="content image" width="500" height="600" >
+2021-12-02 13:32:22	Velkorq	should i do it another way?
+2021-12-02 13:54:41	<--	Northwoods (~Northwood@202.14.122.53) has quit (Ping timeout: 256 seconds)
+2021-12-02 14:02:54	Nomikos	check the console for errors
+2021-12-02 14:03:34	Nomikos	you can usually find it with right-click, inspect, and then there's tabs for console and network, those could have hints as to what is wrong

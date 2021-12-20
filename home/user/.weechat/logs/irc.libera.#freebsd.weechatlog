@@ -1,0 +1,127 @@
+2021-11-24 18:05:14	-->	Velkorq (~Velkorq@user/velkorumx) has joined #freebsd
+2021-11-24 18:05:14	--	Topic for #freebsd is "https://wiki.freebsd.org/IRC/Official-FreeBSD-IRC-channels-now-on-Libera-Chat | freebsd/* cloaks available soon | Pastebin: https://bsd.to | Etherpad: https://pad.bsd.to | FreeBSD Live: #freebsd-pulse"
+2021-11-24 18:05:14	--	Topic set by koobs on Sat, 26 Jun 2021 07:41:09
+2021-11-24 18:05:14	--	Channel #freebsd: 617 nicks (0 ops, 0 voices, 617 normals)
+2021-11-24 18:05:16	--	Channel created on Wed, 19 May 2021 16:50:15
+2021-11-24 18:05:17	Velkorq	hey
+2021-11-24 18:05:28	Velkorq	does sway work fine on freebsd?
+2021-11-24 18:05:53	angry_vincent	Yes.
+2021-11-24 18:05:55	<--	xcfa7b (~xcfa7b@user/xcfa7b) has quit (Quit: leaving)
+2021-11-24 18:06:23	Velkorq	angry_vincent: oh thats good. do you know if pulseaudio /pipewire work too?
+2021-11-24 18:06:34	Velkorq	i am mostly a linux user, but wanted to give freebsd a spin
+2021-11-24 18:07:03	angry_vincent	no idea about pulseaudio/pipewire, never used both
+2021-11-24 18:07:36	Velkorq	also do i have to use zfs? i have only on disk, and i want something with less overhead
+2021-11-24 18:07:41	Velkorq	is ufs good to use?
+2021-11-24 18:07:50	Velkorq	one disk^
+2021-11-24 18:08:59	angry_vincent	i also have one disk and use zfs
+2021-11-24 18:09:26	Velkorq	angry_vincent: btw what is freebsd live? i was looking for a liveusb never found
+2021-11-24 18:10:35	Velkorq	angry_vincent: ?
+2021-11-25 11:39:47	-->	Velkorq (~Velkorq@user/velkorumx) has joined #freebsd
+2021-11-25 11:39:47	--	Topic for #freebsd is "https://wiki.freebsd.org/IRC/Official-FreeBSD-IRC-channels-now-on-Libera-Chat | freebsd/* cloaks available soon | Pastebin: https://bsd.to | Etherpad: https://pad.bsd.to | FreeBSD Live: #freebsd-pulse"
+2021-11-25 11:39:47	--	Topic set by koobs on Sat, 26 Jun 2021 07:41:09
+2021-11-25 11:39:47	--	Channel #freebsd: 612 nicks (0 ops, 0 voices, 612 normals)
+2021-11-25 11:39:47	<--	gizmo_ (~gizmo@45.91.125.2) has quit (Read error: Connection reset by peer)
+2021-11-25 11:39:50	Velkorq	hello
+2021-11-25 11:39:58	Velkorq	is there a freebsd liveusb i can try?
+2021-11-25 11:40:03	--	Channel created on Wed, 19 May 2021 16:50:15
+2021-11-25 11:41:11	tao	yes. the installer lets you select live. however it's only command line. it won't boot up into a graphical environment
+2021-11-25 11:42:40	LXGHTNXNG	that's how the system installs by default. It's reasonably friendly if you have even minimal command of Unix, though there's some oddities if you're used to the GNU operating system.
+2021-11-25 11:46:01	-->	gizmo_ (~gizmo@45.91.125.2) has joined #freebsd
+2021-11-25 11:48:05	-->	zostj (~rue@1-162-44-73.dynamic-ip.hinet.net) has joined #freebsd
+2021-11-25 11:50:29	-->	mohabaks (~mohabaks@gateway/tor-sasl/mohabaks) has joined #freebsd
+2021-11-25 11:51:38	Velkorq	tao: can i install a graphical system from command line?
+2021-11-25 11:51:41	Velkorq	aka run it in ram
+2021-11-25 11:51:47	Velkorq	(for hte live version)
+2021-11-25 11:52:35	tao	it might be possible, but i think it would be very difficult. you would probably have to install it properly and then install the other stuff
+2021-11-25 11:53:00	<--	fluffy (~quassel@user/fluffy) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-25 11:53:48	<--	smeeagle (~smeeagle@2a00:23c8:9611:e600:f867:24e8:4d46:7059) has quit (Quit: smeeagle)
+2021-11-25 11:54:37	<--	obale (~obale@user/obale) has quit (Remote host closed the connection)
+2021-11-25 11:54:54	-->	obale (~obale@user/obale) has joined #freebsd
+2021-11-25 11:58:07	<--	AlaskanEmily (~AlaskanEm@user/alaskanemily) has quit (Remote host closed the connection)
+2021-11-25 11:58:49	<--	tsoome (~tsoome@1927-a2cf-d6aa-e56c-2f80-4a40-07d0-2001.sta.estpak.ee) has quit (Read error: Connection reset by peer)
+2021-11-25 11:59:50	-->	tsoome (~tsoome@1927-a2cf-d6aa-e56c-2f80-4a40-07d0-2001.sta.estpak.ee) has joined #freebsd
+2021-11-25 12:04:41	<--	deksar (~deksar@user/deksar) has quit (Remote host closed the connection)
+2021-11-25 12:13:58	-->	adilix (~adilix@31-152-179-158.pat.amp.cosmote.net) has joined #freebsd
+2021-11-25 12:14:01	adilix	hi all
+2021-11-25 12:15:34	-->	paulf (~paulf@lfbn-lyo-1-397-34.w2-7.abo.wanadoo.fr) has joined #freebsd
+2021-11-25 12:18:45	<--	drathir_tor (~drathir@wireguard/tunneler/drathir) has quit (Remote host closed the connection)
+2021-11-25 12:20:28	-->	drathir_tor (~drathir@wireguard/tunneler/drathir) has joined #freebsd
+2021-11-25 12:22:12	<--	tsoome (~tsoome@1927-a2cf-d6aa-e56c-2f80-4a40-07d0-2001.sta.estpak.ee) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2021-11-25 12:23:57	-->	tsoome (~tsoome@1927-a2cf-d6aa-e56c-2f80-4a40-07d0-2001.sta.estpak.ee) has joined #freebsd
+2021-11-25 12:25:18	<--	adilix (~adilix@31-152-179-158.pat.amp.cosmote.net) has left #freebsd (Leaving)
+2021-11-25 12:26:35	-->	re (~user@user/re) has joined #freebsd
+2021-11-25 12:30:24	-->	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has joined #freebsd
+2021-11-25 12:44:18	-->	keiserr (~keiserr@user/keiserr) has joined #freebsd
+2021-11-25 12:45:14	-->	bouncy_ (~ben@user/benoit) has joined #freebsd
+2021-11-25 12:48:11	<--	tsoome (~tsoome@1927-a2cf-d6aa-e56c-2f80-4a40-07d0-2001.sta.estpak.ee) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2021-11-25 12:49:17	-->	tsoome (~tsoome@1927-a2cf-d6aa-e56c-2f80-4a40-07d0-2001.sta.estpak.ee) has joined #freebsd
+2021-11-25 12:53:37	<--	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:54:26	<--	berkhan (~berkhan@159.146.43.44) has quit (Quit: Leaving for now. See you next time.)
+2021-11-25 12:58:36	-->	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has joined #freebsd
+2021-11-29 16:09:03	-->	Velkorq (~Velkorq@user/velkorumx) has joined #freebsd
+2021-11-29 16:09:03	--	Topic for #freebsd is "https://wiki.freebsd.org/IRC/Official-FreeBSD-IRC-channels-now-on-Libera-Chat | freebsd/* cloaks available soon | Pastebin: https://bsd.to | Etherpad: https://pad.bsd.to | FreeBSD Live: #freebsd-pulse"
+2021-11-29 16:09:03	--	Topic set by koobs on Sat, 26 Jun 2021 07:41:09
+2021-11-29 16:09:03	--	Channel #freebsd: 615 nicks (0 ops, 0 voices, 615 normals)
+2021-11-29 16:09:05	--	Channel created on Wed, 19 May 2021 16:50:15
+2021-11-29 16:09:11	Velkorq	is the freshports site officially supported?
+2021-11-29 16:09:24	Velkorq	and are those extra ports? or the same included in the freebsd system?
+2021-11-29 16:09:34	Velkorq	(by extra i mean like the AUR of archlinux)
+2021-11-29 16:09:46	dvl	Velkorq: https://www.freshports.org/about.php
+2021-11-29 16:09:47	VimDiesel	Title: FreshPorts -- About this site
+2021-11-29 16:09:54	<--	vxwarlock (~Darkcodex@user/vxwarlock) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:10:25	dvl	"FreshPorts lists the changes made to the ports tree." - literally, the website shows you the changes being made to the FreeBSD ports repository.
+2021-11-29 16:10:54	Velkorq	dvl: so i am not meant to get ports scripts from there
+2021-11-29 16:11:09	dvl	Velkorq: Correct.
+2021-11-29 16:11:10	Velkorq	it is like package search to see what is available
+2021-11-29 16:11:28	dvl	Velkorq: Yes, that's one use for the website
+2021-11-29 16:11:55	Velkorq	by the way, is it advisable to use freebsd as a desktop system? i am currently using linux (haven't touched windows in decades)
+2021-11-29 16:12:12	dvl	Velkorq: Sure, if you want to. I did for several years.
+2021-11-29 16:12:20	Velkorq	i am mostly interested in performance, and certain software like sway, pipewire etc
+2021-11-29 16:12:41	<--	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:12:50	Velkorq	and maybe some linux tools like docker, kubernetes, vscode, kvm, dot net core
+2021-11-29 16:12:53	Velkorq	for development
+2021-11-29 16:12:57	-->	makr (~textual@92.98.97.153) has joined #freebsd
+2021-11-29 16:13:12	Velkorq	do you do these in a vm? or do you use linux compat layer
+2021-11-29 16:13:29	-->	srv (~cmd@user/srv) has joined #freebsd
+2021-11-29 16:14:23	Velkorq	also i know its not related to the channel, but does openbsd offer better support for laptop hardware as they say?
+2021-11-29 16:14:48	Velkorq	or was it only for thinkpads? i have an hp 250 g6, so i got to see if i can find drivers for it
+2021-11-29 16:19:28	gearnode	Velkorq: I use FreeBSD as desktop system, and I use bhyve to run Linux VM with kubernetes and docker
+2021-11-29 16:19:28	<--	very_sneaky (~very_snea@user/very-sneaky/x-7432109) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:20:16	gearnode	All the workflow run smoothly (I never touch the VM except to perform update)
+2021-11-29 16:21:00	-->	very_sneaky (~very_snea@user/very-sneaky/x-7432109) has joined #freebsd
+2021-11-29 16:24:36	mfiano	Ok this is a weird one. .Xresources Xcursor.theme and Xcursor.size are only affecting non-root windows. The cursor size and icon are tiny on the root window. Any ideas?
+2021-11-29 16:28:02	<--	mikehu44 (~quassel@gateway/vpn/pia/mikehu44-jc) has quit (Ping timeout: 252 seconds)
+2021-11-29 16:30:47	<--	srv (~cmd@user/srv) has quit (Quit: Leaving)
+2021-11-29 16:31:40	-->	lead_pipe23_ (~Lead@38.146.84.50) has joined #freebsd
+2021-11-29 16:31:57	<--	lead_pipe23 (~Lead@38.146.84.50) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:31:57	--	lead_pipe23_ is now known as lead_pipe23
+2021-11-29 16:33:59	<--	timahvo1 (~rogue@105.163.2.171) has quit (Remote host closed the connection)
+2021-11-29 16:34:02	<--	hugohagogo (~cleber@user/hugohagogo) has quit (Ping timeout: 268 seconds)
+2021-11-29 16:38:25	blastwave	has anyone reported any kernel panics with most recent FreeBSD snapshots? I just booted the 25 Nov amd64 disk1.iso image and ran it as a "live dvd" and it kernel panics pretty quickly
+2021-11-29 16:39:16	<--	varighet (~varighet@d8D875A6A.access.telenet.be) has quit (Ping timeout: 265 seconds)
+2021-11-29 16:39:48	Velkorq	gearnode: is bhyve like kvm? does it work straight on the hardware or is it like virtualbox running in the os?
+2021-11-29 16:40:57	Velkorq	also are ports officially supported by the freebsd project? or are like a community effort? similar to AUR in archlinux
+2021-11-29 16:41:16	MelMalik	bit of both
+2021-11-29 16:41:19	gearnode	Velkorq: bhyve is like KVM and it's a kernel module.
+2021-11-29 16:41:26	MelMalik	bhyve is 100% hardware virtualization.
+2021-11-29 16:41:40	-->	varighet (~varighet@d8D875A6A.access.telenet.be) has joined #freebsd
+2021-11-29 16:42:09	gearnode	Velkorq: Port is an official FreeBSD project, but depending in the port is maintain by the community or FreeBSD contributor.
+2021-11-29 16:46:47	-->	slakman (~slakman@112.202.246.24) has joined #freebsd
+2021-11-29 16:46:50	Velkorq	gearnode: are binaries available for all the ports? so i have the choice to either get the binary or compile the port myself right?
+2021-11-29 16:48:01	 *	blastwave wanders away 
+2021-11-29 16:48:07	-->	tsoome (~tsoome@111f-6d0e-d17f-1828-2f80-4a40-07d0-2001.sta.estpak.ee) has joined #freebsd
+2021-11-29 16:48:13	jkc	Velkorq: Yes, via the pkg command.
+2021-11-29 16:51:17	gearnode	Velkorq: all port are available as binary through pkg command but not for all architecture and FreeBSD version. But if you use x86_64 you should be able to install all port via pkg.
+2021-11-29 16:51:56	Velkorq	oh ok thanks
+2021-11-29 16:52:07	-->	zer0bitz (~zer0bitz@dsl-hkibng31-54fabc-15.dhcp.inet.fi) has joined #freebsd
+2021-11-29 16:52:10	Velkorq	will try out freebsd soon. its time :D
+2021-11-29 16:52:20	gearnode	Velkorq: The only pain point of FreeBSD is the WIFI support :/
+2021-11-29 16:52:47	<--	_inky (~inky_@46.36.112.226) has quit (Quit: Leaving.)
+2021-11-29 16:54:19	nimaje	(well, most of the ports there is at least one where licensing doesn't allow binary distribution, so you have to build it yourself and can't just use the pkg build by freebsd infrastructure)
+2021-11-29 16:56:27	-->	ClaudioM (~ClaudioM@c-73-46-231-176.hsd1.fl.comcast.net) has joined #freebsd
+2021-11-29 16:59:40	-->	lead_pipe23_ (~Lead@38.146.84.50) has joined #freebsd
+2021-11-29 17:00:52	<--	lead_pipe23 (~Lead@38.146.84.50) has quit (Ping timeout: 264 seconds)
+2021-11-29 17:00:52	--	lead_pipe23_ is now known as lead_pipe23
+2021-11-29 17:00:53	<--	ganthore (~ganthore@104-190-224-76.lightspeed.rlghnc.sbcglobal.net) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-29 17:01:01	<--	deksar (~deksar@user/deksar) has left #freebsd (Closing Window)
+2021-11-29 17:01:50	-->	ganthore (~ganthore@104-190-224-76.lightspeed.rlghnc.sbcglobal.net) has joined #freebsd

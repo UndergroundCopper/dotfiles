@@ -1,0 +1,10 @@
+2021-11-29 12:17:55	-->	Velkorq (~Velkorq@user/velkorumx) has joined #pipewire
+2021-11-29 12:17:55	--	Topic for #pipewire is "The official channel is on irc.oftc.net #pipewire and https://matrix.to/#/#pipewire:matrix.org | This channel is muted | PipeWire multimedia daemon. See https://pipewire.org"
+2021-11-29 12:17:55	--	Topic set by Ford_Prefect (sid478174@id-478174.uxbridge.irccloud.com) on Thu, 16 Sep 2021 17:21:32
+2021-11-29 12:17:55	--	Channel #pipewire: 80 nicks (1 op, 0 voices, 79 normals)
+2021-11-29 12:17:57	--	Channel created on Wed, 19 May 2021 15:20:41
+2021-11-29 12:18:42	Velkorq	i have a simple setup: hp 250 g6 laptop, with internal speakers and webcam. and want to also connect to external (jbl) bluetooth speaker, using bluez. will pipewire work on my case
+2021-11-29 12:18:42	--	#pipewire: Cannot send to nick/channel
+2021-11-29 12:18:51	Velkorq	also i use sway/wayland
+2021-11-29 12:18:51	--	#pipewire: Cannot send to nick/channel
+2021-11-29 12:19:17	<--	Velkorq (~Velkorq@user/velkorumx) has left #pipewire

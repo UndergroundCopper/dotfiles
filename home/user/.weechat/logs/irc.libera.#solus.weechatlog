@@ -1,0 +1,85 @@
+2021-11-24 11:49:13	-->	Velkorq (~Velkorq@user/velkorumx) has joined #solus
+2021-11-24 11:49:13	--	Topic for #solus is "Solus Support || Off-Topic Channel: #Solus-Chat || Development Channel: #Solus-Dev || Development Tracker: https://dev.getsol.us || Forums: https://discuss.getsol.us || Community Guidelines: https://getsol.us/articles/contributing/community-guidelines/en/ || Solus 4.3 Released: https://getsol.us/2021/07/11/solus-4-3-released/"
+2021-11-24 11:49:13	--	Topic set by JoshStrobl|Live (~JoshStrob@solus/team/JoshStrobl) on Sun, 11 Jul 2021 16:27:32
+2021-11-24 11:49:13	--	Channel #solus: 58 nicks (6 ops, 8 voices, 44 normals)
+2021-11-24 11:49:15	--	Channel created on Wed, 19 May 2021 20:00:21
+2021-11-24 11:49:15	Velkorq	hello
+2021-11-24 11:49:27	Velkorq	can i install solus on a noobs computer?
+2021-11-24 11:49:39	Velkorq	i want something that i don't have to admin, and doesn't break often
+2021-11-24 11:49:59	Velkorq	in general i avoid rolling release distros for this thing, but maybe solus handles things differently than lets say arch
+2021-11-24 11:53:31	<--	donnohwhy (~donnohwhy@tmo-109-231.customers.d1-online.com) has quit (Remote host closed the connection)
+2021-11-24 11:59:26	<--	ur5us_ (~ur5us@203.86.198.200) has quit (Ping timeout: 268 seconds)
+2021-11-24 12:13:03	@Girtablulu	Velkorq we are a curated rolling distro, so we hold back if it may break other stuff, addtionally our goal is never to break something on the user side but solve it on the packaging side so you only have to click the update button and putting any more thoughts into it, but as always no promise :)
+2021-11-24 12:31:32	Velkorq	i think i will go with fedora silverblue
+2021-11-24 12:31:45	Velkorq	seems unbreakable using only overlays. best for a noob
+2021-11-24 12:31:50	Velkorq	so i dont have to admin it
+2021-11-24 12:35:01	@Girtablulu	never used it, so can't say much about it
+2021-11-24 13:27:12	pandark-net	i have recomanded to a freind he use a old linux mint with mate
+2021-11-24 13:27:23	pandark-net	Solus*
+2021-11-24 13:27:49	pandark-net	i he's very noob
+2021-11-24 13:29:30	pandark-net	i have install a dual boot with windows on his laptop and after a few month with both he prefer Linux for stability
+2021-11-24 13:34:27	pandark-net	but his laptop need to be update with a new distro more light
+2021-11-24 13:35:12	pandark-net	i think xfce or budgie for his laptop will be better than mate
+2021-11-24 14:00:14	-->	smoliva (~Plasma-Li@2601:5c2:0:7160::24ce) has joined #solus
+2021-11-24 15:05:55	-->	livingsilver94 (~livingsil@user/livingsilver94) has joined #solus
+2021-11-24 15:05:55	--	Mode #solus [+v livingsilver94] by ChanServ
+2021-11-24 15:07:03	<--	livingsilver94_ (~livingsil@user/livingsilver94) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:17:19	-->	fulmen_aquilae (~fulmen@2001:6a8:3081:6f08:3998:11e3:b31f:cd80) has joined #solus
+2021-11-24 15:47:03	-->	donnowhy (~donnowhy@tmo-109-231.customers.d1-online.com) has joined #solus
+2021-11-24 15:58:38	<--	pandark-net (~pandark@2a01:e0a:a91:10b0:3b52:e66e:7607:f0b7) has quit (Quit: Leaving)
+2021-11-24 16:08:54	<--	fulmen_aquilae (~fulmen@2001:6a8:3081:6f08:3998:11e3:b31f:cd80) has quit (Remote host closed the connection)
+2021-11-24 16:29:49	<--	donnowhy (~donnowhy@tmo-109-231.customers.d1-online.com) has quit (Remote host closed the connection)
+2021-11-24 16:34:47	-->	JeffGila (~jeffrey@ip65-62-176-143.adsl2.static.versatel.nl) has joined #solus
+2021-11-24 16:38:19	<--	JeffGila (~jeffrey@ip65-62-176-143.adsl2.static.versatel.nl) has quit (Client Quit)
+2021-11-24 16:38:50	-->	JeffGila (~jeffrey@ip65-62-176-143.adsl2.static.versatel.nl) has joined #solus
+2021-11-24 16:40:46	<--	JeffGila (~jeffrey@ip65-62-176-143.adsl2.static.versatel.nl) has quit (Client Quit)
+2021-11-24 16:57:08	-->	Vilding (~Vilding@83-233-165-197.cust.bredband2.com) has joined #solus
+2021-11-24 16:58:43	-->	Junglist (~Junglist@user/junglist) has joined #solus
+2021-11-24 17:03:26	<--	waleee (~waleee@2001:9b0:216:8200:d457:9189:7843:1dbd) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:10:17	-->	helium1 (~helium1@91.108.35.128) has joined #solus
+2021-11-24 17:19:58	helium1	hi, question of the day :) Is there a way to detach flatpak app from the terminal? Tried 'nohup <command> &' and 'command & disown'
+2021-11-24 17:21:18	-->	EbonJaeger (~EbonJaege@2603-7080-3a42-df00-78f0-d4ed-8ec4-885f.res6.spectrum.com) has joined #solus
+2021-11-24 17:21:18	--	Mode #solus [+v EbonJaeger] by ChanServ
+2021-11-24 17:21:23	-->	fulmen_aquilae (~fulmen@236.195-65-87.adsl-dyn.isp.belgacom.be) has joined #solus
+2021-11-24 17:28:23	@Girtablulu	iirc it was disown command
+2021-11-24 17:28:51	+TraceyC|afk	yeah
+2021-11-24 17:29:17	+TraceyC|afk	But there's your "google that" for the day ;) "How to detach from process"
+2021-11-24 17:29:21	--	TraceyC|afk is now known as TraceyC
+2021-11-24 17:29:39	helium1	maybe it doesn't work with flatpak? 🤷️
+2021-11-24 17:39:09	+TraceyC	What are you trying to accomplish?
+2021-11-24 17:42:31	helium1	with 'disown &' in the end it kinda works! I can press CTRL+D and the app is still running.
+2021-11-24 17:42:49	+TraceyC	Why do you need to start it from command line?
+2021-11-24 17:44:08	helium1	Oh, just testing aliases for fun :)
+2021-11-24 17:45:54	Vilding	I thought Solus wasn't able to open terminal consoles with ctrl+alt+f1 to f6. Turns out I put my pinky finger on shift instead of ctrl...
+2021-11-24 17:46:26	helium1	lol
+2021-11-24 17:47:23	Vilding	I can't find any information about why ctrl+alt+f1 seems to be busy or not open the same way the rest of the consoles do, is there some reason for that? Any search terms I might not have used?
+2021-11-24 17:49:26	+TraceyC	That's not just on Solus. Haven't ever been bothered enough to find out why. I use Ctrl Alt F2
+2021-11-24 17:49:30	<--	be1 (~be1@2a01:e0a:238:9d0:74de:c369:d083:6d69) has quit (Quit: be1)
+2021-11-24 17:50:44	helium1	ctrl+alt+f1 - is just a blinking cursor for me
+2021-11-24 17:50:46	Vilding	Hmm...
+2021-11-24 17:55:07	helium1	Why do you need Ctrl Alt F2 TraceyC? :)
+2021-11-24 17:56:42	Vilding	Oh! I think I found an answer on Google Books.
+2021-11-24 17:57:02	Vilding	"alt+ctrl+f1
+2021-11-24 17:57:11	+TraceyC	For the times you need a terminal not in X
+2021-11-24 17:57:56	<--	Paphnutiy (~Solus@109.251.148.234) has quit (Quit: Konversation terminated!)
+2021-11-24 18:00:20	helium1	what is the answer Vilding ?
+2021-11-24 18:02:14	Vilding	alt+ctrl+f1 takes you to /dev/tty1, alt+f2 to dev/tty2 etc. X server takes over a free virtual console unless directed to use a specific console, so I guess it defaults to /dev/tty1 in distros where it is initiated before the login process in the other consoles?
+2021-11-24 18:02:25	Vilding	I'm not sure I understand it correctly
+2021-11-24 18:02:31	Vilding	https://books.google.se/books?id=fP5WBQAAQBAJ&pg=PA52&lpg=PA52&dq=linux+ctrl+alt+f1+busy&source=bl&ots=PaQt2WO-Rd&sig=ACfU3U2PKxIaDMvRUZcam_wck897NMdTPA&hl=sv&sa=X&ved=2ahUKEwiP0MOKrbH0AhVtpYsKHdNbBcUQ6AF6BAgdEAM#v=onepage&q=linux%20ctrl%20alt%20f1%20busy&f=false
+2021-11-24 18:02:31	@Narwhal	[ How Linux Works, 2nd Edition: What Every Superuser Should Know - Brian Ward - Google Böcker ]
+2021-11-24 18:02:43	Vilding	That's the book
+2021-11-24 18:02:46	+TraceyC	Ah, thanks Vilding .
+2021-11-24 18:02:47	Velkorq	can i use solus and upgrade my system once every few months?
+2021-11-24 18:02:53	Velkorq	usually rolling distros break if i do that
+2021-11-24 18:03:16	Velkorq	like in arch i can get circular dependencies after a while
+2021-11-24 18:03:17	+TraceyC	It's generally advised to update more often than that. Ideally once a week when updates come out
+2021-11-24 18:03:49	Velkorq	i see thanks
+2021-11-24 18:03:51	+TraceyC	There's no hard & fast rule that I know of, but your chances of things breaking go up the longer you go between updates. If someone has experience with updating less frequently hopefully they can chime in
+2021-11-24 18:04:34	Velkorq	i wanted to install solus on a noob's pc, its doubtful they will update often
+2021-11-24 18:04:51	Velkorq	might should something more release based like debian
+2021-11-24 18:04:54	Velkorq	choose
+2021-11-24 18:04:54	+TraceyC	Probably better off with a distro that's geared toward that
+2021-11-24 18:05:24	-->	waleee (~waleee@2001:9b0:216:8200:d457:9189:7843:1dbd) has joined #solus
+2021-11-24 18:07:01	helium1	I have updated >1 year without updates laptop. "Almost" no problems. But it has nothing to backup, so I could easly reinstalled :)
+2021-11-24 18:09:20	<--	Vilding (~Vilding@83-233-165-197.cust.bredband2.com) has quit (Read error: Connection reset by peer)
+2021-11-24 18:09:25	-->	Vilding_ (~Vilding@83-233-165-197.cust.bredband2.com) has joined #solus

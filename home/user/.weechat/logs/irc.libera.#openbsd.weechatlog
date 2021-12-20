@@ -1,0 +1,91 @@
+2021-11-25 11:40:05	-->	Velkorq (~Velkorq@user/velkorumx) has joined #openbsd
+2021-11-25 11:40:05	--	Topic for #openbsd is "https://www.openbsd.org | EuroBSDcon Videos: https://www.youtube.com/c/EuroBSDcon/videos | FAQ: https://www.openbsd.org/faq | Can't speak? /msg nickserv register | 3+ line pastes? use a paste site like https://clbin.com | Political discussions and other incendiary things are unwelcome."
+2021-11-25 11:40:05	--	Topic set by phy1729 on Thu, 14 Oct 2021 17:56:53
+2021-11-25 11:40:05	--	Channel #openbsd: 590 nicks (0 ops, 0 voices, 590 normals)
+2021-11-25 11:40:07	--	Channel created on Wed, 19 May 2021 15:12:34
+2021-11-25 11:40:09	Velkorq	hello
+2021-11-25 11:40:30	Velkorq	is there an openbsd liveusb i can try?
+2021-11-25 11:40:36	Velkorq	also does sway work on openbsd?
+2021-11-25 11:42:13	<--	metavoid (~80blocks@user/metavoid) has quit (Ping timeout: 250 seconds)
+2021-11-25 11:43:28	-->	turkja (~Thunderbi@85-76-8-7-nat.elisa-mobile.fi) has joined #openbsd
+2021-11-25 11:44:42	pardis	there's no live image with X, but you can install OpenBSD to a USB stick
+2021-11-25 11:44:47	IcePic	one can install to a usb stick and boot from that
+2021-11-25 11:44:56	pardis	Wayland is a WIP, so currently sway will not work
+2021-11-25 11:45:33	pardis	but you can use i3
+2021-11-25 11:49:02	LXGHTNXNG	similar such user in #freebsd
+2021-11-25 11:52:19	Velkorq	pardis: oh but it seems to work in freebsd, i thought the packages are common between the two
+2021-11-25 11:53:04	pardis	that seems like a fairly terrible assumption to make
+2021-11-25 11:53:32	Velkorq	doesn't it port over packages from freebsd ports?
+2021-11-25 11:53:43	pardis	no
+2021-11-25 11:53:52	Velkorq	thats what i thought. also will not the usb installation be slow?
+2021-11-25 11:53:57	LXGHTNXNG	the projects split in the 90s
+2021-11-25 11:54:03	Velkorq	it was super slow when i tried it for linux distros
+2021-11-25 11:54:23	pardis	if you use a slow USB device, you'll have slow I/O, but that would be true for a live image as well
+2021-11-25 11:54:35	Velkorq	wanted to try out the system but dont want to partition my drive or change grub etc
+2021-11-25 11:55:00	pardis	you can just run it in a VM
+2021-11-25 11:55:01	Velkorq	can i just get an external hdd/ssd that connects with usb3.0 and install there? won't this be as fast as the internal ssd?
+2021-11-25 11:55:15	LXGHTNXNG	it won't
+2021-11-25 11:55:17	Velkorq	i wanted a bare metal install
+2021-11-25 11:55:18	LXGHTNXNG	but it'll be okay
+2021-11-25 11:55:30	LXGHTNXNG	also you could plug a blank ssd internally if on a workstation
+2021-11-25 11:55:49	Velkorq	its a laptop, switching drives requires me to unscrew the entire bottom part
+2021-11-25 11:56:14	LXGHTNXNG	super sigh
+2021-11-25 11:56:29	LXGHTNXNG	back in my day... *sounds like an old grandpa*
+2021-11-25 11:56:56	Velkorq	yes they changed them the last couple of years. my old laptops had a small door to get access to the hdd
+2021-11-25 11:56:58	Velkorq	or the ram
+2021-11-25 11:57:18	Velkorq	they seem to follow mac logic now, to make it as hard as possible
+2021-11-25 11:58:07	<--	AlaskanEmily (~AlaskanEm@user/alaskanemily) has quit (Remote host closed the connection)
+2021-11-25 11:58:21	-->	horseface (~horseface@user/horseface) has joined #openbsd
+2021-11-25 12:00:30	<--	digibit (~digibit@dynamic-093-135-191-160.93.135.pool.telefonica.de) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:04:41	<--	deksar (~deksar@user/deksar) has quit (Remote host closed the connection)
+2021-11-25 12:11:47	<--	sheikhshard (~Rheanna@218.78.104.50) has quit (Remote host closed the connection)
+2021-11-25 12:14:47	-->	sheikhshard (~Rheanna@218.78.53.13) has joined #openbsd
+2021-11-25 12:18:45	<--	drathir_tor (~drathir@wireguard/tunneler/drathir) has quit (Remote host closed the connection)
+2021-11-25 12:19:42	<--	horseface (~horseface@user/horseface) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:20:28	-->	drathir_tor (~drathir@wireguard/tunneler/drathir) has joined #openbsd
+2021-11-25 12:21:06	<--	gbe (~gbe@p4feb8ecb.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:22:35	-->	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has joined #openbsd
+2021-11-25 12:26:35	-->	re (~user@user/re) has joined #openbsd
+2021-11-25 12:29:54	<--	shtirlic_ (~shtirlic@178.70.129.152) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:30:49	-->	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has joined #openbsd
+2021-11-25 12:31:23	-->	shtirlic (~shtirlic@178.70.129.152) has joined #openbsd
+2021-11-25 12:32:51	Voyager_MP	/usr/local/lib/libisc-9.16.23.so: undefined symbol '__emutls_get_address' host is failing
+2021-11-25 12:33:09	renaud	mismatched packages?
+2021-11-25 12:33:43	Voyager_MP	how do I find in which package that lib is
+2021-11-25 12:35:05	<--	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2021-11-25 12:35:25	renaud	that's isc-bind
+2021-11-25 12:35:57	-->	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has joined #openbsd
+2021-11-25 12:36:07	renaud	just try to do a "pkg_add -u", it might solve your issue
+2021-11-25 12:36:20	-->	koon (johan@91.231.153.182) has joined #openbsd
+2021-11-25 12:36:25	Voyager_MP	did that, did not helped
+2021-11-25 12:36:54	renaud	I suppose you are on -current
+2021-11-25 12:37:10	renaud	this kind of thing can happen on -current
+2021-11-25 12:37:24	Han	ldd /usr/local/lib/libisc-9.16.23.so  and then look for which library that library is missing.
+2021-11-25 12:38:10	Voyager_MP	Yes I'm, there is no lib missing
+2021-11-25 12:38:33	-->	mononote (~mononote@user/mononote) has joined #openbsd
+2021-11-25 12:38:42	Voyager_MP	isc-bind is broken, isc-bind-9.16.23v3 and isc-bind-9.16.23v3-geoip
+2021-11-25 12:39:19	Lucas6023	> host is failing
+2021-11-25 12:39:23	Voyager_MP	removeing the package solved the host problem, since I dont use bind anymore, there is no need anyway
+2021-11-25 12:39:31	Lucas6023	host as in /usr/bin/host ? it shouldn't be using a lib from ports
+2021-11-25 12:39:41	pardis	no, isc-bind provides its own implementation of host
+2021-11-25 12:39:47	<--	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2021-11-25 12:39:56	pardis	so this can happen if you override the default $PATH for some silly reason
+2021-11-25 12:40:08	pardis	(OpenBSD's default $PATH will put /usr/bin before /usr/local/bin)
+2021-11-25 12:40:24	Voyager_MP	exactly
+2021-11-25 12:40:30	Lucas6023	mhm, that's what I wanted to get to
+2021-11-25 12:41:01	Voyager_MP	I see that now too :D, gooing to cahnge my default path right away :D
+2021-11-25 12:44:14	-->	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has joined #openbsd
+2021-11-25 12:45:14	-->	bouncy_ (~ben@user/benoit) has joined #openbsd
+2021-11-25 12:47:34	-->	Darkcoal (~user@2001:16a2:78ed:9900:47a:da4f:967f:2c19) has joined #openbsd
+2021-11-25 12:51:04	<--	grobi (~grobi@user/grobi) has quit (Quit: "baby i'm bored ♞▀▄▀▄♝▀")
+2021-11-25 12:51:25	<--	trillp (~trillp@69.233.98.238) has quit (Quit: nyaa~)
+2021-11-25 12:51:28	-->	grobi (~grobi@user/grobi) has joined #openbsd
+2021-11-25 12:52:26	<--	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2021-11-25 12:53:32	-->	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has joined #openbsd
+2021-11-25 12:53:37	<--	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:54:26	<--	berkhan (~berkhan@159.146.43.44) has quit (Quit: Leaving for now. See you next time.)
+2021-11-25 12:57:44	-->	zimmer (~zimmer@user/zimmer) has joined #openbsd
+2021-11-25 12:58:03	<--	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2021-11-25 12:58:11	<--	zimmer (~zimmer@user/zimmer) has quit (Read error: Connection reset by peer)
+2021-11-25 12:58:46	-->	gbe (~gbe@p4feb89e1.dip0.t-ipconnect.de) has joined #openbsd
+2021-11-25 12:58:49	-->	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has joined #openbsd

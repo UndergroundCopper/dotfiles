@@ -1,0 +1,1627 @@
+2021-11-22 12:51:15	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #gentoo
+2021-11-22 12:51:15	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-22 12:51:15	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-22 12:51:15	--	Channel #gentoo: 819 nicks (2 ops, 47 voices, 770 normals)
+2021-11-22 12:51:15	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 12:51:15	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-22 12:51:15	--	URL for #gentoo: https://www.gentoo.org
+2021-11-22 12:51:24	--	irc: disconnected from server
+2021-11-22 12:52:31	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #gentoo
+2021-11-22 12:52:31	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-22 12:52:31	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-22 12:52:31	--	Channel #gentoo: 821 nicks (2 ops, 47 voices, 772 normals)
+2021-11-22 12:52:31	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-22 12:52:31	--	URL for #gentoo: https://www.gentoo.org
+2021-11-22 12:52:35	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 12:52:48	<--	zatteliet (~kv@178-118-155-229.access.telenet.be) has quit (Quit: Leaving)
+2021-11-22 12:52:59	<--	oturtle (~user@c6a7d362.vpn.njalla.net) has quit (Ping timeout: 265 seconds)
+2021-11-22 12:53:21	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #gentoo
+2021-11-22 12:53:21	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-22 12:53:21	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-22 12:53:21	--	Channel #gentoo: 820 nicks (2 ops, 47 voices, 771 normals)
+2021-11-22 12:53:21	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-22 12:53:21	--	URL for #gentoo: https://www.gentoo.org
+2021-11-22 12:53:24	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 12:55:01	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 12:55:18	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 12:56:29	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #gentoo
+2021-11-22 12:56:29	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-22 12:56:29	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-22 12:56:29	--	Channel #gentoo: 820 nicks (2 ops, 47 voices, 771 normals)
+2021-11-22 12:56:29	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-22 12:56:29	--	URL for #gentoo: https://www.gentoo.org
+2021-11-22 12:56:29	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 12:56:47	<--	eruditas (~eru@darwin.eru.lt) has quit (Ping timeout: 256 seconds)
+2021-11-22 12:59:09	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 12:59:27	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 12:59:54	-->	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has joined #gentoo
+2021-11-22 13:01:00	NexAdn	sam_: #826362
+2021-11-22 13:01:03	<--	tonyz (~tonyz@user/tonyz) has quit (Ping timeout: 264 seconds)
+2021-11-22 13:01:21	+sam_	thanks NexAdn
+2021-11-22 13:01:48	+sam_	that's my bad and I'll have it fixed shortly
+2021-11-22 13:01:51	+sam_	thanks for the detailed report
+2021-11-22 13:02:01	-->	AsenMx (~AsenMx@user/asenmx) has joined #gentoo
+2021-11-22 13:02:38	<--	smeeagle (~smeeagle@2a00:23c8:9611:e600:858f:f39:62d8:4ca7) has quit (Quit: smeeagle)
+2021-11-22 13:02:54	NexAdn	no problem
+2021-11-22 13:02:57	<--	agneli (~agneli@gateway/tor-sasl/agneli) has quit (Remote host closed the connection)
+2021-11-22 13:05:07	<--	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has quit (Quit: Konversation terminated!)
+2021-11-22 13:07:03	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-22 13:08:11	-->	agneli (~agneli@gateway/tor-sasl/agneli) has joined #gentoo
+2021-11-22 13:08:17	--	saki- is now known as saki
+2021-11-22 13:14:42	-->	jeff__bruh (~Jeff13231@2405:9800:b820:5324::1) has joined #gentoo
+2021-11-22 13:15:38	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 13:15:55	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 13:19:21	<--	jeff__bruh (~Jeff13231@2405:9800:b820:5324::1) has quit (Client Quit)
+2021-11-22 13:21:51	<--	moxie (~moxie@user/moxie) has quit (Quit: WeeChat 3.3)
+2021-11-22 13:23:49	--	You are now known as Velkorum
+2021-11-22 13:24:45	-->	Velkorx (~Velkorz@ppp-94-66-136-181.home.otenet.gr) has joined #gentoo
+2021-11-22 13:24:45	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-22 13:24:45	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-22 13:24:45	--	Channel #gentoo: 818 nicks (2 ops, 47 voices, 769 normals)
+2021-11-22 13:24:45	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-22 13:24:45	--	URL for #gentoo: https://www.gentoo.org
+2021-11-22 13:24:45	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 13:24:50	--	You are now known as Velkorumx
+2021-11-22 13:25:21	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-22 13:28:05	<--	adeliktas (~adeliktas@2001:16b8:22e5:f300:6070:1d72:baa1:a7ff) has quit (Quit: Client closed)
+2021-11-22 13:28:22	<--	Naib (~j@user/naib) has quit (Ping timeout: 260 seconds)
+2021-11-22 13:29:56	-->	Guest56 (~Guest56@103.197.205.12) has joined #gentoo
+2021-11-22 13:31:43	-->	tonyz (~tonyz@user/tonyz) has joined #gentoo
+2021-11-22 13:31:43	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 13:32:00	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 13:32:59	-->	Velkorq (~Velkorq@ppp-94-66-136-181.home.otenet.gr) has joined #gentoo
+2021-11-22 13:32:59	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-22 13:32:59	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-22 13:32:59	--	Channel #gentoo: 817 nicks (2 ops, 47 voices, 768 normals)
+2021-11-22 13:32:59	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-22 13:32:59	--	URL for #gentoo: https://www.gentoo.org
+2021-11-22 13:33:09	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 15:25:03	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-22 15:25:03	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-22 15:25:03	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-22 15:25:03	--	Channel #gentoo: 819 nicks (2 ops, 46 voices, 771 normals)
+2021-11-22 15:25:03	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-22 15:25:03	--	URL for #gentoo: https://www.gentoo.org
+2021-11-22 15:25:09	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 15:25:26	-->	S0rin (~S0rin@user/s0rin) has joined #gentoo
+2021-11-22 15:27:01	<--	feriman (~feriman@188.163.113.151) has quit (Ping timeout: 245 seconds)
+2021-11-22 15:27:26	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-22 15:28:07	<--	troydm (~troydm@host-176-37-124-197.b025.la.net.ua) has quit (Quit: What is Hope? That all of your wishes and all of your dreams come true? To turn back time because things were not supposed to happen like that (C) Rau Le Creuset)
+2021-11-22 15:29:38	<--	yidhra (~chuck_g@74.123.47.48) has quit (Quit: leaving)
+2021-11-22 15:29:53	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-22 15:29:55	-->	troydm (~troydm@host-176-37-124-197.b025.la.net.ua) has joined #gentoo
+2021-11-22 15:30:13	<--	yidhra (~chuck_g@74.123.47.48) has quit (Client Quit)
+2021-11-22 15:30:27	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-22 15:30:34	-->	Guest8466 (~Guest84@103.217.132.47) has joined #gentoo
+2021-11-22 15:31:35	-->	nlhowell1 (~nlhowell@2600:1702:1bd0:4440::33) has joined #gentoo
+2021-11-22 15:32:41	Guest8466	Guys, I can't mount rootfs, using binary distribution kernel, f2fs file system, systemd-boot (cuz I have arch linux installed with systemd-boot, so thought i can just create a new entry). I load the initramfs generated by dracut, use the kernel binary as well, I supply the root=UUID= as kernel parameter, IDK what I am doing wrong
+2021-11-22 15:33:12	Guest8466	should I add some module for f2fs in initramfs?
+2021-11-22 15:33:30	<--	Expectations (~x@162.208.166.202) has quit (Quit: Lost terminal)
+2021-11-22 15:34:23	Guest8466	Should I provide any more info?
+2021-11-22 15:35:24	Viperlin	sounds like no support for filesystem to be fair - isn't f2fs for sdcards?
+2021-11-22 15:36:05	cmyster	depends on hardware using it
+2021-11-22 15:36:15	Guest8466	gentoo wiki explicitly says its good for SSDs
+2021-11-22 15:37:07	+sam_	i think it's a bit outdated
+2021-11-22 15:37:51	<--	iflema (~ian@user/iflema) has quit (Ping timeout: 245 seconds)
+2021-11-22 15:37:53	Guest8466	f2fs archwiki says that if the kernel used to create fs is newer than the kernel being booted, it can cause issues. I am on ~amd64, that shouldn't be a problem right?
+2021-11-22 15:37:57	ShorTie	i'd just use ext4
+2021-11-22 15:38:12	+sam_	Guest8466: I wonder if you definitely had f2fs-tools installed when you built the initramfs?
+2021-11-22 15:38:16	Arsen	f2fs is designed for flash storage but any modern FS would work on flash anyways
+2021-11-22 15:38:27	Arsen	just trim regularly
+2021-11-22 15:38:44	-->	Mo (~Mo@dynamic-077-006-223-057.77.6.pool.telefonica.de) has joined #gentoo
+2021-11-22 15:38:56	<--	shelter (~shelter@h-82-196-112-230.A166.priv.bahnhof.se) has quit (Ping timeout: 265 seconds)
+2021-11-22 15:39:52	Guest8466	I installed f2fs-tools, but not sure if I generated initramfs before or after installing f2fs-tools
+2021-11-22 15:40:09	Guest8466	should I switch to ext4 or btrfs? if so, I don't want to compile everything again
+2021-11-22 15:40:52	<--	rwinner (~rwinner@cpe-108-185-166-223.socal.res.rr.com) has quit (Ping timeout: 265 seconds)
+2021-11-22 15:42:47	Guest8466	can i use rsync to create a new partition, copy everything, change fstab? what happens to the virtual files like /dev/... /proc etc? symlinks?
+2021-11-22 15:43:13	+sam_	you skip those
+2021-11-22 15:43:27	+iamben	if you use a bindmount as your source, it will omit submounts by default
+2021-11-22 15:43:49	-->	Expectations (~x@162.208.166.202) has joined #gentoo
+2021-11-22 15:44:33	ShorTie	think i'd start with a new initramfs that you know has f2fs-tools in it, sounds the easiest to me
+2021-11-22 15:44:41	Guest8466	but f2fs should boot right? I have installed gentoo with f2fs before, it has worked...
+2021-11-22 15:44:53	Guest8466	yeah, was about to say the same, let me try recreating initramfs
+2021-11-22 15:45:15	-->	shelter (~shelter@h-82-196-112-230.A166.priv.bahnhof.se) has joined #gentoo
+2021-11-22 15:47:30	-->	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has joined #gentoo
+2021-11-22 15:47:59	Guest8466	reinstalled sys-kernel/gentoo-kernel-bin, that regenerated initramfs, let me try rebooting
+2021-11-22 15:48:11	<--	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has quit (Client Quit)
+2021-11-22 15:48:43	<--	Guest8466 (~Guest84@103.217.132.47) has left #gentoo
+2021-11-22 15:48:59	-->	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has joined #gentoo
+2021-11-22 15:52:06	-->	gaussianblue (~gaussianb@78-61-246-87.static.zebra.lt) has joined #gentoo
+2021-11-22 15:53:03	<--	Expectations (~x@162.208.166.202) has quit (Quit: Lost terminal)
+2021-11-22 15:55:51	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-22 15:58:17	<--	iivanov (~iivanov@95.43.221.46) has quit (Quit: Leaving...)
+2021-11-22 15:58:21	-->	duxsco (~duxsco@2a01:c22:7658:da10::4b0) has joined #gentoo
+2021-11-22 15:59:15	<--	Mo (~Mo@dynamic-077-006-223-057.77.6.pool.telefonica.de) has quit (Ping timeout: 264 seconds)
+2021-11-22 16:00:00	<--	duxsco (~duxsco@2a01:c22:7658:da10::4b0) has quit (Client Quit)
+2021-11-22 16:00:11	-->	iivanov (~iivanov@95.43.221.46) has joined #gentoo
+2021-11-22 16:00:27	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 264 seconds)
+2021-11-22 16:00:29	<--	go4godvin (~go4godvin@user/go4godvin) has quit (Quit: Reconnecting)
+2021-11-22 16:00:45	-->	go4godvin (~go4godvin@user/go4godvin) has joined #gentoo
+2021-11-22 16:01:12	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-22 16:01:35	<--	slackin (~slackin@ip68-10-28-55.hr.hr.cox.net) has quit (Ping timeout: 264 seconds)
+2021-11-22 16:04:18	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 16:04:35	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 16:05:15	<--	nlhowell1 (~nlhowell@2600:1702:1bd0:4440::33) has quit (Ping timeout: 264 seconds)
+2021-11-22 16:05:39	-->	nlhowell1 (~nlhowell@75-15-12-106.lightspeed.bltnin.sbcglobal.net) has joined #gentoo
+2021-11-22 16:06:02	<--	`VL (~vl@mail.inspert.ru) has quit (Ping timeout: 260 seconds)
+2021-11-22 16:06:20	-->	`VL (~vl@82.204.252.162) has joined #gentoo
+2021-11-22 16:08:41	<--	luxifer (~luxifer@188.95.145.33) has quit (Quit: Konversation terminated!)
+2021-11-22 16:08:41	<--	sheep9121 (~sheep9121@mobile-access-5d6a95-170.dhcp.inet.fi) has quit (Read error: Connection reset by peer)
+2021-11-22 16:09:18	<--	iivanov (~iivanov@95.43.221.46) has quit (Quit: Leaving...)
+2021-11-22 16:10:05	-->	utis (~utis@vpn-client096.uio.no) has joined #gentoo
+2021-11-22 16:10:59	-->	spare (~lcqdwbk4h@user/spareproject) has joined #gentoo
+2021-11-22 16:12:48	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 16:13:05	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 16:13:13	<--	bitblit (~bitblit@gateway/tor-sasl/bitblit) has quit (Remote host closed the connection)
+2021-11-22 16:13:43	<--	spare (~lcqdwbk4h@user/spareproject) has quit (Remote host closed the connection)
+2021-11-22 16:13:52	-->	spare (~lcqdwbk4h@user/spareproject) has joined #gentoo
+2021-11-22 16:13:56	-->	iivanov (~iivanov@95.43.221.46) has joined #gentoo
+2021-11-22 16:15:03	<--	judabuda (kowbunga@user/judabuda) has quit (Quit: Gone.)
+2021-11-22 16:15:08	-->	pepperoni (~pepperoni@gateway/vpn/pia/pepperoni) has joined #gentoo
+2021-11-22 16:16:18	<--	jpds (~jpds@gateway/tor-sasl/jpds) has quit (Ping timeout: 276 seconds)
+2021-11-22 16:17:53	-->	jpds (~jpds@gateway/tor-sasl/jpds) has joined #gentoo
+2021-11-22 16:18:15	<--	yidhra (~chuck_g@74.123.47.48) has quit (Quit: leaving)
+2021-11-22 16:18:35	<--	AndrewAmmerlaan (~Thunderbi@gentoo/developer/andrewammerlaan) has quit (Quit: AndrewAmmerlaan)
+2021-11-22 16:18:50	-->	AndrewAmmerlaan (~Thunderbi@gentoo/developer/andrewammerlaan) has joined #gentoo
+2021-11-22 16:18:50	--	Mode #gentoo [+v AndrewAmmerlaan] by ChanServ
+2021-11-22 16:20:54	<--	brutex (~brutex@user/brutex) has quit (Remote host closed the connection)
+2021-11-22 16:22:01	<--	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has quit (Quit: My MacBook Air has gone to sleep. ZZZzzz…)
+2021-11-22 16:25:44	-->	adeliktas (~adeliktas@2001:16b8:22e5:f300:6070:1d72:baa1:a7ff) has joined #gentoo
+2021-11-22 16:26:49	-->	judabuda (kowbunga@kowbunga.thunderirc.net) has joined #gentoo
+2021-11-22 16:27:01	-->	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has joined #gentoo
+2021-11-22 16:28:03	-->	bitblit (~bitblit@gateway/tor-sasl/bitblit) has joined #gentoo
+2021-11-22 16:28:07	<--	CMoH|notebook (~cipi@95.76.67.141) has quit (Ping timeout: 250 seconds)
+2021-11-22 16:28:58	-->	Guest70 (~Guest70@122-58-72-16-adsl.sparkbb.co.nz) has joined #gentoo
+2021-11-22 16:29:15	<--	S0rin (~S0rin@user/s0rin) has quit (Ping timeout: 264 seconds)
+2021-11-22 16:29:16	-->	FinboySlick (~shark@2604:b980:c8:70:be30:5bff:feb8:8ba4) has joined #gentoo
+2021-11-22 16:30:54	<--	jpds (~jpds@gateway/tor-sasl/jpds) has quit (Remote host closed the connection)
+2021-11-22 16:31:15	-->	jpds (~jpds@gateway/tor-sasl/jpds) has joined #gentoo
+2021-11-22 16:31:33	<--	Guest70 (~Guest70@122-58-72-16-adsl.sparkbb.co.nz) has quit (Client Quit)
+2021-11-22 16:31:58	-->	S0rin (~S0rin@user/s0rin) has joined #gentoo
+2021-11-22 16:35:57	violetina	hmm gentoo-kernel and gentoo-kernel-bin , never heard of before, sys-kernel/gentoo-sources here , is this something new ?
+2021-11-22 16:36:05	<--	Bircoph (~Bircoph@gentoo/developer/bircoph) has quit (Ping timeout: 256 seconds)
+2021-11-22 16:36:19	-->	Bircoph (~Bircoph@gentoo/developer/bircoph) has joined #gentoo
+2021-11-22 16:36:19	--	Mode #gentoo [+v Bircoph] by ChanServ
+2021-11-22 16:36:22	+iamben	yes they are new, gentoo-sources is still availbale though
+2021-11-22 16:36:39	+iamben	the gentoo-kernel* ebuilds actually produce a built kernel & initramfs in /boot without manual make or genkernel
+2021-11-22 16:36:47	+mpagano	violetina: do you use gentoo-sources with USE=experimental ?
+2021-11-22 16:37:09	violetina	no
+2021-11-22 16:37:40	<--	AndrewAmmerlaan (~Thunderbi@gentoo/developer/andrewammerlaan) has quit (Quit: AndrewAmmerlaan)
+2021-11-22 16:37:54	-->	AndrewAmmerlaan (~Thunderbi@gentoo/developer/andrewammerlaan) has joined #gentoo
+2021-11-22 16:37:54	--	Mode #gentoo [+v AndrewAmmerlaan] by ChanServ
+2021-11-22 16:38:52	<--	`VL (~vl@82.204.252.162) has quit (Ping timeout: 265 seconds)
+2021-11-22 16:39:06	-->	psymin (~psymin@user/psymin) has joined #gentoo
+2021-11-22 16:39:23	<--	syu (~syu@user/syu) has quit (Ping timeout: 250 seconds)
+2021-11-22 16:40:08	violetina	I just wonder what is the point of sys-kernel/gentoo-kernel while there is always been sys-kernel/gentoo-sources
+2021-11-22 16:40:53	violetina	and should i consider moving ...
+2021-11-22 16:40:57	marduk	I think -kernel builds/installs the kernel & mods while -sources just installs the sources, right?
+2021-11-22 16:41:15	-->	syu (~syu@user/syu) has joined #gentoo
+2021-11-22 16:41:19	-->	hypoon (~hypoon@pool-108-31-49-4.washdc.fios.verizon.net) has joined #gentoo
+2021-11-22 16:42:10	violetina	seems logic marduk, i fetch sources then genkernel the kernel to build it
+2021-11-22 16:42:43	marduk	And then there's -bin which installs a pre-build kernel if i'm not mistaken
+2021-11-22 16:43:10	violetina	then you miss all the fun ;)
+2021-11-22 16:43:49	-->	io_default (~io_defaul@user/io-default/x-3141089) has joined #gentoo
+2021-11-22 16:43:53	violetina	but might result in a more stable/sane kernel tho ...
+2021-11-22 16:43:54	-->	raonyguimaraes (~raonyguim@80.111.34.143) has joined #gentoo
+2021-11-22 16:46:14	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 16:46:31	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 16:46:43	violetina	thb i just b0rrowed my config from the ubuntu kernel that came with my  Dell xps13 laptop , then made minor changes and let genkernel do the rest , quiet a bloated kernel i guess
+2021-11-22 16:47:47	marduk	violetina: which XPS 13?
+2021-11-22 16:47:59	-->	AmmerlaanAndrew (~znc@77-171-220-50.fixed.kpn.net) has joined #gentoo
+2021-11-22 16:48:37	--	AmmerlaanAndrew is now known as AndrewAmmerlaan1
+2021-11-22 16:48:38	marduk	I have one that runs a very customized kernel.
+2021-11-22 16:50:06	<--	AndrewAmmerlaan (~Thunderbi@gentoo/developer/andrewammerlaan) has quit (Quit: AndrewAmmerlaan)
+2021-11-22 16:50:07	--	AndrewAmmerlaan1 is now known as AndrewAmmerlaan
+2021-11-22 16:50:07	<--	AndrewAmmerlaan (~znc@77-171-220-50.fixed.kpn.net) has quit (Changing host)
+2021-11-22 16:50:07	-->	AndrewAmmerlaan (~znc@gentoo/developer/andrewammerlaan) has joined #gentoo
+2021-11-22 16:50:07	--	Mode #gentoo [+v AndrewAmmerlaan] by ChanServ
+2021-11-22 16:50:08	violetina	not sure marduk, the core i7  10th gen, think it is about 2 years old and I really love this machine!
+2021-11-22 16:50:15	-->	TheteSigma (~TheteSi@cpe-68-201-132-39.elp.res.rr.com) has joined #gentoo
+2021-11-22 16:51:11	-->	`VL (~vl@mail.inspert.ru) has joined #gentoo
+2021-11-22 16:51:16	marduk	Oh mine is the 9310 I've had less than a year. I like it but already had to replace the keyboard on it.
+2021-11-22 16:51:20	+xiaomiao	I avoided using the XPS13 while I had it ... it's a nice status symbol / room decoration
+2021-11-22 16:51:54	+xiaomiao	no idea why it's so optimized to be annoying :) (e.g. keyboard, sigh. ufff. whyyy)
+2021-11-22 16:52:24	violetina	its from my work , its that or a mac , so easy choice
+2021-11-22 16:52:55	-->	AndrewAmmerlaan1 (~Thunderbi@gentoo/developer/andrewammerlaan) has joined #gentoo
+2021-11-22 16:52:55	--	Mode #gentoo [+v AndrewAmmerlaan1] by ChanServ
+2021-11-22 16:53:30	+xiaomiao	gniih.
+2021-11-22 16:53:41	<--	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has quit (Quit: My MacBook Air has gone to sleep. ZZZzzz…)
+2021-11-22 16:53:46	marduk	Other than the key breaking I haven't had any problems with it.
+2021-11-22 16:53:47	+xiaomiao	i've had both situations and did all the proper work from a thinkpad instead
+2021-11-22 16:53:54	+xiaomiao	having an insert key is /awesome/ >_>
+2021-11-22 16:55:30	<--	AndrewAmmerlaan1 (~Thunderbi@gentoo/developer/andrewammerlaan) has quit (Client Quit)
+2021-11-22 16:56:29	<--	gaussianblue (~gaussianb@78-61-246-87.static.zebra.lt) has quit (Quit: leaving)
+2021-11-22 16:56:57	<--	AlaricToo (~alaric@caerllewys.net) has left #gentoo
+2021-11-22 16:58:54	<--	cmyster (~cmyster@user/cmyster) has quit (Read error: Connection reset by peer)
+2021-11-22 16:59:04	-->	cmyster (~cmyster@user/cmyster) has joined #gentoo
+2021-11-22 16:59:49	violetina	I like my hands so i try to use a external keyboard as much as possible , the keyboard is indeed arrgh, esp. the split keys arrow left/right  with page up/down
+2021-11-22 17:00:35	<--	raonyguimaraes (~raonyguim@80.111.34.143) has quit
+2021-11-22 17:00:55	lericson	macbook keyboards are pretty nice to type on
+2021-11-22 17:00:57	+xiaomiao	I have the Lenovo ThinkPad Compact USB keyboard for those scenarios
+2021-11-22 17:01:23	+xiaomiao	lericson: depends on the model/generation, imo all too "flat" and lacking important keys
+2021-11-22 17:01:46	+xiaomiao	del, insert, pgdown ... who would ever want those when you can make rude gestures towards the touchpad ;)
+2021-11-22 17:01:50	lericson	well, anything year \not\in [2015, 2020]
+2021-11-22 17:02:19	lericson	i like the low travel
+2021-11-22 17:02:25	lericson	mechanical keyboards are so overrated
+2021-11-22 17:02:48	lericson	wouldn't surprise me if they cause serious repetetive strain injuries in the long term
+2021-11-22 17:03:24	lericson	they for sure cause angry coworker syndrome in the short term anyway :p
+2021-11-22 17:04:12	lericson	i will say though that for linux, the apple keyboards are not a good fit simply because of the modifier key setup
+2021-11-22 17:04:49	violetina	also since when did gentoo move to librachat from freenode? I was quite confused last week when i needed some help for once  :x
+2021-11-22 17:04:58	-->	candrews (~candrews@gentoo/developer/candrews) has joined #gentoo
+2021-11-22 17:04:58	--	Mode #gentoo [+v candrews] by ChanServ
+2021-11-22 17:05:07	+xiaomiao	violetina: freenode nuked itself earlier this year, it's a nice bit of drama
+2021-11-22 17:05:33	violetina	seems i missed a lot of fun ;)
+2021-11-22 17:05:46	<--	paramount_obd (~Unknown@131.178.200.61) has quit (Ping timeout: 260 seconds)
+2021-11-22 17:06:22	lericson	it's been surprisingly uneventful apart from the transition itself
+2021-11-22 17:06:32	lericson	everything just kept on trucking pretty much
+2021-11-22 17:06:37	lericson	s/freenode/libera/ in your irc config
+2021-11-22 17:07:34	-->	masterbuilder (~user@user/masterbuilder) has joined #gentoo
+2021-11-22 17:07:42	-->	paramount_obd (~Unknown@131.178.200.61) has joined #gentoo
+2021-11-22 17:12:52	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 17:12:57	<--	endstille (~Miranda@94.31.96.100) has quit (Quit: Miranda NG! Smaller, Faster, Easier. https://miranda-ng.org/)
+2021-11-22 17:13:09	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 17:13:22	<--	smeeagle (~smeeagle@2a00:23c8:9611:e600:858f:f39:62d8:4ca7) has quit (Quit: smeeagle)
+2021-11-22 17:13:46	<--	mixfix41 (~homefame@user/mixfix41) has quit (Ping timeout: 260 seconds)
+2021-11-22 17:16:54	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 17:17:12	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 17:19:11	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 17:19:28	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 17:20:52	brrm	sam_: sssd works now as expected, thank you!
+2021-11-22 17:21:03	 *	brrm loves gentoo!
+2021-11-22 17:22:01	<--	S0rin (~S0rin@user/s0rin) has quit (Ping timeout: 245 seconds)
+2021-11-22 17:23:44	<--	avane_ (~avane@fsf/member/avane) has quit (Quit: o/)
+2021-11-22 17:23:47	-->	S0rin (~S0rin@user/s0rin) has joined #gentoo
+2021-11-22 17:24:05	-->	avane (~avane@fsf/member/avane) has joined #gentoo
+2021-11-22 17:25:25	-->	mixfix41 (~homefame@user/mixfix41) has joined #gentoo
+2021-11-22 17:25:53	<--	moxie (~moxie@user/moxie) has quit (Quit: WeeChat 3.3)
+2021-11-22 17:26:17	-->	moxie (~moxie@user/moxie) has joined #gentoo
+2021-11-22 17:26:18	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-22 17:27:48	<--	hololeap (~hololeap@user/hololeap) has quit (Ping timeout: 276 seconds)
+2021-11-22 17:28:23	-->	hololeap (~hololeap@user/hololeap) has joined #gentoo
+2021-11-22 17:28:47	-->	CMoH_notebook (~cipi@95.76.67.141) has joined #gentoo
+2021-11-22 17:29:38	<--	ninjabuffet (~ninjabuff@user/ninjabuffet) has left #gentoo (Laters)
+2021-11-22 17:31:37	-->	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has joined #gentoo
+2021-11-22 17:32:01	-->	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has joined #gentoo
+2021-11-22 17:33:00	<--	paramount_obd (~Unknown@131.178.200.61) has quit (Ping timeout: 265 seconds)
+2021-11-22 17:34:58	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 17:35:15	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 17:36:06	-->	nuh^ (~nuh@68.101.63.101) has joined #gentoo
+2021-11-22 17:37:04	-->	Guest56 (~Guest56@103.197.205.12) has joined #gentoo
+2021-11-22 17:38:06	Guest56	why is parallel-compiler use flag masked? https://dpaste.com/HTP65ZG5S
+2021-11-22 17:40:21	+ajak	https://github.com/gentoo/gentoo/blob/master/profiles/base/package.use.mask#L37
+2021-11-22 17:40:38	+ajak	apparently not tested by upstream, could miscompile code
+2021-11-22 17:41:07	-->	MoosePrime (~moose@207.44.22.117) has joined #gentoo
+2021-11-22 17:41:30	Guest56	who said "could miscompile code"??
+2021-11-22 17:41:54	+ajak	read the link i just pasted
+2021-11-22 17:41:56	+ajak	the rust maintainer
+2021-11-22 17:42:17	<--	iivanov (~iivanov@95.43.221.46) has quit (Quit: Leaving...)
+2021-11-22 17:42:30	Guest56	oh
+2021-11-22 17:42:34	<--	moxie (~moxie@user/moxie) has quit (Quit: WeeChat 3.3)
+2021-11-22 17:44:45	-->	progenyx (progenyx@gateway/vpn/airvpn/progenyx) has joined #gentoo
+2021-11-22 17:46:18	-->	srv (~cmd@user/srv) has joined #gentoo
+2021-11-22 17:47:42	Guest56	help https://dpaste.com/HV8B5HN4S
+2021-11-22 17:48:39	-->	moxie (~moxie@user/moxie) has joined #gentoo
+2021-11-22 17:51:12	-->	iivanov (~iivanov@95.43.221.46) has joined #gentoo
+2021-11-22 17:51:41	<--	anunna (~lahmu@aruru.lilitusec.net) has quit (Quit: %bye%)
+2021-11-22 17:52:26	-->	anunna (~lahmu@aruru.lilitusec.net) has joined #gentoo
+2021-11-22 17:54:27	<--	_inky (~inky_@31.7.162.99) has quit (Ping timeout: 264 seconds)
+2021-11-22 17:55:54	-->	paramount_obd (~Unknown@131.178.200.66) has joined #gentoo
+2021-11-22 17:56:58	violetina	Guest56:      Available versions:  7.3.7(0/pypy38-pp73)^t {bzip2 gdbm +jit ncurses sqlite test tk}  , so i guess you need to move to python3.8
+2021-11-22 17:57:05	--	Vaevictu1 is now known as Vaevictus
+2021-11-22 17:58:16	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-22 18:00:12	Guest56	thanks
+2021-11-22 18:01:52	<--	tseug (~tseug@2601:681:4d03:bf50::612e) has quit (Remote host closed the connection)
+2021-11-22 18:02:10	-->	tseug (~tseug@2601:681:4d03:bf50::612e) has joined #gentoo
+2021-11-22 18:04:32	<--	spare (~lcqdwbk4h@user/spareproject) has quit (Remote host closed the connection)
+2021-11-24 11:11:55	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-24 11:11:55	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-24 11:11:55	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-24 11:11:55	--	Channel #gentoo: 824 nicks (3 ops, 45 voices, 776 normals)
+2021-11-24 11:11:55	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-24 11:11:55	--	URL for #gentoo: https://www.gentoo.org
+2021-11-24 11:12:01	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-24 11:12:34	<--	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Read error: Connection reset by peer)
+2021-11-24 11:12:48	projectmoon	is there a way to figure out what libraries i need to enable 32 bit for to get steam to use host libraries? aside from starting steam and having it tell me the list of libraries
+2021-11-24 11:13:05	-->	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-24 11:13:25	genr8eofl_	try "ldd steam" and look for whats missing
+2021-11-24 11:13:50	-->	`VL (~vl@mail.inspert.ru) has joined #gentoo
+2021-11-24 11:14:24	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-24 11:14:24	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-24 11:14:24	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-24 11:14:24	--	Channel #gentoo: 825 nicks (3 ops, 45 voices, 777 normals)
+2021-11-24 11:14:25	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-24 11:14:25	--	URL for #gentoo: https://www.gentoo.org
+2021-11-24 11:14:32	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-24 11:15:19	<--	DiffieHellman (~Username@user/curve25519chacha) has quit (Remote host closed the connection)
+2021-11-24 11:15:27	projectmoon	it tells me "not a dynamic executable"
+2021-11-24 11:15:44	+leio	projectmoon: The multilib deps of steam itself should be there in a steam ebuild, and from there everything else would theoretically come from the steam runtime. If you opt to not use the steam runtime (an option in the steam-overlay steam ebuild iirc), then host ones are needed and there's a tool called "esteam" (a package in steam-overlay as well) which will scan your installed games and generate a set for you with the necessary multilib (and native)
+2021-11-24 11:15:44	+leio	dependencies for your installed games to work; at least it did years ago when I used it
+2021-11-24 11:15:53	-->	DiffieHellman (~Username@user/curve25519chacha) has joined #gentoo
+2021-11-24 11:16:11	+leio	alternatively one could use steam from flatpak and have it tucked away in a sandbox as a proprietary thing
+2021-11-24 11:16:12	projectmoon	leio: that might be what i need yes. i have steamruntime use flag enabled at the moment
+2021-11-24 11:16:19	projectmoon	it's generally recommended to use the runtime anyway right
+2021-11-24 11:16:54	projectmoon	but yes i see use flag setup
+2021-11-24 11:16:58	projectmoon	maybe i will try that just for the lolz
+2021-11-24 11:17:16	projectmoon	i ran into a problem with native version of shadows of the tomb raider, but that happens even with the steam runtime
+2021-11-24 11:17:21	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 11:17:50	+leio	years ago I had to use it just to get away from the incompatibilities of what's bundled in the steam runtime and what isn't (runtime issues between what it ended up using from host vs the older versions of others things used via the runtime); I think it has gotten better though
+2021-11-24 11:18:05	+leio	use it = disable steam runtime
+2021-11-24 11:18:11	-->	CyberTailor (~cyber@gateway/tor-sasl/cybertailor) has joined #gentoo
+2021-11-24 11:18:27	projectmoon	hmm yes
+2021-11-24 11:18:44	projectmoon	i would expect the steam runtime to be entirely self-contained, but that is apparently not the case
+2021-11-24 11:18:53	 *	cmyster laughs in windows
+2021-11-24 11:19:02	+leio	for me (and this was like 3-5 years ago) it was something about udev back then
+2021-11-24 11:19:18	projectmoon	it would of course be easier in windows. but i specifically removed windows
+2021-11-24 11:19:27	+leio	if I fresh installed steam now, I'd probably just install it from flatpak
+2021-11-24 11:19:48	projectmoon	that's what i do on my laptop
+2021-11-24 11:20:08	genr8eofl_	i agree with your advantage of using flatpak for containing invasive apps like this
+2021-11-24 11:20:36	-->	scramblez (~michael@230.3.169.217.in-addr.arpa) has joined #gentoo
+2021-11-24 11:21:01	-->	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has joined #gentoo
+2021-11-24 11:21:23	projectmoon	it's about the only thing i use flatpak for now
+2021-11-24 11:21:34	projectmoon	i was using it for nextcloud but i switched to the ebuild for that because the flatpak sort of stopped working
+2021-11-24 11:22:59	projectmoon	hmm after setting -steamruntime, it prompts to rebuild steam-meta and steam-games-meta, but doesn't prompt to update a bunch of other libs to 32bit, which it should be
+2021-11-24 11:23:03	projectmoon	https://github.com/anyc/steam-overlay/blob/master/games-util/steam-client-meta/steam-client-meta-0-r20210804.ebuild
+2021-11-24 11:23:15	projectmoon	ebuild says that dev-libs/nss should be 32bit for example, but that is not set on my machine at the moment
+2021-11-24 11:23:51	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 264 seconds)
+2021-11-24 11:24:36	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 11:25:21	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-24 11:26:01	pinkflames[m]	projectmoon: in general you should either build everything with 32 bit abi or not
+2021-11-24 11:26:21	projectmoon	i just have what portage told me to make 32bit for steam etc to run initially
+2021-11-24 11:26:22	genr8eofl_	uhh
+2021-11-24 11:26:40	genr8eofl_	making your entire system 32 bit is not advised
+2021-11-24 11:26:41	pinkflames[m]	the mix and match approach relies on every maintainer in the chain of dependencies having bothered to get their multilib deps right and then kept them that way
+2021-11-24 11:26:53	pinkflames[m]	genr8eofl_: it very much should be
+2021-11-24 11:27:30	genr8eofl_	ive never heard of that, and it sounds disastrously wasteful
+2021-11-24 11:27:45	-->	aniruddha (uid340443@id-340443.ilkley.irccloud.com) has joined #gentoo
+2021-11-24 11:27:46	pinkflames[m]	Yes, which is why I use Steam from a flatpak
+2021-11-24 11:27:57	pinkflames[m]	but the build times change less than you'd expect
+2021-11-24 11:28:06	<--	thunderrd (~thunderrd@183.182.111.230) has quit (Remote host closed the connection)
+2021-11-24 11:28:22	projectmoon	it's still using steamruntime even with the useflag set lol
+2021-11-24 11:29:03	pinkflames[m]	because src_compile itself is often not the slowest part of emerge and many ebuilds will actually disable components for non-native build, so it sometimes only adds seconds to build time
+2021-11-24 11:29:08	-->	thunderrd (~thunderrd@183.182.111.230) has joined #gentoo
+2021-11-24 11:29:40	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 11:29:59	<--	fixl (~Thunderbi@gateway/vpn/pia/fixl) has quit (Quit: fixl)
+2021-11-24 11:30:31	-->	fixl (~Thunderbi@gateway/vpn/pia/fixl) has joined #gentoo
+2021-11-24 11:32:09	projectmoon	had to set the use flag on a few more packages. the various steam ebuild don't seem to care that much about mix and match
+2021-11-24 11:32:19	projectmoon	now it's prompting me for the ABI changes
+2021-11-24 11:32:24	<--	DiffieHellman (~Username@user/curve25519chacha) has quit (Remote host closed the connection)
+2021-11-24 11:32:59	-->	DiffieHellman (~Username@user/curve25519chacha) has joined #gentoo
+2021-11-24 11:33:02	pinkflames[m]	To be clear, are you saying that Portage correctly prompted you to add more 32 bit multilib to some packages or did you have to manually fix what it missed?
+2021-11-24 11:33:08	projectmoon	it's prompting now
+2021-11-24 11:33:18	projectmoon	i had to set -steamruntime on a few other packages than steam-meta and steam-games-meta
+2021-11-24 11:33:22	pinkflames[m]	the first is correct and expected and the second is technically a bug to report
+2021-11-24 11:33:55	<--	LiaoTao (~LiaoTao@gateway/tor-sasl/liaotao) has quit (Remote host closed the connection)
+2021-11-24 11:34:07	projectmoon	i've asked this question before, but forgot the answer: is there a way to get portage to print all required use changes?
+2021-11-24 11:34:10	-->	LiaoTao (~LiaoTao@gateway/tor-sasl/liaotao) has joined #gentoo
+2021-11-24 11:34:13	projectmoon	rather than one at a time
+2021-11-24 11:34:26	pinkflames[m]	Perhaps they should receive a IUSE match dependency then (but that's just a guess without knowing if that's really a reasonable thing to enforce)
+2021-11-24 11:34:32	scramblez	Hi all, I got this REQUIRED_USE popping up ">=media-libs/opencv-4.5.2-r3 contribdnn" which I suppose will make opencv graphics processing /better/ but github states tiny-dnn devs are abandoning the project.
+2021-11-24 11:34:35	pinkflames[m]	projectmoon: no
+2021-11-24 11:34:42	projectmoon	pinkflames[m]: very cool very cool
+2021-11-24 11:35:00	projectmoon	isn't there a trick with autounmsak
+2021-11-24 11:35:02	projectmoon	unmask*
+2021-11-24 11:35:08	pinkflames[m]	the only way it works for some packages like pipewire is because the ebuild intentionally duplicates them as a single conflict
+2021-11-24 11:35:22	-->	iflema (~ian@user/iflema) has joined #gentoo
+2021-11-24 11:35:28	recyclehero	guys I want to harden the linux but not messing with compilation time securtity only userspaec like selinux and integrity checking.
+2021-11-24 11:35:30	pinkflames[m]	I have no idea because I would not trust autounmask
+2021-11-24 11:35:35	<--	m4ho (~m4ho@81.20.119.6) has quit (Read error: Connection reset by peer)
+2021-11-24 11:35:43	recyclehero	only may be one major step is good for me, but that should be?
+2021-11-24 11:36:36	<--	iamben (~iamben@gentoo/developer/bkohler) has quit (Ping timeout: 268 seconds)
+2021-11-24 11:36:50	pinkflames[m]	recyclehero: I would argue that it's the other way round - hardening the compiler is usually easier than SELinux or integrity enforcement
+2021-11-24 11:37:04	<--	Despatche (~desp@72.11.37.193) has quit (Quit: Read error: Connection reset by deer)
+2021-11-24 11:37:30	pinkflames[m]	the toolchain stuff is generally well tested, reasonably common and only requires stuff to build and run - what you want requires active integration between components
+2021-11-24 11:38:16	genr8eofl_	the hardened gentoo has almost no downside now
+2021-11-24 11:38:23	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 11:38:57	recyclehero	I read grsecurity and and pax is not available
+2021-11-24 11:38:58	violetina_	if so why isn't it the default? genr8eofl_
+2021-11-24 11:39:05	pinkflames[m]	if you wanted it full and proper it would require things interoperating from UEFI/TPM 2.0 to your bootloader, to kernel, to modules, to filesystem(s), to userspace
+2021-11-24 11:39:20	genr8eofl_	recyclehero, thats old
+2021-11-24 11:39:25	recyclehero	pinkflames[m]: I want it quick and dirty
+2021-11-24 11:39:28	pinkflames[m]	that's a whole lot of less known things where failure anywhere will either compromise your intention or outright break your bootup
+2021-11-24 11:39:41	pinkflames[m]	recyclehero: destroy your data yourself first then ;)
+2021-11-24 11:39:46	genr8eofl_	violetina_, i dont know, maybe it will be when more people find this out
+2021-11-24 11:40:00	pinkflames[m]	but at least without encryption it won't actually get lost, just might not boot
+2021-11-24 11:40:31	recyclehero	its a jump server I would take recommendation to do just two things regarding hardening the os
+2021-11-24 11:40:49	pinkflames[m]	genr8eofl_: apart from probably still no systemd support and at best lacking SELinux docs?
+2021-11-24 11:41:11	genr8eofl_	im not talking about selinux, thats a mess
+2021-11-24 11:41:18	genr8eofl_	hardened itself is fine though
+2021-11-24 11:41:42	pinkflames[m]	violetina_: the parts that are deemed reasonable are being included into the default profile, so you actually have partially hardened toolchain
+2021-11-24 11:41:57	pinkflames[m]	and PaX is being upstreamed at the whole Linux kernel level
+2021-11-24 11:42:07	pinkflames[m]	*PaX/grsecurity
+2021-11-24 11:43:09	recyclehero	it will be running openssh and git. should I do things beside using the stage3 hardened
+2021-11-24 11:43:10	genr8eofl_	recyclehero, dont enable ssh to the world, and update your software
+2021-11-24 11:43:25	recyclehero	ok I will openssh only to my vpn ip
+2021-11-24 11:44:10	violetina_	  Hardening index : 64 [############        ]  Lynis , I wonder what a ubuntu desktop will report
+2021-11-24 11:44:30	pinkflames[m]	recyclehero: the most important thing of them all are two: use key not password based authentication, preferably two or three factor and keep everything up to date
+2021-11-24 11:45:12	recyclehero	its open but thats for the ssh to only allow my IP. maybe Iptable.
+2021-11-24 11:45:17	recyclehero	key always
+2021-11-24 11:45:46	recyclehero	from 0 to 10 how stupid is it to run a torrent client on that device?
+2021-11-24 11:46:16	genr8eofl_	that advertises your IP as a target, so not great
+2021-11-24 11:46:31	pinkflames[m]	expect to get scanned and probed
+2021-11-24 11:46:41	recyclehero	even behind a nat?
+2021-11-24 11:46:46	pinkflames[m]	and that goes even for a black setup
+2021-11-24 11:47:22	pinkflames[m]	I'm not expert enough to comment on how much protection NAT provide
+2021-11-24 11:48:01	genr8eofl_	they will just be hammering away on the NAT router like angry mosquitos
+2021-11-24 11:48:36	pinkflames[m]	My point is if you're connected to the internet, you'll get scanned and probed
+2021-11-24 11:48:56	pinkflames[m]	even if the box was just sitting there completely silent
+2021-11-24 11:48:57	genr8eofl_	waiting for the day when something goes wrong and they find a crack in
+2021-11-24 11:49:34	-->	Qeenon (~Miezhiko@user/qeenon) has joined #gentoo
+2021-11-24 11:49:57	 *	recyclehero starting hardened x86 installation 
+2021-11-24 11:50:20	violetina_	at work we block IPs from russia and china reduces attacks by 90% ;)
+2021-11-24 11:50:21	-->	Despatche (~desp@72.11.37.193) has joined #gentoo
+2021-11-24 11:50:48	<--	DiffieHellman (~Username@user/curve25519chacha) has quit (Remote host closed the connection)
+2021-11-24 11:50:56	genr8eofl_	yep good idea
+2021-11-24 11:51:15	-->	DiffieHellman (~Username@user/curve25519chacha) has joined #gentoo
+2021-11-24 11:51:31	scardracs	sam_, pinkflames[m]: do we have that file? https://gitlab.freedesktop.org/libinput/libinput/-/issues/705#note_1167957
+2021-11-24 11:51:36	<--	Miezhiko (~Miezhiko@user/qeenon) has quit (Ping timeout: 245 seconds)
+2021-11-24 11:52:03	--	Qeenon is now known as Miezhiko
+2021-11-24 11:52:48	pinkflames[m]	scardracs: but you're using systemd so you should have udev
+2021-11-24 11:52:52	-->	m4ho (~m4ho@81.20.119.6) has joined #gentoo
+2021-11-24 11:53:24	pinkflames[m]	I wonder if I should remind whot that Gentoo does have systemd and that we're dropping eudev ;)
+2021-11-24 11:53:57	scardracs	Yeah I have udev
+2021-11-24 11:54:12	+ionen	eudev might stay around not that it's maintained again fwiw
+2021-11-24 11:54:23	+ionen	now that*
+2021-11-24 11:54:59	+ionen	not that I particularly recommend using it
+2021-11-24 11:55:06	-->	khaled_ (~khaled@193-80-106-160.adsl.highway.telekom.at) has joined #gentoo
+2021-11-24 11:55:14	projectmoon	wasn't eudev removed for most people?
+2021-11-24 11:55:21	scardracs	It should
+2021-11-24 11:56:21	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 268 seconds)
+2021-11-24 11:56:44	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #gentoo
+2021-11-24 11:56:49	violetina_	hmm i still have it , will look at it (eudev), only red about it yesterday
+2021-11-24 11:57:16	projectmoon	me too
+2021-11-24 11:57:29	projectmoon	at least on my desktop
+2021-11-24 11:57:39	<--	khaled (~khaled@193-80-106-160.adsl.highway.telekom.at) has quit (Ping timeout: 256 seconds)
+2021-11-24 11:58:05	-->	synchris (~quassel@user/synchris) has joined #gentoo
+2021-11-24 11:58:29	scardracs	We don't have hwdb?
+2021-11-24 11:58:43	genr8eofl_	we do ?
+2021-11-24 11:58:49	+ionen	..yeah, fair amount of progress looking at upstream
+2021-11-24 11:59:31	scardracs	ionen: my keyboard is on it... That's why it does not works the major/minor ':)
+2021-11-24 12:00:40	<--	dagb (~dagb@241.92-220-211.customer.lyse.net) has left #gentoo
+2021-11-24 12:01:14	pinkflames[m]	ionen: btw, does the current stage3 for OpenRC contain udev or eudev?
+2021-11-24 12:01:30	-->	lavaball (felix@31.204.155.215) has joined #gentoo
+2021-11-24 12:01:46	pinkflames[m]	scardracs: that was just a guess by whot, not a clear statement what the problem might be
+2021-11-24 12:01:47	genr8eofl_	can we just end the anti-eudev campaign ?
+2021-11-24 12:02:18	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 12:02:22	projectmoon	hmm news item says that eudev will be masked from october. did that actually happen?
+2021-11-24 12:02:25	+ionen	pinkflames[m]: udev
+2021-11-24 12:02:52	pinkflames[m]	genr8eofl_: it does not stop you from using eudev if you explicitly install it (or have it installed already) [unless it's masked and/or removed]
+2021-11-24 12:02:56	pinkflames[m]	ionen: nice
+2021-11-24 12:03:23	pinkflames[m]	projectmoon: it ended up not being last rited (so probably still not masked if you have it installed)
+2021-11-24 12:03:35	pinkflames[m]	had it been masked, your portage would try to replace it with udev
+2021-11-24 12:04:04	projectmoon	pinkflames[m]: yes that's what i would expect
+2021-11-24 12:04:23	 *	violetina_ not likes to change things that w0rk :x
+2021-11-24 12:04:56	scardracs	Why hwdb is on /etc/udev/hwdb.d instead of /lib/udev/hwdb.d?
+2021-11-24 12:06:05	scardracs	Uh, solved
+2021-11-24 12:06:19	genr8eofl_	hwdb.d and hwdb.bin are different things ?
+2021-11-24 12:07:38	scardracs	Yes
+2021-11-24 12:07:43	-->	Guest23 (~Guest23@111.68.101.130) has joined #gentoo
+2021-11-24 12:07:57	scardracs	One is a binary file while .d is a directory
+2021-11-24 12:08:17	scardracs	The hwdb.d is empty
+2021-11-24 12:08:20	Guest23	hi,  Need  guidance .I am facing problem in installing virtualbox.  https://drive.google.com/drive/folders/1vQGsgs8yooW4tbg-AQhk8ScI2CBZrbUf
+2021-11-24 12:08:24	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 12:08:27	Guest23	sorry
+2021-11-24 12:08:27	scardracs	The fix should be on it
+2021-11-24 12:08:52	Guest23	https://dpaste.com/34GM3AJPC
+2021-11-24 12:08:53	genr8eofl_	do you have sys-apps/hwids installed ?
+2021-11-24 12:09:38	genr8eofl_	Guest23, its telling you it requires java for the optional vboxwebsrv
+2021-11-24 12:10:22	scardracs	genr8eofl_: yes
+2021-11-24 12:10:36	Guest23	I even remove "sdk" local flag but still
+2021-11-24 12:10:58	Guest23	then I add sd but same thing
+2021-11-24 12:11:08	Guest23	sdk
+2021-11-24 12:11:18	genr8eofl_	its not talking about the sdk, its talking about vboxwebsrv and java
+2021-11-24 12:11:19	violetina_	Guest23: vboxwebsrv needs the java use flag , so if ypou dont want that disable vboxwebsrv
+2021-11-24 12:11:47	Guest23	https://packages.gentoo.org/packages/app-emulation/virtualbox
+2021-11-24 12:12:00	pinkflames[m]	genr8eofl_: okay, now that I'm back from gitlab, tell me this - what do you gain from using eudev?
+2021-11-24 12:12:53	-->	twnqx (~twnqx@ip4d1464c3.dynamic.kabel-deutschland.de) has joined #gentoo
+2021-11-24 12:12:57	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 256 seconds)
+2021-11-24 12:12:59	Guest23	here sdk is added inside /etc/portage/package.use/vim xfceapp
+2021-11-24 12:13:39	genr8eofl_	im against the systemd-ification of gentoo. i would remove it if I could
+2021-11-24 12:13:48	pinkflames[m]	so you gain nothing?
+2021-11-24 12:14:08	pinkflames[m]	because if it's meritless, why have divergence just because someone irrationally hates something?
+2021-11-24 12:14:20	scardracs	I'm gonna add /etc/udev/hwdb.d/60-keyboard.hwdb and see if it helps
+2021-11-24 12:14:47	pinkflames[m]	scardracs: with what content?
+2021-11-24 12:15:13	scardracs	pinkflames[m]: https://github.com/eudev-project/eudev/blob/master/hwdb/60-keyboard.hwdb
+2021-11-24 12:15:25	scardracs	But that's actually for eudev
+2021-11-24 12:15:34	pinkflames[m]	remember that if you have /usr/lib/udev/hwdb.d/60-keyboard.hwdb and you create /etc/udev/hwdb.d/60-keyboard.hwdb then the original will be completely ignored in favor of /etc version
+2021-11-24 12:15:59	pinkflames[m]	scardracs: why do you want to replace the systemd udev version with eudev version?
+2021-11-24 12:16:00	scardracs	I don't have the /usr/lib/udev at all
+2021-11-24 12:16:14	pinkflames[m]	scardracs: whta insanity is that?
+2021-11-24 12:16:23	pinkflames[m]	Are you sure you're using systemd then?
+2021-11-24 12:16:26	genr8eofl_	its /lib/udev/hwdb.d/ and it comes from sys-apps/hwids
+2021-11-24 12:16:31	pinkflames[m]	is that a prefix install?
+2021-11-24 12:16:52	scardracs	Ok find kt
+2021-11-24 12:17:08	pinkflames[m]	genr8eofl_: thank you
+2021-11-24 12:17:14	pinkflames[m]	also I just made a fool out of myself
+2021-11-24 12:17:15	scardracs	But it should be /usr/lib/udev/hwdb.d
+2021-11-24 12:17:20	pinkflames[m]	if that's the cause
+2021-11-24 12:18:18	genr8eofl_	dont worry, it went over my head
+2021-11-24 12:18:19	scardracs	I'll try to CP it into /usr
+2021-11-24 12:18:27	<--	lavaball (felix@31.204.155.215) has quit (Remote host closed the connection)
+2021-11-24 12:18:32	genr8eofl_	wat, no, why
+2021-11-24 12:18:36	pinkflames[m]	floppym: is there a reason why we use https://github.com/gentoo/hwids instead of proper upstream hwdb?
+2021-11-24 12:18:50	scardracs	No, that doesn't help
+2021-11-24 12:19:02	<--	Lucretia (~laguest@user/lucretia) has quit (Ping timeout: 240 seconds)
+2021-11-24 12:19:15	pinkflames[m]	scardracs: do not touch /usr/ just put stuff in /etc
+2021-11-24 12:19:33	pinkflames[m]	having an udev rule file of the same name completely hides the /usr variant
+2021-11-24 12:20:02	<--	enigma (~enigma@82.0.71.12) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:20:07	pinkflames[m]	scardracs: what you should do is locate the systemd udev hwdb file and put that in /etc
+2021-11-24 12:20:21	pinkflames[m]	it's likely that the hwids file is outdated
+2021-11-24 12:20:39	genr8eofl_	or install the 999999999 version
+2021-11-24 12:20:49	-->	kyoreln_ (~kyoreln@lfbn-poi-1-1272-155.w90-78.abo.wanadoo.fr) has joined #gentoo
+2021-11-24 12:21:04	pinkflames[m]	Are you sure that will help?
+2021-11-24 12:21:20	<--	scramblez (~michael@230.3.169.217.in-addr.arpa) has left #gentoo
+2021-11-24 12:21:21	scardracs	I think I've found the AT file
+2021-11-24 12:21:26	scardracs	Line*
+2021-11-24 12:21:27	pinkflames[m]	The bug has been around for long enough that it would be unlikely that it's been magically fixed in the past quarter
+2021-11-24 12:21:41	-->	RiFo (~RiFo@user/rifo) has joined #gentoo
+2021-11-24 12:21:46	genr8eofl_	then forget it
+2021-11-24 12:22:51	scardracs	I think it should be here the problem
+2021-11-24 12:23:15	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 264 seconds)
+2021-11-24 12:23:44	scardracs	Wait, what? The freedesktop version does not have any translated subsection
+2021-11-24 12:23:45	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 12:23:46	<--	kyoreln (~kyoreln@lfbn-poi-1-1243-30.w90-78.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:23:57	scardracs	https://cgit.freedesktop.org/systemd/systemd/tree/hwdb/60-keyboard.hwdb
+2021-11-24 12:25:57	<--	Guest23 (~Guest23@111.68.101.130) has quit (Ping timeout: 256 seconds)
+2021-11-24 12:26:15	-->	Lucretia (~laguest@user/lucretia) has joined #gentoo
+2021-11-24 12:26:16	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 12:26:34	pinkflames[m]	that's not FDO version, that's the upstrem systemd udev hwdb version
+2021-11-24 12:26:39	grawity	scardracs: the fd.o Git service had been shut down 6 years ago, so you're looking at a 6-year-old file there
+2021-11-24 12:26:41	pinkflames[m]	fdo just hots the project
+2021-11-24 12:26:48	<--	crabbedhaloablut (~crabbedha@user/crabbedhaloablut) has quit (Remote host closed the connection)
+2021-11-24 12:26:54	pinkflames[m]	*hosts
+2021-11-24 12:26:54	scardracs	Lol ops
+2021-11-24 12:27:01	<--	kyoreln_ (~kyoreln@lfbn-poi-1-1272-155.w90-78.abo.wanadoo.fr) has quit (Ping timeout: 245 seconds)
+2021-11-24 12:27:04	-->	crabbedhaloablut (~crabbedha@user/crabbedhaloablut) has joined #gentoo
+2021-11-24 12:27:09	-->	kyoreln (~kyoreln@lfbn-poi-1-1272-155.w90-78.abo.wanadoo.fr) has joined #gentoo
+2021-11-24 12:27:37	<--	ixti (~ixti@87.125.252.231) has quit (Read error: Connection reset by peer)
+2021-11-24 12:27:41	pinkflames[m]	grawity: weird, it was still in sync for PIpeWire in the summer (cgit and gitlab)
+2021-11-24 12:27:54	grawity	maybe for some projects, e.g. those which use fd.o gitlab?
+2021-11-24 12:28:01	grawity	but systemd moved out to GitHub long ago
+2021-11-24 12:28:24	grawity	oh, right, I guess it's the GNOME cgit that was shut down when they got their own Gitlab
+2021-11-24 12:28:48	scardracs	Uff, that thing is a pain
+2021-11-24 12:28:49	grawity	but I don't remember git://anongit.fd.o being up-to-date for the projects I follow
+2021-11-24 12:29:35	pinkflames[m]	the URL is https://gitlab.freedesktop.org/pipewire/pipewire.git
+2021-11-24 12:29:55	grawity	scardracs: anyway https://github.com/systemd/systemd/blob/main/hwdb.d/60-keyboard.hwdb is the correct URL
+2021-11-24 12:30:05	pinkflames[m]	also I prefer to use HTTPS unless you also need to push
+2021-11-24 12:30:36	-->	Guest23 (~Guest23@111.68.101.130) has joined #gentoo
+2021-11-24 12:31:46	pinkflames[m]	scardracs: in case if it's too daunting, place the file grawity linked as /etc/udev/hwdb.d/60-keyboard.hwdb and probably best reboot
+2021-11-24 12:31:49	genr8eofl_	pinkflames[m], what do you gain from using pipewire ?
+2021-11-24 12:32:11	pinkflames[m]	reloading of udev rules should be a thing but chances are things may not appreciate that
+2021-11-24 12:32:19	<--	fixl (~Thunderbi@gateway/vpn/pia/fixl) has quit (Ping timeout: 250 seconds)
+2021-11-24 12:32:57	-->	enigma (~enigma@82.0.71.12) has joined #gentoo
+2021-11-24 12:33:02	pinkflames[m]	genr8eofl_: than you for asking specifically about me - I gain low latency audio, I can use JACK applications without having to deal with jackd, I also get to use Wayland screen capture
+2021-11-24 12:33:18	scardracs	pinkflames[m]: I'll try it
+2021-11-24 12:34:01	Guest23	well  if I apply #gentoo emerge --info  java is not added in the Global flag. So may I add it  ?
+2021-11-24 12:34:18	grawity	you may need to run `systemd-hwdb update` to recompile the hwdb.bin before rebooting
+2021-11-24 12:34:54	-->	fixl (~Thunderbi@gateway/vpn/pia/fixl) has joined #gentoo
+2021-11-24 12:35:06	pinkflames[m]	Thanks for being the expert here - I have only replaced rules and did not know that the db needs a recompile ;)
+2021-11-24 12:35:58	genr8eofl_	Guest23, echo "app-emulation/virtualbox java" > /etc/portage/package.use/virtualbox
+2021-11-24 12:36:00	grawity	hwdb and rules can be updated on the fly without problems (`systemd-hwdb update` for the former and `udevadm control --reload` for the latter), but re-applying them to an existing device is more troublesome – if you can physically unplug and reconnect a USB keyboard that should do the job, but often it's easier to just reboot than mess around with `udevadm trigger` etc
+2021-11-24 12:37:34	pinkflames[m]	grawity: what I meant is that there's a known bug in current WirePlumber 0.4.5 where doing udevadm trigger will break audio if it's been called once before
+2021-11-24 12:38:07	grawity	ah yeah trigger can break stuff a lot
+2021-11-24 12:38:07	scardracs	Still doesn't work
+2021-11-24 12:38:17	scardracs	:(
+2021-11-24 12:38:18	pinkflames[m]	Hopefully the fix will land as WIrePlumber 0.4.5-r1 today (or within a few days) but there may be other such software
+2021-11-24 12:38:37	grawity	might be a good idea to check with `udevadm info /sys/class/input/whatever` to make sure the hwdb additions are there
+2021-11-24 12:39:54	scardracs	https://www.irccloud.com/pastebin/y0xEOzP8/
+2021-11-24 12:39:59	scardracs	grawity: ^
+2021-11-24 12:40:22	grawity	ok and what was the actual hwdb change that's supposed to be there?
+2021-11-24 12:40:40	scardracs	I don't know?
+2021-11-24 12:40:55	grawity	I missed the whole part about the problem you were trying to fix
+2021-11-24 12:41:37	scardracs	I have the <> between altgr and left button and I'm trying to make it as <> instead of rightctrl
+2021-11-24 12:42:45	pinkflames[m]	grawity: tl;dr libinput reports KEY_ALTRIGHT on Gentoo while other distros report the same key as KEY_CTRLRIGHT (IIRC)
+2021-11-24 12:42:59	pinkflames[m]	this may or may not cause the eventual issue but at least it's something to look at
+2021-11-24 12:42:59	<--	cmyster (~cmyster@user/cmyster) has quit (Read error: Connection reset by peer)
+2021-11-24 12:43:18	scardracs	pinkflames[m]: right
+2021-11-24 12:43:39	genr8eofl_	how are you typing <> if the button doesnt work ?
+2021-11-24 12:43:42	scardracs	pinkflames[m]: it's changed
+2021-11-24 12:43:43	scardracs	Now
+2021-11-24 12:43:51	scardracs	It's rightctrl on gentoo too
+2021-11-24 12:44:08	scardracs	genr8eofl_: typing from smartphone
+2021-11-24 12:44:17	genr8eofl_	ok
+2021-11-24 12:44:32	pinkflames[m]	scardracs: so it's now reported correctly with systemd udev hwdb?
+2021-11-24 12:44:46	pinkflames[m]	but it still does not produce the correct < > characters?
+2021-11-24 12:44:46	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:45:29	scardracs	Yes
+2021-11-24 12:45:50	Guest23	"genr8eofl_   "Thanks now there is no error >:)  Only just by adding java flag .There is no need rest "LOCAL USE FLAGS "of the flags?
+2021-11-24 12:46:39	<--	CyberTailor (~cyber@gateway/tor-sasl/cybertailor) has quit (Quit: Konversation terminated!)
+2021-11-24 12:46:43	Guest23	what is the reason  behind it ?
+2021-11-24 12:46:49	Guest23	:)
+2021-11-24 12:47:52	pinkflames[m]	scardracs: okay, that's now a #gentoo-kde issue, I think
+2021-11-24 12:47:53	-->	SkunkyLaptop (~skunky@user/skunky) has joined #gentoo
+2021-11-24 12:48:11	pinkflames[m]	since KDE should now be getting the same key event as on other distros
+2021-11-24 12:48:48	-->	cmyster (~cmyster@user/cmyster) has joined #gentoo
+2021-11-24 12:49:03	scardracs	I have to report everything, again? D:
+2021-11-24 12:49:18	pinkflames[m]	scardracs: I can only suggest comparing localectl on Gentoo and a working distro as well as the KDE keyboard settings (layout and the various options it lets you toggle)
+2021-11-24 12:49:25	grawity	I'm now very confused as to what physical key is involved here
+2021-11-24 12:49:49	pinkflames[m]	scardracs: not everything and #gentoo-kde is basically sam, asturm and a few more people so it's not like we don't know your issue by now
+2021-11-24 12:49:59	grawity	oh there's a photo on the gitlab
+2021-11-24 12:50:06	scardracs	grawity: look at https://h30434.www3.hp.com/t5/image/serverpage/image-id/203235i01AD626584587DA1?v=v2
+2021-11-24 12:50:07	pinkflames[m]	is there?
+2021-11-24 12:50:41	scardracs	My laptop has the same layout without the \ in ‹›
+2021-11-24 12:50:55	<--	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has quit (Remote host closed the connection)
+2021-11-24 12:51:04	grawity	ah, so HP put a ><\ key *in place of* RCtrl
+2021-11-24 12:51:12	scardracs	Yes
+2021-11-24 12:51:15	<--	spare (~tddlwirog@user/spareproject) has quit (Remote host closed the connection)
+2021-11-24 12:51:28	scardracs	On mine is only ><
+2021-11-24 12:51:28	grawity	>\< is exactly how I feel about that
+2021-11-24 12:51:48	-->	kyoreln_ (~kyoreln@lfbn-poi-1-1272-155.w90-78.abo.wanadoo.fr) has joined #gentoo
+2021-11-24 12:51:54	grawity	still better than Lenovo having Fn in place of LCtrl, I guess
+2021-11-24 12:54:09	Guest23	" genr8eofl " Thanks emerge doesn't show any message. what is the reason that  with only java   there is no error ?
+2021-11-24 12:54:34	<--	kyoreln (~kyoreln@lfbn-poi-1-1272-155.w90-78.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:54:46	genr8eofl_	vboxwebsrv requires java, its as simple as that ...
+2021-11-24 12:54:48	pinkflames[m]	scardracs: I __think__ that systemd[-hwdb] confusingly actually might install upstream hwdb?
+2021-11-24 12:55:16	scardracs	? Isn't hwdb forced by +hwdb?
+2021-11-24 12:55:18	pinkflames[m]	but that only raises more questions - like why is it +hwdb and why is it named that way when it seems like the exact opposite of what it promises
+2021-11-24 12:55:32	pinkflames[m]	it's not forced, just enabled by default
+2021-11-24 12:55:37	Guest23	and rest of the local use flags  ?
+2021-11-24 12:55:38	pinkflames[m]	forcing is done vya package.use.force
+2021-11-24 12:55:56	pinkflames[m]	*via
+2021-11-24 12:56:01	genr8eofl_	Guest23, they do other stuff. read "equery u virtualbox"
+2021-11-24 12:56:20	scardracs	Aaah that thing is running me out of ideas
+2021-11-24 12:56:32	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 12:56:34	pinkflames[m]	scardracs: which is why you ask #gentoo-kde now
+2021-11-24 12:56:47	grawity	pinkflames[m]: by the way, does pipewire persist volume settings like PA does? iirc, last time I looked at it, you couldn't have it remember speaker vs headphone volumes separately from each other
+2021-11-24 12:56:59	pinkflames[m]	we at least got to the point where Plasma is getting the same key press event but reacting differently
+2021-11-24 12:57:23	scardracs	pinkflames[m]: did I post the question correctly? ':9
+2021-11-24 12:57:27	scardracs	':)*
+2021-11-24 12:57:42	pinkflames[m]	grawity: no idea about port volumes but that's not your biggest issue - the automatic switching between headphones jack and speakers is still not implemented by default
+2021-11-24 12:58:13	grawity	ah, that's the one I forgot
+2021-11-24 12:58:16	<--	sh1r4s3 (~sh1r4s3@109.252.75.9) has quit (Ping timeout: 245 seconds)
+2021-11-24 12:58:24	grawity	yeah not gonna test it yet, then
+2021-11-24 12:58:41	pinkflames[m]	as for remembering volumes in general, WirePlumber  handles that very well (as long as you are not using Pro Audio profile - for that volumes must be handled by alsamixer)
+2021-11-24 12:58:41	-->	avionicsx (~avionicsx@103.197.205.13) has joined #gentoo
+2021-11-24 12:59:01	-->	kirk781 (~doors_1@2402:3a80:b43:45e:7c29:f5f:169e:4925) has joined #gentoo
+2021-11-24 13:00:04	avionicsx	guys one side of my cpu when i went to cleaning saw that it was slightly bend, now im worried if there's a problem when its running. is there a linux tool i can use to check?? i know of https://www.intel.com/content/www/us/en/support/articles/000005567/processors.html but its software is for windows only
+2021-11-24 13:00:04	<--	jimmyb (~jimmyb@user/jimmyb) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 13:00:25	-->	jimmyb (~jimmyb@user/jimmyb) has joined #gentoo
+2021-11-24 13:00:40	pinkflames[m]	scardracs: actually no - at this point you just say that libinput reports the same key event as for other distros but that it's not handled correctly
+2021-11-24 13:00:46	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-24 13:00:50	pinkflames[m]	also I would still like to see the localectl output comparison
+2021-11-24 13:01:14	<--	plebe (~user@gateway/tor-sasl/plebe) has quit (Remote host closed the connection)
+2021-11-24 13:01:18	pinkflames[m]	and if those match up then go and check systemsettings5 keyboard kcm which has like 3 tabs for you to explore
+2021-11-24 13:01:26	-->	plebe (~user@gateway/tor-sasl/plebe) has joined #gentoo
+2021-11-24 13:01:27	-->	golfmiketango (~golfmiket@2601:645:4001:48c0:329c:23ff:fee4:9d1e) has joined #gentoo
+2021-11-24 13:01:38	scardracs	pinkflames[m]: which is the command?
+2021-11-24 13:01:46	pinkflames[m]	localectl
+2021-11-24 13:01:47	pinkflames[m]	IIRC
+2021-11-24 13:01:51	genr8eofl_	scardracs, I also see a flag on systemd "xkb" to control the keymap on logind
+2021-11-24 13:02:02	scardracs	https://www.irccloud.com/pastebin/GXDL90J7/
+2021-11-24 13:02:30	pinkflames[m]	genr8eofl_: good point but I'm not even sure if Plasma cares about that
+2021-11-24 13:02:46	genr8eofl_	idk
+2021-11-24 13:02:54	pinkflames[m]	KDE has a history of ignoring OS keyboard configuration and doing everything its way
+2021-11-24 13:03:03	avionicsx	lopl
+2021-11-24 13:03:12	pinkflames[m]	I'm just point out the things to go and check
+2021-11-24 13:03:18	genr8eofl_	I dont use Udev, Systemd, KDE, keymaps or pipewire
+2021-11-24 13:03:21	genr8eofl_	so im out of my depth here
+2021-11-24 13:04:00	pinkflames[m]	scardracs: and what about another distro where it works as intended?
+2021-11-24 13:04:10	pinkflames[m]	the output in isolation is a bit meaningless, IMO
+2021-11-24 13:04:29	pinkflames[m]	it's far better to compare to a known working setup to find and eliminate differences from bottom to top
+2021-11-24 13:04:38	scardracs	Manjaro should works
+2021-11-24 13:05:26	pinkflames[m]	I have neither manjaro nor your hardware to check
+2021-11-24 13:05:41	pinkflames[m]	so it's up to you to get the output from its localectl and compare the two
+2021-11-24 13:05:53	scardracs	I'm gonna download it and test
+2021-11-24 13:06:28	pinkflames[m]	then how could you compare the libinput debug-events then?
+2021-11-24 13:07:08	grawity	hmm systemd-localed just generates an Xorg.conf that sets the xkb keymap, right?
+2021-11-24 13:07:19	grawity	I think that's one of those features I've never used
+2021-11-24 13:09:36	<--	avionicsx (~avionicsx@103.197.205.13) has quit (Quit: Client closed)
+2021-11-24 13:12:59	<--	kirk781 (~doors_1@2402:3a80:b43:45e:7c29:f5f:169e:4925) has quit (Quit: Leaving)
+2021-11-24 13:13:30	-->	voltron (~voltrin_@ip4d16bdc6.dynamic.kabel-deutschland.de) has joined #gentoo
+2021-11-24 13:13:55	<--	brrm (~brrm@HSI-KBW-078-043-200-244.hsi4.kabel-badenwuerttemberg.de) has quit (Ping timeout: 250 seconds)
+2021-11-24 13:17:30	<--	jbox (~jbox@user/jbox) has quit (Read error: Connection reset by peer)
+2021-11-24 13:18:31	<--	voltron (~voltrin_@ip4d16bdc6.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2021-11-24 13:21:19	-->	BOUSILLOR (~bousillor@82.66.49.81) has joined #gentoo
+2021-11-24 13:21:19	<--	BOUSILLOR (~bousillor@82.66.49.81) has quit (Changing host)
+2021-11-24 13:21:19	-->	BOUSILLOR (~bousillor@user/bousillor) has joined #gentoo
+2021-11-24 13:22:21	-->	masterbuilder (~user@user/masterbuilder) has joined #gentoo
+2021-11-24 13:22:47	recyclehero	what I am doing wrong? sudo dd if=/tftproot/install-x86-minimal-20211115T170540Z.iso of=/dev/sdd status=progress
+2021-11-24 13:22:56	recyclehero	isolinux.bin is missing
+2021-11-24 13:24:19	SkunkyLaptop	recyclehero: you're trying to dd a cd image to... a usb stick?
+2021-11-24 13:25:00	-->	brrm (~brrm@HSI-KBW-078-043-200-244.hsi4.kabel-badenwuerttemberg.de) has joined #gentoo
+2021-11-24 13:26:51	recyclehero	ok I've loop mounted the minimal.iso what should I do now?
+2021-11-24 13:27:17	recyclehero	SkunkyLaptop: i have seen this work for some installations
+2021-11-24 13:27:27	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 264 seconds)
+2021-11-24 13:27:39	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 13:27:46	recyclehero	I shouldd parttion the usb make one bootable with isolinux on it  and so one ?
+2021-11-24 13:27:47	SkunkyLaptop	recyclehero: sure, it works, on SOME iso files, sometimes....
+2021-11-24 13:28:22	SkunkyLaptop	recyclehero: do you really not already have some bootable linux stick?
+2021-11-24 13:29:21	recyclehero	no
+2021-11-24 13:29:29	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 13:30:27	<--	Mo (~Mo@dynamic-095-112-110-153.95.112.pool.telefonica.de) has quit (Ping timeout: 264 seconds)
+2021-11-24 13:30:39	recyclehero	every time its diffrent. this laptop bios is locked so I cant network boot which I had ready for the past installation. :\
+2021-11-24 13:31:33	-->	marindia (~marindia@103.197.205.13) has joined #gentoo
+2021-11-24 13:31:56	marindia	hello. suddenly my time is 6 hours ahead. how do i fix??
+2021-11-24 13:32:16	pinkflames[m]	grawity: I find it unlikely that systemd would be touching /etc/X11 files
+2021-11-24 13:32:21	marindia	i checked time in bios its ok but only in gentoo linux the time is 6 hours ahead
+2021-11-24 13:32:26	recyclehero	marindia: date hhmmmmddccyy.ss
+2021-11-24 13:32:40	pinkflames[m]	it's far more likely to be changing environment variables than anything else
+2021-11-24 13:32:47	marindia	??
+2021-11-24 13:33:07	recyclehero	       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+2021-11-24 13:33:11	grawity	pinkflames[m]: yeah but that's exactly what it does in keymap-util
+2021-11-24 13:33:19	marindia	how do i get internet sync time
+2021-11-24 13:33:23	grawity	marindia: what's the time in `date -u`?
+2021-11-24 13:33:37	grawity	marindia: and are you dual-booting with Windows?
+2021-11-24 13:33:40	marindia	date -u ohh its correct
+2021-11-24 13:33:47	marindia	grawity yea
+2021-11-24 13:33:54	pinkflames[m]	grawity: I'm not immediately aware of where keymap-util is found
+2021-11-24 13:34:27	marindia	time in date is 6 hours ahead but in date -u its ok. whats going on??
+2021-11-24 13:34:33	pinkflames[m]	marindia: are you using systemd or OpenRC (excuse all the triggered people)
+2021-11-24 13:34:34	<--	fixl (~Thunderbi@gateway/vpn/pia/fixl) has quit (Read error: Connection reset by peer)
+2021-11-24 13:34:45	grawity	pinkflames[m]: https://github.com/systemd/systemd/blob/master/src/locale/keymap-util.c#L350
+2021-11-24 13:34:53	marindia	im using systemd
+2021-11-24 13:34:53	grawity	er, s/master/main
+2021-11-24 13:35:03	pinkflames[m]	marindia: check timedatectl then
+2021-11-24 13:35:34	pinkflames[m]	it should show RTC in local TZ: yes
+2021-11-24 13:35:39	pinkflames[m]	if not, that's one thing to fix
+2021-11-24 13:36:00	grawity	probably better to configure Windows to use UTC instead
+2021-11-24 13:36:00	-->	Joro (~joro@37.63.16.197) has joined #gentoo
+2021-11-24 13:36:01	pinkflames[m]	and you want to see NTP service: active
+2021-11-24 13:36:18	marindia	RTC in local TZ: no
+2021-11-24 13:36:26	pinkflames[m]	is that possible?
+2021-11-24 13:36:27	marindia	what's the fix?
+2021-11-24 13:36:38	Joro	any idea how to make gentoo-kernel to include a custom built module in the initramfs?
+2021-11-24 13:36:45	marindia	NTP service: active
+2021-11-24 13:37:49	marindia	pinkflames fix??
+2021-11-24 13:38:10	marindia	pinkflames[m]
+2021-11-24 13:38:23	grawity	pinkflames[m]: yeah https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows – it works in Win10, though iirc used to be broken in Win7
+2021-11-24 13:38:37	-->	lavaball (felix@31.204.155.215) has joined #gentoo
+2021-11-24 13:38:48	genr8eofl_	nice, ill have to try that
+2021-11-24 13:39:11	marindia	k
+2021-11-24 13:39:35	<--	marindia (~marindia@103.197.205.13) has quit (Quit: Client closed)
+2021-11-24 13:39:43	pinkflames[m]	marindia: NTP looks good (so your time is being updated from internet)
+2021-11-24 13:39:50	grawity	apt-get install some patience :(
+2021-11-24 13:40:58	pinkflames[m]	all you need is to either switch windows to UTC like grawity suggests or switch your Gentoo to localtime by calling timedatectl set-local-rtc yes
+2021-11-24 13:41:19	pinkflames[m]	arguably the grawity approach is better since using local time does produce a scary looking warning ;D
+2021-11-24 13:41:26	grawity	tbh
+2021-11-24 13:41:44	grawity	localtime just always reminds me of the DST adjustment mess I used to have when dualbooting Win98 and Win2000
+2021-11-24 13:41:56	grawity	with both systems thinking they have to adjust the RTC
+2021-11-24 13:42:19	pinkflames[m]	DST itself gives me PTSD
+2021-11-24 13:42:29	pinkflames[m]	no need for computers to be involved at all
+2021-11-24 13:42:39	pinkflames[m]	or rather, the time change gives me PTSD
+2021-11-24 13:45:47	-->	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has joined #gentoo
+2021-11-24 13:48:09	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 256 seconds)
+2021-11-24 13:53:04	DiffieHellman	Best to just set computer time to UTC and then do braindamage timezone adjustments on that.
+2021-11-24 13:57:29	<--	Guest23 (~Guest23@111.68.101.130) has quit (Quit: Client closed)
+2021-11-24 13:59:20	Joro	Windows is doing the mess by requiring the RTC to be set in local time. Up to Windows 7 you can set it to work with UTC RTC timer. I believe the setting is the same for 8, 10 and 11. It's a single registry key. I used to set it up like that when I was dual-booting and this saved me a whole lot of trouble.
+2021-11-24 14:00:29	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 14:00:42	jpds	Joro: Use dracut for including kernel modules
+2021-11-24 14:01:25	-->	tirnanog (~tirnanog@user/tirnanog) has joined #gentoo
+2021-11-24 14:01:38	burak	if your initrd generated by dracut, you would add warpclock module that set rtc clock to wallclock during the boot
+2021-11-24 14:02:40	Joro	jpds: will it modify the already existing image, or should I build a new one? The later is not an option for me as I didn't find a way to reproduce some settings gentoo-kernel does.
+2021-11-24 14:03:42	jpds	Joro: The latter, and you should fix that issue instead of working around it
+2021-11-24 14:04:57	<--	aniruddha (uid340443@id-340443.ilkley.irccloud.com) has quit (Quit: Connection closed for inactivity)
+2021-11-24 14:04:58	Joro	jpds: I don't have time to waste on some obscure issue which affects the input devices and makes my life hell, so I'm looking for a workaround.
+2021-11-24 14:05:05	burak	initrd image is generated by dracut if you re using ggentoo-kernel, you can add 'dracutmodules+=" warpclock "' to dracut.conf
+2021-11-24 14:05:15	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 264 seconds)
+2021-11-24 14:05:27	Joro	burak: thx, that's exactly what I'm looking for!
+2021-11-24 14:05:45	Joro	I was just reading the manual page of dracut
+2021-11-24 14:06:30	-->	erg_ (~erg@78.11.12.207) has joined #gentoo
+2021-11-24 14:06:41	burak	np, you can check with lsinitrd output to ensure that wrapclock is included your initrd or not
+2021-11-24 14:07:17	<--	zatteliet (~kv@178-118-155-229.access.telenet.be) has quit (Quit: Leaving)
+2021-11-24 14:08:11	<--	dor (~erg@78.11.12.207) has quit (Read error: Connection reset by peer)
+2021-11-24 14:09:31	Joro	burak: for my case it seems to be add_modules
+2021-11-24 14:09:48	Joro	           add_drivers ^
+2021-11-24 14:11:01	burak	Joro: add_drivers is realated to kernel modules, you can  use dracutmodules+= or add_modules
+2021-11-24 14:11:45	Joro	ok
+2021-11-24 14:12:50	burak	Joro: add_drivers is realated to kernel modules, you can  use dracutmodules+= or add_dracutmodules,
+2021-11-24 14:13:20	Joro	but this is about dracut modules and I want to include a kernel module?
+2021-11-24 14:13:55	burak	Joro: dracutmodules option forces to add module, according to "man 5 dracut.conf"
+2021-11-24 14:14:25	Joro	reading the same thing
+2021-11-24 14:14:34	-->	sem2peie- (~sem2peie@user/sem2peie) has joined #gentoo
+2021-11-24 14:14:35	burak	dracut module and kernel module are totally different
+2021-11-24 14:15:09	Joro	Modules are located in /usr/lib/dracut/modules.d.
+2021-11-24 14:15:27	<--	sem2peie (~sem2peie@user/sem2peie) has quit (Ping timeout: 264 seconds)
+2021-11-24 14:15:27	--	sem2peie- is now known as sem2peie
+2021-11-24 14:15:57	Joro	I see I haven't mentioned it's about a kernel module
+2021-11-24 14:16:07	Joro	anyway thanks for pointing me to the right direction
+2021-11-24 14:17:31	-->	freakynl (~freaky@user/freakynl) has joined #gentoo
+2021-11-24 14:17:43	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 14:19:45	burak	Joro: backup your working initd, you can boot older initrd if newer initrd doesnt bootup
+2021-11-24 14:20:15	Joro	got it
+2021-11-24 14:22:16	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 265 seconds)
+2021-11-24 14:22:29	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 14:22:39	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 264 seconds)
+2021-11-24 14:24:11	<--	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has quit (Quit: My MacBook Air has gone to sleep. ZZZzzz…)
+2021-11-24 14:32:36	<--	Joro (~joro@37.63.16.197) has quit (Remote host closed the connection)
+2021-11-24 14:34:17	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 14:35:33	recyclehero	guys I need to learn this. How can I make bootable disk from diffrent images
+2021-11-24 14:35:47	+username234	recyclehero: depends on the image.
+2021-11-24 14:35:51	recyclehero	windows there was a rufus program and it made isos to bootable usbs
+2021-11-24 14:36:13	+username234	recyclehero: with the Gentoo Install CDs you can dd it directly to a USB drive and it should boot.
+2021-11-24 14:36:18	recyclehero	forexample now I want to make bootable freedos in gentoo
+2021-11-24 14:39:35	<--	skotos (~scott@2406:3400:217:2760:736:1c1b:d4ec:d263) has quit (Quit: Leaving)
+2021-11-24 14:41:47	BtbN	There is no generic tool for that. You need to read the documentation of the specific thing you want to put on there.
+2021-11-24 14:42:03	BtbN	If you want it to be UEFI and BIOS bootable, it's quite a mess
+2021-11-24 14:47:29	<--	iflema (~ian@user/iflema) has quit (Quit: iflema)
+2021-11-24 14:52:47	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 260 seconds)
+2021-11-24 14:54:21	<--	`VL (~vl@mail.inspert.ru) has quit (Remote host closed the connection)
+2021-11-24 14:55:42	-->	`VL (~vl@mail.inspert.ru) has joined #gentoo
+2021-11-24 14:56:03	<--	tafa (~tafa@2a04:52c0:101:85c::1) has quit (Quit: ZNC - https://znc.in)
+2021-11-24 14:56:12	-->	tafa (~tafa@tafa.xyz) has joined #gentoo
+2021-11-24 14:56:30	<--	`VL (~vl@mail.inspert.ru) has quit (Client Quit)
+2021-11-24 14:56:44	-->	`VL (~vl@mail.inspert.ru) has joined #gentoo
+2021-11-24 14:57:51	<--	arinov (~arinov@213.194.126.155) has quit (Ping timeout: 245 seconds)
+2021-11-24 14:58:12	-->	smeeagle (~smeeagle@2a00:23c8:9611:e600:e825:d8ae:9f6e:237c) has joined #gentoo
+2021-11-24 14:58:40	<--	winny (~weechat@user/winny) has quit (Remote host closed the connection)
+2021-11-24 14:59:08	-->	winny (~weechat@user/winny) has joined #gentoo
+2021-11-24 14:59:15	-->	spare (~bcep2h2qr@user/spareproject) has joined #gentoo
+2021-11-24 14:59:31	<--	slackin (~slackin@ip68-10-28-55.hr.hr.cox.net) has quit (Ping timeout: 245 seconds)
+2021-11-24 15:02:48	-->	Qeenon (~Miezhiko@user/qeenon) has joined #gentoo
+2021-11-24 15:04:42	<--	tafa (~tafa@tafa.xyz) has quit (Remote host closed the connection)
+2021-11-24 15:04:52	-->	tafa (~tafa@tafa.xyz) has joined #gentoo
+2021-11-24 15:05:42	<--	Miezhiko (~Miezhiko@user/qeenon) has quit (Ping timeout: 260 seconds)
+2021-11-24 15:05:54	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 15:10:39	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:13:57	-->	arinov (~arinov@77.67.129.200) has joined #gentoo
+2021-11-24 15:17:39	<--	matsl (~matsl@gentoo/developer/matsl) has quit (Remote host closed the connection)
+2021-11-24 15:22:16	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 15:24:17	-->	sn1tch3r (~sn1tch3r@user/sn1tch3r) has joined #gentoo
+2021-11-24 15:24:36	-->	zcheng3 (~zcheng3@d198-53-38-251.abhsia.telus.net) has joined #gentoo
+2021-11-24 15:25:39	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:25:51	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 15:25:53	<--	sn1tch3r (~sn1tch3r@user/sn1tch3r) has quit (Client Quit)
+2021-11-24 15:27:16	-->	cdown_ (~cdown@163.114.131.1) has joined #gentoo
+2021-11-24 15:29:57	-->	nos0u1 (nosoul@gateway/vpn/protonvpn/nosoul) has joined #gentoo
+2021-11-24 15:30:09	<--	cdown (~cdown@89.32.122.5) has quit (Ping timeout: 256 seconds)
+2021-11-24 15:30:17	<--	tafa (~tafa@tafa.xyz) has quit (Quit: ZNC - https://znc.in)
+2021-11-24 15:30:20	--	cdown_ is now known as cdown
+2021-11-24 15:30:26	-->	tafa (~tafa@tafa.xyz) has joined #gentoo
+2021-11-24 15:32:47	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 268 seconds)
+2021-11-24 15:33:00	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 15:33:14	--	Qeenon is now known as Miezhiko
+2021-11-24 15:33:37	<--	tafa (~tafa@tafa.xyz) has quit (Remote host closed the connection)
+2021-11-24 15:33:46	-->	tafa (~tafa@tafa.xyz) has joined #gentoo
+2021-11-24 15:34:42	<--	wuseman (~wuseman@user/wuseman) has quit (Ping timeout: 256 seconds)
+2021-11-24 15:34:46	<--	zcheng3 (~zcheng3@d198-53-38-251.abhsia.telus.net) has quit (Ping timeout: 265 seconds)
+2021-11-24 15:37:43	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 268 seconds)
+2021-11-24 15:38:39	<--	ano (~ano@user/ano) has quit (Remote host closed the connection)
+2021-11-24 15:39:02	-->	ano (~ano@user/ano) has joined #gentoo
+2021-11-24 15:39:14	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 15:39:24	<--	spare (~bcep2h2qr@user/spareproject) has quit (Ping timeout: 276 seconds)
+2021-11-24 15:39:43	-->	spare (~yjw3x7w2i@user/spareproject) has joined #gentoo
+2021-11-24 15:40:46	-->	iamben (~iamben@gentoo/developer/bkohler) has joined #gentoo
+2021-11-24 15:40:46	--	Mode #gentoo [+v iamben] by ChanServ
+2021-11-24 15:40:55	<--	spare (~yjw3x7w2i@user/spareproject) has quit (Remote host closed the connection)
+2021-11-24 15:41:34	-->	TheteSigma (TheteSi@2603-8080-fb05-4502-8199-f096-4a19-6970.res6.spectrum.com) has joined #gentoo
+2021-11-24 15:43:03	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:43:41	-->	spare (~yjw3x7w2i@user/spareproject) has joined #gentoo
+2021-11-24 15:43:58	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 260 seconds)
+2021-11-24 15:43:59	<--	tafa (~tafa@tafa.xyz) has quit (Changing host)
+2021-11-24 15:43:59	-->	tafa (~tafa@user/tafa) has joined #gentoo
+2021-11-24 15:44:27	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 15:45:03	-->	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has joined #gentoo
+2021-11-24 15:46:50	pinkflames[m]	grawity: okay, so systemd does not directly modify xorg.conf (which would be insane) - it just drops in a bit of config into the /etc/X11/xorg.conf.d which is perfectly sane thing to do
+2021-11-24 15:47:28	-->	zcheng3 (~zcheng3@node-1w7jr9y96tcwmrs0pps3ycfov.ipv6.telus.net) has joined #gentoo
+2021-11-24 15:52:15	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 256 seconds)
+2021-11-24 15:52:28	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 15:55:00	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 15:58:41	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 245 seconds)
+2021-11-24 15:58:54	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 15:59:31	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-24 16:03:16	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 245 seconds)
+2021-11-24 16:04:09	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 16:05:19	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #gentoo
+2021-11-24 16:05:32	-->	alex11 (~alex11@user/alex11) has joined #gentoo
+2021-11-24 16:09:30	-->	kiraslaugh (uid145385@id-145385.lymington.irccloud.com) has joined #gentoo
+2021-11-24 16:09:58	kiraslaugh	If you run genkernel, do you still have to make install and make modules?
+2021-11-24 16:10:12	kiraslaugh	or does it do that for you when you run genkernel all?
+2021-11-24 16:10:57	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:11:23	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 16:11:52	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 16:12:29	qwerty	On the wiki it suggests to set VIDEO_CARDS to video_cards_vmware, but I  noticed emerge checks only for 'vmware'.. should i change it vmware instead of video_cards_vmware ?
+2021-11-24 16:14:15	recyclehero	BtbN: so its a mess and I am not alone. good
+2021-11-24 16:14:30	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 16:16:37	tirnanog	qwerty: yes. which article states that?
+2021-11-24 16:17:59	qwerty	tirnanog: cool thanks will change it now. here's the link https://packages.gentoo.org/useflags/video_cards_vmware
+2021-11-24 16:18:23	tirnanog	qwerty: it doesn't actually say that, though.
+2021-11-24 16:18:47	<--	Miezhiko (~Miezhiko@user/qeenon) has quit (Quit: Leaving)
+2021-11-24 16:19:48	tirnanog	the flag is, inded, video_cards_vmware, but the string, VIDEO_CARDS is designated as a USE_EXPAND flag. in effect, it becomes a namespaced flag. thus, VIDEO_CARDS="vmware" is valid, and so it USE="video_cards_vmware", for example.
+2021-11-24 16:20:30	tirnanog	the mechanism is briefly mentioned in the portage(5) man page.
+2021-11-24 16:23:07	tirnanog	there's also a special package.use syntax for it. regardless, writing out the flag in full remains an option.
+2021-11-24 16:24:21	tirnanog	incidentally, that's not a wiki article and is almost certainly auto-generated.
+2021-11-24 16:24:37	-->	adeliktas (~adeliktas@2001:16b8:225a:af00:259d:e0b5:dc34:1c72) has joined #gentoo
+2021-11-24 16:24:51	qwerty	thanks for the info, I'll read more about it
+2021-11-24 16:25:00	-->	CaptFrito (~CaptFrito@75.145.240.138) has joined #gentoo
+2021-11-24 16:29:07	-->	ec (~ec@gateway/tor-sasl/ec) has joined #gentoo
+2021-11-24 16:29:15	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:29:45	-->	adip (~adip@dhy92.neoplus.adsl.tpnet.pl) has joined #gentoo
+2021-11-24 16:29:51	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:30:03	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 16:30:18	-->	boxybox (~boxybox@bras-base-toroon0717w-grc-30-76-71-109-225.dsl.bell.ca) has joined #gentoo
+2021-11-24 16:31:07	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-24 16:33:38	-->	jim (~jim@69-92-185-65.cpe.sparklight.net) has joined #gentoo
+2021-11-24 16:34:22	-->	l403 (~x@2a00:1028:83a2:2aae:1c12:8f48:ff8a:c345) has joined #gentoo
+2021-11-24 16:37:47	-->	duxsco (~duxsco@2a01:c22:77c2:2310::b85) has joined #gentoo
+2021-11-24 16:38:09	<--	duxsco (~duxsco@2a01:c22:77c2:2310::b85) has quit (Remote host closed the connection)
+2021-11-24 16:38:46	<--	progenyx (progenyx@gateway/vpn/airvpn/progenyx) has quit (Ping timeout: 268 seconds)
+2021-11-24 16:40:51	-->	section1 (~section1@181.23.195.170) has joined #gentoo
+2021-11-24 16:41:15	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:41:24	<--	xxyxx_ (~none@b2b-37-24-160-145.unitymedia.biz) has quit (Remote host closed the connection)
+2021-11-24 16:41:32	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 16:43:05	-->	xxyxx (~none@b2b-37-24-160-145.unitymedia.biz) has joined #gentoo
+2021-11-24 16:45:06	-->	pa1983 (~patrik@h-81-170-178-14.A216.priv.bahnhof.se) has joined #gentoo
+2021-11-24 16:45:43	<--	pa1983 (~patrik@h-81-170-178-14.A216.priv.bahnhof.se) has quit (Client Quit)
+2021-11-24 16:45:57	-->	pa1983 (~patrik@h-81-170-178-14.A216.priv.bahnhof.se) has joined #gentoo
+2021-11-24 16:50:57	-->	oma6 (~oma6@2001:999:204:4cd2:a4d0:f204:42c:a615) has joined #gentoo
+2021-11-24 16:51:01	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #gentoo
+2021-11-24 16:51:06	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:51:19	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 16:51:43	violetina_	kiraslaugh: bit late but ...  yes all does both and concider setting  --bootloader=grub2 , the it updates grub too, make sure configured grub, right (like set it to do lvm or other things you need)
+2021-11-24 16:51:55	<--	TheteSigma (TheteSi@2603-8080-fb05-4502-8199-f096-4a19-6970.res6.spectrum.com) has quit (Quit: Leaving)
+2021-11-24 16:54:42	-->	martin0x13[m] (~martin0x1@2001:470:69fc:105::1:3d07) has joined #gentoo
+2021-11-24 16:55:01	l403	I've noticed google-chrome (bin) has +50% performance compared to chromium (built) on the Motionmark (1.2) benchmark. I wonder what the reason might be.
+2021-11-24 16:55:44	Jannik2099	binary builds with LTO and PGO
+2021-11-24 16:57:00	-->	zeden (~zeden@user/zeden) has joined #gentoo
+2021-11-24 16:58:01	marduk	Does google document how they build chrome?
+2021-11-24 16:58:03	kiraslaugh	violetina_: awesome, thank you. I didn't think I needed to run it but wanted to make sure.
+2021-11-24 16:59:03	l403	interesting point
+2021-11-24 17:01:07	Jannik2099	marduk: just the default release config you find in chromium, afaik
+2021-11-24 17:01:29	Jannik2099	clang, thinLTO, pgo
+2021-11-24 17:01:34	marduk	Jannik2099: yeah but chromium != chrome. That's why Im asking
+2021-11-24 17:01:39	<--	zgu|skaro (~zgu@2603-7080-b704-0800-832f-b7d5-7b90-f547.res6.spectrum.com) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:01:54	<--	skalle (~skalle@173-25-201-240.client.mchsi.com) has quit (Read error: Connection reset by peer)
+2021-11-24 17:02:10	-->	hypoon (~hypoon@pool-108-31-49-4.washdc.fios.verizon.net) has joined #gentoo
+2021-11-24 17:03:56	<--	oma6 (~oma6@2001:999:204:4cd2:a4d0:f204:42c:a615) has quit (Quit: Leaving)
+2021-11-24 17:04:09	-->	oma6 (~oma6@2001:999:204:4cd2:a4d0:f204:42c:a615) has joined #gentoo
+2021-11-24 17:04:12	l403	marduk: here is no mention of build options difference https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/chromium_browser_vs_google_chrome.md
+2021-11-24 17:04:30	l403	I guess I can try as soon as I find how to make distcc push more than 4 jobs
+2021-11-24 17:06:37	-->	nlhowell1 (~nlhowell@2600:1702:1bd0:4440::33) has joined #gentoo
+2021-11-24 17:06:54	marduk	Doesn't say much about the build process. but it's a start.
+2021-11-24 17:08:08	-->	NGC (~brtt@2600:8804:8745:8300::7e8c) has joined #gentoo
+2021-11-24 17:08:34	Jannik2099	well again, clang + thinLTO + the profiling suite that's part of the sources
+2021-11-24 17:09:21	Jannik2099	sadly the ebuild isn't set up to run the profiling suite
+2021-11-24 17:10:13	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:10:30	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 17:12:27	<--	S0rin (~S0rin@user/s0rin) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:14:01	-->	dor (~erg@78.11.12.207) has joined #gentoo
+2021-11-24 17:14:01	<--	erg_ (~erg@78.11.12.207) has quit (Read error: Connection reset by peer)
+2021-11-24 17:14:19	-->	psymin (~psymin@user/psymin) has joined #gentoo
+2021-11-24 17:14:27	-->	S0rin (~S0rin@user/s0rin) has joined #gentoo
+2021-11-24 17:16:28	<--	tafa (~tafa@user/tafa) has quit (Quit: ZNC - https://znc.in)
+2021-11-24 17:16:42	-->	tafa (~tafa@user/tafa) has joined #gentoo
+2021-11-24 17:17:06	-->	skalle (~skalle@173-25-201-240.client.mchsi.com) has joined #gentoo
+2021-11-24 17:17:14	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 265 seconds)
+2021-11-24 17:17:27	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 17:17:31	-->	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has joined #gentoo
+2021-11-24 17:18:51	<--	ec (~ec@gateway/tor-sasl/ec) has quit (Ping timeout: 276 seconds)
+2021-11-24 17:20:34	<--	S0rin (~S0rin@user/s0rin) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:21:02	Learath2	Been a while since I last used nvidia-drivers, any idea why it’d be requiring me to build 32bit libraries?
+2021-11-24 17:22:27	marduk	It's probably because it's a binary driver and the binary has 32 and 64bit code so it has to depend on both(?)
+2021-11-24 17:22:42	-->	S0rin (~S0rin@user/s0rin) has joined #gentoo
+2021-11-24 17:22:46	marduk	I'm guessing though. I don't really use nividia-drivers
+2021-11-24 17:24:03	Learath2	I thought that too, but I can manually do -abi_x86_32 and it won’t require me to build any. I don’t see why it’d be on by default given my ABI_X86 is set to 64
+2021-11-24 17:25:38	<--	lericson (~lericson@user/lericson) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:26:10	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:26:24	-->	oma6_ (~oma6@83-245-226-181-nat-p.elisa-mobile.fi) has joined #gentoo
+2021-11-24 17:26:42	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 17:26:45	-->	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has joined #gentoo
+2021-11-24 17:27:52	+username234	Learath2: it could be 1 or more of the nvidia userland tools is (or was) 32-bit only at one point in time.
+2021-11-24 17:27:55	-->	ec (~ec@gateway/tor-sasl/ec) has joined #gentoo
+2021-11-24 17:28:27	Learath2	I tried building -tools too, it still wanted to build some 32 bit libs
+2021-11-24 17:28:34	<--	Flow (~none@gentoo/developer/flow) has quit (Quit: WeeChat 3.2)
+2021-11-24 17:29:48	<--	oma6 (~oma6@2001:999:204:4cd2:a4d0:f204:42c:a615) has quit (Ping timeout: 265 seconds)
+2021-11-24 17:32:11	-->	aHick (~memes@71.219.184.252) has joined #gentoo
+2021-11-24 17:32:25	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:32:38	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 17:35:30	<--	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:35:58	-->	ixti (~ixti@static-26-40-227-77.ipcom.comunitel.net) has joined #gentoo
+2021-11-24 17:37:38	<--	lavaball (felix@31.204.155.215) has quit (Remote host closed the connection)
+2021-11-24 17:37:39	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:37:52	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 17:38:21	<--	hsv-2 (~weechat@gateway/tor-sasl/hsv-2) has quit (Ping timeout: 276 seconds)
+2021-11-24 17:40:24	-->	hsv-2 (~weechat@gateway/tor-sasl/hsv-2) has joined #gentoo
+2021-11-24 17:40:50	-->	zer0bitz (~zer0bitz@2001:2003:f6bc:f00:4c2d:8074:ff8b:55dd) has joined #gentoo
+2021-11-24 17:41:12	Learath2	Ah, I found where it’s coming from, the profile sets it by default
+2021-11-24 17:41:37	<--	arinov (~arinov@77.67.129.200) has quit (Ping timeout: 256 seconds)
+2021-11-24 17:42:07	-->	ceamac (~ceamac@89.42.42.141) has joined #gentoo
+2021-11-24 17:42:08	<--	ceamac (~ceamac@89.42.42.141) has quit (Changing host)
+2021-11-24 17:42:08	-->	ceamac (~ceamac@user/ceamac) has joined #gentoo
+2021-11-24 17:42:54	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:47:51	-->	FinboySlick (~shark@2604:b980:c8:70:be30:5bff:feb8:8ba4) has joined #gentoo
+2021-11-24 17:49:05	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 17:49:41	<--	trace987 (~trace@ip5b429941.dynamic.kabel-deutschland.de) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:53:11	@sam_	there's a PR for gentoo to add PGO + LTO for chromium
+2021-11-24 17:54:06	<--	yidhra (~chuck_g@74.123.47.48) has quit (Remote host closed the connection)
+2021-11-24 17:54:19	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 17:57:27	<--	username234 (~username2@user/username234) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:57:27	-->	zatteliet (~kv@178-118-155-229.access.telenet.be) has joined #gentoo
+2021-11-24 17:57:50	-->	trace987 (~trace@ip5b429941.dynamic.kabel-deutschland.de) has joined #gentoo
+2021-11-24 17:58:41	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 245 seconds)
+2021-11-24 17:58:48	-->	arinov (~arinov@77.67.129.200) has joined #gentoo
+2021-11-24 17:59:45	<--	hypoon (~hypoon@pool-108-31-49-4.washdc.fios.verizon.net) has quit (Ping timeout: 256 seconds)
+2021-11-24 18:00:01	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 18:00:06	<--	ensar[m] (~ensarmozi@2001:470:69fc:105::f5db) has quit (Quit: You have been kicked for being idle)
+2021-11-24 18:02:15	<--	twistdroach (~textual@pool-108-49-221-175.bstnma.fios.verizon.net) has quit (Quit: My MacBook Air has gone to sleep. ZZZzzz…)
+2021-11-24 18:03:09	-->	username234 (~username2@user/username234) has joined #gentoo
+2021-11-24 18:03:09	--	Mode #gentoo [+v username234] by ChanServ
+2021-11-24 18:05:21	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 245 seconds)
+2021-11-24 18:05:34	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-24 18:05:55	<--	xcfa7b (~xcfa7b@user/xcfa7b) has quit (Quit: leaving)
+2021-11-24 18:09:50	-->	phireh (~user@2.59.233.131) has joined #gentoo
+2021-11-25 11:39:47	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-25 11:39:47	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-25 11:39:47	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-25 11:39:47	--	Channel #gentoo: 829 nicks (3 ops, 43 voices, 783 normals)
+2021-11-25 11:39:47	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-25 11:39:47	--	URL for #gentoo: https://www.gentoo.org
+2021-11-25 11:39:57	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-25 11:40:04	<--	alfie (~hiu@host-95-235-178-104.retail.telecomitalia.it) has quit (Remote host closed the connection)
+2021-11-25 11:41:10	-->	fixl (~Thunderbi@gateway/vpn/pia/fixl) has joined #gentoo
+2021-11-25 11:41:41	<--	zugz (~zugz@dslb-092-073-197-106.092.073.pools.vodafone-ip.de) has quit (Ping timeout: 256 seconds)
+2021-11-25 11:45:06	-->	twnqx (~twnqx@ip4d1464c3.dynamic.kabel-deutschland.de) has joined #gentoo
+2021-11-25 11:46:18	-->	spare (~sbzwyjups@user/spareproject) has joined #gentoo
+2021-11-25 11:46:46	<--	swimmer (~swimmer@user/swimmer) has quit (Remote host closed the connection)
+2021-11-25 11:49:58	-->	Guest68 (~Guest68@111.68.101.130) has joined #gentoo
+2021-11-25 11:50:24	-->	swimmer (~swimmer@user/swimmer) has joined #gentoo
+2021-11-25 11:51:02	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 240 seconds)
+2021-11-25 11:51:12	<--	cmyster (~cmyster@user/cmyster) has quit (Read error: Connection reset by peer)
+2021-11-25 11:51:27	-->	cmyster (~cmyster@user/cmyster) has joined #gentoo
+2021-11-25 11:52:27	<--	lethu (~lethu@user/lethu) has quit (Read error: Connection reset by peer)
+2021-11-25 11:53:33	-->	alfie (~hiu@host-95-235-178-104.retail.telecomitalia.it) has joined #gentoo
+2021-11-25 11:53:48	<--	smeeagle (~smeeagle@2a00:23c8:9611:e600:f867:24e8:4d46:7059) has quit (Quit: smeeagle)
+2021-11-25 11:54:46	-->	milobit (~milobit@ltea-178-013-121-150.pools.arcor-ip.net) has joined #gentoo
+2021-11-25 11:57:58	-->	lethu (~lethu@user/lethu) has joined #gentoo
+2021-11-25 12:02:51	<--	arinov (~arinov@213.194.126.155) has quit (Ping timeout: 245 seconds)
+2021-11-25 12:03:06	<--	spare (~sbzwyjups@user/spareproject) has quit (Remote host closed the connection)
+2021-11-25 12:04:06	-->	spare (~sbzwyjups@user/spareproject) has joined #gentoo
+2021-11-25 12:13:22	<--	lifthrasil (~lifthrasi@dynamic-077-010-064-133.77.10.pool.telefonica.de) has quit (Quit: WeeChat 3.0)
+2021-11-25 12:19:55	<--	`VL (~vl@82.204.252.162) has quit (Ping timeout: 250 seconds)
+2021-11-25 12:21:11	-->	heday (~heday@2a00:23c5:12a3:9400:28d4:4c00:b9df:a59) has joined #gentoo
+2021-11-25 12:21:17	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-25 12:22:05	-->	arinov (~arinov@77.67.129.200) has joined #gentoo
+2021-11-25 12:25:07	<--	samuelbernardo (~samuelber@nata01.lip.pt) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-25 12:25:22	-->	samuelbernardo (~samuelber@nata01.lip.pt) has joined #gentoo
+2021-11-25 12:26:15	<--	spare (~sbzwyjups@user/spareproject) has quit (Remote host closed the connection)
+2021-11-25 12:30:52	-->	franky (~franky@212.128.154.116) has joined #gentoo
+2021-11-25 12:32:44	-->	`VL (~vl@82.204.252.162) has joined #gentoo
+2021-11-25 12:32:51	<--	franky (~franky@212.128.154.116) has quit (Client Quit)
+2021-11-25 12:37:25	-->	lagfra_ (~fra@93-41-138-156.ip81.fastwebnet.it) has joined #gentoo
+2021-11-25 12:40:43	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 250 seconds)
+2021-11-25 12:40:56	-->	aniruddha (uid340443@id-340443.ilkley.irccloud.com) has joined #gentoo
+2021-11-25 12:43:10	<--	fakeshell_ (~fakeshell@91.99.83.255) has quit (Read error: Connection reset by peer)
+2021-11-25 12:44:14	-->	fakeshell_ (~fakeshell@91.99.83.255) has joined #gentoo
+2021-11-25 12:46:29	<--	AndrewAmmerlaan (~znc@77-171-220-50.fixed.kpn.net) has quit (Changing host)
+2021-11-25 12:46:29	-->	AndrewAmmerlaan (~znc@gentoo/developer/andrewammerlaan) has joined #gentoo
+2021-11-25 12:46:29	--	Mode #gentoo [+v AndrewAmmerlaan] by ChanServ
+2021-11-25 12:47:34	-->	Darkcoal (~user@2001:16a2:78ed:9900:47a:da4f:967f:2c19) has joined #gentoo
+2021-11-25 12:50:21	<--	`VL (~vl@82.204.252.162) has quit (Ping timeout: 245 seconds)
+2021-11-25 12:50:31	<--	violetina (~quassel@226.4-245-81.adsl-static.isp.belgacom.be) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:53:37	<--	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:58:49	-->	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has joined #gentoo
+2021-11-25 12:58:50	-->	spacedust (~info@user/cosmicblue) has joined #gentoo
+2021-11-25 12:59:33	-->	violetina (~quassel@226.4-245-81.adsl-static.isp.belgacom.be) has joined #gentoo
+2021-11-25 12:59:39	freakynl	Hi, anyone know how to back-up files including posix capabilities? tar doesn't seem to support it
+2021-11-25 13:00:13	scardracs	Does xmodmap works on Wayland or only in x11?
+2021-11-25 13:00:14	grawity	`tar --xattrs` might
+2021-11-25 13:11:15	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-25 13:11:15	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --exclude python:3.9"
+2021-11-25 13:11:15	--	Topic set by username234 on Tue, 08 Jun 2021 18:02:38
+2021-11-25 13:11:15	--	Channel #gentoo: 835 nicks (3 ops, 44 voices, 788 normals)
+2021-11-25 13:11:15	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-25 13:11:15	--	URL for #gentoo: https://www.gentoo.org
+2021-11-25 13:11:21	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-25 13:12:00	<--	stelf (~stelf@p200300f68f1d3500020cc6fffe7b1fa4.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2021-11-25 13:12:44	-->	stelf (~stelf@p57a100f3.dip0.t-ipconnect.de) has joined #gentoo
+2021-11-25 13:14:42	-->	masterbuilder (~user@user/masterbuilder) has joined #gentoo
+2021-11-25 13:19:44	<--	Guest99 (~Guest99@178.238.11.193) has quit (Quit: Client closed)
+2021-11-25 13:21:41	Guest68	hi, I am facing an error after installing Virtualbox.It shows error.How may I past it here ...?
+2021-11-25 13:22:07	chris218	wgetpaste is really nice for that
+2021-11-25 13:22:11	+username234	Guest68: It only shows "error" nothing else?
+2021-11-25 13:22:36	Guest68	 ERROR: app-emulation/virtualbox-6.1.24-r1::gentoo failed (prepare phase):
+2021-11-25 13:22:37	Guest68	 *   patch -p1  failed with /var/tmp/portage/app-emulation/virtualbox-6.1.24-r1/files/virtualbox-5.2.8-paxmark-bldprogs.patch
+2021-11-25 13:22:37	Guest68	 *
+2021-11-25 13:23:37	Guest68	actually it is on full screen  so may I paste it here ?
+2021-11-25 13:23:47	chris218	app-text/wgetpaste
+2021-11-25 13:24:33	Guest68	above is only few lines which i have  pasted here
+2021-11-25 13:24:58	chris218	better to use it for anything 2+ lines it's nicer to work with and less spamy :)
+2021-11-25 13:26:09	chris218	you can post logs with it from `/var/tmp/portage/app-emulation/virtualbox*/temp/build.log`
+2021-11-25 13:27:09	Mo	Hi, I'm trying iperf3 to a server in the same subnet: iperf3 --client -u 192.168.8.2    But I always get Name or service not known.
+2021-11-25 13:27:15	Guest68	what will be the correct syntax to paste it ? app-text/wgetpaste     .THe text is on my terminal windows
+2021-11-25 13:27:44	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-25 13:27:47	Guest68	so 1st i copy it and then...? how to add it in my wegetpaste
+2021-11-25 13:27:49	chris218	the same text will be in `/var/tmp/portage/app-emulation/virtualbox*/temp/build.log` so use `wgetpaste <that path>`
+2021-11-25 13:28:01	Jens3	Guest68: wgetpaste is a program you need to emerge first
+2021-11-25 13:28:16	Guest68	ic ic
+2021-11-25 13:28:19	chris218	but it looks like the patch is messing something from what you poasted
+2021-11-25 13:28:21	chris218	posted*
+2021-11-25 13:28:43	chris218	do you use pax-kernel?
+2021-11-25 13:28:49	Jens3	https://wikitest.gentoo.org/wiki/Wgetpaste
+2021-11-25 13:28:52	pinkflames[m]	scardracs: it would be surprising if x<anything> worked on Wayland (it might work on Xwayland but that doesn't seem like the best idea ever)
+2021-11-25 13:28:56	chris218	because that patch gets applied only if you enable that use flag?
+2021-11-25 13:29:17	chris218	Guest68: ^^
+2021-11-25 13:29:22	+username234	chris218: is that what it says in the ebuild? (I haven't looked)
+2021-11-25 13:30:02	<--	Darkcoal (~user@2001:16a2:78ed:9900:47a:da4f:967f:2c19) has quit (Ping timeout: 240 seconds)
+2021-11-25 13:30:17	freakynl	mo server running on 192.168.8.2? -- 'iperf3 -c 192.168.8.2' and on 192.168.8.2 run 'iperf3 -s'
+2021-11-25 13:30:30	chris218	yup username234 https://gitweb.gentoo.org/repo/gentoo.git/tree/app-emulation/virtualbox/virtualbox-6.1.30.ebuild#n210
+2021-11-25 13:30:44	grawity	Mo: the IP address has to go directly after -c
+2021-11-25 13:31:00	<--	fixl (~Thunderbi@gateway/vpn/pia/fixl) has quit (Remote host closed the connection)
+2021-11-25 13:31:11	freakynl	Mo: can add -u to both if you want (at the end)
+2021-11-25 13:31:11	<--	andrey_utkin (~andrey_ut@gentoo/developer/andrey-utkin) has left #gentoo (Error from remote client)
+2021-11-25 13:31:56	Mo	freakynl: Exactly. I tried localhost, works. I tried some small OpenWRT router, also working via hostname or IP. But this laptop with Wifi, running a OpenSuse live stick and iperf3 -s cannot be connected.
+2021-11-25 13:32:01	-->	Darkcoal (~user@143.92.183.8) has joined #gentoo
+2021-11-25 13:32:32	chris218	maybe firewall issue?
+2021-11-25 13:32:33	freakynl	Mo: probably firewalling then, iptables/nftables
+2021-11-25 13:33:05	Mo	freakynl: -u only supported on the client side.
+2021-11-25 13:33:19	<--	violetina (~quassel@226.4-245-81.adsl-static.isp.belgacom.be) has quit (Ping timeout: 256 seconds)
+2021-11-25 13:33:36	<--	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has quit (Ping timeout: 260 seconds)
+2021-11-25 13:33:50	Mo	freakynl: Ok, I'll ask #opensuse about that.
+2021-11-25 13:34:55	Mo	freakynl: iptables -S only shows 3 lines with ACCEPT
+2021-11-25 13:35:03	<--	Guest68 (~Guest68@111.68.101.130) has quit (Quit: Client closed)
+2021-11-25 13:35:07	chris218	I think suse uses firewalld
+2021-11-25 13:35:12	-->	Gentpup (~Gentpupb4@217.75.212.43) has joined #gentoo
+2021-11-25 13:35:20	freakynl	Mo: ? trying running 'iptables -I INPUT 1 -p tcp --dport 5201 -j ACCEPT; iptables -I INPUT 1 -p udp --dport 5201 -j ACCEPT' first and try again
+2021-11-25 13:35:35	<--	Raz- (~nikolay@libera/sponsor/razor) has quit (Ping timeout: 256 seconds)
+2021-11-25 13:35:38	freakynl	chris218: is that nftables?
+2021-11-25 13:35:56	Mo	freakynl: Ok, disabled the firewall in yast, working now. Thanks.
+2021-11-25 13:36:01	chris218	it's front end to iptables I think
+2021-11-25 13:36:16	chris218	nah nftables https://wiki.archlinux.org/title/Firewalld
+2021-11-25 13:36:53	freakynl	Yea that would explain the output of iptables :)
+2021-11-25 13:37:00	-->	Peste_Bubonica (~Peste_Bub@user/peste-bubonica/x-0568126) has joined #gentoo
+2021-11-25 13:37:33	Mo	Interesing, wireless throughput is 346MBit/s tcp, but using -u I only have 1.05MBit/s. Why?
+2021-11-25 13:38:02	grawity	in TCP, the flow control algorithm decides how fast to keep sending packets
+2021-11-25 13:38:09	grawity	as UDP doesn't have flow control, iperf3 itself has to rate-limit it
+2021-11-25 13:38:16	grawity	and the default rate limit is 1 Mbps
+2021-11-25 13:38:23	-->	NeoCron (~NeoCron@p200300c4cf1ab200146a93e8f94739c9.dip0.t-ipconnect.de) has joined #gentoo
+2021-11-25 13:38:31	-->	futurefutura (~futurefut@p200300faf7413b0fbea8a6fffebcb59c.dip0.t-ipconnect.de) has joined #gentoo
+2021-11-25 13:38:33	grawity	that's the -b --bitrate option
+2021-11-25 13:38:39	Mo	Why rate limit in order to test the thoughput?
+2021-11-25 13:39:06	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 245 seconds)
+2021-11-25 13:39:14	grawity	otherwise you'd be sending packets literally as fast as the CPU can generate them
+2021-11-25 13:39:33	grawity	out of which, some % will go out to the network, the rest will overflow and get dropped somewhere along the way
+2021-11-25 13:39:39	freakynl	Why insist on using UDP if default is TCP? :P
+2021-11-25 13:40:15	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-25 13:40:15	futurefutura	Hello !  In order to install gentoo on a new device, I make a logical volume, and inside it a partition table for boot and root. Question: how to mkfs.ext4 a partition inside a logical volume ?
+2021-11-25 13:40:46	grawity	1) mkfs doesn't create partitions, and 2) you're not supposed to be creating partitions inside a logical volume because that's what *logical volumes* are for
+2021-11-25 13:41:16	Mo	freakynl: Any difference doing the iperf as user or as root?
+2021-11-25 13:41:17	grawity	assuming you meant LVM kind of logical volumes
+2021-11-25 13:41:18	futurefutura	grawity i did the partition table nicely with fdisk. thats not my problem
+2021-11-25 13:41:23	grawity	though a LVM logical volume for /boot doesn't sound very useful
+2021-11-25 13:41:48	pinkflames[m]	I would just use GPT and maybe Btrfs subvolumes if that kind of functionality is required
+2021-11-25 13:42:11	futurefutura	grawity yes, lvcreate blablabla 64G volumegroup, yes
+2021-11-25 13:42:13	grawity	futurefutura: it is your problem, even if fdisk didn't complain while doing so
+2021-11-25 13:42:39	grawity	the kernel won't recognize partition tables inside LVs (or other mapper devices)
+2021-11-25 13:42:58	tirnanog	for real. nobody in their right mind tries to create partitoin tables inside logical volumes unless they are backing a VM or something.
+2021-11-25 13:43:14	grawity	though partitions inside LVs are useless (and a /boot partition inside a LV is doubly useless)
+2021-11-25 13:43:25	scardracs	pinkflames[m]: asking here as it isn't kde related
+2021-11-25 13:43:28	grawity	I mean, again, that's literally what LVs themselves are supposed to be for
+2021-11-25 13:43:45	tirnanog	they're useful for, say, qemu, but the issue of partitioning would then typically be punted to the guest itself.
+2021-11-25 13:43:48	futurefutura	grawity i completed doing my partioning with fdisk . now I like to mkfs.ext4 /dev/volumegroup/mylogicalvolume_partition1/2
+2021-11-25 13:43:59	scardracs	I was looking on how system greps for keyboard and found that
+2021-11-25 13:44:03	grawity	futurefutura: and what stops you from mkfs.ext4 that?
+2021-11-25 13:44:19	freakynl	tirnanog: Imho nobody in their right mind would use LVM in a VM to begin with, unless they need mirroring or something in the OS level. You can just use 1 virtual disk per partition you want. Chaining spread blocks together with LVM isn't necessary there
+2021-11-25 13:44:21	scardracs	https://www.irccloud.com/pastebin/vL9IXF7X/%23%20%2Flib%2Fudev%2Frules.d%2F60-evdev.rules
+2021-11-25 13:44:38	<--	domhnall (~developer@user/domhnall/x-2887755) has quit (Ping timeout: 260 seconds)
+2021-11-25 13:44:57	freakynl	Mo: not that I'm aware of, but I never use it with UDP
+2021-11-25 13:45:13	tirnanog	freakynl: hmm? LVM is fantastically useful for acting as a pool of storage for block devices. I wasn't suggesting that anyone ought to create individual LVs for every block evice that might otherwise be a partition to a guest.
+2021-11-25 13:45:15	futurefutura	grawity. when you look at disk images, you will agree once you dd them to a lv, you can offsetmount them and use them from inside. so there should be a way to encode a partition with mkfs and so
+2021-11-25 13:45:21	scardracs	I've looked into dmidecode to see if it contains something useful but ends on that
+2021-11-25 13:45:24	scardracs	https://www.irccloud.com/pastebin/DvI969pH/
+2021-11-25 13:45:45	tirnanog	freakynl: i.e. /dev/kvmstore/<guestname>, which may technically contain partition metadata, but where the host shouldn't care, only the guest.
+2021-11-25 13:45:50	grawity	futurefutura: there is, but that's extremely not the job of mkfs
+2021-11-25 13:45:50	futurefutura	yea, dmidecode .... i was looking at that, too
+2021-11-25 13:45:56	freakynl	tirnanog: Yea, it's fantastic for that. Which is awesome if you're limited with disks or raid at a physical level. These days that's seldom true, especially virtual
+2021-11-25 13:46:34	grawity	futurefutura: there's a tool called "kpartx" (in, I think, multipath-tools) which sets up linear DM mappings for partitions on top of any block device, even those that the kernel wouldn't scan for partitions
+2021-11-25 13:47:01	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-25 13:47:03	grawity	futurefutura: but even with your "disk image" description, I can't see a good use for this at all
+2021-11-25 13:47:23	-->	Raz- (~nikolay@84-238-136-197.ip.btc-net.bg) has joined #gentoo
+2021-11-25 13:47:36	scardracs	And hwinfo show that
+2021-11-25 13:47:38	<--	Raz- (~nikolay@84-238-136-197.ip.btc-net.bg) has quit (Changing host)
+2021-11-25 13:47:38	-->	Raz- (~nikolay@libera/sponsor/razor) has joined #gentoo
+2021-11-25 13:47:38	scardracs	https://www.irccloud.com/pastebin/Wsznwuny/
+2021-11-25 13:47:53	futurefutura	grawity . idea is : just dd an entire working gentoo to a logical volume with all its data . then you can offsetmount the partitions inside
+2021-11-25 13:47:54	grawity	not to be confused with the util-linux "partx" tool
+2021-11-25 13:48:08	futurefutura	so there should be a way to create partitions inside a lv, too
+2021-11-25 13:48:34	grawity	you already created them, doesn't mean the kernel knows how to access them
+2021-11-25 13:48:35	tirnanog	freakynl: I'm really not sure what else it is that you're proposing. I have no intention of using filesystem-backed images. partitons would be ridiculously inflexible. if you're some huge operator that can back each guest with distinct physical storage then good for you. I would say that's far from being the case for everyone.
+2021-11-25 13:49:10	grawity	futurefutura: again, if you really really want to do this, then run `kpartx` on your LV to detect the partitions – both for mkfs'ing, and for mounting
+2021-11-25 13:49:35	-->	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has joined #gentoo
+2021-11-25 13:49:39	futurefutura	tirnanog in fact i have enough ressources, yes
+2021-11-25 13:50:04	futurefutura	grawity yes i want. because i dont know how it works
+2021-11-25 13:50:30	tirnanog	futurefutura: I dispute that it's "rarely the case" but it's neither here not there, and is tangiental to the use case I described (which remains a valid one).
+2021-11-25 13:51:24	grawity	futurefutura: do you mean partitions or kpartx?
+2021-11-25 13:51:27	-->	BOUSILLOR (~bousillor@82.66.49.81) has joined #gentoo
+2021-11-25 13:51:28	<--	BOUSILLOR (~bousillor@82.66.49.81) has quit (Changing host)
+2021-11-25 13:51:28	-->	BOUSILLOR (~bousillor@user/bousillor) has joined #gentoo
+2021-11-25 13:52:03	futurefutura	grawity kpartx is inside sys-fs/multipath-tools ?
+2021-11-25 13:52:06	grawity	yes
+2021-11-25 13:52:26	-->	andrey_utkin (~andrey_ut@gentoo/developer/andrey-utkin) has joined #gentoo
+2021-11-25 13:52:26	--	Mode #gentoo [+v andrey_utkin] by ChanServ
+2021-11-25 13:52:33	futurefutura	grawity, tirnanog thank you
+2021-11-25 13:52:37	<--	kelo_ (~atanyukev@mx7.olek.im) has quit (Quit: leaving)
+2021-11-25 13:52:51	-->	kelo (~atanyukev@mx7.olek.im) has joined #gentoo
+2021-11-25 13:53:09	<--	Gentpup (~Gentpupb4@217.75.212.43) has quit (Quit: Leaving)
+2021-11-25 13:53:31	-->	pereira_alex (~alex@2001:8a0:f3ac:a900:b62e:99ff:fec8:5f40) has joined #gentoo
+2021-11-25 13:53:45	grawity	hmm come to think of it, losetup -P may also work
+2021-11-25 13:54:13	grawity	but since you're using it on a mapper device instead of a file, kpartx is probably better
+2021-11-25 13:54:15	futurefutura	grawity -... great thought !
+2021-11-25 13:55:15	tirnanog	I would second that. losetup could be a headache.
+2021-11-25 13:55:33	scardracs	grawity, pinkflames[m], genr8eofl: thanks for trying to help me but I don't want to waste your time more than that
+2021-11-25 13:55:52	scardracs	I'll figure out what's happened and why it doesn't work
+2021-11-25 13:56:01	-->	erg_ (~erg@78.11.12.207) has joined #gentoo
+2021-11-25 13:56:53	scardracs	First thing I'll do it's an emerge -e to see if something was left behind
+2021-11-25 13:59:54	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-25 14:00:02	<--	dor (~erg@78.11.12.207) has quit (Ping timeout: 260 seconds)
+2021-11-25 14:01:04	-->	spare (~sbzwyjups@user/spareproject) has joined #gentoo
+2021-11-25 14:03:54	<--	arinov (~arinov@77.67.129.200) has quit (Ping timeout: 268 seconds)
+2021-11-25 14:04:06	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-25 14:05:20	<--	sh1r4s3 (~sh1r4s3@109-252-75-9.nat.spd-mgts.ru) has quit (Ping timeout: 260 seconds)
+2021-11-25 14:06:16	-->	nos0u1 (nosoul@gateway/vpn/protonvpn/nosoul) has joined #gentoo
+2021-11-25 14:06:51	pinkflames[m]	Didn't you conclude that the issue is present on Fedora both KDE and GNOME spins?
+2021-11-25 14:06:59	<--	Peste_Bubonica (~Peste_Bub@user/peste-bubonica/x-0568126) has quit (Remote host closed the connection)
+2021-11-25 14:07:23	pinkflames[m]	so it's probably impossible for emerge -e to change something that is present in other distros sharing similar source code
+2021-11-25 14:07:33	-->	Peste_Bubonica (~Peste_Bub@user/peste-bubonica/x-0568126) has joined #gentoo
+2021-11-25 14:10:16	scardracs	pinkflames[m]: I don't know where to hit my head
+2021-11-25 14:11:20	scardracs	I know it used to works but I don't remember how
+2021-11-25 14:11:24	<--	spare (~sbzwyjups@user/spareproject) has quit (Ping timeout: 276 seconds)
+2021-11-25 14:11:35	-->	spare (~sbzwyjups@user/spareproject) has joined #gentoo
+2021-11-25 14:11:45	futurefutura	hey its me again .. i primared losetup, for i got experience with offsetmounts ... what can i say -- i just created my first btrfs subvolume for my root partition inside there !!
+2021-11-25 14:11:51	pinkflames[m]	I suggest using a virtual keyboard, ibus or just pick a way to input less than and greather than via a keyboard combo
+2021-11-25 14:11:55	futurefutura	thank you all again !!
+2021-11-25 14:12:26	scardracs	pinkflames[m]: checked and there isn't any key combo for it
+2021-11-25 14:12:34	pinkflames[m]	futurefutura: I would have done btrfs inside a plain GPT partition just to avoid surprises
+2021-11-25 14:12:56	scardracs	The only way is to set as US but actually all the others keys changes too
+2021-11-25 14:13:41	<--	Mo (~Mo@dynamic-095-116-244-094.95.116.pool.telefonica.de) has quit (Ping timeout: 245 seconds)
+2021-11-25 14:13:42	futurefutura	pinkflames ah, its not meant to be productive. i wanna world a clone of my productive server inside there, as well as many changes to be online in january :)
+2021-11-25 14:14:24	-->	libva (~libva@103.197.205.13) has joined #gentoo
+2021-11-25 14:14:43	libva	guys x11-misc/slop fails to emerge
+2021-11-25 14:15:13	libva	build log: https://dpaste.com/HJNWZTCAB
+2021-11-25 14:16:16	<--	spare (~sbzwyjups@user/spareproject) has quit (Remote host closed the connection)
+2021-11-25 14:16:28	-->	spare (~sbzwyjups@user/spareproject) has joined #gentoo
+2021-11-25 14:16:33	-->	dsrt^ (~dsrt@68.101.63.101) has joined #gentoo
+2021-11-25 14:17:42	<--	yidhra (~chuck_g@74.123.47.48) has quit (Ping timeout: 260 seconds)
+2021-11-25 14:18:12	-->	cruncher (~cruncher@90.68.118.49) has joined #gentoo
+2021-11-25 14:18:16	-->	yidhra (~chuck_g@74.123.47.48) has joined #gentoo
+2021-11-25 14:22:12	-->	violetina (~quassel@226.4-245-81.adsl-static.isp.belgacom.be) has joined #gentoo
+2021-11-25 14:25:14	<--	sputnik__ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Ping timeout: 260 seconds)
+2021-11-25 14:27:38	libva	where are the helpers
+2021-11-25 14:29:16	scardracs	libva: probably no one know the answer
+2021-11-25 14:30:14	marduk	libva: https://bugs.gentoo.org/810349
+2021-11-25 14:30:34	+ionen	^ has a patch, can alternatively USE=-opengl
+2021-11-25 14:32:07	libva	thanks
+2021-11-25 14:32:11	<--	libva (~libva@103.197.205.13) has quit (Quit: Client closed)
+2021-11-25 14:32:40	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-25 14:32:58	-->	kadavul (~vazha@117.207.47.46) has joined #gentoo
+2021-11-25 14:34:06	-->	arinov (~arinov@77.67.129.200) has joined #gentoo
+2021-11-25 14:34:07	+ionen	guess I'll fix it
+2021-11-25 14:39:12	-->	fitgirl (~fitgirl@103.197.205.13) has joined #gentoo
+2021-11-25 14:39:55	-->	lavaball (felix@31.204.155.215) has joined #gentoo
+2021-11-25 14:42:30	<--	kadavul (~vazha@117.207.47.46) has quit (Ping timeout: 260 seconds)
+2021-11-29 12:02:45	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-29 12:02:45	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --a python:3.9"
+2021-11-29 12:02:45	--	Topic set by tdr (~tdr@user/tdr) on Sat, 27 Nov 2021 07:20:26
+2021-11-29 12:02:45	--	Channel #gentoo: 807 nicks (2 ops, 45 voices, 760 normals)
+2021-11-29 12:02:46	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-29 12:02:46	--	URL for #gentoo: https://www.gentoo.org
+2021-11-29 12:02:51	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 12:03:02	-->	akaWolf (~akaWolf@akawolf.org) has joined #gentoo
+2021-11-29 12:03:08	Velkorq	hey
+2021-11-29 12:03:19	Velkorq	whats the difference between minimal installation cd and the admin cd?
+2021-11-29 12:03:54	--	Lord_of_Life_ is now known as Lord_of_Life
+2021-11-29 12:05:05	<--	Hummer12007 (061e0434dc@2604:bf00:561:2000::16) has quit (Remote host closed the connection)
+2021-11-29 12:05:41	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 252 seconds)
+2021-11-29 12:05:44	-->	Hummer12007 (061e0434dc@2604:bf00:561:2000::16) has joined #gentoo
+2021-11-29 12:08:45	genr8eofl	admin has more stuff
+2021-11-29 12:09:36	<--	EdLin (~ploni@user/edlin) has quit (Quit: WeeChat 3.3)
+2021-11-29 12:09:48	-->	RiFo (~RiFo@user/rifo) has joined #gentoo
+2021-11-29 12:09:53	<--	Guest4751 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-11-29 12:10:02	<--	lavaball (felix@31.204.155.215) has quit (Remote host closed the connection)
+2021-11-29 12:10:22	<--	spikyatlinux (~spikiller@ip1f124e12.dynamic.kabel-deutschland.de) has quit (Ping timeout: 265 seconds)
+2021-11-29 12:10:25	Velkorq	genr8eofl: can i get a list of what it has?
+2021-11-29 12:10:29	Velkorq	i cant find anything.
+2021-11-29 12:10:30	<--	BOUSILLOR (~bousillor@user/bousillor) has quit (Quit: Konversation terminated!)
+2021-11-29 12:10:33	Velkorq	also are both up to date?
+2021-11-29 12:11:53	-->	thunder_ (~thunder@37-33-152-49.bb.dnainternet.fi) has joined #gentoo
+2021-11-29 12:12:27	<--	thunder_ (~thunder@37-33-152-49.bb.dnainternet.fi) has quit (Client Quit)
+2021-11-29 12:13:27	-->	Guest9970 (~Guest99@37-33-152-49.bb.dnainternet.fi) has joined #gentoo
+2021-11-29 12:14:11	<--	Guest9970 (~Guest99@37-33-152-49.bb.dnainternet.fi) has quit (Client Quit)
+2021-11-29 12:14:24	-->	EdLin (~ploni@user/edlin) has joined #gentoo
+2021-11-29 12:14:57	EdLin	I tried blender with 5.14.x (latest that works with the vendor-reset module) and it still gives me the segfault.
+2021-11-29 12:15:01	EdLin	new Mesa also
+2021-11-29 12:15:12	EdLin	(~amd64)
+2021-11-29 12:15:28	-->	sputnik (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 12:15:33	--	sputnik is now known as Guest9625
+2021-11-29 12:15:51	EdLin	OK, this is enough debugging of this for now... :/
+2021-11-29 12:16:05	EdLin	I'll wait for further emails from bugs.gentoo.org
+2021-11-29 12:16:37	EdLin	thanks everyone for working with me on this.
+2021-11-29 12:16:46	EdLin	you guys are amazeballs.
+2021-11-29 12:17:13	<--	EdLin (~ploni@user/edlin) has quit (Client Quit)
+2021-11-29 12:21:32	<--	ufk (~textual@bzq-84-108-89-219.cablep.bezeqint.net) has quit (Quit: My Mac Pro has gone to sleep. ZZZzzz…)
+2021-11-29 12:24:38	-->	letto2 (~letto@188.25.118.240) has joined #gentoo
+2021-11-29 12:25:31	<--	letto (~letto@86.120.85.133) has quit (Ping timeout: 268 seconds)
+2021-11-29 12:25:39	<--	Guest9625 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-11-29 12:29:25	-->	sputnik (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 12:29:29	--	sputnik is now known as Guest2559
+2021-11-29 12:31:53	<--	samuelbernardo (~samuelber@nata01.lip.pt) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-29 12:33:58	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-29 12:37:15	<--	_inky (~inky_@5.77.165.221) has quit (Read error: Connection reset by peer)
+2021-11-29 12:37:38	-->	samuelbernardo (~samuelber@nata01.lip.pt) has joined #gentoo
+2021-11-29 12:39:48	-->	tirnanog (~tirnanog@user/tirnanog) has joined #gentoo
+2021-11-29 12:42:07	Velkorq	is there a list of what gentoo admin cd includes?
+2021-11-29 12:42:41	Velkorq	and will we have eventually a minimal cd, that includes x11, with something like openbox, or jwm or whatever. (helps reading the handbook when installing)
+2021-11-29 12:43:29	tirnanog	https://gitweb.gentoo.org/proj/releng.git/tree/releases/specs/amd64/hardened/admincd-stage1.spec
+2021-11-29 12:44:06	+kurly	Velkorq: you can use almost any linux environment you want to install gentoo; there's no need to use a gentoo branded one
+2021-11-29 12:44:08	tirnanog	not sure if that covers everything, though.
+2021-11-29 12:44:28	tirnanog	there are USE flag differences also. for example, if you need to set up LVM thin provisioning, minimal doesn't work.
+2021-11-29 12:45:48	Velkorq	kurly: i remember the handbook, has some differences on mount points etc, because some distros use other mount points, or symlinks etc
+2021-11-29 12:45:59	Velkorq	 thats why i always prefered using the gentoo one, to have less of a headache
+2021-11-29 12:46:20	tirnanog	at any rate, I can tell you that the admincd doesn't contain X11 or anything of that sort.
+2021-11-29 12:46:27	Velkorq	tirnanog: thanks, might use admin cd from now on for installing gentoo
+2021-11-29 12:46:32	-->	MrZammler (~evas@188.4.101.162.dsl.dyn.forthnet.gr) has joined #gentoo
+2021-11-29 12:47:20	<--	nuh^ (~nuh@68.101.58.90) has quit (Remote host closed the connection)
+2021-11-29 12:47:23	Velkorq	yes a minimal x11 environment, would be helpful. even without gpu drivers, only the opensource ones. and a simple browser
+2021-11-29 12:48:00	Velkorq	its not like i cant install it in the livecd using a binary package, i have to compile x11 in live cd environment...
+2021-11-29 12:48:26	-->	futurefutura (~futurefut@159.48.55.165) has joined #gentoo
+2021-11-29 12:48:27	-->	shiznix (quassel@115.128.136.230) has joined #gentoo
+2021-11-29 12:48:37	Velkorq	can't figure why this isn't a thing yet. internet speeds have increased. 200mb image or 700mg image, makes not much of a difference
+2021-11-29 12:49:02	futurefutura	Hello ! In order to compile my kernel, I need "sys-devel/bc"  . But it doesnt emerge : http://dpaste.com/DEZJ2ZGE7
+2021-11-29 12:49:02	Velkorq	(also most people use usb sticks, so the cd limit doesn't mean much)
+2021-11-29 12:49:18	-->	arinov (~arinov@178.240.181.140) has joined #gentoo
+2021-11-29 12:49:29	tirnanog	it does for some. but that's probably not the reason that such a thing doesn't exist. rather, there's nobody on the developer roster that's interested in maintaining such a thing at present.
+2021-11-29 12:49:33	<--	Guest2559 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-11-29 12:50:08	tirnanog	and there are plenty of live distros available. notwithstanding that there are some occasional nuances, as you pointed out.
+2021-11-29 12:51:36	Velkorq	i see. 
+2021-11-29 12:52:03	Velkorq	is the creation of the iso automated? can i write a build for a livecd iso that includes x11?
+2021-11-29 12:52:26	tirnanog	after all, there used to be a livedvd. but it was infrequently refreshed and, as a result, I can't see that it had much use. someone has to put in the work to keep it fresh, ultimately.
+2021-11-29 12:52:26	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 252 seconds)
+2021-11-29 12:52:44	arinov	new FF is freezes every time i want to play audio or video, how can i return my previous FF back?
+2021-11-29 12:52:51	tirnanog	Velkorq: I've not used it personally, but I think it's prepared using a build system known as catalyst.
+2021-11-29 12:52:55	arinov	i dont want this update
+2021-11-29 12:53:14	tirnanog	Velkorq: I might be wrong though. can't remember whether catalyst is just for stages.
+2021-11-29 12:53:19	-->	dormito (~dullfire@user/dormito) has joined #gentoo
+2021-11-29 12:53:19	futurefutura	solved. changed libedit to readline .
+2021-11-29 12:53:28	Velkorq	tirnanog: if the normal livecd's were replaced with one also including minimal X, then there would be no need to double maintenance efforts
+2021-11-29 12:53:36	arinov	or maybe its wayland flags makes it dummy
+2021-11-29 12:53:45	tirnanog	Velkorq: for some reasonable definition of minimal, you're probably right.
+2021-11-29 12:54:10	-->	sputnik (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 12:54:11	Velkorq	also the admincd could probably be the one cd, gentoo offers. both seem very minimal as is
+2021-11-29 12:54:14	--	sputnik is now known as Guest3484
+2021-11-29 12:54:36	tirnanog	on that point, I concur. or, at least, some explanation as to the distinction wouldn't go amiss.
+2021-11-29 12:54:38	-->	SkunkyLaptop (~skunky@user/skunky) has joined #gentoo
+2021-11-29 12:55:09	tirnanog	all I know is that I need it for my storage provisioning.
+2021-11-29 12:56:55	-->	_inky (~inky_@46.36.112.226) has joined #gentoo
+2021-11-29 12:57:30	-->	dsrt^ (~dsrt@68.101.58.90) has joined #gentoo
+2021-11-29 13:07:07	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-29 13:11:55	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 256 seconds)
+2021-11-29 13:13:28	<--	S0rin (~S0rin@user/s0rin) has quit (Ping timeout: 264 seconds)
+2021-11-29 13:13:49	-->	S0rin (~S0rin@user/s0rin) has joined #gentoo
+2021-11-29 13:15:03	<--	arinov (~arinov@178.240.181.140) has quit (Quit: WeeChat 3.3)
+2021-11-29 14:37:01	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-29 14:37:01	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --a python:3.9"
+2021-11-29 14:37:01	--	Topic set by tdr (~tdr@user/tdr) on Sat, 27 Nov 2021 07:20:26
+2021-11-29 14:37:01	--	Channel #gentoo: 807 nicks (2 ops, 45 voices, 760 normals)
+2021-11-29 14:37:02	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-29 14:37:02	--	URL for #gentoo: https://www.gentoo.org
+2021-11-29 14:37:09	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 14:37:19	twnqx	uh.
+2021-11-29 14:37:33	ShorTie	why use git instead of sync if i can ask ??
+2021-11-29 14:37:39	<--	alexxy[home] (~alexxy@biod.pnpi.spb.ru) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-29 14:37:47	Kelsar	or use sync with git
+2021-11-29 14:37:48	-->	LordRishav (~LordRisha@user/lordrishav) has joined #gentoo
+2021-11-29 14:38:06	twnqx	why does sys-libs/glibc install a /var/db/Makefile ?
+2021-11-29 14:38:35	<--	BOUSILLOR (~bousillor@user/bousillor) has quit (Ping timeout: 252 seconds)
+2021-11-29 14:39:04	-->	justache (~justache@user/justache) has joined #gentoo
+2021-11-29 14:39:04	<--	justache (~justache@user/justache) has quit (Excess Flood)
+2021-11-29 14:39:47	twnqx	hm ok, i don't know the purpose of the files it would generate... oh well
+2021-11-29 14:40:38	-->	dormito (~dullfire@user/dormito) has joined #gentoo
+2021-11-29 14:41:05	-->	Sarcutus (~Sarcutus@pool-96-241-63-17.washdc.fios.verizon.net) has joined #gentoo
+2021-11-29 14:41:33	-->	alexxy (~alexxy@biod.pnpi.spb.ru) has joined #gentoo
+2021-11-29 14:41:33	<--	alexxy (~alexxy@biod.pnpi.spb.ru) has quit (Changing host)
+2021-11-29 14:41:33	-->	alexxy (~alexxy@gentoo/developer/alexxy) has joined #gentoo
+2021-11-29 14:41:33	--	Mode #gentoo [+v alexxy] by ChanServ
+2021-11-29 14:42:33	-->	justache (~justache@user/justache) has joined #gentoo
+2021-11-29 14:45:57	trace987	test
+2021-11-29 14:47:07	<--	justache (~justache@user/justache) has quit (Ping timeout: 256 seconds)
+2021-11-29 14:47:23	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 252 seconds)
+2021-11-29 14:48:01	-->	fassl (~fassl@2a02:8388:1987:9380:7d37:f3ce:8f29:dfc3) has joined #gentoo
+2021-11-29 14:48:53	-->	`VL (~vl@mail.inspert.ru) has joined #gentoo
+2021-11-29 14:49:30	<--	dor (~erg@78.11.12.207) has quit (Read error: Connection reset by peer)
+2021-11-29 14:49:42	-->	dor (~erg@78.11.12.207) has joined #gentoo
+2021-11-29 14:51:12	-->	arinov (~arinov@178.240.181.140) has joined #gentoo
+2021-11-29 14:52:12	-->	justache (~justache@user/justache) has joined #gentoo
+2021-11-29 14:52:20	<--	alexxy (~alexxy@gentoo/developer/alexxy) has quit (Ping timeout: 252 seconds)
+2021-11-29 14:55:22	<--	rwinner (~rwinner@cpe-108-185-166-223.socal.res.rr.com) has quit (Ping timeout: 268 seconds)
+2021-11-29 14:55:34	<--	LordRishav (~LordRisha@user/lordrishav) has quit (Quit: Ight Imma Head out)
+2021-11-29 14:56:40	<--	justache (~justache@user/justache) has quit (Ping timeout: 264 seconds)
+2021-11-29 14:59:44	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-29 15:00:19	-->	alexxy (~alexxy@biod.pnpi.spb.ru) has joined #gentoo
+2021-11-29 15:00:19	<--	alexxy (~alexxy@biod.pnpi.spb.ru) has quit (Changing host)
+2021-11-29 15:00:19	-->	alexxy (~alexxy@gentoo/developer/alexxy) has joined #gentoo
+2021-11-29 15:00:19	--	Mode #gentoo [+v alexxy] by ChanServ
+2021-11-29 15:01:23	<--	alexxy (~alexxy@gentoo/developer/alexxy) has quit (Excess Flood)
+2021-11-29 15:02:45	-->	justache (~justache@user/justache) has joined #gentoo
+2021-11-29 15:02:47	<--	dor (~erg@78.11.12.207) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:03:31	-->	dor (~erg@78.11.12.207) has joined #gentoo
+2021-11-29 15:03:31	<--	cmyster (~cmyster@user/cmyster) has quit (Read error: Connection reset by peer)
+2021-11-29 15:03:56	-->	alexxy (~alexxy@biod.pnpi.spb.ru) has joined #gentoo
+2021-11-29 15:03:56	<--	alexxy (~alexxy@biod.pnpi.spb.ru) has quit (Changing host)
+2021-11-29 15:03:57	-->	alexxy (~alexxy@gentoo/developer/alexxy) has joined #gentoo
+2021-11-29 15:03:57	--	Mode #gentoo [+v alexxy] by ChanServ
+2021-11-29 15:04:26	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:05:23	<--	Hummer12007 (061e0434dc@2604:bf00:561:2000::16) has quit (Remote host closed the connection)
+2021-11-29 15:05:45	-->	Hummer12007 (061e0434dc@2604:bf00:561:2000::16) has joined #gentoo
+2021-11-29 15:07:11	<--	justache (~justache@user/justache) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:07:17	-->	zeden (~zeden@user/zeden) has joined #gentoo
+2021-11-29 15:07:50	<--	Guest3542 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-11-29 15:08:26	-->	sputnik (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 15:08:30	--	sputnik is now known as Guest5508
+2021-11-29 15:08:43	-->	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 15:09:16	-->	cmyster (~cmyster@user/cmyster) has joined #gentoo
+2021-11-29 15:12:05	<--	Guest5508 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-11-29 15:12:06	<--	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-11-29 15:12:15	fassl	hey, i came up with the following list of compiler optimizations for my laptop and desktop (i want to use it on both just in case one machine dies). would you also do that? is there much to be gained, would i feel a difference? or should i just enable sse, avx and mmx?:  -mmmx -msse -msse2 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2 -mpclmul -mfsgsbase -mrdrnd -mf16c -mfma -mpopcnt -mabm -mbmi -mbmi2 -mfxsr -mxsave -mxsaveopt
+2021-11-29 15:12:31	-->	sputnik (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 15:12:33	-->	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 15:12:35	--	sputnik is now known as Guest4933
+2021-11-29 15:12:48	<--	uwu (~nya@user/phrost) has quit (Ping timeout: 276 seconds)
+2021-11-29 15:12:53	<--	amadio (~amadio@gentoo/developer/amadio) has left #gentoo
+2021-11-29 15:14:00	-->	uwu (~nya@user/phrost) has joined #gentoo
+2021-11-29 15:14:08	<--	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Client Quit)
+2021-11-29 15:16:23	-->	justache (~justache@user/justache) has joined #gentoo
+2021-11-29 15:16:23	-->	cdown_ (~cdown@163.114.131.1) has joined #gentoo
+2021-11-29 15:16:44	-->	Joseph_Vissarion (~kvirc@95.174.126.153) has joined #gentoo
+2021-11-29 15:16:48	-->	LordRishav (~LordRisha@user/lordrishav) has joined #gentoo
+2021-11-29 15:16:51	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-11-29 15:17:12	<--	NGC (~brtt@2600:8804:8745:8300::7e8c) has quit (Quit: WeeChat 3.3)
+2021-11-29 15:17:18	-->	Kritias (~Kritias@205-160-184-091.ip-addr.vsenet.de) has joined #gentoo
+2021-11-29 15:17:30	<--	zatteliet (~kv@178-118-155-229.access.telenet.be) has quit (Quit: Leaving)
+2021-11-29 15:18:54	arinov	how to enable verbose running firefox from cli?
+2021-11-29 15:19:02	arinov	can't see any options
+2021-11-29 15:19:27	-->	CyberTailor (~CyberTail@5.1.53.225) has joined #gentoo
+2021-11-29 15:19:28	<--	cdown (~cdown@188.214.11.14) has quit (Ping timeout: 264 seconds)
+2021-11-29 15:19:37	<--	Code_Bleu (~Code_Bleu@user/code-bleu/x-6939963) has quit (Quit: WeeChat 3.3)
+2021-11-29 15:19:40	--	cdown_ is now known as cdown
+2021-11-29 15:20:49	<--	Guest4933 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-11-29 15:20:53	-->	Joro (~joro@84.238.202.210) has joined #gentoo
+2021-11-29 15:21:14	Joro	Receiving objects: 100% (3298713/3298713), 1.03 GiB | 2.54 MiB/s, done
+2021-11-29 15:21:36	Joro	can somebody give an explanation for that 1 Gb size of the portage tree?
+2021-11-29 15:22:07	-->	sputnik (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 15:22:09	-->	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-11-29 15:22:10	<--	cruncher (~cruncher@90.68.118.49) has quit (Ping timeout: 260 seconds)
+2021-11-29 15:22:11	--	sputnik is now known as Guest8407
+2021-11-29 15:22:23	twnqx	fassl, there's likely no large difference. go with an -march thart's the lower of the two, and it will enable all of those anyway
+2021-11-29 15:22:46	twnqx	joro: git has history
+2021-11-29 15:23:00	twnqx	it's not a snapshot of the current like rsync is
+2021-11-29 15:23:07	<--	Guest8407 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Client Quit)
+2021-11-29 15:23:25	Joro	twnqx: I have history with git too and have never seen such thing
+2021-11-29 15:23:40	twnqx	oh, that's rsync, not git?
+2021-11-29 15:23:53	Joro	no, it's git
+2021-11-29 15:24:21	twnqx	then just imagine every tiny change to any ebuild is its own commit. they rack up quickly
+2021-11-29 15:24:23	Joro	I thought my connection was bad before noticing that huge size
+2021-11-29 15:24:58	<--	arinov (~arinov@178.240.181.140) has quit (Quit: WeeChat 3.3)
+2021-11-29 15:25:23	-->	Guest64 (~Guest64@173.216.46.109) has joined #gentoo
+2021-11-29 15:25:28	Joro	twnqx: are you defending a general position or from the point of view of particular events
+2021-11-29 15:25:36	-->	tatti (~tatti@cpc159293-nrth1-2-0-cust154.8-4.cable.virginm.net) has joined #gentoo
+2021-11-29 15:25:38	<--	tatti (~tatti@cpc159293-nrth1-2-0-cust154.8-4.cable.virginm.net) has quit (Client Quit)
+2021-11-29 15:25:43	-->	NGC (~brtt@2600:8804:8745:8300::7e8c) has joined #gentoo
+2021-11-29 15:25:43	twnqx	i am explaining why the git repo is so large
+2021-11-29 15:25:51	twnqx	there's nothing to defend, that's how it works
+2021-11-29 15:26:05	NGC	anyone here know how to properly edit the related file to raise the ulimit file size?
+2021-11-29 15:57:04	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-11-29 15:57:04	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --a python:3.9"
+2021-11-29 15:57:04	--	Topic set by tdr (~tdr@user/tdr) on Sat, 27 Nov 2021 07:20:26
+2021-11-29 15:57:04	--	Channel #gentoo: 809 nicks (2 ops, 45 voices, 762 normals)
+2021-11-29 15:57:04	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-11-29 15:57:04	--	URL for #gentoo: https://www.gentoo.org
+2021-11-29 15:57:10	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 15:57:19	Velkorq	can we autogenerate ebuilds in gentoo like this? https://funtoo-metatools.readthedocs.io/en/latest/autogen.html
+2021-11-29 15:57:31	Velkorq	to have more upto-date ebuilds automatically?
+2021-11-29 15:57:43	<--	Joseph_Vissarion (~kvirc@95.174.126.153) has quit (Quit: KVIrc 5.0.1 Aria http://www.kvirc.net/)
+2021-11-29 15:58:41	Velkorq	also does the project take new features from funtoo? if something like this is implemented?
+2021-11-29 16:01:08	-->	cilly (pluto@user/cilly) has joined #gentoo
+2021-11-29 16:02:09	<--	meta-system (~metasyste@lfbn-poi-1-276-214.w86-233.abo.wanadoo.fr) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-29 16:02:42	-->	Peste_Bubonica (~Peste_Bub@user/peste-bubonica/x-0568126) has joined #gentoo
+2021-11-29 16:03:02	+iamben	in general gentoo isn't against adopting new features from funtoo but I can't imagine us autogenerating(auto committing) ebuilds w/o developer oversight
+2021-11-29 16:03:11	-->	erg_ (~erg@78.11.12.207) has joined #gentoo
+2021-11-29 16:03:15	<--	imadam__ (~imadam__@51.219.27.85) has quit (Quit: Client closed)
+2021-11-29 16:03:19	<--	dor (~erg@78.11.12.207) has quit (Read error: Connection reset by peer)
+2021-11-29 16:03:36	Peste_Bubonica	Hi folks. Is possible to force a specific mac address on a bridge using OpenRC network config?
+2021-11-29 16:04:34	-->	vStone (~Po0ky@cyberflox.irken.org) has joined #gentoo
+2021-11-29 16:06:00	twnqx	i'd say yes
+2021-11-29 16:06:07	twnqx	let me take a quick look
+2021-11-29 16:06:17	<--	s0berage (~s0berage@135-23-213-77.cpe.pppoe.ca) has quit (Quit: Leaving)
+2021-11-29 16:06:57	-->	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has joined #gentoo
+2021-11-29 16:07:31	<--	nlhowell1 (~nlhowell@2600:1702:1bd0:4440::45) has quit (Ping timeout: 268 seconds)
+2021-11-29 16:07:54	-->	nlhowell1 (~nlhowell@75-15-12-106.lightspeed.bltnin.sbcglobal.net) has joined #gentoo
+2021-11-29 16:07:57	-->	ganome (~quassel@2601:283:c200:553:b156:99f7:131c:aad4) has joined #gentoo
+2021-11-29 16:08:34	<--	ganome (~quassel@2601:283:c200:553:b156:99f7:131c:aad4) has quit (Client Quit)
+2021-11-29 16:09:21	-->	jim__ (~jim@69-92-185-65.cpe.sparklight.net) has joined #gentoo
+2021-11-29 16:10:13	-->	ganome (~quassel@2601:283:c200:553:b156:99f7:131c:aad4) has joined #gentoo
+2021-11-29 16:10:39	<--	Kritias (~Kritias@205-160-184-091.ip-addr.vsenet.de) has quit (Quit: Verlassend)
+2021-11-29 16:10:43	twnqx	Peste_Bubonica: you'll need macchanger installed, and use #mac_br0="00:11:22:33:44:55" according to the example (with netifrc)
+2021-11-29 16:10:49	twnqx	without #
+2021-11-29 16:11:57	<--	Peste_Bubonica (~Peste_Bub@user/peste-bubonica/x-0568126) has quit (Ping timeout: 276 seconds)
+2021-11-29 16:12:41	<--	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:13:37	-->	srv (~cmd@user/srv) has joined #gentoo
+2021-11-29 16:15:17	-->	Peste_Bubonica (~Peste_Bub@user/peste-bubonica/x-0568126) has joined #gentoo
+2021-11-29 16:15:50	Peste_Bubonica	twnqx, mac_br="xxx" works :)
+2021-11-29 16:15:52	-->	pepperoni (~pepperoni@gateway/vpn/pia/pepperoni) has joined #gentoo
+2021-11-29 16:16:20	-->	Joseph_Vissarion (~kvirc@95.174.126.153) has joined #gentoo
+2021-11-29 16:16:51	-->	lordrishav_ (~LordRisha@user/lordrishav) has joined #gentoo
+2021-11-29 16:17:40	<--	LordRishav (~LordRisha@user/lordrishav) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:20:04	<--	Sarcutus (~Sarcutus@pool-96-241-63-17.washdc.fios.verizon.net) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:22:15	--	dfdx_ is now known as dfdx
+2021-11-29 16:24:04	<--	jotik (~J@user/jotik) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:26:19	--	lordrishav_ is now known as LordRishav
+2021-11-29 16:30:47	<--	srv (~cmd@user/srv) has quit (Quit: Leaving)
+2021-11-29 16:33:05	plebe	I ran into bug 724314 I tried rebuilding gcc with vtv and building boost still failed. I am wondering if there is a documented workaround that I am missing
+2021-11-29 16:33:10	+willikins	plebe: https://bugs.gentoo.org/724314 "sys-devel/gcc-10.1.0-r1 stack corruption in cp_gimplify_expr() when building dev-libs/boost-1.73.0 on AMD Ryzen (znver1)"; Gentoo Linux, Current packages; CONF; myloveyuxuan:toolchain
+2021-11-29 16:33:59	<--	timahvo1 (~rogue@105.163.2.171) has quit (Remote host closed the connection)
+2021-11-29 16:34:03	-->	psymin (~psymin@user/psymin) has joined #gentoo
+2021-11-29 16:34:19	+ionen	read the bug (notably the later comments) and try some random suggested things, may or may not work -- there's no proper fix to a hardware bug
+2021-11-29 16:35:17	+ionen	I don't have such cpu so I can't test to really suggest anything
+2021-11-29 16:35:21	marduk	If there is a workaround it's likely to be in the bug report itself.  Also masking is a thing.
+2021-11-29 16:39:16	<--	milobit (~milobit@ltea-178-013-121-150.pools.arcor-ip.net) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:39:39	-->	milobit (~milobit@77-169-34-100.fixed.kpn.net) has joined #gentoo
+2021-11-29 16:40:02	-->	meta-system (~metasyste@lfbn-poi-1-276-214.w86-233.abo.wanadoo.fr) has joined #gentoo
+2021-11-29 16:41:02	<--	yasha (~yasha@user/yasha) has quit (Ping timeout: 260 seconds)
+2021-11-29 16:43:24	-->	FinboySlick (~shark@2604:b980:c8:70:be30:5bff:feb8:8ba4) has joined #gentoo
+2021-11-29 16:44:22	-->	yasha (~yasha@user/yasha) has joined #gentoo
+2021-11-29 16:46:49	-->	matsl (~matsl@gentoo/developer/matsl) has joined #gentoo
+2021-11-29 16:46:49	--	Mode #gentoo [+v matsl] by ChanServ
+2021-11-29 16:50:25	-->	Libero (~Libero@77.49.77.131.dsl.dyn.forthnet.gr) has joined #gentoo
+2021-11-29 16:52:04	-->	TheteSigma (TheteSi@2603-8080-fb05-4502-0db9-3a59-b948-316e.res6.spectrum.com) has joined #gentoo
+2021-11-29 16:52:07	-->	zer0bitz (~zer0bitz@dsl-hkibng31-54fabc-15.dhcp.inet.fi) has joined #gentoo
+2021-11-29 16:52:47	<--	_inky (~inky_@46.36.112.226) has quit (Quit: Leaving.)
+2021-11-29 16:53:17	<--	thunderrd_ (~thunderrd@183.182.111.230) has quit (Ping timeout: 265 seconds)
+2021-11-29 16:53:44	--	JTL is now known as JLT
+2021-11-29 16:53:51	--	JLT is now known as JTL
+2021-11-29 16:54:52	<--	aHick (~memes@143.60.229.4) has quit (Ping timeout: 264 seconds)
+2021-11-29 17:02:24	-->	anessen97 (~Anessen97@host-79-41-170-37.retail.telecomitalia.it) has joined #gentoo
+2021-12-02 13:29:40	-->	Velkorq (~Velkorq@user/velkorumx) has joined #gentoo
+2021-12-02 13:29:40	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Add: --a python:3.9"
+2021-12-02 13:29:40	--	Topic set by tdr (~tdr@user/tdr) on Sat, 27 Nov 2021 07:20:26
+2021-12-02 13:29:40	--	Channel #gentoo: 799 nicks (2 ops, 44 voices, 753 normals)
+2021-12-02 13:29:40	--	PvNotice(ChanServ): Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+2021-12-02 13:29:40	--	URL for #gentoo: https://www.gentoo.org
+2021-12-02 13:29:47	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-12-02 13:30:17	samip537	What's the primary way to contact gentoo devs? Like I would like to ask something from mgorny, but the dev channel is moderated aka ops and voice users can only speak there?
+2021-12-02 13:34:21	<--	saintwatermelon (~root@91.203.24.166) has quit (Ping timeout: 256 seconds)
+2021-12-02 13:34:21	<--	samip537 (samip537@user/samip537) has quit (Changing host)
+2021-12-02 13:34:21	-->	samip537 (samip537@hilla.kapsi.fi) has joined #gentoo
+2021-12-02 13:34:28	-->	sputnik (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-12-02 13:34:32	--	sputnik is now known as Guest2305
+2021-12-02 13:35:04	-->	jess (~jess@libera/staff/jess) has joined #gentoo
+2021-12-02 13:35:04	--	Mode #gentoo [+v jess] by ChanServ
+2021-12-02 13:35:07	-->	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has joined #gentoo
+2021-12-02 13:35:30	-->	masterbuilder (~user@user/masterbuilder) has joined #gentoo
+2021-12-02 13:37:40	-->	khaled (~khaled@91-115-181-17.adsl.highway.telekom.at) has joined #gentoo
+2021-12-02 13:37:48	<--	Guest2305 (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-12-02 13:38:20	<--	jeffrey (~jeffrey@145.107.161.215) has quit (Quit: Client quit)
+2021-12-02 13:38:24	<--	jasmariie (~jasmine@180.150.83.172) has quit (Read error: Connection reset by peer)
+2021-12-02 13:39:57	<--	DogHackit (~nathanren@c-76-27-57-63.hsd1.ut.comcast.net) has quit (Ping timeout: 256 seconds)
+2021-12-02 13:40:30	-->	phylaz (~phylaz@219.92-221-176.customer.lyse.net) has joined #gentoo
+2021-12-02 13:41:16	-->	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-12-02 13:41:32	-->	zeden (~zeden@user/zeden) has joined #gentoo
+2021-12-02 13:43:25	<--	S0rin (~S0rin@user/s0rin) has quit (Ping timeout: 256 seconds)
+2021-12-02 13:43:41	Arsen	samip537: probably email, or ask in the right IRC channel
+2021-12-02 13:43:50	Arsen	/alis list gentoo
+2021-12-02 13:45:35	<--	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has quit (Remote host closed the connection)
+2021-12-02 13:46:12	-->	S0rin (~S0rin@user/s0rin) has joined #gentoo
+2021-12-02 13:47:20	samip537	Arsen: That doesn't say anything?
+2021-12-02 13:47:33	Arsen	check your server buffer
+2021-12-02 13:47:44	Arsen	maybe your client isn't showing it in the buffer you used
+2021-12-02 13:48:03	-->	sputnik_ (~sputnik@cpe-76-88-124-197.san.res.rr.com) has joined #gentoo
+2021-12-02 13:48:10	samip537	"Alias list added", but that's all. Nothing actually useful.
+2021-12-02 13:48:18	Arsen	yeah, you typod
+2021-12-02 13:48:20	Arsen	it's /alis
+2021-12-02 13:48:23	samip537	Oh
+2021-12-02 13:48:26	Arsen	/msg alis*
+2021-12-02 13:48:39	Arsen	sorry, I forgot I had /<service> aliased to /msg <service>
+2021-12-02 13:49:45	samip537	And mgorny is only in the dev channel that is moderated.
+2021-12-02 13:50:13	Arsen	he's in more than that, that's your only mutual channel
+2021-12-02 13:50:32	Arsen	what specifically do you mean to ask? if it's private, you probably should email him, otherwise, ask in the right projects channel
+2021-12-02 13:50:51	samip537	Related to the portage tree eclass that was modified.
+2021-12-02 13:51:19	samip537	Which to me, is a dev channel question.
+2021-12-02 13:51:29	Arsen	#gentoo-dev-help?
+2021-12-02 13:51:48	+ionen	which eclass?
+2021-12-02 13:51:59	samip537	kernel build related.
+2021-12-02 13:52:07	samip537	kernel-install
+2021-12-02 13:52:39	+ionen	it hasn't been modified in a while
+2021-12-02 13:52:45	samip537	This https://gitweb.gentoo.org/repo/gentoo.git/commit/eclass/kernel-install.eclass?id=e893119949ec1f94b83dc467514dc9ad4495a596 commit broke our raspberrypi-kernel eclass, due to it building multiple.
+2021-12-02 13:53:04	+ionen	ah that
+2021-12-02 13:54:06	+ionen	filling a bug explaining the issue would make more sense I think
+2021-12-02 13:54:47	samip537	I can override it, but I would want to know why it was needed.
+2021-12-02 13:58:05	<--	arinov (~arinov@213.194.126.155) has quit (Ping timeout: 256 seconds)
+2021-12-02 14:02:47	jpds	samip537: bugs.gentoo.org
+2021-12-02 14:04:55	samip537	Yeah, just did. Bug 828010
+2021-12-02 14:04:55	+willikins	samip537: https://bugs.gentoo.org/828010 "kernel-install:eclass: Commit e893119949ec1f94b83dc467514dc9ad4495a596 broke our raspberrypi-kernel ebuild/class"; Gentoo Linux, Eclasses; UNCO; sm+gbugs:bug-wranglers

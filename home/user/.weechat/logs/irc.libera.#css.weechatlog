@@ -1,0 +1,25 @@
+2021-12-02 13:31:08	-->	Velkorq (~Velkorq@user/velkorumx) has joined #css
+2021-12-02 13:31:08	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate and give a live URL :: Rules: https://hashcss.com/rules/ :: FAQ: https://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2021-12-02 13:31:08	--	Topic set by AMcBain (~AMcBain@user/amcbain) on Sat, 29 May 2021 01:18:49
+2021-12-02 13:31:08	--	Channel #css: 138 nicks (0 ops, 0 voices, 138 normals)
+2021-12-02 13:31:10	--	Channel created on Wed, 19 May 2021 15:27:57
+2021-12-02 13:31:24	Velkorq	how can i load an svg image using the img tag? it doesnt work
+2021-12-02 13:32:31	-->	jplejacq (~jplejacq@24.224.90.176) has joined #css
+2021-12-02 13:35:20	-->	jess (~jess@libera/staff/jess) has joined #css
+2021-12-02 13:38:20	<--	jeffrey (~jeffrey@145.107.161.215) has quit (Quit: Client quit)
+2021-12-02 13:40:20	hunboy	<img src='https://mysite.com/pictures/image.svg' />
+2021-12-02 13:40:55	Velkorq	hunboy: doesnt seem to work
+2021-12-02 13:41:06	hunboy	must be
+2021-12-02 13:41:07	Velkorq	shows broken img and alt attribute
+2021-12-02 13:41:39	hunboy	send me link to image
+2021-12-02 13:41:44	Velkorq	also do i need the closing /
+2021-12-02 13:41:52	hunboy	depends
+2021-12-02 13:41:54	Velkorq	i write img as this <img src="" >
+2021-12-02 13:41:57	Velkorq	and it works
+2021-12-02 13:42:00	hunboy	that also good
+2021-12-02 13:43:06	hunboy	send me link to image
+2021-12-02 13:43:15	hunboy	on your website
+2021-12-02 13:47:38	Velkorq	actually doesnt display any image
+2021-12-02 13:47:45	Velkorq	even jpg. something is wrong with my setup
+2021-12-02 13:49:14	Velkorq	thanks anyway
+2021-12-02 13:50:15	<--	WishBoy (~WishBoy@user/wishboy) has quit

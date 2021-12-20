@@ -1,0 +1,643 @@
+2021-11-22 11:55:05		New key binding (context "default"): meta2-1;5P => /bar scroll buflist * -100%
+2021-11-22 11:55:05		New key binding (context "default"): meta2-1;5Q => /bar scroll buflist * +100%
+2021-11-22 11:55:05		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2021-11-22 11:55:05		New key binding (context "default"): meta2-1;3Q => /bar scroll buflist * e
+2021-11-22 11:55:05		New key binding (context "default"): meta2-1;3P => /bar scroll buflist * b
+2021-11-22 11:55:05		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2021-11-22 11:55:05		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2021-11-22 11:55:05		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2021-11-22 11:55:05		New key binding (context "default"): meta-meta2-12~ => /bar scroll buflist * e
+2021-11-22 11:55:05		New key binding (context "default"): meta-meta2-11~ => /bar scroll buflist * b
+2021-11-22 11:55:05		New key binding (context "default"): meta2-12^ => /bar scroll buflist * +100%
+2021-11-22 11:55:05		New key binding (context "default"): meta2-12~ => /bar scroll buflist * +100%
+2021-11-22 11:55:05		New key binding (context "default"): meta2-11^ => /bar scroll buflist * -100%
+2021-11-22 11:55:05		New key binding (context "default"): meta2-11~ => /bar scroll buflist * -100%
+2021-11-22 11:55:05		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 11:55:11	=!=	You can not write text in this buffer
+2021-11-22 11:55:21		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 11:55:30	=!=	Too few arguments for command "/query" (help on command: /help query)
+2021-11-22 11:55:35		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:05:26		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:35:05		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:35:42		irc: server added: libera
+2021-11-22 12:36:07		Option changed: irc.server.libera.sasl_mechanism = plain  (default if null: plain)
+2021-11-22 12:36:38		Option changed: irc.server.libera.sasl_username = "Vektorx"  (default if null: "")
+2021-11-22 12:37:51		Passphrase added
+2021-11-22 12:38:13		Secured data "libera_password" set
+2021-11-22 12:38:13		Options saved to sec.conf
+2021-11-22 12:38:40		Option changed: irc.server.libera.sasl_password = "${sec.data.libera_password}"  (default if null: "")
+2021-11-22 12:38:53		Options saved to sec.conf
+2021-11-22 12:38:53		Options saved to weechat.conf
+2021-11-22 12:38:53		Options saved to plugins.conf
+2021-11-22 12:38:53		Options saved to charset.conf
+2021-11-22 12:38:53		Options saved to logger.conf
+2021-11-22 12:38:53		Options saved to exec.conf
+2021-11-22 12:38:53		Options saved to trigger.conf
+2021-11-22 12:38:53		Options saved to spell.conf
+2021-11-22 12:38:53		Options saved to alias.conf
+2021-11-22 12:38:53		Options saved to buflist.conf
+2021-11-22 12:38:53		Options saved to fifo.conf
+2021-11-22 12:38:53		Options saved to xfer.conf
+2021-11-22 12:38:53		Options saved to irc.conf
+2021-11-22 12:38:53		Options saved to relay.conf
+2021-11-22 12:38:53		Options saved to ruby.conf
+2021-11-22 12:38:53		Options saved to python.conf
+2021-11-22 12:38:53		Options saved to perl.conf
+2021-11-22 12:38:53		Options saved to script.conf
+2021-11-22 12:38:53		Options saved to fset.conf
+2021-11-22 12:39:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:39:29		All servers:
+2021-11-22 12:39:29		   libera
+2021-11-22 12:40:32		All servers:
+2021-11-22 12:40:32		   libera
+2021-11-22 12:44:05		Option changed: irc.server.libera.autoconnect = on  (default if null: off)
+2021-11-22 12:44:11		Options saved to sec.conf
+2021-11-22 12:44:11		Options saved to weechat.conf
+2021-11-22 12:44:11		Options saved to plugins.conf
+2021-11-22 12:44:11		Options saved to charset.conf
+2021-11-22 12:44:11		Options saved to logger.conf
+2021-11-22 12:44:11		Options saved to exec.conf
+2021-11-22 12:44:11		Options saved to trigger.conf
+2021-11-22 12:44:11		Options saved to spell.conf
+2021-11-22 12:44:11		Options saved to alias.conf
+2021-11-22 12:44:11		Options saved to buflist.conf
+2021-11-22 12:44:11		Options saved to fifo.conf
+2021-11-22 12:44:11		Options saved to xfer.conf
+2021-11-22 12:44:11		Options saved to irc.conf
+2021-11-22 12:44:11		Options saved to relay.conf
+2021-11-22 12:44:11		Options saved to ruby.conf
+2021-11-22 12:44:11		Options saved to python.conf
+2021-11-22 12:44:11		Options saved to perl.conf
+2021-11-22 12:44:11		Options saved to script.conf
+2021-11-22 12:44:11		Options saved to fset.conf
+2021-11-22 12:44:31		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:45:49		Option changed: irc.server.libera.nicks = "Velkorx,Velkory,Velkorz,Velkora,Velkorq"  (default if null: "user,user1,user2,user3,user4")
+2021-11-22 12:45:58		Option changed: irc.server.libera.username = "Velkorz"  (default if null: "user")
+2021-11-22 12:46:09		Option changed: irc.server.libera.realname = "Velkorz"  (default if null: "")
+2021-11-22 12:47:59		[core]  /secure  passphrase <passphrase>|-delete
+2021-11-22 12:47:59		                 decrypt <passphrase>|-discard
+2021-11-22 12:47:59		                 set <name> <value>
+2021-11-22 12:47:59		                 del <name>
+2021-11-22 12:47:59		manage secured data (passwords or private data encrypted in file sec.conf)
+2021-11-22 12:47:59		passphrase: change the passphrase (without passphrase, data is stored as plain text in file sec.conf)
+2021-11-22 12:47:59		   -delete: delete passphrase
+2021-11-22 12:47:59		   decrypt: decrypt data still encrypted (it happens only if passphrase was not given on startup)
+2021-11-22 12:47:59		  -discard: discard all data still encrypted
+2021-11-22 12:47:59		       set: add or change secured data
+2021-11-22 12:47:59		       del: delete secured data
+2021-11-22 12:47:59		Without argument, this command displays secured data in a new buffer.
+2021-11-22 12:47:59		Keys on secure buffer:
+2021-11-22 12:47:59		  alt+v  toggle values
+2021-11-22 12:47:59		When a passphrase is used (data encrypted), it is asked by WeeChat on startup.
+2021-11-22 12:47:59		It is possible to set environment variable "WEECHAT_PASSPHRASE" to prevent the prompt (this same variable is used by WeeChat on /upgrade), or to set option sec.crypt.passphrase_file to read the passphrase from a file (see /help sec.crypt.passphrase_file).
+2021-11-22 12:47:59		Secured data with format ${sec.data.xxx} can be used in:
+2021-11-22 12:47:59		  - command /eval
+2021-11-22 12:47:59		  - command line argument "--run-command"
+2021-11-22 12:47:59		  - options weechat.startup.command_{before|after}_plugins
+2021-11-22 12:47:59		  - other options that may contain a password or sensitive data (for example proxy, irc server and relay); see /help on the options to check if they are evaluated.
+2021-11-22 12:47:59		Examples:
+2021-11-22 12:47:59		  set a passphrase:
+2021-11-22 12:47:59		    /secure passphrase this is my passphrase
+2021-11-22 12:47:59		  encrypt freenode SASL password:
+2021-11-22 12:47:59		    /secure set freenode mypassword
+2021-11-22 12:47:59		    /set irc.server.freenode.sasl_password "${sec.data.freenode}"
+2021-11-22 12:47:59		  encrypt oftc password for nickserv:
+2021-11-22 12:47:59		    /secure set oftc mypassword
+2021-11-22 12:47:59		    /set irc.server.oftc.command "/msg nickserv identify ${sec.data.oftc}"
+2021-11-22 12:47:59		  alias to ghost the nick "mynick":
+2021-11-22 12:47:59		    /alias add ghost /eval /msg -server freenode nickserv ghost mynick ${sec.data.freenode}
+2021-11-22 12:48:45		Options saved to sec.conf
+2021-11-22 12:48:45		Options saved to weechat.conf
+2021-11-22 12:48:45		Options saved to plugins.conf
+2021-11-22 12:48:45		Options saved to charset.conf
+2021-11-22 12:48:45		Options saved to logger.conf
+2021-11-22 12:48:45		Options saved to exec.conf
+2021-11-22 12:48:45		Options saved to trigger.conf
+2021-11-22 12:48:45		Options saved to spell.conf
+2021-11-22 12:48:45		Options saved to alias.conf
+2021-11-22 12:48:45		Options saved to buflist.conf
+2021-11-22 12:48:45		Options saved to fifo.conf
+2021-11-22 12:48:45		Options saved to xfer.conf
+2021-11-22 12:48:45		Options saved to irc.conf
+2021-11-22 12:48:45		Options saved to relay.conf
+2021-11-22 12:48:45		Options saved to ruby.conf
+2021-11-22 12:48:45		Options saved to python.conf
+2021-11-22 12:48:45		Options saved to perl.conf
+2021-11-22 12:48:45		Options saved to script.conf
+2021-11-22 12:48:45		Options saved to fset.conf
+2021-11-22 12:48:48		Options saved to sec.conf
+2021-11-22 12:48:48		Options saved to weechat.conf
+2021-11-22 12:48:48		Options saved to plugins.conf
+2021-11-22 12:48:48		Options saved to charset.conf
+2021-11-22 12:48:48		Options saved to logger.conf
+2021-11-22 12:48:48		Options saved to exec.conf
+2021-11-22 12:48:48		Options saved to trigger.conf
+2021-11-22 12:48:48		Options saved to spell.conf
+2021-11-22 12:48:48		Options saved to alias.conf
+2021-11-22 12:48:48		Options saved to buflist.conf
+2021-11-22 12:48:48		Options saved to fifo.conf
+2021-11-22 12:48:48		Options saved to xfer.conf
+2021-11-22 12:48:48		Options saved to irc.conf
+2021-11-22 12:48:48		Options saved to relay.conf
+2021-11-22 12:48:48		Options saved to ruby.conf
+2021-11-22 12:48:48		Options saved to python.conf
+2021-11-22 12:48:48		Options saved to perl.conf
+2021-11-22 12:48:48		Options saved to script.conf
+2021-11-22 12:48:48		Options saved to fset.conf
+2021-11-22 12:48:57		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:50:50		Option changed: irc.server.libera.autojoin = "#debian,#ubuntu,#archlinux,#gentoo,#linux"  (default if null: "")
+2021-11-22 12:50:52		Options saved to sec.conf
+2021-11-22 12:50:52		Options saved to weechat.conf
+2021-11-22 12:50:52		Options saved to plugins.conf
+2021-11-22 12:50:52		Options saved to charset.conf
+2021-11-22 12:50:52		Options saved to logger.conf
+2021-11-22 12:50:52		Options saved to exec.conf
+2021-11-22 12:50:52		Options saved to trigger.conf
+2021-11-22 12:50:52		Options saved to spell.conf
+2021-11-22 12:50:52		Options saved to alias.conf
+2021-11-22 12:50:52		Options saved to buflist.conf
+2021-11-22 12:50:52		Options saved to fifo.conf
+2021-11-22 12:50:52		Options saved to xfer.conf
+2021-11-22 12:50:52		Options saved to irc.conf
+2021-11-22 12:50:52		Options saved to relay.conf
+2021-11-22 12:50:52		Options saved to ruby.conf
+2021-11-22 12:50:52		Options saved to python.conf
+2021-11-22 12:50:52		Options saved to perl.conf
+2021-11-22 12:50:52		Options saved to script.conf
+2021-11-22 12:50:52		Options saved to fset.conf
+2021-11-22 12:51:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:52:03	=!=	You must decrypt data still encrypted before doing any operation on secured data or passphrase
+2021-11-22 12:52:10	=!=	Error: WeeChat main buffer can't be closed
+2021-11-22 12:52:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:52:36		Passphrase deleted
+2021-11-22 12:52:36		Options saved to sec.conf
+2021-11-22 12:52:38		Passphrase added
+2021-11-22 12:52:38		Options saved to sec.conf
+2021-11-22 12:52:40		Passphrase changed
+2021-11-22 12:52:40		Options saved to sec.conf
+2021-11-22 12:52:42		Passphrase changed
+2021-11-22 12:52:42		Options saved to sec.conf
+2021-11-22 12:52:56		Passphrase deleted
+2021-11-22 12:52:56		Options saved to sec.conf
+2021-11-22 12:53:00		Options saved to sec.conf
+2021-11-22 12:53:00		Options saved to weechat.conf
+2021-11-22 12:53:00		Options saved to plugins.conf
+2021-11-22 12:53:00		Options saved to charset.conf
+2021-11-22 12:53:00		Options saved to logger.conf
+2021-11-22 12:53:00		Options saved to exec.conf
+2021-11-22 12:53:00		Options saved to trigger.conf
+2021-11-22 12:53:00		Options saved to spell.conf
+2021-11-22 12:53:00		Options saved to alias.conf
+2021-11-22 12:53:00		Options saved to buflist.conf
+2021-11-22 12:53:00		Options saved to fifo.conf
+2021-11-22 12:53:00		Options saved to xfer.conf
+2021-11-22 12:53:00		Options saved to irc.conf
+2021-11-22 12:53:00		Options saved to relay.conf
+2021-11-22 12:53:00		Options saved to ruby.conf
+2021-11-22 12:53:00		Options saved to python.conf
+2021-11-22 12:53:00		Options saved to perl.conf
+2021-11-22 12:53:00		Options saved to script.conf
+2021-11-22 12:53:00		Options saved to fset.conf
+2021-11-22 12:53:06		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:53:53	=!=	Error with command "/secure list" (help on command: /help secure)
+2021-11-22 12:54:02		[core]  /secure  passphrase <passphrase>|-delete
+2021-11-22 12:54:02		                 decrypt <passphrase>|-discard
+2021-11-22 12:54:02		                 set <name> <value>
+2021-11-22 12:54:02		                 del <name>
+2021-11-22 12:54:02		manage secured data (passwords or private data encrypted in file sec.conf)
+2021-11-22 12:54:02		passphrase: change the passphrase (without passphrase, data is stored as plain text in file sec.conf)
+2021-11-22 12:54:02		   -delete: delete passphrase
+2021-11-22 12:54:02		   decrypt: decrypt data still encrypted (it happens only if passphrase was not given on startup)
+2021-11-22 12:54:02		  -discard: discard all data still encrypted
+2021-11-22 12:54:02		       set: add or change secured data
+2021-11-22 12:54:02		       del: delete secured data
+2021-11-22 12:54:02		Without argument, this command displays secured data in a new buffer.
+2021-11-22 12:54:02		Keys on secure buffer:
+2021-11-22 12:54:02		  alt+v  toggle values
+2021-11-22 12:54:02		When a passphrase is used (data encrypted), it is asked by WeeChat on startup.
+2021-11-22 12:54:02		It is possible to set environment variable "WEECHAT_PASSPHRASE" to prevent the prompt (this same variable is used by WeeChat on /upgrade), or to set option sec.crypt.passphrase_file to read the passphrase from a file (see /help sec.crypt.passphrase_file).
+2021-11-22 12:54:02		Secured data with format ${sec.data.xxx} can be used in:
+2021-11-22 12:54:02		  - command /eval
+2021-11-22 12:54:02		  - command line argument "--run-command"
+2021-11-22 12:54:02		  - options weechat.startup.command_{before|after}_plugins
+2021-11-22 12:54:02		  - other options that may contain a password or sensitive data (for example proxy, irc server and relay); see /help on the options to check if they are evaluated.
+2021-11-22 12:54:02		Examples:
+2021-11-22 12:54:02		  set a passphrase:
+2021-11-22 12:54:02		    /secure passphrase this is my passphrase
+2021-11-22 12:54:02		  encrypt freenode SASL password:
+2021-11-22 12:54:02		    /secure set freenode mypassword
+2021-11-22 12:54:02		    /set irc.server.freenode.sasl_password "${sec.data.freenode}"
+2021-11-22 12:54:02		  encrypt oftc password for nickserv:
+2021-11-22 12:54:02		    /secure set oftc mypassword
+2021-11-22 12:54:02		    /set irc.server.oftc.command "/msg nickserv identify ${sec.data.oftc}"
+2021-11-22 12:54:02		  alias to ghost the nick "mynick":
+2021-11-22 12:54:02		    /alias add ghost /eval /msg -server freenode nickserv ghost mynick ${sec.data.freenode}
+2021-11-22 12:54:35		Secured data "libera_password" deleted
+2021-11-22 12:54:35		Options saved to sec.conf
+2021-11-22 12:54:36	=!=	Secured data "libera_password" not found
+2021-11-22 12:54:37	=!=	Secured data "libera_password" not found
+2021-11-22 12:54:38	=!=	Secured data "libera_password" not found
+2021-11-22 12:54:39	=!=	Secured data "libera_password" not found
+2021-11-22 12:54:57	=!=	Secured data "libera_password" not found
+2021-11-22 12:55:09		Passphrase is not set
+2021-11-22 12:55:11		Passphrase added
+2021-11-22 12:55:12		Passphrase changed
+2021-11-22 12:55:12		Passphrase changed
+2021-11-22 12:55:13		Passphrase changed
+2021-11-22 12:55:14		Passphrase changed
+2021-11-22 12:55:14		Passphrase changed
+2021-11-22 12:55:15		Passphrase changed
+2021-11-22 12:55:15		Passphrase changed
+2021-11-22 12:55:17		Passphrase changed
+2021-11-22 12:55:21		Passphrase changed
+2021-11-22 12:55:30		Passphrase deleted
+2021-11-22 12:56:12		Option reset: irc.server.libera.sasl_password = null -> ""
+2021-11-22 12:56:12		1 option(s) reset, 0 option(s) removed
+2021-11-22 12:56:13		0 option(s) reset, 0 option(s) removed
+2021-11-22 12:56:14		0 option(s) reset, 0 option(s) removed
+2021-11-22 12:56:14		0 option(s) reset, 0 option(s) removed
+2021-11-22 12:56:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 12:56:48		Passphrase added
+2021-11-22 12:56:55		Passphrase deleted
+2021-11-22 12:57:02		[core]  /secure  passphrase <passphrase>|-delete
+2021-11-22 12:57:02		                 decrypt <passphrase>|-discard
+2021-11-22 12:57:02		                 set <name> <value>
+2021-11-22 12:57:02		                 del <name>
+2021-11-22 12:57:02		manage secured data (passwords or private data encrypted in file sec.conf)
+2021-11-22 12:57:02		passphrase: change the passphrase (without passphrase, data is stored as plain text in file sec.conf)
+2021-11-22 12:57:02		   -delete: delete passphrase
+2021-11-22 12:57:02		   decrypt: decrypt data still encrypted (it happens only if passphrase was not given on startup)
+2021-11-22 12:57:02		  -discard: discard all data still encrypted
+2021-11-22 12:57:02		       set: add or change secured data
+2021-11-22 12:57:02		       del: delete secured data
+2021-11-22 12:57:02		Without argument, this command displays secured data in a new buffer.
+2021-11-22 12:57:02		Keys on secure buffer:
+2021-11-22 12:57:02		  alt+v  toggle values
+2021-11-22 12:57:02		When a passphrase is used (data encrypted), it is asked by WeeChat on startup.
+2021-11-22 12:57:02		It is possible to set environment variable "WEECHAT_PASSPHRASE" to prevent the prompt (this same variable is used by WeeChat on /upgrade), or to set option sec.crypt.passphrase_file to read the passphrase from a file (see /help sec.crypt.passphrase_file).
+2021-11-22 12:57:02		Secured data with format ${sec.data.xxx} can be used in:
+2021-11-22 12:57:02		  - command /eval
+2021-11-22 12:57:02		  - command line argument "--run-command"
+2021-11-22 12:57:02		  - options weechat.startup.command_{before|after}_plugins
+2021-11-22 12:57:02		  - other options that may contain a password or sensitive data (for example proxy, irc server and relay); see /help on the options to check if they are evaluated.
+2021-11-22 12:57:02		Examples:
+2021-11-22 12:57:02		  set a passphrase:
+2021-11-22 12:57:02		    /secure passphrase this is my passphrase
+2021-11-22 12:57:02		  encrypt freenode SASL password:
+2021-11-22 12:57:02		    /secure set freenode mypassword
+2021-11-22 12:57:02		    /set irc.server.freenode.sasl_password "${sec.data.freenode}"
+2021-11-22 12:57:02		  encrypt oftc password for nickserv:
+2021-11-22 12:57:02		    /secure set oftc mypassword
+2021-11-22 12:57:02		    /set irc.server.oftc.command "/msg nickserv identify ${sec.data.oftc}"
+2021-11-22 12:57:02		  alias to ghost the nick "mynick":
+2021-11-22 12:57:02		    /alias add ghost /eval /msg -server freenode nickserv ghost mynick ${sec.data.freenode}
+2021-11-22 12:57:16	=!=	Secured data "libera_password" not found
+2021-11-22 12:57:35		0 option(s) reset, 0 option(s) removed
+2021-11-22 12:57:36		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:02:13		Option reset: irc.server.libera.autojoin = null -> ""
+2021-11-22 13:02:13		1 option(s) reset, 0 option(s) removed
+2021-11-22 13:02:14		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:02:25		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:02:44		Option changed: irc.server.libera.autojoin = "#debian,#archlinux,#gentoo,#linux"  (default if null: "")
+2021-11-22 13:03:12		Option reset: irc.server.libera.sasl_username = null -> ""
+2021-11-22 13:03:12		1 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:14		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:14		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:15		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:15		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:16		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:28		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:30		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:03:31		Options saved to sec.conf
+2021-11-22 13:03:31		Options saved to weechat.conf
+2021-11-22 13:03:31		Options saved to plugins.conf
+2021-11-22 13:03:31		Options saved to charset.conf
+2021-11-22 13:03:31		Options saved to logger.conf
+2021-11-22 13:03:31		Options saved to exec.conf
+2021-11-22 13:03:31		Options saved to trigger.conf
+2021-11-22 13:03:31		Options saved to spell.conf
+2021-11-22 13:03:31		Options saved to alias.conf
+2021-11-22 13:03:31		Options saved to buflist.conf
+2021-11-22 13:03:31		Options saved to fifo.conf
+2021-11-22 13:03:31		Options saved to xfer.conf
+2021-11-22 13:03:31		Options saved to irc.conf
+2021-11-22 13:03:31		Options saved to relay.conf
+2021-11-22 13:03:31		Options saved to ruby.conf
+2021-11-22 13:03:31		Options saved to python.conf
+2021-11-22 13:03:31		Options saved to perl.conf
+2021-11-22 13:03:31		Options saved to script.conf
+2021-11-22 13:03:31		Options saved to fset.conf
+2021-11-22 13:13:51		Options saved to sec.conf
+2021-11-22 13:13:51		Options saved to weechat.conf
+2021-11-22 13:13:51		Options saved to plugins.conf
+2021-11-22 13:13:51		Options saved to charset.conf
+2021-11-22 13:13:51		Options saved to logger.conf
+2021-11-22 13:13:51		Options saved to exec.conf
+2021-11-22 13:13:51		Options saved to trigger.conf
+2021-11-22 13:13:51		Options saved to spell.conf
+2021-11-22 13:13:51		Options saved to alias.conf
+2021-11-22 13:13:51		Options saved to buflist.conf
+2021-11-22 13:13:51		Options saved to fifo.conf
+2021-11-22 13:13:51		Options saved to xfer.conf
+2021-11-22 13:13:51		Options saved to irc.conf
+2021-11-22 13:13:51		Options saved to relay.conf
+2021-11-22 13:13:51		Options saved to ruby.conf
+2021-11-22 13:13:51		Options saved to python.conf
+2021-11-22 13:13:51		Options saved to perl.conf
+2021-11-22 13:13:51		Options saved to script.conf
+2021-11-22 13:13:51		Options saved to fset.conf
+2021-11-22 13:23:43		Options saved to sec.conf
+2021-11-22 13:23:43		Options saved to weechat.conf
+2021-11-22 13:23:43		Options saved to plugins.conf
+2021-11-22 13:23:43		Options saved to charset.conf
+2021-11-22 13:23:43		Options saved to logger.conf
+2021-11-22 13:23:43		Options saved to exec.conf
+2021-11-22 13:23:43		Options saved to trigger.conf
+2021-11-22 13:23:43		Options saved to spell.conf
+2021-11-22 13:23:43		Options saved to alias.conf
+2021-11-22 13:23:43		Options saved to buflist.conf
+2021-11-22 13:23:43		Options saved to fifo.conf
+2021-11-22 13:23:43		Options saved to xfer.conf
+2021-11-22 13:23:43		Options saved to irc.conf
+2021-11-22 13:23:43		Options saved to relay.conf
+2021-11-22 13:23:43		Options saved to ruby.conf
+2021-11-22 13:23:43		Options saved to python.conf
+2021-11-22 13:23:43		Options saved to perl.conf
+2021-11-22 13:23:43		Options saved to script.conf
+2021-11-22 13:23:43		Options saved to fset.conf
+2021-11-22 13:24:25		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 13:24:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 13:26:16		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:26:17		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:26:28		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:26:29		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:26:31		Options saved to sec.conf
+2021-11-22 13:26:31		Options saved to weechat.conf
+2021-11-22 13:26:31		Options saved to plugins.conf
+2021-11-22 13:26:31		Options saved to charset.conf
+2021-11-22 13:26:31		Options saved to logger.conf
+2021-11-22 13:26:31		Options saved to exec.conf
+2021-11-22 13:26:31		Options saved to trigger.conf
+2021-11-22 13:26:31		Options saved to spell.conf
+2021-11-22 13:26:31		Options saved to alias.conf
+2021-11-22 13:26:31		Options saved to buflist.conf
+2021-11-22 13:26:31		Options saved to fifo.conf
+2021-11-22 13:26:31		Options saved to xfer.conf
+2021-11-22 13:26:31		Options saved to irc.conf
+2021-11-22 13:26:31		Options saved to relay.conf
+2021-11-22 13:26:31		Options saved to ruby.conf
+2021-11-22 13:26:31		Options saved to python.conf
+2021-11-22 13:26:31		Options saved to perl.conf
+2021-11-22 13:26:31		Options saved to script.conf
+2021-11-22 13:26:31		Options saved to fset.conf
+2021-11-22 13:27:05		Option changed: irc.server.libera.sasl_username = "Velkorumx"  (default if null: "")
+2021-11-22 13:27:32		Option changed: irc.server.libera.sasl_password = "Nik&21@x!!32"  (default if null: "")
+2021-11-22 13:27:35		Options saved to sec.conf
+2021-11-22 13:27:35		Options saved to weechat.conf
+2021-11-22 13:27:35		Options saved to plugins.conf
+2021-11-22 13:27:35		Options saved to charset.conf
+2021-11-22 13:27:35		Options saved to logger.conf
+2021-11-22 13:27:35		Options saved to exec.conf
+2021-11-22 13:27:35		Options saved to trigger.conf
+2021-11-22 13:27:35		Options saved to spell.conf
+2021-11-22 13:27:35		Options saved to alias.conf
+2021-11-22 13:27:35		Options saved to buflist.conf
+2021-11-22 13:27:35		Options saved to fifo.conf
+2021-11-22 13:27:35		Options saved to xfer.conf
+2021-11-22 13:27:35		Options saved to irc.conf
+2021-11-22 13:27:35		Options saved to relay.conf
+2021-11-22 13:27:35		Options saved to ruby.conf
+2021-11-22 13:27:35		Options saved to python.conf
+2021-11-22 13:27:35		Options saved to perl.conf
+2021-11-22 13:27:35		Options saved to script.conf
+2021-11-22 13:27:35		Options saved to fset.conf
+2021-11-22 13:28:03		Option reset: irc.server.libera.autojoin = null -> ""
+2021-11-22 13:28:03		1 option(s) reset, 0 option(s) removed
+2021-11-22 13:28:04		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:28:05		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:28:15		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:29:06		Option changed: irc.server.libera.autojoin = "#debian,#linux,#archlinux,#gentoo"  (default if null: "")
+2021-11-22 13:29:26		Option reset: irc.server.libera.username = null -> "user"
+2021-11-22 13:29:26		1 option(s) reset, 0 option(s) removed
+2021-11-22 13:29:27		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:29:28		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:29:28		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:29:29		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:29:49		Option changed: irc.server.libera.username = "Velkorq"  (default if null: "user")
+2021-11-22 13:30:02		Option reset: irc.server.libera.realname = null -> ""
+2021-11-22 13:30:02		1 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:02		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:03		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:04		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:06		Option reset: irc.server.libera.username = null -> "user"
+2021-11-22 13:30:06		1 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:07		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:29		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:30		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:31		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:39		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:30:40		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:31:09		Option changed: irc.server.libera.username = "Velkorq"  (default if null: "user")
+2021-11-22 13:31:21		Option changed: irc.server.libera.realname = "Velkorq"  (default if null: "")
+2021-11-22 13:31:31		Option reset: irc.server.libera.nicks = null -> "user,user1,user2,user3,user4"
+2021-11-22 13:31:31		1 option(s) reset, 0 option(s) removed
+2021-11-22 13:31:31		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:31:32		0 option(s) reset, 0 option(s) removed
+2021-11-22 13:32:13		Option changed: irc.server.libera.nicks = "Velkorq,Velkorz,Velkorm,Velkorc,Velkorw"  (default if null: "user,user1,user2,user3,user4")
+2021-11-22 13:32:16		Options saved to sec.conf
+2021-11-22 13:32:16		Options saved to weechat.conf
+2021-11-22 13:32:16		Options saved to plugins.conf
+2021-11-22 13:32:16		Options saved to charset.conf
+2021-11-22 13:32:16		Options saved to logger.conf
+2021-11-22 13:32:16		Options saved to exec.conf
+2021-11-22 13:32:16		Options saved to trigger.conf
+2021-11-22 13:32:16		Options saved to spell.conf
+2021-11-22 13:32:16		Options saved to alias.conf
+2021-11-22 13:32:16		Options saved to buflist.conf
+2021-11-22 13:32:16		Options saved to fifo.conf
+2021-11-22 13:32:16		Options saved to xfer.conf
+2021-11-22 13:32:16		Options saved to irc.conf
+2021-11-22 13:32:16		Options saved to relay.conf
+2021-11-22 13:32:16		Options saved to ruby.conf
+2021-11-22 13:32:16		Options saved to python.conf
+2021-11-22 13:32:16		Options saved to perl.conf
+2021-11-22 13:32:16		Options saved to script.conf
+2021-11-22 13:32:16		Options saved to fset.conf
+2021-11-22 13:32:40		Options saved to sec.conf
+2021-11-22 13:32:40		Options saved to weechat.conf
+2021-11-22 13:32:40		Options saved to plugins.conf
+2021-11-22 13:32:40		Options saved to charset.conf
+2021-11-22 13:32:40		Options saved to logger.conf
+2021-11-22 13:32:40		Options saved to exec.conf
+2021-11-22 13:32:40		Options saved to trigger.conf
+2021-11-22 13:32:40		Options saved to spell.conf
+2021-11-22 13:32:40		Options saved to alias.conf
+2021-11-22 13:32:40		Options saved to buflist.conf
+2021-11-22 13:32:40		Options saved to fifo.conf
+2021-11-22 13:32:40		Options saved to xfer.conf
+2021-11-22 13:32:40		Options saved to irc.conf
+2021-11-22 13:32:40		Options saved to relay.conf
+2021-11-22 13:32:40		Options saved to ruby.conf
+2021-11-22 13:32:40		Options saved to python.conf
+2021-11-22 13:32:40		Options saved to perl.conf
+2021-11-22 13:32:40		Options saved to script.conf
+2021-11-22 13:32:40		Options saved to fset.conf
+2021-11-22 13:32:45		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-22 15:24:48		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-24 11:11:40		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-24 11:12:46		Option reset: irc.server.libera.autojoin = null -> ""
+2021-11-24 11:12:46		1 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:47		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:48		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:48		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:49		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:49		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:49		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:50		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:51		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:51		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:51		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:52		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:52		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:52		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:53		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:53		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:54		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:12:54		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:13:04		0 option(s) reset, 0 option(s) removed
+2021-11-24 11:13:58		Option changed: irc.server.libera.autojoin = "#ubuntu,#debian,#archlinux,#gentoo,#linux"  (default if null: "")
+2021-11-24 11:14:01		Options saved to sec.conf
+2021-11-24 11:14:01		Options saved to weechat.conf
+2021-11-24 11:14:01		Options saved to plugins.conf
+2021-11-24 11:14:01		Options saved to charset.conf
+2021-11-24 11:14:01		Options saved to logger.conf
+2021-11-24 11:14:01		Options saved to exec.conf
+2021-11-24 11:14:01		Options saved to trigger.conf
+2021-11-24 11:14:01		Options saved to spell.conf
+2021-11-24 11:14:01		Options saved to alias.conf
+2021-11-24 11:14:01		Options saved to buflist.conf
+2021-11-24 11:14:01		Options saved to fifo.conf
+2021-11-24 11:14:01		Options saved to xfer.conf
+2021-11-24 11:14:01		Options saved to irc.conf
+2021-11-24 11:14:01		Options saved to relay.conf
+2021-11-24 11:14:01		Options saved to ruby.conf
+2021-11-24 11:14:01		Options saved to python.conf
+2021-11-24 11:14:01		Options saved to perl.conf
+2021-11-24 11:14:01		Options saved to script.conf
+2021-11-24 11:14:01		Options saved to fset.conf
+2021-11-24 11:14:03		Options saved to sec.conf
+2021-11-24 11:14:03		Options saved to weechat.conf
+2021-11-24 11:14:03		Options saved to plugins.conf
+2021-11-24 11:14:03		Options saved to charset.conf
+2021-11-24 11:14:03		Options saved to logger.conf
+2021-11-24 11:14:03		Options saved to exec.conf
+2021-11-24 11:14:03		Options saved to trigger.conf
+2021-11-24 11:14:03		Options saved to spell.conf
+2021-11-24 11:14:03		Options saved to alias.conf
+2021-11-24 11:14:03		Options saved to buflist.conf
+2021-11-24 11:14:03		Options saved to fifo.conf
+2021-11-24 11:14:03		Options saved to xfer.conf
+2021-11-24 11:14:03		Options saved to irc.conf
+2021-11-24 11:14:03		Options saved to relay.conf
+2021-11-24 11:14:03		Options saved to ruby.conf
+2021-11-24 11:14:03		Options saved to python.conf
+2021-11-24 11:14:03		Options saved to perl.conf
+2021-11-24 11:14:03		Options saved to script.conf
+2021-11-24 11:14:03		Options saved to fset.conf
+2021-11-24 11:14:10		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-24 18:08:21		[core]
+2021-11-24 18:08:21		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2021-11-24 18:08:21		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2021-11-24 18:08:21		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2021-11-24 18:08:21		[ruby]
+2021-11-24 18:08:21		  ruby
+2021-11-24 18:08:21		[exec]
+2021-11-24 18:08:21		  exec
+2021-11-24 18:08:21		[buflist]
+2021-11-24 18:08:21		  buflist
+2021-11-24 18:08:21		[charset]
+2021-11-24 18:08:21		  charset
+2021-11-24 18:08:21		[trigger]
+2021-11-24 18:08:21		  trigger
+2021-11-24 18:08:21		[spell]
+2021-11-24 18:08:21		  spell
+2021-11-24 18:08:21		[python]
+2021-11-24 18:08:21		  python
+2021-11-24 18:08:21		[irc]
+2021-11-24 18:08:21		  admin       cycle       ignore      links       names       pong        sajoin      squery      unquiet     whois     
+2021-11-24 18:08:21		  allchan     dcc         info        list        nick        query       samode      squit       userhost    whowas    
+2021-11-24 18:08:21		  allpv       dehalfop    invite      lusers      notice      quiet       sanick      stats       users     
+2021-11-24 18:08:21		  allserv     deop        ison        map         notify      quote       sapart      summon      version   
+2021-11-24 18:08:21		  ban         devoice     join        me          op          reconnect   saquit      time        voice     
+2021-11-24 18:08:21		  cap         die         kick        mode        oper        rehash      server      topic       wallchops 
+2021-11-24 18:08:21		  connect     disconnect  kickban     motd        part        remove      service     trace       wallops   
+2021-11-24 18:08:21		  ctcp        halfop      kill        msg         ping        restart     servlist    unban       who       
+2021-11-24 18:08:21		[script]
+2021-11-24 18:08:21		  script
+2021-11-24 18:08:21		[fifo]
+2021-11-24 18:08:21		  fifo
+2021-11-24 18:08:21		[logger]
+2021-11-24 18:08:21		  logger
+2021-11-24 18:08:21		[perl]
+2021-11-24 18:08:21		  perl
+2021-11-24 18:08:21		[alias]
+2021-11-24 18:08:21		  AAWAY    BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2021-11-24 18:08:21		  alias    BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WM     
+2021-11-24 18:08:21		  ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI       WW     
+2021-11-24 18:08:21		[relay]
+2021-11-24 18:08:21		  relay
+2021-11-24 18:08:21		[xfer]
+2021-11-24 18:08:21		  me  xfer
+2021-11-24 18:08:21		[fset]
+2021-11-24 18:08:21		  fset
+2021-11-24 18:09:00		[core]
+2021-11-24 18:09:00		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2021-11-24 18:09:00		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2021-11-24 18:09:00		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2021-11-24 18:09:00		[ruby]
+2021-11-24 18:09:00		  ruby
+2021-11-24 18:09:00		[exec]
+2021-11-24 18:09:00		  exec
+2021-11-24 18:09:00		[buflist]
+2021-11-24 18:09:00		  buflist
+2021-11-24 18:09:00		[charset]
+2021-11-24 18:09:00		  charset
+2021-11-24 18:09:00		[trigger]
+2021-11-24 18:09:00		  trigger
+2021-11-24 18:09:00		[spell]
+2021-11-24 18:09:00		  spell
+2021-11-24 18:09:00		[python]
+2021-11-24 18:09:00		  python
+2021-11-24 18:09:00		[irc]
+2021-11-24 18:09:00		  admin       cycle       ignore      links       names       pong        sajoin      squery      unquiet     whois     
+2021-11-24 18:09:00		  allchan     dcc         info        list        nick        query       samode      squit       userhost    whowas    
+2021-11-24 18:09:00		  allpv       dehalfop    invite      lusers      notice      quiet       sanick      stats       users     
+2021-11-24 18:09:00		  allserv     deop        ison        map         notify      quote       sapart      summon      version   
+2021-11-24 18:09:00		  ban         devoice     join        me          op          reconnect   saquit      time        voice     
+2021-11-24 18:09:00		  cap         die         kick        mode        oper        rehash      server      topic       wallchops 
+2021-11-24 18:09:00		  connect     disconnect  kickban     motd        part        remove      service     trace       wallops   
+2021-11-24 18:09:00		  ctcp        halfop      kill        msg         ping        restart     servlist    unban       who       
+2021-11-24 18:09:00		[script]
+2021-11-24 18:09:00		  script
+2021-11-24 18:09:00		[fifo]
+2021-11-24 18:09:00		  fifo
+2021-11-24 18:09:00		[logger]
+2021-11-24 18:09:00		  logger
+2021-11-24 18:09:00		[perl]
+2021-11-24 18:09:00		  perl
+2021-11-24 18:09:00		[alias]
+2021-11-24 18:09:00		  AAWAY    BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2021-11-24 18:09:00		  alias    BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WM     
+2021-11-24 18:09:00		  ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI       WW     
+2021-11-24 18:09:00		[relay]
+2021-11-24 18:09:00		  relay
+2021-11-24 18:09:00		[xfer]
+2021-11-24 18:09:00		  me  xfer
+2021-11-24 18:09:00		[fset]
+2021-11-24 18:09:00		  fset
+2021-11-25 11:39:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-25 13:11:00		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-29 12:02:30		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-29 14:36:47		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-11-29 15:56:50		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-12-02 13:29:26		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer

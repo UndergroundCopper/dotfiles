@@ -1,0 +1,9 @@
+2021-11-24 11:15:48	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu-budgie
+2021-11-24 11:15:48	--	Topic for #ubuntu-budgie is "Welcome to the Ubuntu Budgie irc channel. There are other people on discourse if it's quiet here. Check it out at https://discourse.ubuntubudgie.org"
+2021-11-24 11:15:48	--	Topic set by fossfreedom (sid378898@ubuntu/member/fossfreedom) on Mon, 24 May 2021 09:07:15
+2021-11-24 11:15:48	--	Channel #ubuntu-budgie: 9 nicks (0 ops, 0 voices, 9 normals)
+2021-11-24 11:15:50	--	Channel created on Sun, 23 May 2021 21:52:06
+2021-11-24 11:15:56	Velkorq	hello
+2021-11-24 11:16:06	Velkorq	what login manager does budgie use? gdm?
+2021-11-24 14:56:47	fossfreedom	Lightdm
+2021-11-24 14:56:57	fossfreedom	Specifically slick-greeter

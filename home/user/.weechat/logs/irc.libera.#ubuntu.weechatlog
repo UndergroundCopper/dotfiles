@@ -1,0 +1,1171 @@
+2021-11-22 16:59:33	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-11-22 16:59:33	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-11-22 16:59:33	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-11-22 16:59:33	--	Channel #ubuntu: 1039 nicks (2 ops, 0 voices, 1037 normals)
+2021-11-22 16:59:33	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-22 16:59:35	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-22 17:00:00	Velkorq	hey
+2021-11-22 17:00:17	Velkorq	is ubuntu lts any more recent (in packages) than debian stable?
+2021-11-22 17:00:31	Velkorq	or it tracks debian stable releases exactly?
+2021-11-22 17:02:01	TJ-	Slartibart: I see that device declared as an alias in the built module: "modules.alias:3406:alias pci:v00008086d00004680sv*sd*bc03sc*i* i915"
+2021-11-22 17:02:29	TJ-	Slartibart: check for your install with: " grep -n 8086.*4680 /usr/lib/modules/$(uname -r)/*module* "
+2021-11-22 17:02:47	-->	trekkie1701c (~trekkie17@user/trekkie1701c) has joined #ubuntu
+2021-11-22 17:02:55	Slartibart	TJ-: That sounds right, 'lspci -nnk' prints 'Kernel modules: i915' and some other things. But why isn't it in use? No 'Kernel module in use' line.
+2021-11-22 17:03:00	Slartibart	Ok, checking.
+2021-11-22 17:03:23	<--	hggdh (~hggdh@ubuntu/member/hggdh) has quit (Remote host closed the connection)
+2021-11-22 17:03:44	TJ-	Slartibart: OK, the "Kernel modules" is printed as a result of seeing the alias, so you've confirmed it is there
+2021-11-22 17:03:53	-->	hggdh (~hggdh@ubuntu/member/hggdh) has joined #ubuntu
+2021-11-22 17:04:11	TJ-	Slartibart: can you show us the complete kernel log? Maybe there's something breaking and preventing it. " journalctl -k | nc termbin.com 9999 "
+2021-11-22 17:04:24	-->	TomyWork (~TomyLobo@p200300e80f0f270049e924565c7edb8a.dip0.t-ipconnect.de) has joined #ubuntu
+2021-11-22 17:04:57	<--	BluesKaj (~Blues@user/blueskaj) has quit (Quit: Konversation terminated!)
+2021-11-22 17:05:06	Slartibart	TJ-: grep found one line, but I guess that was the confirmed part? Running journalctl
+2021-11-22 17:05:26	TJ-	Slartibart: yes; at least we know it /should/ work !
+2021-11-22 17:06:41	-->	herman (~herman@2603:9000:8500:baa0:3d55:204:7f7d:3fed) has joined #ubuntu
+2021-11-22 17:07:09	Velkorq	does anyone know if ubuntu lts releases track debian stable?
+2021-11-22 17:07:16	Velkorq	and if therefore the packages are of the same version
+2021-11-22 17:07:28	TJ-	Velkorq: no
+2021-11-22 17:07:50	-->	brutex (~brutex@user/brutex) has joined #ubuntu
+2021-11-22 17:07:55	<--	brutex_ (~brutex@user/brutex) has quit (Ping timeout: 268 seconds)
+2021-11-22 17:07:55	TJ-	Velkorq: Ubuntu syncs from Debian testing during the development phase
+2021-11-22 17:08:01	-->	Neo517 (~Neo17@node-1w7jr9ydiugdcyx9rlxd5rct2.ipv6.telus.net) has joined #ubuntu
+2021-11-22 17:08:07	<--	brutex (~brutex@user/brutex) has quit (Remote host closed the connection)
+2021-11-22 17:08:09	-->	kamdard_ (~kamdard@47.187.208.241) has joined #ubuntu
+2021-11-22 17:08:32	TJ-	Velkorq: after that only Security and Stable Release Updates are permitted
+2021-11-22 17:08:35	TJ-	!sru
+2021-11-22 17:08:35	ubottu	Stable Release Update information is at https://wiki.ubuntu.com/StableReleaseUpdates
+2021-11-22 17:08:35	Slartibart	*grooan*.. a lot of yellow and red lines in there :-|. https://termbin.com/kku3
+2021-11-22 17:08:47	Velkorq	so if i have ubuntu lts and debian stable, is ubuntu lts more up to date?
+2021-11-22 17:08:50	TJ-	Slartibart: well, that's good - it means it is unlikely to be a mystery
+2021-11-22 17:09:29	Slartibart	lol Ok, I reluctantly admit you got a point there.
+2021-11-22 17:09:39	Velkorq	i wanted to install one of those on a friends laptop so he can use it for 5 years without any problems, but i am not sure which will have newer packages
+2021-11-22 17:09:45	Velkorq	both i think are stable enough
+2021-11-22 17:09:51	<--	jontyms (~jontyms@76-242-160-235.lightspeed.dybhfl.sbcglobal.net) has quit (Remote host closed the connection)
+2021-11-22 17:11:28	TJ-	Slartibart: so, we have "i915 0000:00:02.0: Your graphics device 4680 is not properly supported by the driver in this kernel version. To force driver probe anyway, use i915.forxew_probe=4680 module parameter"
+2021-11-22 17:11:40	-->	Metamorphosis (uid451146@user/metamorphosis) has joined #ubuntu
+2021-11-22 17:12:26	TJ-	Slartibart: therefore, let's try that manually right now and then review the kernel log to see how it got on. "sudo modprobe i915 force_probe=4680"
+2021-11-22 17:12:42	TJ-	Slartibart: then show me " journalctl -k -n 100 | nc termbin.com 9999 "
+2021-11-22 17:13:11	<--	nuala (~nuala@user/nuala) has quit (Ping timeout: 265 seconds)
+2021-11-22 17:13:46	<--	mixfix41 (~homefame@user/mixfix41) has quit (Ping timeout: 260 seconds)
+2021-11-22 17:14:15	TJ-	Velkorq: we're currently in the development phase for the next LTS (22.04) to be released April 2022 - so maybe install 21.10 now and do a release-upgrade in May/June next year to that LTS
+2021-11-22 17:15:14	TJ-	Velkorq: Ubuntu has the "do-release-upgrade" tool that manages release upgrades correctly (not like the Debian way of just altering sources.list and dist-upgrade)
+2021-11-22 17:16:03	-->	humberto1 (~humbertow@189.236.62.65) has joined #ubuntu
+2021-11-22 17:16:38	Slartibart	TJ-: https://termbin.com/59zp Should I try 'systemctl start plymouth-start' or something?
+2021-11-22 17:16:42	oerheks	TJ-,  i see vboxdrv too...?
+2021-11-22 17:17:13	-->	awenrobot (~awenrobot@139.47.116.179) has joined #ubuntu
+2021-11-22 17:17:18	TJ-	Slartibart: no, not yet!
+2021-11-22 17:17:23	<--	awenrobot (~awenrobot@139.47.116.179) has quit (Client Quit)
+2021-11-22 17:18:25	-->	junktext (~junktext@gateway/vpn/pia/junktext) has joined #ubuntu
+2021-11-22 17:18:55	TJ-	Slartibart: hmmm, don't see the i915 even trying to load there, but you've got a broken USB Bluetooth module that is causing log spam
+2021-11-22 17:19:46	TJ-	Slartibart: it looks like we may need to look further back. Try again with " journalctl -k --since="10 minutes ago" | nc termbin.com 9999 "
+2021-11-22 17:19:50	Slartibart	Could be the USB hub, should I disconnect it? I'd have to reboot and modprobe again, of course
+2021-11-22 17:20:00	Slartibart	Ok, pasting
+2021-11-22 17:20:19	-->	alekksander (~aleksande@user/alekksander) has joined #ubuntu
+2021-11-22 17:21:02	<--	Colt (~Colt@user/colt) has quit (Ping timeout: 240 seconds)
+2021-11-22 17:22:21	Velkorq	TJ-: how dependable is that script "do-release-upgrade". can it break my system?
+2021-11-22 17:22:35	Velkorq	usually i do it manually on my systems, aka the debian way
+2021-11-22 17:22:44	TJ-	Velkorq: d-r-u is THE way it is done
+2021-11-22 17:23:10	TJ-	Velkorq: the GUI has an interface to it, too, via the 'Software' tool or whatever its called these days!
+2021-11-22 17:23:10	-->	nuala (~nuala@user/nuala) has joined #ubuntu
+2021-11-22 17:23:12	-->	croraf (croraf@croraf.ircforever.org) has joined #ubuntu
+2021-11-22 17:23:28	Velkorq	TJ-: isn't that software tool a gnome thing?
+2021-11-22 17:23:41	TJ-	d-r-u knows about any gotchyas and copes with LTS > LTS as well as dev > LTS upgrades
+2021-11-22 17:23:55	Velkorq	also does it only contain snaps or also includes normal software , aka packages, yeah
+2021-11-22 17:24:25	-->	junktext_ (~junktext@gateway/vpn/pia/junktext) has joined #ubuntu
+2021-11-22 17:24:39	TJ-	Velkorq: http://manpages.ubuntu.com/manpages/jammy/en/man8/do-release-upgrade.8.html
+2021-11-22 17:25:02	TJ-	Velkorq: what is 'it' on that context?
+2021-11-22 17:25:08	Slartibart	TJ-: https://termbin.com/2h6ta Moved back 40 minutes though
+2021-11-22 17:25:25	-->	mixfix41 (~homefame@user/mixfix41) has joined #ubuntu
+2021-11-22 17:26:11	<--	junktext (~junktext@gateway/vpn/pia/junktext) has quit (Ping timeout: 245 seconds)
+2021-11-22 17:26:35	TJ-	Slartibart: did you definitely do "sudo modprobe i915 force_probe=4680" before then?
+2021-11-22 17:26:48	TJ-	Slartibart: there's nothing from i915 driver in there
+2021-11-22 17:27:47	TJ-	Slartibart: oh - maybe the driver is still in memory despite not binding, doh! Check that with "lsmod | grep i915" and it is, do "sudo modprobe --remove i915" and THEN do "sudo modprobe force_probe=4680"
+2021-11-22 17:28:05	TJ-	oh gawd, typos!
+2021-11-22 17:28:16	TJ-	Slartibart: "sudo modprobe i915 force_probe=4680"
+2021-11-22 17:29:45	Slartibart	Don't know what to say now. Hello, login screen? =)
+2021-11-22 17:30:08	Slartibart	TJ-: You made it!
+2021-11-22 17:30:12	TJ-	Slartibart: are you saying the GPU driver is working?
+2021-11-22 17:30:14	<--	azidhaka (~azidhaka@user/azidhaka) has quit (Quit: azidhaka)
+2021-11-22 17:30:23	TJ-	Slartibart: OK, so now we need to make that permanent across reboots
+2021-11-22 17:30:46	Slartibart	The login screen appeared now, yes. *sunshine* I'll try logging in to be sure.
+2021-11-22 17:30:58	<--	cmbengue (~Thunderbi@207.191.249.160) has quit (Quit: Thanks, see you later.)
+2021-11-22 17:31:01	<--	trekkie1701c (~trekkie17@user/trekkie1701c) has quit (Quit: :P)
+2021-11-22 17:31:27	TJ-	Slartibart: " echo 'options i915 force_probe=4680' | sudo tee -a /etc/modprobe.d/i915.conf
+2021-11-22 17:36:05	-->	nuh^ (~nuh@68.101.63.101) has joined #ubuntu
+2021-11-22 17:39:23	<--	callmepk (~callmepk@wslu/callmepk) has quit (Quit: <= To Be Continued)
+2021-11-22 17:39:57	-->	HarryGuerrilla (~harryguer@2001:470:69fc:105::e24d) has joined #ubuntu
+2021-11-22 17:41:38	<--	jje (~jje@user/jje) has quit (Quit: ZNC 1.8.2+deb2build1 - https://znc.in)
+2021-11-22 17:42:10	<--	MrSassyPants (~Phil@2a02:1368:6200:32d8:60a4:379f:195:b8ad) has quit (Remote host closed the connection)
+2021-11-22 17:42:52	Slartibart	TJ-: Sorry, just one last thing if it's ok.. When I rebooted I was back to no login screen. But if I removed i915 from command line and readded it the login screen appeared again. Could it be that i915.conf isn't being read?
+2021-11-22 17:44:27	-->	junktext__ (~junktext@gateway/vpn/pia/junktext) has joined #ubuntu
+2021-11-22 17:46:11	<--	junktext_ (~junktext@gateway/vpn/pia/junktext) has quit (Ping timeout: 245 seconds)
+2021-11-22 17:46:14	TJ-	Slartibart: it could be, yes .. lets check if I made a typo!
+2021-11-22 17:46:30	Slartibart	 It does have the same permissions as the other files in /etc/modprobe.d. Does it have to be added somehow/somewhere?
+2021-11-22 17:46:58	ioria	TJ-, would not be better to make him install 5.15 from mainline ?
+2021-11-22 17:47:15	TJ-	ioria: and then get told "no support" as happened to another user yesterday?
+2021-11-22 17:47:27	TJ-	ioria: if this works it's far preferable
+2021-11-22 17:47:32	ioria	oky
+2021-11-22 17:47:39	-->	srv (~cmd@user/srv) has joined #ubuntu
+2021-11-22 17:47:50	TJ-	Slartibart: the one thing I can think is the module was loaded from the initialramfs which doesn't contain the option
+2021-11-22 17:48:11	<--	andygasman (~andygasma@88.97.30.94) has quit (Remote host closed the connection)
+2021-11-22 17:48:23	-->	andygasman (~andygasma@88.97.30.94) has joined #ubuntu
+2021-11-22 17:49:20	<--	xet7 (~xet7@user/xet7) has quit (Remote host closed the connection)
+2021-11-22 17:49:32	TJ-	Slartibart: that is it - we just need to rebuild the initialramfs to include the change. "sudo update-initramfs -vu" should do it
+2021-11-22 17:50:05	<--	HyN0X (~HyNoX@151.57.2.9) has quit (Read error: Connection reset by peer)
+2021-11-22 17:50:28	-->	xet7 (~xet7@user/xet7) has joined #ubuntu
+2021-11-22 17:51:13	<--	ahso (~Thunderbi@user/ahso) has quit (Remote host closed the connection)
+2021-11-22 17:51:58	<--	llorllale (~llorllale@2607:9880:3a18:69:8c55:8432:f2b6:d367) has quit (Ping timeout: 260 seconds)
+2021-11-22 17:52:56	<--	codex__ (~codex@user/codex/x-6136475) has quit (Ping timeout: 268 seconds)
+2021-11-22 17:53:32	-->	codex__ (~codex@user/codex/x-6136475) has joined #ubuntu
+2021-11-22 17:54:08	-->	HyN0X (~HyNoX@151.43.94.201) has joined #ubuntu
+2021-11-22 17:54:11	<--	cart_man (~rynot@host-78-144-121-71.as13285.net) has quit (Quit: Konversation terminated!)
+2021-11-22 17:54:31	-->	Xaldafax (~xaldafax@cpe-198-72-160-101.socal.res.rr.com) has joined #ubuntu
+2021-11-22 17:54:31	<--	blackmesa (~blackmesa@2a02:908:13c3:8640:393c:ac19:17cd:d042) has quit (Ping timeout: 245 seconds)
+2021-11-22 17:55:02	<--	djhankb (~djhankb@208.113.164.68) has quit (Read error: Connection reset by peer)
+2021-11-22 17:55:19	<--	ElectronApps (~ElectronA@user/electronapps) has quit (Remote host closed the connection)
+2021-11-22 17:56:42	Slartibart	TJ-: Yep, that was it. Still some network, bluetooth and perhaps some other things to wrestle now, but thanks a bunch, this was a huge step forward for me, I've been working on things since yesterday now. Thanks a ton.
+2021-11-22 17:57:01	TJ-	Slartibart: :)
+2021-11-22 17:58:15	-->	ahso (~Thunderbi@user/ahso) has joined #ubuntu
+2021-11-22 17:58:42	-->	LiftLeft (~LiftLeft@216-26-118-34.dynamic.nelson.airstreamcomm.net) has joined #ubuntu
+2021-11-22 17:59:40	-->	badbadpants_ (~smuxi@205.175.118.94) has joined #ubuntu
+2021-11-22 18:00:23	<--	badbadpants (~smuxi@205.175.118.94) has quit (Ping timeout: 264 seconds)
+2021-11-22 18:02:15	-->	trekkie1701c (~trekkie17@user/trekkie1701c) has joined #ubuntu
+2021-11-22 18:02:39	-->	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-22 18:02:43	-->	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-22 18:03:25	<--	thrillgore (~ZugZug@69-225-55-100.lightspeed.nsvltn.sbcglobal.net) has quit (Ping timeout: 268 seconds)
+2021-11-22 18:04:14	-->	vxwarlock (~Darkcodex@user/vxwarlock) has joined #ubuntu
+2021-11-24 11:14:22	=!=	irc: this buffer is not a channel!
+2021-11-24 11:14:24	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-11-24 11:14:24	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-11-24 11:14:24	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-11-24 11:14:24	--	Channel #ubuntu: 1033 nicks (2 ops, 0 voices, 1031 normals)
+2021-11-24 11:14:25	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-24 11:14:25	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-24 11:14:28	Velkorq	hey
+2021-11-24 11:14:51	-->	prxq (~quassel@x4db6f614.dyn.telefonica.de) has joined #ubuntu
+2021-11-24 11:15:11	Velkorq	is ubuntu lts as recent as debian stable?
+2021-11-24 11:15:35	Velkorq	or it contains access to newer packages? So basically its repos are based on debian stable repos only or testing as well
+2021-11-24 11:15:59	-->	HyN0X (~HyNoX@151.57.19.34) has joined #ubuntu
+2021-11-24 11:17:33	-->	Sven_vB (~sven@user/sven-vb/x-2094958) has joined #ubuntu
+2021-11-24 11:19:41	<--	Jimmy_H__ (~Jimmy_H@119.136.155.234) has quit (Read error: Connection reset by peer)
+2021-11-24 11:20:04	-->	Jimmy_H__ (~Jimmy_H@119.136.155.234) has joined #ubuntu
+2021-11-24 11:20:06	-->	groovetherapy (~kent@S01063497f65de8a8.cg.shawcable.net) has joined #ubuntu
+2021-11-24 11:21:01	-->	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has joined #ubuntu
+2021-11-24 11:22:03	<--	knidos (~knidos@85.98.20.202) has quit (Ping timeout: 264 seconds)
+2021-11-24 11:22:17	-->	xu-irc15w (~xu-irc15w@39.148.116.80) has joined #ubuntu
+2021-11-24 11:22:28	xu-irc15w	Hello
+2021-11-24 11:22:46	xu-irc15w	Errno input out error plz help
+2021-11-24 11:23:27	xu-irc15w	Install ubuntu erro
+2021-11-24 11:24:36	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 11:25:09	ducasse	Velkorq: ubuntu pulls from testing/unstable
+2021-11-24 11:25:38	Velkorq	ducasse: does ubuntu lts do the same?
+2021-11-24 11:25:44	ducasse	yes
+2021-11-24 11:25:45	Velkorq	or only the non lts versions
+2021-11-24 11:25:56	Velkorq	so it will be newer than debian stable. i see
+2021-11-24 11:26:21	xu-irc15w	Can anyone help
+2021-11-24 11:26:29	<--	ash_worksi (~ash_m@user/ash-m/x-3292451) has quit (Ping timeout: 256 seconds)
+2021-11-24 11:26:34	Velkorq	also seems both debian stable and ubuntu lts offer 5 years of support. I am not sure which to use. i want to install something that will have as little issues as possible with bugs, but also not be outdated
+2021-11-24 11:27:01	<--	groovetherapy (~kent@S01063497f65de8a8.cg.shawcable.net) has quit (Ping timeout: 245 seconds)
+2021-11-24 11:27:23	ducasse	ubuntu offers up to 10 years if you're willing to pay for commercial support
+2021-11-24 11:27:30	-->	ash_worksi (~ash_m@user/ash-m/x-3292451) has joined #ubuntu
+2021-11-24 11:27:34	ducasse	xu-irc15w: what is the problem?
+2021-11-24 11:27:34	<--	EvilDMP (~textual@django/moderator/EvilDMP) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2021-11-24 11:27:51	-->	aniruddha (uid340443@id-340443.ilkley.irccloud.com) has joined #ubuntu
+2021-11-24 11:28:04	-->	EvilDMP (~textual@django/moderator/EvilDMP) has joined #ubuntu
+2021-11-24 11:28:12	xu-irc15w	Install ubuntu erro,  errno input out error
+2021-11-24 11:28:26	xu-irc15w	Errno 5
+2021-11-24 11:28:57	-->	groovetherapy (~kent@S01063497f65de8a8.cg.shawcable.net) has joined #ubuntu
+2021-11-24 11:29:24	ducasse	where are you getting this error?
+2021-11-24 11:29:28	rfm	!elaborate | xu-irc15w
+2021-11-24 11:29:28	ubottu	xu-irc15w: Please elaborate; your question or issue may not seem clear or detailed enough for people to help you. Please give more detailed information; for example, we might need errors, steps, relevant configuration files, Ubuntu version, and hardware information. Use a !pastebin to avoid flooding the channel.
+2021-11-24 11:29:31	<--	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 245 seconds)
+2021-11-24 11:29:31	<--	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 245 seconds)
+2021-11-24 11:30:09	xu-irc15w	When i want click install in last step
+2021-11-24 11:30:26	xu-irc15w	Messeage pops, install halt
+2021-11-24 11:30:27	<--	GNUtoo (~GNUtoo@gateway/tor-sasl/gnutoo) has quit (Ping timeout: 276 seconds)
+2021-11-24 11:30:39	-->	andygasman (~andygasma@88.97.30.94) has joined #ubuntu
+2021-11-24 11:30:43	ducasse	what *exactly* does the error say?
+2021-11-24 11:30:52	ducasse	word by word
+2021-11-24 11:31:05	Velkorq	ducasse: 5 is the normal for lts? just like debian stable right?
+2021-11-24 11:31:09	xu-irc15w	Errno 5, input output error
+2021-11-24 11:31:34	ducasse	Velkorq: canonical offers esm, which is 10 years
+2021-11-24 11:31:52	-->	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-24 11:31:54	-->	GNUtoo (~GNUtoo@gateway/tor-sasl/gnutoo) has joined #ubuntu
+2021-11-24 11:31:59	ducasse	xu-irc15w: input output errors usually indicate a disk problem
+2021-11-24 11:32:00	-->	ur5us_ (~ur5us@203.86.198.200) has joined #ubuntu
+2021-11-24 11:32:04	-->	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-24 11:32:21	<--	Koopz (~Koopz@koopz.rocks) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 11:32:53	mei	Velkorq debian stable have 3 years of support not 5
+2021-11-24 11:32:55	xu-irc15w	Is my usb stick bad?
+2021-11-24 11:33:13	rfm	xu-irc15w, please tell us exactly what you were trying to do
+2021-11-24 11:33:14	mei	also there is no point to call it "stable", debian is debian. it have only one release, "testing" is a just beta really
+2021-11-24 11:34:01	-->	NineBAR (~NineBAR@c-107-5-176-200.hsd1.mi.comcast.net) has joined #ubuntu
+2021-11-24 11:34:09	-->	Koopz (~Koopz@koopz.rocks) has joined #ubuntu
+2021-11-24 11:34:10	-->	SteelRose (~SteelRose@193.93.66.233) has joined #ubuntu
+2021-11-24 11:34:16	xu-irc15w	Install ubuntu from usb
+2021-11-24 11:34:49	-->	p0indexter (~alpha@user/p0indexter) has joined #ubuntu
+2021-11-24 11:34:56	<--	Tsynk (~VoinTsynk@64-130-186-155.pool.dsl.scrtc.com) has quit (Ping timeout: 245 seconds)
+2021-11-24 11:35:15	<--	ur5us (~ur5us@2406:e002:6c7b:2301:1b18:b746:eaa9:fad6) has quit (Ping timeout: 264 seconds)
+2021-11-24 11:37:04	<--	Despatche (~desp@72.11.37.193) has quit (Quit: Read error: Connection reset by deer)
+2021-11-24 11:39:00	rfm	xu-irc15w, so. you dd what? starting on a something system, downloaded x, then..
+2021-11-24 11:40:18	mei	Velkorq i guess ubuntu lts + snap will have more updatad things than debian
+2021-11-24 11:42:15	rfm	mei:"things" is working hard there
+2021-11-24 11:43:02	<--	c4ndyfl1p (~candy@user/c4ndyfl1p) has quit (Quit: Leaving)
+2021-11-24 11:43:20	<--	rfm (~rfm@user/rfm) has quit (Read error: Connection reset by peer)
+2021-11-24 11:45:27	<--	xu-irc15w (~xu-irc15w@39.148.116.80) has quit (Quit: Ping timeout (120 seconds))
+2021-11-24 11:45:58	-->	lsrtl_ (~lsrtl@user/lsrtl) has joined #ubuntu
+2021-11-24 11:45:59	Velkorq	mei: i read debian lts has 5 years on their wiki and got confused.
+2021-11-24 11:46:18	Velkorq	mei: ok so if i install latest lts of ubuntu i have 5 years of upgrades?
+2021-11-24 11:46:23	Velkorq	support etc
+2021-11-24 11:47:44	-->	LuksNuke (~LuksNuke@gateway/tor-sasl/luksnuke) has joined #ubuntu
+2021-11-24 11:48:43	<--	NineBAR (~NineBAR@c-107-5-176-200.hsd1.mi.comcast.net) has quit (Remote host closed the connection)
+2021-11-24 11:49:44	<--	LuksNuke (~LuksNuke@gateway/tor-sasl/luksnuke) has quit (Remote host closed the connection)
+2021-11-24 11:50:10	-->	Bendik (~Bendik@168.51-175-237.customer.lyse.net) has joined #ubuntu
+2021-11-24 11:50:21	-->	Despatche (~desp@72.11.37.193) has joined #ubuntu
+2021-11-24 11:51:01	Bendik	Hi! How can I monitor my system while running a task in the terminal? I want to see what is the bottleneck for my program
+2021-11-24 11:52:12	-->	idnc_sk (~idnc_sk@mail.iostream.sk) has joined #ubuntu
+2021-11-24 11:52:20	idnc_sk	hi all
+2021-11-24 11:52:20	-->	sinaowolabi_ (~SinaOwola@102.134.114.1) has joined #ubuntu
+2021-11-24 11:52:25	idnc_sk	have a strange issue regarding nfs
+2021-11-24 11:52:30	<--	sinaowolabi (~SinaOwola@102.134.114.1) has quit (Ping timeout: 260 seconds)
+2021-11-24 11:52:40	<--	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has quit (Read error: Connection reset by peer)
+2021-11-24 11:52:49	idnc_sk	nfs v3 mounts from an old netapp work just fine on a testserver running 18.04
+2021-11-24 11:52:58	idnc_sk	but fail when mounting from 20.04
+2021-11-24 11:53:03	Velkorq	also ubuntu lts on desktop, means i get new version of packages for 5 years or only security updates?
+2021-11-24 11:53:26	idnc_sk	nfsstat on 18 shows client nfs v3 and v4, on 20 it only shows client v4
+2021-11-24 11:53:41	-->	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has joined #ubuntu
+2021-11-24 11:53:55	idnc_sk	so guess somehow buntu 20.04 disables nfs3 cfg by default (or maybe some issue in relation to rpcbind cfg or something)
+2021-11-24 11:53:59	idnc_sk	anyone any idea
+2021-11-24 11:54:34	idnc_sk	I tried to enforce v3 in a couple of ways (-o v3 | -o nfsvers=3 | -o vers=3)
+2021-11-24 11:55:01	idnc_sk	but nfs mounts keep failing on that new machine
+2021-11-24 11:55:52	-->	nizarus (~nizarus@41.229.253.37) has joined #ubuntu
+2021-11-24 11:55:52	<--	nizarus (~nizarus@41.229.253.37) has quit (Changing host)
+2021-11-24 11:55:52	-->	nizarus (~nizarus@ubuntu/member/nizarus) has joined #ubuntu
+2021-11-24 11:56:17	<--	via_c7 (~orangeext@user/orangeextract) has quit (Quit: Leaving)
+2021-11-24 11:56:24	idnc_sk	why would nfsstat not return client v3 .. is my pointer here
+2021-11-24 11:56:44	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #ubuntu
+2021-11-24 11:57:23	-->	NineBAR (~NineBAR@c-107-5-176-200.hsd1.mi.comcast.net) has joined #ubuntu
+2021-11-24 11:58:41	-->	Gaboradon_ (~Gaboradon@cpe-86-58-57-5.static.triera.net) has joined #ubuntu
+2021-11-24 11:58:58	<--	MrSassyPants (~Phil@2a02:1368:6200:32d8:bad6:7c7:6d56:85df) has quit (Remote host closed the connection)
+2021-11-24 11:59:02	<--	YourOnlyOne (~Laibcoms@user/laibcoms) has quit (Quit: Leaving)
+2021-11-24 11:59:26	<--	ur5us_ (~ur5us@203.86.198.200) has quit (Ping timeout: 268 seconds)
+2021-11-24 11:59:30	-->	dreamon (~dreamon@ppp-88-217-64-242.dynamic.mnet-online.de) has joined #ubuntu
+2021-11-24 11:59:37	-->	MrSassyPants (~Phil@2a02:1368:6200:32d8:398c:74a2:4d5:4bfd) has joined #ubuntu
+2021-11-24 12:00:26	<--	The_Blode (~Blode@user/the-blode/x-7164444) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:01:50	<--	Gaboradon (~Gaboradon@cpe-86-58-57-5.static.triera.net) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:01:56	-->	lli[m] (~zoltixmat@2001:470:69fc:105::1:3259) has joined #ubuntu
+2021-11-24 12:02:18	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 12:03:09	-->	The_Seeker (~uname@2405:6e00:3022:ce00:ec0b:6d2:c5bf:9c28) has joined #ubuntu
+2021-11-24 12:06:09	<--	katnis (uid15849@id-15849.helmsley.irccloud.com) has quit (Quit: Connection closed for inactivity)
+2021-11-24 12:06:54	<--	NineBAR (~NineBAR@c-107-5-176-200.hsd1.mi.comcast.net) has quit (Remote host closed the connection)
+2021-11-24 12:09:11	<--	peto (~quassel@210.pppoe-147-78-57.cust.surany.net) has quit (Ping timeout: 265 seconds)
+2021-11-24 12:11:11	<--	givemeyourpies (givemeyour@c-66-235-2-202.sea.wa.customer.broadstripe.net) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2021-11-24 12:14:15	<--	cismee (~cisme_@2600:1700:d980:1a40:18af:f8ba:d762:e4b) has quit (Ping timeout: 264 seconds)
+2021-11-24 12:14:51	<--	quazimodo (~quazimodo@n1-40-235-47.bla1.nsw.optusnet.com.au) has quit (Ping timeout: 264 seconds)
+2021-11-24 12:15:18	<--	Gaboradon_ (~Gaboradon@cpe-86-58-57-5.static.triera.net) has quit (Quit: Shutdown)
+2021-11-24 12:16:24	-->	motsgar (~ovihrial@2001:14b8:1871:a01:5ab:6ff4:4f40:99cd) has joined #ubuntu
+2021-11-24 12:16:45	<--	five64 (~five6@8.40.26.64) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 12:17:00	<--	motsgar (~ovihrial@2001:14b8:1871:a01:5ab:6ff4:4f40:99cd) has quit (Client Quit)
+2021-11-24 12:18:12	-->	popey4 (~popey@ubuntu/member/popey) has joined #ubuntu
+2021-11-24 12:18:15	mei	Velkorq what page state it's supported for 5 years?
+2021-11-24 12:18:34	<--	krumelmonster (~krumelmon@user/krumelmonster) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:18:59	-->	five643 (~five6@8.40.26.64) has joined #ubuntu
+2021-11-24 12:19:06	<--	Paddy_NI (~Paddy_NI@cpc117256-ldry4-2-0-cust75.2-1.cable.virginm.net) has quit (Ping timeout: 245 seconds)
+2021-11-24 12:19:25	mei	you get updated apps through snap, that means mostly end-user apps like firefox for example. system packages should stay at their release version, except few things. someone that use lts can correct me though
+2021-11-24 12:19:34	<--	yuljk (~yuljk@86.11.178.103) has quit (Ping timeout: 260 seconds)
+2021-11-24 12:20:24	<--	popey (~popey@ubuntu/member/popey) has quit (Ping timeout: 268 seconds)
+2021-11-24 12:20:24	--	popey4 is now known as popey
+2021-11-24 12:20:50	TJ-	Velkorq: during the support period, security and serious bug fixes of packages in the 'main' component of the archive (and sometimes 'restricted'). Support for packages in universe or multiverse components are a community thing and and not guaranteed,
+2021-11-24 12:21:30	mei	mhm, i was also wondering about universe...
+2021-11-24 12:21:31	TJ-	Velkorq: When you see "Ubuntu support" read it as "Canonical suppport" and it'll make more sense.
+2021-11-24 12:22:24	-->	ElectronApps (~ElectronA@user/electronapps) has joined #ubuntu
+2021-11-24 12:23:07	TJ-	The 'community' (volunteers) are repsonsible for packages in universe and multiverse although some Canonical devs also cover some of those as their personal interest; also some of those devs are also Debian devs/maintainers and try to ensure fixes go into Debian at the same time
+2021-11-24 12:23:52	mei	btw what is the process that get packages into official support? wireguard being in universe is kinda silly
+2021-11-24 12:24:16	<--	lli[m] (~zoltixmat@2001:470:69fc:105::1:3259) has left #ubuntu
+2021-11-24 12:25:08	-->	iomari891 (~iomari891@105.112.138.38) has joined #ubuntu
+2021-11-24 12:25:09	TJ-	Someone stepping up to commit to support it, and that someone usually being closely related to Canonical
+2021-11-24 12:25:38	<--	emilsp (~emilsp@libera/staff/emilsp) has quit (Ping timeout: 608 seconds)
+2021-11-24 12:25:45	-->	nafnarfr (~narfnarfr@user/nafnarfr) has joined #ubuntu
+2021-11-24 12:26:08	TJ-	Thing is it isn't need in main. "wireguard-tools" is optional since Ubuntu uses systemd-networkd or NetworkManager which both have wireguard support
+2021-11-24 12:26:15	<--	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has quit (Ping timeout: 264 seconds)
+2021-11-24 12:26:23	TJ-	And the wireguard module itself is in the mainline kernel
+2021-11-24 12:26:42	mei	hmm need to investigate this
+2021-11-24 12:26:46	mei	i'm used to wg-quick
+2021-11-24 12:27:16	TJ-	'wireguard' package is just an empty top-level to pull in the underlying packages nowadays
+2021-11-24 12:28:23	-->	yuljk (~yuljk@86.11.178.103) has joined #ubuntu
+2021-11-24 12:28:42	-->	emilsp (~emilsp@libera/staff/emilsp) has joined #ubuntu
+2021-11-24 12:29:01	mei	is it really in the mailine kernel? i see the package depends on wireguard-dkms still
+2021-11-24 12:29:34	mei	well yeah, i can "modprobe wireguard"
+2021-11-24 12:30:58	-->	Paddy_NI (~Paddy_NI@cpc117256-ldry4-2-0-cust75.2-1.cable.virginm.net) has joined #ubuntu
+2021-11-24 12:34:04	TJ-	mei: wireguard went into mainline for v5.6
+2021-11-24 12:34:08	<--	JohnnyonFlame (~quassel@179-107-147-136.zamix.com.br) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-24 12:34:28	-->	JohnnyonFlame (~quassel@179-107-147-136.zamix.com.br) has joined #ubuntu
+2021-11-24 12:36:21	mei	mhm i know that, but since the package still depends on dkms is confusing a bit. also it doesn't mean that ubuntu compile the kernel with wireguard enabled
+2021-11-24 12:36:58	<--	nyuszika7h (~nyuszika7@lykos/dev/nyuszika7h) has quit (Quit: ZNC 1.8.2+deb2+b1 - https://znc.in)
+2021-11-24 12:37:53	<--	shokohsc8618 (~shokohsc@161.88.195.77.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 12:38:09	TJ-	mei: "sudo grep CONFIG_WIREGUARD /boot/config* "
+2021-11-24 12:38:32	TJ-	Mine only go back to 5.13 so I can't check
+2021-11-24 12:38:34	mei	handy :)
+2021-11-24 12:38:56	TJ-	I don't use Ubuntu kernels; build my own
+2021-11-24 12:39:02	mei	what do you mean? 5.13 is newer than 5.6 ?_?
+2021-11-24 12:39:24	TJ-	thirteen is greater than six
+2021-11-24 12:39:45	mei	so why you can't check?
+2021-11-24 12:40:08	TJ-	because I do not have kernels as old as 5.4/5.6 AND I don't have Ubuntu kernels
+2021-11-24 12:40:23	mei	oh well, i was not curious at al about 5.6, just ubuntu generally
+2021-11-24 12:46:10	-->	ArtfulDodger (~ArtfulDod@2a02-8440-631d-1bde-78ba-13a3-5b05-4fb6.rev.sfr.net) has joined #ubuntu
+2021-11-24 12:46:20	-->	mihaiadrian (~Thunderbi@82.76.223.244) has joined #ubuntu
+2021-11-24 12:47:05	-->	pro (~pro@user/pro) has joined #ubuntu
+2021-11-24 12:47:55	-->	quazimodo (~quazimodo@n1-40-235-47.bla1.nsw.optusnet.com.au) has joined #ubuntu
+2021-11-24 12:48:25	<--	gdhughes5 (~gdhughes5@2603-7000-3d03-51f2-ddae-9c05-f4a1-2989.res6.spectrum.com) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2021-11-24 12:49:42	<--	pro (~pro@user/pro) has quit (Client Quit)
+2021-11-24 12:50:49	-->	five6439 (~five6@8.40.26.25) has joined #ubuntu
+2021-11-24 12:50:55	<--	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has quit (Remote host closed the connection)
+2021-11-24 12:51:47	-->	pseudonymous (~pseud0@78.143.68.142.static.fibianet.dk) has joined #ubuntu
+2021-11-24 12:53:15	<--	five643 (~five6@8.40.26.64) has quit (Ping timeout: 264 seconds)
+2021-11-24 12:53:15	--	five6439 is now known as five643
+2021-11-24 12:53:35	pseudonymous	Hey. 20.04 LTS, stuck in a login loop. In wayland mode, I get booted out immediately. With xorg, I can log in, but I get a fullscreen "A problem has occurred and the system can't recover. Please log out and try again". If I click, I get booted out. Right now, I've kept it up because the desktop actually works.. How can I see what's up and get this annoying popup to never appear again ?
+2021-11-24 12:55:22	-->	tobybl_ (~tobybl@213.31.134.21) has joined #ubuntu
+2021-11-24 12:58:03	<--	tobybl (~tobybl@213.31.134.21) has quit (Ping timeout: 264 seconds)
+2021-11-24 12:58:12	<--	pseudonymous (~pseud0@78.143.68.142.static.fibianet.dk) has quit (Remote host closed the connection)
+2021-11-24 12:59:01	-->	kirk781 (~doors_1@2402:3a80:b43:45e:7c29:f5f:169e:4925) has joined #ubuntu
+2021-11-24 13:00:04	<--	jimmyb (~jimmyb@user/jimmyb) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 13:00:35	-->	jimmyb (~jimmyb@user/jimmyb) has joined #ubuntu
+2021-11-24 13:01:14	<--	Sven_vB (~sven@user/sven-vb/x-2094958) has quit (Remote host closed the connection)
+2021-11-24 13:01:45	-->	Sven_vB (~sven@user/sven-vb/x-2094958) has joined #ubuntu
+2021-11-24 13:02:25	-->	i0e (~is0ke3@user/is0ke3) has joined #ubuntu
+2021-11-24 13:02:49	<--	EvilDMP (~textual@django/moderator/EvilDMP) has quit (Ping timeout: 256 seconds)
+2021-11-24 13:03:54	-->	codex (~codex@user/codex) has joined #ubuntu
+2021-11-24 13:04:43	-->	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has joined #ubuntu
+2021-11-24 13:05:18	<--	nafnarfr (~narfnarfr@user/nafnarfr) has quit (Ping timeout: 260 seconds)
+2021-11-24 13:05:52	-->	nafnarfr (~narfnarfr@user/nafnarfr) has joined #ubuntu
+2021-11-24 13:07:39	-->	EvilDMP (~textual@django/moderator/EvilDMP) has joined #ubuntu
+2021-11-24 13:08:41	-->	The_Blode (~Blode@user/the-blode/x-7164444) has joined #ubuntu
+2021-11-24 13:09:54	<--	codex (~codex@user/codex) has quit (Quit: Leaving)
+2021-11-24 13:11:08	-->	KBar (~KBar@213.230.118.71) has joined #ubuntu
+2021-11-24 13:11:42	-->	Simplar (~quassel@188.163.92.225) has joined #ubuntu
+2021-11-24 13:12:59	<--	kirk781 (~doors_1@2402:3a80:b43:45e:7c29:f5f:169e:4925) has quit (Quit: Leaving)
+2021-11-24 13:13:03	<--	eleventh (~eleventh@143.131.13.208) has quit (Ping timeout: 264 seconds)
+2021-11-24 13:13:03	<--	mihaiadrian (~Thunderbi@82.76.223.244) has quit (Read error: Connection reset by peer)
+2021-11-24 13:13:20	-->	mihaiadrian (~Thunderbi@82.76.223.244) has joined #ubuntu
+2021-11-24 13:13:32	-->	voltron (~voltrin_@ip4d16bdc6.dynamic.kabel-deutschland.de) has joined #ubuntu
+2021-11-24 13:13:38	-->	eleventh (~eleventh@143.131.13.208) has joined #ubuntu
+2021-11-24 13:15:11	-->	elstellino (~elstellin@78.30.20.40) has joined #ubuntu
+2021-11-24 13:16:24	-->	joo-_ (~joo-_@fsf/member/joo--) has joined #ubuntu
+2021-11-24 13:17:50	-->	cart_man (~rynot@109-170-197-185.xdsl.murphx.net) has joined #ubuntu
+2021-11-24 13:18:08	-->	ShahNaim (naim@grape.ircnow.org) has joined #ubuntu
+2021-11-24 13:18:08	<--	ShahNaim (naim@grape.ircnow.org) has quit (Changing host)
+2021-11-24 13:18:08	-->	ShahNaim (naim@user/shahnaim) has joined #ubuntu
+2021-11-24 13:18:08	joo-_	is ubuntu 21.10 considered stable? i just installed it on my desktop and my laptop and are experiencing different kind of crashes related to gnome and lifreoffice
+2021-11-24 13:18:31	<--	voltron (~voltrin_@ip4d16bdc6.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2021-11-24 13:19:02	mgedmin	it's stable for me
+2021-11-24 13:22:22	<--	lotuspsychje (~lotuspsyc@user/lotuspsychje) has quit (Quit: Leaving)
+2021-11-24 13:23:04	<--	lehinsun (~ttytwiste@188.113.176.117) has quit (Remote host closed the connection)
+2021-11-24 13:23:26	-->	lehinsun (~ttytwiste@188.113.176.117) has joined #ubuntu
+2021-11-24 13:24:46	<--	The_Seeker (~uname@2405:6e00:3022:ce00:ec0b:6d2:c5bf:9c28) has quit (Quit: The_Seeker)
+2021-11-24 13:26:01	<--	michele (~eraser@user/michele) has quit (Quit: restart)
+2021-11-24 13:26:41	-->	yaaii (~andirc@2400:4052:8383:5c00:a8fc:ac7a:310c:277c) has joined #ubuntu
+2021-11-24 13:27:19	-->	kuldip (~kuldip@180.211.110.146) has joined #ubuntu
+2021-11-24 13:28:01	<--	blahblah441_ (~blahblah4@89.46.62.154) has quit (Read error: Connection reset by peer)
+2021-11-24 13:32:12	-->	gschanuel9 (~gschanuel@user/gschanuel) has joined #ubuntu
+2021-11-24 13:34:09	kuldip	Hello @all Right now i want to setup Client slave deployment server using open-stack, Any good site for help in open-stack installation ? please help Thank-you
+2021-11-24 13:35:21	<--	gschanuel (~gschanuel@user/gschanuel) has quit (Ping timeout: 245 seconds)
+2021-11-24 13:35:21	--	gschanuel9 is now known as gschanuel
+2021-11-24 13:36:57	<--	Etua (~Thunderbi@2a02:a317:e13a:2b00:6794:fa3e:fe90:46c1) has quit (Remote host closed the connection)
+2021-11-24 13:40:34	-->	michele (~eraser@user/michele) has joined #ubuntu
+2021-11-24 13:41:00	-->	thiras (~thiras@user/thiras) has joined #ubuntu
+2021-11-24 13:42:34	-->	multi8 (~dark@m83-185-42-191.cust.tele2.se) has joined #ubuntu
+2021-11-24 13:44:15	<--	thib1 (~thib@2a01cb0583f76c00592a4f49f4a92137.ipv6.abo.wanadoo.fr) has quit (Ping timeout: 264 seconds)
+2021-11-24 13:44:45	-->	llorllale (~llorllale@2607:9880:3a18:69:6cb9:78ac:9c8d:f1d5) has joined #ubuntu
+2021-11-24 13:44:49	--	dbristow_ is now known as dbristow
+2021-11-24 13:45:07	<--	quazimodo (~quazimodo@n1-40-235-47.bla1.nsw.optusnet.com.au) has quit (Ping timeout: 250 seconds)
+2021-11-24 13:45:28	<--	EvilDMP (~textual@django/moderator/EvilDMP) has quit (Read error: Connection reset by peer)
+2021-11-24 13:46:03	-->	thib1 (~thib@2a01cb0583f76c000c619b99b1185c90.ipv6.abo.wanadoo.fr) has joined #ubuntu
+2021-11-24 13:46:04	-->	EvilDMP (~textual@django/moderator/EvilDMP) has joined #ubuntu
+2021-11-24 13:51:18	-->	LuksNuke (~LuksNuke@gateway/tor-sasl/luksnuke) has joined #ubuntu
+2021-11-24 13:53:11	-->	cismee (~cisme_@2600:1700:d980:1a40:ce34:520:2d1:f5bf) has joined #ubuntu
+2021-11-24 13:54:14	<--	thib1 (~thib@2a01cb0583f76c000c619b99b1185c90.ipv6.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2021-11-24 13:55:27	-->	knidos (~knidos@85.98.20.202) has joined #ubuntu
+2021-11-24 13:56:56	-->	blahblah441 (~blahblah4@89.46.62.154) has joined #ubuntu
+2021-11-24 13:57:45	<--	elstellino (~elstellin@78.30.20.40) has quit (Remote host closed the connection)
+2021-11-24 13:59:24	kuldip	Hello can i get help for Open-stack installation if yes then how ?
+2021-11-24 14:00:01	<--	kuldip (~kuldip@180.211.110.146) has left #ubuntu (Leaving)
+2021-11-24 14:01:45	<--	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has quit (Ping timeout: 256 seconds)
+2021-11-24 14:02:59	-->	h0193r (~holger@149.172.7.59) has joined #ubuntu
+2021-11-24 14:04:06	<--	yuri (~yuri@85.89.126.31) has quit (Remote host closed the connection)
+2021-11-24 14:04:31	-->	xet7_ (~xet7@user/xet7) has joined #ubuntu
+2021-11-24 14:04:57	<--	aniruddha (uid340443@id-340443.ilkley.irccloud.com) has quit (Quit: Connection closed for inactivity)
+2021-11-24 14:05:07	-->	yuri (~yuri@85.89.126.31) has joined #ubuntu
+2021-11-24 14:07:01	<--	BlessJah (~BlessJah@user/blessjah) has quit (Ping timeout: 245 seconds)
+2021-11-24 14:07:05	<--	jhutchins (~jonathan@136.34.196.147) has quit (Ping timeout: 268 seconds)
+2021-11-24 14:07:46	<--	xet7 (~xet7@user/xet7) has quit (Ping timeout: 260 seconds)
+2021-11-24 14:08:56	<--	ddstreet (~quassel@ubuntu/member/ddstreet) has quit (Read error: Connection reset by peer)
+2021-11-24 14:09:31	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 245 seconds)
+2021-11-24 14:10:42	-->	ddstreet (~quassel@ubuntu/member/ddstreet) has joined #ubuntu
+2021-11-24 14:11:49	-->	i0e (~is0ke3@user/is0ke3) has joined #ubuntu
+2021-11-24 14:12:28	-->	thib1 (~thib@2a01cb0583f76c000c619b99b1185c90.ipv6.abo.wanadoo.fr) has joined #ubuntu
+2021-11-24 14:14:04	-->	BlessJah (~BlessJah@user/blessjah) has joined #ubuntu
+2021-11-24 14:17:31	-->	freakynl (~freaky@user/freakynl) has joined #ubuntu
+2021-11-24 14:20:13	<--	thib1 (~thib@2a01cb0583f76c000c619b99b1185c90.ipv6.abo.wanadoo.fr) has quit (Ping timeout: 250 seconds)
+2021-11-24 14:21:28	-->	RMOTAO (~user@128.201.77.212) has joined #ubuntu
+2021-11-24 14:22:01	-->	banditkroot (~bandit@gateway/tor-sasl/banditkroot) has joined #ubuntu
+2021-11-24 14:26:02	-->	thib1 (~thib@2a01cb0583f76c000c619b99b1185c90.ipv6.abo.wanadoo.fr) has joined #ubuntu
+2021-11-24 14:29:36	<--	john122 (~john122@36.red-79-144-82.dynamicip.rima-tde.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2021-11-24 14:31:27	-->	withered_wolf (~withered_@174.25.131.17) has joined #ubuntu
+2021-11-24 14:32:26	-->	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has joined #ubuntu
+2021-11-24 14:33:36	<--	withered_wolf (~withered_@174.25.131.17) has quit (Remote host closed the connection)
+2021-11-24 14:33:51	-->	withered_wolf (~withered_@174.25.131.17) has joined #ubuntu
+2021-11-24 14:34:44	-->	pseudonymous (~pseud0@78.143.68.142.static.fibianet.dk) has joined #ubuntu
+2021-11-24 14:35:41	<--	jje (~jje@user/jje) has quit (Read error: Connection reset by peer)
+2021-11-24 14:35:59	-->	jje (~jje@user/jje) has joined #ubuntu
+2021-11-24 14:36:08	pseudonymous	trying to use this theme ( https://www.gnome-look.org/p/1013484/ ) in XFCE on Ubuntu 20.04 LTS and things look very odd. All text is white, many lines are not drawn. Opening xfce4-settings-manager from the terminal to see errors as the theme is selected I see mountains of deprecated CSS class warnings. Anyone know if I can get this theme working ?
+2021-11-24 14:37:47	idnc_sk	pseudonymous why would you torture your self this way
+2021-11-24 14:38:05	idnc_sk	there is prettiness in the universe
+2021-11-24 14:38:29	idnc_sk	even in the grammaverse somwehre :|
+2021-11-24 14:38:35	idnc_sk	*grammar
+2021-11-24 14:38:39	<--	retep (~Retep@155.143.182.238) has quit (Read error: Connection reset by peer)
+2021-11-24 14:40:57	<--	p0indexter (~alpha@user/p0indexter) has quit (Quit: ars longa vita brevis)
+2021-11-24 14:41:10	<--	nafnarfr (~narfnarfr@user/nafnarfr) has quit (Read error: Connection reset by peer)
+2021-11-24 14:41:27	-->	nafnarfr (~narfnarfr@user/nafnarfr) has joined #ubuntu
+2021-11-24 14:41:58	pseudonymous	idnc_sk: nostalgia. Plain and simple. Most "modern" computing suck. Just today my "LTS" release refused to boot me into the desktop. Kept throwing up a popup that, if clicked, logs me out, the rest of the interface works. Guess what ? XFCE just works. Tired of all this "modern" nonsense. Nothing friggin' works anymore.
+2021-11-24 14:42:38	<--	nafnarfr (~narfnarfr@user/nafnarfr) has quit (Remote host closed the connection)
+2021-11-24 14:43:26	pseudonymous	(and more on-point. The gui of 2000's era windows is very clear in which components are active/disabled and clearly shows what's a part of what. "Modern" UI tend to use low-contrast and flatness, damn near impossible to see what's what. )
+2021-11-24 14:43:30	idnc_sk	I use xfce myself + "modern" computing sucks indeed, sometimes you have to smash your head with a ballot 20x to really believe its 2021 (when working with computers in general)
+2021-11-24 14:44:12	<--	ihristov (~ihristov@85.187.46.226) has quit (Quit: Connection closed)
+2021-11-24 14:44:49	pseudonymous	Yea, had anyone told me in 2000 that my future involved letting Javascript power nearly all my desktop, I guess I would've gone into a different field. This is madness.
+2021-11-24 14:46:34	idnc_sk	https://imgur.com/JRgeN1s.png
+2021-11-24 14:47:50	idnc_sk	I actually like javascript esp the nodejs ecosystem, even being the security/async-nighmare it is
+2021-11-24 14:48:02	pseudonymous	idnc_sk: it's a pretty desktop, I'll grant. Sadly my eyes will be too strained with dark themes. These days I have to have higher contrast and software like redshift running to power through 8hr+ days in front of the computer.
+2021-11-24 14:49:26	idnc_sk	https://imgur.com/oPOEui3.png here my winapm
+2021-11-24 14:49:29	idnc_sk	*winamp skin
+2021-11-24 14:50:00	<--	LuksNuke (~LuksNuke@gateway/tor-sasl/luksnuke) has quit (Remote host closed the connection)
+2021-11-24 14:50:08	idnc_sk	yeah I spent quite some time getting my vscode "just right" due to eye strain
+2021-11-24 14:50:13	zaggynl	heh, nostalgic
+2021-11-24 14:50:53	idnc_sk	old love :)
+2021-11-24 14:51:26	idnc_sk	really liked winamp the same way I like old MP3 players (you know, those devices that do one thing and one thing only)
+2021-11-24 14:51:45	pseudonymous	idnc_sk: I think JS exemplifies the issue. Software has 1000 dependencies, all ever-changing. CPU and RAM is assumed free - so more is required to do the same as before (think Pidgin vs electron chat apps). And honestly, the desktop seems to crash a lot more than it did in the KDE3/Gnome 2 days. /rant
+2021-11-24 14:51:56	-->	omarramo (~omarramo@2a01:c23:659e:e800:144b:f445:30e8:6b6a) has joined #ubuntu
+2021-11-24 14:55:08	-->	abrantesasf (~abrantesa@187.36.170.211) has joined #ubuntu
+2021-11-24 14:55:35	<--	y0sh_ (~y0sh@072-189-235-113.res.spectrum.com) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-24 14:55:54	idnc_sk	I try to keep my deps minimal, even have a habit of incorporating code from 3rd party modules into my own just to not be dependent on some unknown person on the interwebz, there are a zillion simple modules to run something as a deamon or get mime type of a file or to generate a uuid, btw running noscript for a loong time now - would encourage
+2021-11-24 14:55:54	idnc_sk	everyone to try it for some time to get an idea of what you have mentioned there :)
+2021-11-24 14:57:58	-->	shokohsc8618 (~shokohsc@161.88.195.77.rev.sfr.net) has joined #ubuntu
+2021-11-24 14:58:27	<--	yuri (~yuri@85.89.126.31) has quit (Quit: Ухожу я от вас (xchat 2.4.5 или старше))
+2021-11-24 14:59:51	<--	noidea__ (~noidea@66.10.247.251) has quit (Quit: Leaving)
+2021-11-24 15:00:07	-->	noidea_ (~noidea@66.10.247.251) has joined #ubuntu
+2021-11-24 15:00:57	<--	noidea_ (~noidea@66.10.247.251) has quit (Read error: Connection reset by peer)
+2021-11-24 15:01:13	-->	noidea_ (~noidea@66.10.247.251) has joined #ubuntu
+2021-11-24 15:02:10	omarramo	hey guys, is there a way to install a newer version of mutter (besides compiling it)?
+2021-11-24 15:02:11	-->	y0sh_ (~y0sh@072-189-235-113.res.spectrum.com) has joined #ubuntu
+2021-11-24 15:03:04	<--	SmokenatorZ6 (~Smokenato@177.62.138.127) has quit (Quit: Screw you guys, im going home)
+2021-11-24 15:03:16	KBar	pseudonymous, check out forum.xfce.org. Lots of solved questions and customization suggestions.
+2021-11-24 15:03:27	<--	guiverc (~guiverc@ubuntu/member/guiverc) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:03:38	<--	Bendik (~Bendik@168.51-175-237.customer.lyse.net) has quit (Quit: Client closed)
+2021-11-24 15:03:39	-->	SmokenatorZ6 (~Smokenato@177.62.138.127) has joined #ubuntu
+2021-11-24 15:05:35	mgedmin	waah cups-browserd is refusing to supply destination host names, no printing for me today
+2021-11-24 15:06:19	-->	lapion (~axion@2001:980:d51e:1:4e1c:16c8:2c3e:2ece) has joined #ubuntu
+2021-11-24 15:06:24	-->	cmbengue (~Thunderbi@207.191.249.160) has joined #ubuntu
+2021-11-24 15:06:53	-->	Nimzowitsch (~nimzo@user/nimzowitsch) has joined #ubuntu
+2021-11-24 15:07:25	-->	Alabalistic (~quassel@p5de632d1.dip0.t-ipconnect.de) has joined #ubuntu
+2021-11-24 15:07:32	<--	RMOTAO (~user@128.201.77.212) has quit (Remote host closed the connection)
+2021-11-24 15:07:40	-->	RMOTAO (~user@128.201.77.212) has joined #ubuntu
+2021-11-24 15:08:15	<--	cismee (~cisme_@2600:1700:d980:1a40:ce34:520:2d1:f5bf) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:09:28	<--	Nimzowitsch (~nimzo@user/nimzowitsch) has quit (Remote host closed the connection)
+2021-11-24 15:09:53	-->	Nimzowitsch (~nimzo@user/nimzowitsch) has joined #ubuntu
+2021-11-24 15:11:00	-->	codex (~codex@user/codex) has joined #ubuntu
+2021-11-24 15:11:39	<--	omarramo (~omarramo@2a01:c23:659e:e800:144b:f445:30e8:6b6a) has quit (Quit: omarramo)
+2021-11-24 15:13:28	<--	Colti (Miramar-FL@user/host-pond) has quit (Excess Flood)
+2021-11-24 15:13:34	<--	HyN0X (~HyNoX@151.57.19.34) has quit (Ping timeout: 260 seconds)
+2021-11-24 15:13:40	<--	dbasinge (~dbasinge@ubuntu/member/dbasinge) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-24 15:14:12	<--	withered_wolf (~withered_@174.25.131.17) has quit (Remote host closed the connection)
+2021-11-24 15:14:40	<--	tallbarr_ (~none@gateway/tor-sasl/tallbarr) has quit (Remote host closed the connection)
+2021-11-24 15:15:04	-->	HyN0X (~HyNoX@151.43.51.19) has joined #ubuntu
+2021-11-24 15:15:07	<--	thib1 (~thib@2a01cb0583f76c000c619b99b1185c90.ipv6.abo.wanadoo.fr) has quit (Quit: WeeChat 3.3)
+2021-11-24 15:15:15	-->	Colti (Miramar-FL@user/host-pond) has joined #ubuntu
+2021-11-24 15:15:18	-->	tallbarr_ (~none@gateway/tor-sasl/tallbarr) has joined #ubuntu
+2021-11-24 15:15:39	-->	dbasinge (~dbasinge@ubuntu/member/dbasinge) has joined #ubuntu
+2021-11-24 15:16:23	<--	cart_man (~rynot@109-170-197-185.xdsl.murphx.net) has quit (Quit: Konversation terminated!)
+2021-11-24 15:18:16	<--	iomari891 (~iomari891@105.112.138.38) has quit (Ping timeout: 245 seconds)
+2021-11-24 15:20:26	-->	iomari891 (~iomari891@129.205.113.32) has joined #ubuntu
+2021-11-24 15:21:21	<--	idnc_sk (~idnc_sk@mail.iostream.sk) has quit (Quit: Client closed)
+2021-11-24 15:21:39	-->	||arifaX (~Commodore@p4fc72daa.dip0.t-ipconnect.de) has joined #ubuntu
+2021-11-24 15:21:39	<--	||arifaX (~Commodore@p4fc72daa.dip0.t-ipconnect.de) has quit (Changing host)
+2021-11-24 15:21:39	-->	||arifaX (~Commodore@user/arifax/x-9857073) has joined #ubuntu
+2021-11-24 15:22:28	-->	ahso (~Thunderbi@user/ahso) has joined #ubuntu
+2021-11-24 15:24:13	-->	ioria (~hurt_lock@host-79-49-218-152.retail.telecomitalia.it) has joined #ubuntu
+2021-11-24 15:24:17	-->	sn1tch3r (~sn1tch3r@user/sn1tch3r) has joined #ubuntu
+2021-11-24 15:25:53	<--	sn1tch3r (~sn1tch3r@user/sn1tch3r) has quit (Client Quit)
+2021-11-24 15:26:17	<--	BravoSlo (BravoSlo@gateway/vpn/airvpn/bravoslo) has quit (Quit: Leaving)
+2021-11-24 15:29:47	-->	BravoSlo (BravoSlo@gateway/vpn/airvpn/bravoslo) has joined #ubuntu
+2021-11-24 15:33:02	-->	sadstephen (~sadstephe@115.114.115.249) has joined #ubuntu
+2021-11-24 15:34:05	-->	Ginalo (uid502518@id-502518.tinside.irccloud.com) has joined #ubuntu
+2021-11-24 15:34:42	<--	wuseman (~wuseman@user/wuseman) has quit (Ping timeout: 256 seconds)
+2021-11-24 15:34:52	-->	Sheilong (uid293653@id-293653.ilkley.irccloud.com) has joined #ubuntu
+2021-11-24 15:36:00	<--	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has quit (Quit: ZzzZ)
+2021-11-24 15:38:22	<--	Simplar (~quassel@188.163.92.225) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-24 15:39:23	-->	BluesKaj (~Blues@user/blueskaj) has joined #ubuntu
+2021-11-24 15:39:31	BluesKaj	Hi folks
+2021-11-24 15:43:19	-->	webchat93 (~webchat93@84.93.59.230) has joined #ubuntu
+2021-11-24 15:44:15	<--	iomari891 (~iomari891@129.205.113.32) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:45:03	-->	frostschutz (~frostschu@2a01:c23:781b:fa00:1188:fa81:2726:60b7) has joined #ubuntu
+2021-11-24 15:47:27	-->	iomari891 (~iomari891@105.112.138.38) has joined #ubuntu
+2021-11-24 15:50:27	<--	sadstephen (~sadstephe@115.114.115.249) has quit (Quit: Connection closed)
+2021-11-24 15:52:08	<--	webchat93 (~webchat93@84.93.59.230) has left #ubuntu
+2021-11-24 15:52:55	-->	MartinCH (~MartinCH@84.93.59.230) has joined #ubuntu
+2021-11-24 15:53:44	MartinCH	Hello. I have a video display problem (fuzzy/hazy/snowy screen, with right hand side going off the screen edge) with ubuntu 18.04.1 LTS after updates were installed. The display chip is AMD/ATI Mobility Radeon HD3470 (RV620). The problem is present with (kernel) version 4.15.0-162.151-generic 4.15.18 (after updates). Works fine with
+2021-11-24 15:53:45	MartinCH	4.15.0-29.31-generic
+2021-11-24 15:56:33	-->	withered_wolf (~withered_@174.25.131.17) has joined #ubuntu
+2021-11-24 15:56:35	<--	iomari891 (~iomari891@105.112.138.38) has quit (Quit: WeeChat 3.3)
+2021-11-24 15:58:22	<--	yaaii (~andirc@2400:4052:8383:5c00:a8fc:ac7a:310c:277c) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:00:27	<--	Nimzowitsch (~nimzo@user/nimzowitsch) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:00:45	<--	mihaiadrian (~Thunderbi@82.76.223.244) has quit (Quit: mihaiadrian)
+2021-11-24 16:00:45	<--	withered_wolf (~withered_@174.25.131.17) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:01:30	-->	mihaiadrian (~Thunderbi@82.76.223.244) has joined #ubuntu
+2021-11-24 16:04:56	<--	sinaowolabi_ (~SinaOwola@102.134.114.1) has quit (Ping timeout: 245 seconds)
+2021-11-24 16:05:19	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #ubuntu
+2021-11-24 16:05:32	-->	gdhughes5 (~gdhughes5@2603-7000-3d03-51f2-ddae-9c05-f4a1-2989.res6.spectrum.com) has joined #ubuntu
+2021-11-24 16:06:27	<--	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:06:27	<--	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:07:01	<--	MonkZ (~MonkZ@user/monkz) has quit (Ping timeout: 250 seconds)
+2021-11-24 16:11:07	<--	Znevna (viper@wireguard/tunneler/znevna) has quit (Remote host closed the connection)
+2021-11-24 16:11:24	<--	gdhughes5 (~gdhughes5@2603-7000-3d03-51f2-ddae-9c05-f4a1-2989.res6.spectrum.com) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2021-11-24 16:11:38	<--	BUSY (~BUSY@user/busy) has quit (Ping timeout: 268 seconds)
+2021-11-24 16:12:18	<--	mihaiadrian (~Thunderbi@82.76.223.244) has quit (Quit: mihaiadrian)
+2021-11-24 16:13:28	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #ubuntu
+2021-11-24 16:14:29	-->	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-24 16:14:30	<--	gioyik (~gioyik@gateway/tor-sasl/gioyik) has quit (Ping timeout: 276 seconds)
+2021-11-24 16:14:31	-->	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-24 16:15:00	-->	gggpkm (~jack@111.63.44.9) has joined #ubuntu
+2021-11-24 16:16:54	-->	mIk3_08 (~Thunderbi@user/mik3-08/x-2852566) has joined #ubuntu
+2021-11-24 16:17:30	<--	llorllale (~llorllale@2607:9880:3a18:69:6cb9:78ac:9c8d:f1d5) has quit (Ping timeout: 260 seconds)
+2021-11-24 16:18:08	-->	Znevna (viper@wireguard/tunneler/znevna) has joined #ubuntu
+2021-11-24 16:19:33	<--	knidos (~knidos@85.98.20.202) has quit (Quit: WeeChat 3.3)
+2021-11-24 16:20:10	-->	sinaowolabi (~SinaOwola@41.58.247.249) has joined #ubuntu
+2021-11-24 16:20:35	<--	gggpkm (~jack@111.63.44.9) has quit (Ping timeout: 256 seconds)
+2021-11-24 16:22:19	<--	multi8 (~dark@m83-185-42-191.cust.tele2.se) has quit (Read error: Connection reset by peer)
+2021-11-24 16:22:40	-->	ff9527ff_ (uid527419@id-527419.uxbridge.irccloud.com) has joined #ubuntu
+2021-11-24 16:22:48	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Quit: ZNC 1.8.2+deb2+b1 - https://znc.in)
+2021-11-24 16:24:22	-->	multi8 (~dark@m83-185-42-191.cust.tele2.se) has joined #ubuntu
+2021-11-24 16:25:50	-->	gdhughes5 (~gdhughes5@2603-7000-3d03-51f2-ddae-9c05-f4a1-2989.res6.spectrum.com) has joined #ubuntu
+2021-11-24 16:29:25	-->	SzinDzeks (~SzinDzeks@user-5-173-21-105.play-internet.pl) has joined #ubuntu
+2021-11-24 16:29:48	SzinDzeks	Hi. I have to confess to something unforgivable...
+2021-11-24 16:29:59	-->	BUSY (~BUSY@user/busy) has joined #ubuntu
+2021-11-24 16:30:02	SzinDzeks	I killed snap process because it was draining my precious 1Mbps internet connection
+2021-11-24 16:30:05	SzinDzeks	And now...
+2021-11-24 16:30:07	SzinDzeks	it revenges
+2021-11-24 16:30:34	SzinDzeks	Many apps like HexChat, WeeChat and Minecraft don't have internet connection
+2021-11-24 16:31:00	SzinDzeks	Firefox, Discord and using ping command works just fine
+2021-11-24 16:31:05	SzinDzeks	please help
+2021-11-24 16:31:15	<--	mIk3_08 (~Thunderbi@user/mik3-08/x-2852566) has quit (Quit: mIk3_08)
+2021-11-24 16:32:44	-->	pankaj (~pankaj@user/marko822) has joined #ubuntu
+2021-11-24 16:33:58	SzinDzeks	i beg you
+2021-11-24 16:34:02	SzinDzeks	i need to play minecraft
+2021-11-24 16:36:25	-->	src (~src@user/src) has joined #ubuntu
+2021-11-24 16:37:21	-->	konrados (~konrados@user-94-254-167-41.play-internet.pl) has joined #ubuntu
+2021-11-24 16:38:28	mjt	reboot?
+2021-11-24 16:38:46	SzinDzeks	didn't work
+2021-11-24 16:39:07	<--	toddc (~toddc@ubuntu/member/toddc) has quit (Quit: WeeChat 2.8)
+2021-11-24 16:40:07	<--	SzinDzeks (~SzinDzeks@user-5-173-21-105.play-internet.pl) has quit (Quit: Connection closed)
+2021-11-24 16:41:36	-->	SzinDzeks (~SzinDzeks@user-5-173-21-105.play-internet.pl) has joined #ubuntu
+2021-11-24 16:42:27	-->	SzinDzeks16 (~SzinDzeks@user-5-173-21-105.play-internet.pl) has joined #ubuntu
+2021-11-24 16:43:00	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #ubuntu
+2021-11-24 16:43:54	-->	AngryTom (~tom@a89-183-43-252.net-htp.de) has joined #ubuntu
+2021-11-24 16:44:45	SzinDzeks16	Ok, i think it actually has something to do with my firewall rather than killing snap. Sorry for wasting your time
+2021-11-24 16:44:48	<--	SzinDzeks16 (~SzinDzeks@user-5-173-21-105.play-internet.pl) has quit (Client Quit)
+2021-11-24 16:46:03	<--	SzinDzeks (~SzinDzeks@user-5-173-21-105.play-internet.pl) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:46:59	-->	leaftype (~nathan@173.225.205.207) has joined #ubuntu
+2021-11-24 16:48:54	-->	webchat42 (~webchat42@84.93.59.230) has joined #ubuntu
+2021-11-24 16:49:07	<--	webchat42 (~webchat42@84.93.59.230) has left #ubuntu
+2021-11-24 16:50:29	-->	toddc (~toddc@ubuntu/member/toddc) has joined #ubuntu
+2021-11-24 16:51:01	-->	gioyik (~gioyik@gateway/tor-sasl/gioyik) has joined #ubuntu
+2021-11-24 16:52:57	<--	revolt112 (~revolt112@gw.thefirewall.de) has quit (Ping timeout: 250 seconds)
+2021-11-24 16:53:05	KBar	Well, that was rather anticlimactic. :)
+2021-11-24 16:54:03	<--	raub (~Raub_Voge@cpe-107-15-44-154.nc.res.rr.com) has quit (Ping timeout: 250 seconds)
+2021-11-24 16:55:19	-->	yaaii (~andirc@p643191-ipngn4001niigatani.niigata.ocn.ne.jp) has joined #ubuntu
+2021-11-24 16:56:15	<--	pankaj (~pankaj@user/marko822) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:59:15	<--	vsuojanen (~vsuojanen@cable-hml-585682-65.dhcp.inet.fi) has quit (Ping timeout: 264 seconds)
+2021-11-24 16:59:34	-->	evert_ (~evert@86.20-247-81.adsl-static.isp.belgacom.be) has joined #ubuntu
+2021-11-24 16:59:38	-->	lab (~lab@2a02:908:1398:ad80:60b5:7bec:6d48:43d5) has joined #ubuntu
+2021-11-24 17:00:38	-->	vsuojanen (~vsuojanen@cable-hml-585682-65.dhcp.inet.fi) has joined #ubuntu
+2021-11-24 17:01:01	<--	lab (~lab@2a02:908:1398:ad80:60b5:7bec:6d48:43d5) has quit (Client Quit)
+2021-11-24 17:01:35	<--	gdhughes5 (~gdhughes5@2603-7000-3d03-51f2-ddae-9c05-f4a1-2989.res6.spectrum.com) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:02:10	<--	maret (~maret@nat-88-212-37-89.antik.sk) has quit (Read error: Connection reset by peer)
+2021-11-24 17:02:20	-->	revolt112 (~revolt112@gw.thefirewall.de) has joined #ubuntu
+2021-11-24 17:02:36	-->	maret (~maret@nat-88-212-37-89.antik.sk) has joined #ubuntu
+2021-11-24 17:02:55	-->	via_c7 (~orangeext@user/orangeextract) has joined #ubuntu
+2021-11-24 17:03:27	<--	BluesKaj (~Blues@user/blueskaj) has quit (Quit: Konversation terminated!)
+2021-11-24 17:03:59	-->	weedmic (~weedmic@188.120.139.53) has joined #ubuntu
+2021-11-24 17:05:05	-->	trekkie1701c (~trekkie17@user/trekkie1701c) has joined #ubuntu
+2021-11-24 17:05:54	<--	theoceaniscool (~theoceani@119.12.232.133) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:09:27	<--	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:09:46	<--	RMOTAO (~user@128.201.77.212) has left #ubuntu
+2021-11-24 17:10:03	<--	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:10:13	<--	wgrant (~wgrant@ubuntu/member/wgrant) has quit (Ping timeout: 268 seconds)
+2021-11-24 17:10:14	-->	RMOTAO (~user@128.201.77.212) has joined #ubuntu
+2021-11-24 17:11:20	-->	bbju (~bbju@2409:8929:353d:654:dc0b:bdab:6d2e:8aff) has joined #ubuntu
+2021-11-24 17:12:38	<--	ShahNaim (naim@user/shahnaim) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:13:17	-->	wgrant (~wgrant@ubuntu/member/wgrant) has joined #ubuntu
+2021-11-24 17:14:02	<--	geirha (~geirha@user/geirha) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:15:01	-->	Damni (~daniele@user/damni) has joined #ubuntu
+2021-11-24 17:16:24	<--	weedmic (~weedmic@188.120.139.53) has quit (Quit: Konversation terminated!)
+2021-11-24 17:16:51	<--	abrantesasf (~abrantesa@187.36.170.211) has quit (Read error: Connection reset by peer)
+2021-11-24 17:16:55	-->	nyuszika7h_ (nyuszika7h@lykos/dev/nyuszika7h) has joined #ubuntu
+2021-11-24 17:17:15	-->	abrantesasf (~abrantesa@187.36.170.211) has joined #ubuntu
+2021-11-24 17:17:53	<--	Damni (~daniele@user/damni) has quit (Client Quit)
+2021-11-24 17:18:38	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:19:48	--	nyuszika7h_ is now known as nyuszika7h
+2021-11-24 17:21:35	-->	elstellino (~elstellin@78.30.20.40) has joined #ubuntu
+2021-11-24 17:21:36	<--	ElectronApps (~ElectronA@user/electronapps) has quit (Remote host closed the connection)
+2021-11-24 17:22:55	-->	tieinv (~tieinv@user/tieinv) has joined #ubuntu
+2021-11-24 17:23:56	-->	fyhl (~fyhl@ip203.ip-51-83-149.eu) has joined #ubuntu
+2021-11-24 17:24:05	fyhl	Hi, I have a problem. How can I deactivate individual audio outputs such as HDMI to monitor and leave only my headphones?
+2021-11-24 17:24:46	<--	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has quit (Ping timeout: 260 seconds)
+2021-11-24 17:25:35	KBar	What version of Ubuntu are you running?
+2021-11-24 17:26:13	fyhl	I am currently using 21.04
+2021-11-24 17:26:54	-->	ghostcube (~ghostcube@user/ghostcube) has joined #ubuntu
+2021-11-24 17:27:04	-->	theoceaniscool (~theoceani@119.12.232.133) has joined #ubuntu
+2021-11-24 17:27:59	KBar	fyhl, try this https://help.ubuntu.com/21.04/ubuntu-help/sound-usespeakers.html.en
+2021-11-24 17:28:26	sillymob[m]	fyhl: PulseAudio Volume Control should let you do that rather easily
+2021-11-24 17:28:38	-->	Xaldafax (~xaldafax@cpe-198-72-160-101.socal.res.rr.com) has joined #ubuntu
+2021-11-24 17:29:12	<--	MartinCH (~MartinCH@84.93.59.230) has left #ubuntu
+2021-11-24 17:30:17	<--	s8548a_ (~s8548a@user/s8548a) has quit (Ping timeout: 265 seconds)
+2021-11-24 17:30:31	-->	kamdard (~kamdard@47.189.25.217) has joined #ubuntu
+2021-11-24 17:31:01	<--	trekkie1701c (~trekkie17@user/trekkie1701c) has quit (Quit: :P)
+2021-11-24 17:32:10	-->	ShahNaim (naim@grape.ircnow.org) has joined #ubuntu
+2021-11-24 17:32:10	<--	ShahNaim (naim@grape.ircnow.org) has quit (Changing host)
+2021-11-24 17:32:10	-->	ShahNaim (naim@user/shahnaim) has joined #ubuntu
+2021-11-24 17:32:13	<--	Alabalistic (~quassel@p5de632d1.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2021-11-24 17:32:21	-->	oxez (~jason@user/oxez) has joined #ubuntu
+2021-11-24 17:33:11	-->	nyuszika7h (nyuszika7h@lykos/dev/nyuszika7h) has joined #ubuntu
+2021-11-24 17:33:17	-->	EriC^^ (~e@185.203.117.141) has joined #ubuntu
+2021-11-24 17:33:27	fyhl	sillymob[m] I installed pavucontrol, but I don't see an option to deactivate individual outputs here.
+2021-11-24 17:33:39	oxez	Hi. Running on 20.04, as of this morning my ethernet connection keeps dropping (even my ISP saw my pc disconnect at random intervals from their router). Didn't have any issues until this morning, and the network works correctly on other OSes. Not sure what could cause this? I didn't upgrade anything in weeks.
+2021-11-24 17:34:13	<--	EriC^^ (~e@185.203.117.141) has left #ubuntu (Leaving)
+2021-11-24 17:35:07	sillymob[m]	fyhl: the little 'loudspeaker' icon should let you disable an output
+2021-11-24 17:35:10	KBar	oxez, perhaps looking through the logs might help find the cause.
+2021-11-24 17:35:59	-->	EriC^^ (~e@185.203.117.141) has joined #ubuntu
+2021-11-24 17:36:05	oxez	KBar: perhaps, just not certain where to look
+2021-11-24 17:36:46	KBar	oxez, `journalctl --unit=NetworkManager`
+2021-11-24 17:37:48	KBar	oxez, `journalctl -b --unit=NetworkManager` to list only entries for current boot.
+2021-11-24 17:38:12	KBar	NetworkManager usually complains when there's a problem.
+2021-11-24 17:38:31	KBar	And it shows up in systemd's journal.
+2021-11-24 17:38:35	<--	||arifaX (~Commodore@user/arifax/x-9857073) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-24 17:38:48	-->	herman (~herman@2603:9000:8500:baa0:4023:a2ca:7f9c:1d6b) has joined #ubuntu
+2021-11-24 17:39:19	oxez	I don't use NetworkManager, and haven't for years (I'm with systemd-networkd). Actually tried NetworkManager this morning to try to debug, I'll look at logs, thanks. Going to get some work done from wi-fi before :)
+2021-11-24 17:39:28	-->	Ricardus (~rich@cpe-69-207-98-184.rochester.res.rr.com) has joined #ubuntu
+2021-11-24 17:39:50	-->	Fjord (~Fjord@c-73-14-198-35.hsd1.co.comcast.net) has joined #ubuntu
+2021-11-24 17:40:04	fyhl	sillymob[m]Can I set the output as default somewhere? Every time I plug in headphones the sound plays on HDMI, but my monitor has no speakers.
+2021-11-24 17:40:50	-->	zer0bitz (~zer0bitz@2001:2003:f6bc:f00:4c2d:8074:ff8b:55dd) has joined #ubuntu
+2021-11-24 17:42:47	-->	kamdard_ (~kamdard@47.189.25.217) has joined #ubuntu
+2021-11-24 17:46:10	KBar	fyhl, run this `pactl list sinks | pastebinit` and share the link
+2021-11-24 17:47:24	-->	elcedro_83 (~elcedro_8@191.111.41.75) has joined #ubuntu
+2021-11-24 17:47:55	fyhl	I changed something and it works
+2021-11-24 17:47:58	fyhl	I gues
+2021-11-24 17:48:00	fyhl	guess
+2021-11-24 17:48:01	fyhl	https://paste.ubuntu.com/p/B6jGwFdMbP/
+2021-11-24 17:50:34	-->	pentrix2 (~pentrix@195.242.213.153) has joined #ubuntu
+2021-11-24 17:50:42	-->	codex__ (~codex@user/codex/x-6136475) has joined #ubuntu
+2021-11-24 17:52:21	<--	bbju (~bbju@2409:8929:353d:654:dc0b:bdab:6d2e:8aff) has quit (Ping timeout: 256 seconds)
+2021-11-24 17:53:44	-->	mulliken_ (sid504384@id-504384.helmsley.irccloud.com) has joined #ubuntu
+2021-11-24 17:53:51	<--	codex (~codex@user/codex) has quit (Ping timeout: 264 seconds)
+2021-11-24 17:54:28	<--	mulliken_ (sid504384@id-504384.helmsley.irccloud.com) has quit (Client Quit)
+2021-11-24 17:55:14	<--	fyhl (~fyhl@ip203.ip-51-83-149.eu) has quit (Quit: Connection closed)
+2021-11-24 17:55:28	-->	fyhl (~fyhl@ip203.ip-51-83-149.eu) has joined #ubuntu
+2021-11-24 17:58:42	KBar	fyhl, yep. Everything looks good. Active port is set to analog-output-headphones.
+2021-11-24 17:58:51	<--	leaftype (~nathan@173.225.205.207) has quit (Quit: Konversation terminated!)
+2021-11-24 17:59:50	fyhl	Yeah, I unplugged my headphones and plugged it again. It automatically selected them as output
+2021-11-24 18:00:02	fyhl	Thank you all so much!
+2021-11-24 18:00:40	KBar	No problem.
+2021-11-24 18:00:57	-->	idnc_sk (~idnc_sk@mail.iostream.sk) has joined #ubuntu
+2021-11-24 18:01:46	-->	coz_ (~coz_@user/coz/x-5866170) has joined #ubuntu
+2021-11-24 18:02:10	-->	knidos (~knidos@85.98.20.202) has joined #ubuntu
+2021-11-24 18:03:39	-->	LuksNuke (~LuksNuke@gateway/tor-sasl/luksnuke) has joined #ubuntu
+2021-11-24 18:05:06	-->	trekkie1701c (~trekkie17@user/trekkie1701c) has joined #ubuntu
+2021-11-24 18:05:21	--	genii-core is now known as genii
+2021-11-24 18:08:42	-->	leaftype (~nathan@173.225.205.207) has joined #ubuntu
+2021-11-24 18:08:46	KBar	oxez, well, in that case you can specify networkd as the target: `journalctl -b --unit=systemd-networkd.service`
+2021-11-24 18:09:09	<--	coz_ (~coz_@user/coz/x-5866170) has quit (Quit: Have a goo oned)
+2021-11-25 11:39:47	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-11-25 11:39:47	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-11-25 11:39:47	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-11-25 11:39:47	--	Channel #ubuntu: 1041 nicks (2 ops, 0 voices, 1039 normals)
+2021-11-25 11:39:47	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-25 11:39:49	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-25 11:40:01	micomumu	how to install office 2010 in ubuntu 20.04 ?
+2021-11-25 11:40:38	-->	verdesio (~max@host-82-56-166-188.retail.telecomitalia.it) has joined #ubuntu
+2021-11-25 11:42:34	<--	verdesio (~max@host-82-56-166-188.retail.telecomitalia.it) has quit (Client Quit)
+2021-11-25 11:46:23	<--	micomumu (~micomumu@103.147.241.2) has quit (Quit: Leaving)
+2021-11-25 11:49:28	<--	jay-m126_ (~jay-m@195.24.211.78) has quit (Ping timeout: 268 seconds)
+2021-11-25 11:50:00	-->	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-25 11:50:05	<--	jay-m126 (~jay-m@195.24.211.78) has quit (Ping timeout: 268 seconds)
+2021-11-25 11:51:26	-->	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has joined #ubuntu
+2021-11-25 11:51:44	-->	codex (~codex@user/codex) has joined #ubuntu
+2021-11-25 11:53:31	<--	codex (~codex@user/codex) has quit (Client Quit)
+2021-11-25 11:57:04	-->	chenshijie (~Thunderbi@124.126.19.250) has joined #ubuntu
+2021-11-25 11:59:05	<--	Bashing-om (~sysop@ubuntu/member/bashing-om) has quit (Quit: leaving)
+2021-11-25 11:59:25	-->	via_c7 (~orangeext@user/orangeextract) has joined #ubuntu
+2021-11-25 12:02:27	<--	EvilDMP (~textual@django/moderator/EvilDMP) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2021-11-25 12:02:34	-->	masber (~masber@vpn-42.cscs.ch) has joined #ubuntu
+2021-11-25 12:03:14	-->	TJ- (~root@about/linux/staff/tj-) has joined #ubuntu
+2021-11-25 12:04:12	-->	EvilDMP (~textual@django/moderator/EvilDMP) has joined #ubuntu
+2021-11-25 12:06:46	-->	||shark|| (~shark@dolphin.sharkarea.net) has joined #ubuntu
+2021-11-25 12:10:02	<--	|shark| (~shark@dolphin.sharkarea.net) has quit (Ping timeout: 240 seconds)
+2021-11-25 12:10:59	<--	jay-m126_ (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:11:09	<--	jay-m126 (jay-m@gateway/vpn/protonvpn/jay-m126) has quit (Ping timeout: 256 seconds)
+2021-11-25 12:11:41	<--	evert_ (~evert@86.20-247-81.adsl-static.isp.belgacom.be) has quit (Quit: Ex-Chat)
+2021-11-25 12:12:30	-->	jay-m126 (~jay-m@129.0.76.209) has joined #ubuntu
+2021-11-25 12:13:04	-->	jay-m126_ (~jay-m@129.0.76.209) has joined #ubuntu
+2021-11-25 12:15:02	<--	chenqisu1 (~03cia7d@183.217.201.124) has quit (Remote host closed the connection)
+2021-11-25 12:15:04	<--	tsujp (~tsujp@sourcehut/user/tsujp) has quit (Quit: Client closed)
+2021-11-25 12:15:26	-->	chenqisu1 (~03cia7d@183.217.201.124) has joined #ubuntu
+2021-11-25 12:18:41	<--	jay-m126_ (~jay-m@129.0.76.209) has quit (Ping timeout: 245 seconds)
+2021-11-25 12:19:05	<--	jay-m126 (~jay-m@129.0.76.209) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:19:39	-->	jay-m126 (~jay-m@195.24.211.78) has joined #ubuntu
+2021-11-25 12:19:42	<--	vsuojanen (~vsuojanen@cable-hml-585682-65.dhcp.inet.fi) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:19:47	-->	floown (~quassel@user/floown) has joined #ubuntu
+2021-11-25 12:21:11	-->	vsuojanen (~vsuojanen@cable-hml-585682-65.dhcp.inet.fi) has joined #ubuntu
+2021-11-25 12:21:40	-->	Simplar (~Simplar@188.163.92.225) has joined #ubuntu
+2021-11-25 12:24:32	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 240 seconds)
+2021-11-25 12:25:03	-->	jay-m126_ (~jay-m@195.24.211.78) has joined #ubuntu
+2021-11-25 12:25:07	<--	samuelbernardo (~samuelber@nata01.lip.pt) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-25 12:25:22	-->	samuelbernardo (~samuelber@nata01.lip.pt) has joined #ubuntu
+2021-11-25 12:25:37	-->	weedmic (~weedmic@188.120.139.53) has joined #ubuntu
+2021-11-25 12:26:43	-->	i0e (~is0ke3@user/is0ke3) has joined #ubuntu
+2021-11-25 12:27:43	-->	hero (~quassel@176.62.187.24) has joined #ubuntu
+2021-11-25 12:29:15	ravage	Tob: the only 30 year old command i can think of is "wall". but thats console only. KDE4 used to display those messages in a notification. gnome has no support for it i think. so you would have to write something yourself
+2021-11-25 12:30:11	ravage	and i think it sadly does not cover your "on reboot" requirement
+2021-11-25 12:30:43	-->	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has joined #ubuntu
+2021-11-25 12:31:30	-->	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #ubuntu
+2021-11-25 12:31:32	<--	hero (~quassel@176.62.187.24) has quit (Client Quit)
+2021-11-25 12:35:16	<--	dhsc19 (~dhsc19@2607:f1c0:1800:24::1) has left #ubuntu
+2021-11-25 12:35:22	KBar	Perhaps write(1) will be useful.
+2021-11-25 12:35:26	-->	blei (~blei@209.201.38.106) has joined #ubuntu
+2021-11-25 12:36:40	<--	jay-m126_ (~jay-m@195.24.211.78) has quit (Ping timeout: 256 seconds)
+2021-11-25 12:37:34	<--	jay-m126 (~jay-m@195.24.211.78) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:41:02	-->	aniruddha (uid340443@id-340443.ilkley.irccloud.com) has joined #ubuntu
+2021-11-25 12:42:12	<--	marlinc_ (~marlinc@user/marlinc) has quit (Quit: ZNC 1.8.2+deb1+focal2 - https://znc.in)
+2021-11-25 12:42:36	-->	marlinc (~marlinc@user/marlinc) has joined #ubuntu
+2021-11-25 12:49:07	-->	dhsc19 (~dhsc19@2607:f1c0:1800:24::1) has joined #ubuntu
+2021-11-25 12:49:08	-->	hqdruxn08_ (~hqdruxn08@cpe-66-68-166-214.austin.res.rr.com) has joined #ubuntu
+2021-11-25 12:53:37	<--	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:53:37	<--	hqdruxn08__ (~hqdruxn08@cpe-66-68-166-214.austin.res.rr.com) has quit (Ping timeout: 268 seconds)
+2021-11-25 12:54:00	<--	chenshijie (~Thunderbi@124.126.19.250) has quit (Ping timeout: 250 seconds)
+2021-11-25 12:54:10	<--	sinaowolabi_ (~SinaOwola@102.134.114.1) has quit (Ping timeout: 260 seconds)
+2021-11-25 12:54:47	<--	sinaowolabi (~SinaOwola@41.58.61.92) has quit (Ping timeout: 256 seconds)
+2021-11-25 12:55:44	<--	dhsc19 (~dhsc19@2607:f1c0:1800:24::1) has left #ubuntu
+2021-11-25 12:58:17	<--	Simplar (~Simplar@188.163.92.225) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2021-11-25 12:58:49	-->	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has joined #ubuntu
+2021-11-25 12:59:42	<--	tobybl (~tobybl@dhcp-199-132.inf.ed.ac.uk) has quit (Remote host closed the connection)
+2021-11-25 13:11:14	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-11-25 13:11:14	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-11-25 13:11:14	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-11-25 13:11:15	--	Channel #ubuntu: 1041 nicks (2 ops, 0 voices, 1039 normals)
+2021-11-25 13:11:15	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-25 13:11:15	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-25 13:11:16	XATRIX	Hi, can you advice ? Is there any option to make my wifi be enabled after login ? After i updated from 18.04 to 20.04.3, after i do login, my laptop is in offline state. I click network manager in tray, and set the checkbox "wifi enabled", later on i have connected
+2021-11-25 13:11:20	alkisg	While for console logins, there's motd
+2021-11-25 13:11:57	<--	blei (~blei@209.201.38.106) has quit (Quit: Client closed)
+2021-11-25 13:13:58	XATRIX	https://imgur.com/a/Xq88qbU - the screenshot, where the wifi checkbox is
+2021-11-25 13:14:08	XATRIX	Please, advice !
+2021-11-25 13:15:58	<--	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has quit (Quit: ZzzZ)
+2021-11-25 13:16:22	EriC^^	XATRIX: i think you can use rfkill to enable it
+2021-11-25 13:16:25	TJ-	XATRIX: this info may help. NetworkManager's enable/disable Wifi actually resets/sets the rfkill soft block, if I recall correctly. There is also a separate system service to that saves/restores the state of the rfkill block. I'm wondering if somethin in the upgrade means your system's rfkill service is blocking wifi on each reboot
+2021-11-25 13:16:41	-->	dhsc19 (~dhsc19@70.35.205.161) has joined #ubuntu
+2021-11-25 13:17:04	<--	Bendik (~Bendik@168.51-175-237.customer.lyse.net) has quit (Quit: Client closed)
+2021-11-25 13:17:51	TJ-	XATRIX: check "systemctl status systemd-rfkill"
+2021-11-25 13:19:11	TJ-	XATRIX: and, to check the saved state for that do " grep . /var/lib/systemd/rfkill/* "
+2021-11-25 13:19:27	TJ-	XATRIX: a value of 1 means the saved state is set to soft block
+2021-11-25 13:20:17	XATRIX	TJ-: ● systemd-rfkill.service
+2021-11-25 13:20:17	XATRIX	     Loaded: masked (Reason: Unit systemd-rfkill.service is masked.)
+2021-11-25 13:20:17	XATRIX	     Active: inactive (dead)
+2021-11-25 13:20:22	<--	eleventh (~eleventh@143.131.13.208) has quit (Ping timeout: 260 seconds)
+2021-11-25 13:20:22	Tob	<alkisg>, yes, "upon reboot" means "on the next user login". If I had event at "early" run-levels during boot, I want to report the event at next login. Thx, got it: motd and /etc/xdg/autostart with Zenity or send-notify.
+2021-11-25 13:20:25	XATRIX	It looks like, it is disabled
+2021-11-25 13:21:09	TJ-	XATRIX: it does; so possibly something else. Next, I'd check NetworkManager's log for rfkill related messages. " journalctl -b -u NetworkManager  | grep rfkill "
+2021-11-25 13:21:09	-->	eleventh (~eleventh@143.131.13.208) has joined #ubuntu
+2021-11-25 13:22:14	XATRIX	TJ-: nothing special i think https://paste.debian.net/1220764/
+2021-11-25 13:22:47	-->	gggp (~gggp@li1760-14.members.linode.com) has joined #ubuntu
+2021-11-25 13:22:51	-->	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has joined #ubuntu
+2021-11-25 13:23:18	TJ-	XATRIX: On my 21.10, NM has a separate state file. Check that too (although I expect it is supposed to show the current active state so will likely be =true) " cat /var/lib/NetworkManager/NetworkManager.state "
+2021-11-25 13:23:39	-->	xx_ (~mint@185.13.106.101) has joined #ubuntu
+2021-11-25 13:23:45	<--	xx_ (~mint@185.13.106.101) has quit (Client Quit)
+2021-11-25 13:23:53	TJ-	XATRIX: your log "manager: rfkill: Wi-Fi now disabled by radio killswitch"
+2021-11-25 13:24:10	<--	lehinsun (~ttytwiste@188.113.176.117) has quit (Read error: Connection reset by peer)
+2021-11-25 13:24:27	TJ-	XATRIX: aaahhh I see the problem
+2021-11-25 13:24:40	XATRIX	[main]
+2021-11-25 13:24:40	XATRIX	NetworkingEnabled=true
+2021-11-25 13:24:40	XATRIX	WirelessEnabled=true
+2021-11-25 13:24:40	XATRIX	WWANEnabled=true
+2021-11-25 13:24:41	TJ-	XATRIX: You only have 1 wifi device, is that correct?
+2021-11-25 13:24:48	XATRIX	Yeap
+2021-11-25 13:25:25	TJ-	XATRIX: but your system is loading the IdeaPad ACPI driver, which is disabling wifi. " rfkill0: found Wi-Fi radio killswitch (at /sys/devices/pci0000:00/0000:00:1f.0/PNP0C09:00/VPC2004:00/rfkill/rfkill0) (platform driver ideapad_acpi)"
+2021-11-25 13:25:29	XATRIX	TJ-: https://imgur.com/tT9ECEy.png
+2021-11-25 13:26:06	TJ-	XATRIX: then the 'real' controller (attached to the device) "Found Wi-Fi radio killswitch (at /sys/devices/pci0000:00/0000:00:1c.3/0000:02:00.0/ieee80211/phy0/rfkill2) (driver rtl8723be)"
+2021-11-25 13:26:30	XATRIX	Maybe i have to unmask systemd-rfkill.service ?
+2021-11-25 13:26:32	TJ-	XATRIX: so, I think the solution is to stop the ideapad_acpi driver from messing with the rfkill state
+2021-11-25 13:26:44	XATRIX	hmm
+2021-11-25 13:27:18	-->	peto (~quassel@210.pppoe-147-78-57.cust.surany.net) has joined #ubuntu
+2021-11-25 13:27:33	XATRIX	[xatrix@MERNOV-NB ~]$ dmesg | grep "wifi"
+2021-11-25 13:27:34	XATRIX	[   18.159784] rtl8723be: Using firmware rtlwifi/rtl8723befw_36.bin
+2021-11-25 13:27:34	XATRIX	[   18.280540] rtlwifi: rtlwifi: wireless switch is on
+2021-11-25 13:27:56	<--	Grems (~grems@194.19.73.77) has left #ubuntu
+2021-11-25 13:28:11	TJ-	XATRIX: I suspect you'll have to blacklist the ideapad-laptop kernel module
+2021-11-25 13:28:44	TJ-	I'm doing some digging - it doesn't appear to have a module option to leave wifi kill alone, but it does have one for bluetooth
+2021-11-25 13:29:12	TJ-	XATRIX: "modinfo ideapad-laptop" -- shows 'parm no_bt_rfkill'
+2021-11-25 13:30:12	XATRIX	TJ-: https://pastebin.com/kWReFXj7
+2021-11-25 13:30:26	-->	p0indexter (~alpha@user/p0indexter) has joined #ubuntu
+2021-11-25 13:30:47	XATRIX	yeap, the same as i have found
+2021-11-25 13:31:06	-->	tallbarr_ (~none@gateway/tor-sasl/tallbarr) has joined #ubuntu
+2021-11-25 13:32:53	TJ-	XATRIX: I'd try rebooting and before enabling NM wifi, in a terminal shell, do "rfkill list" -- I suspect the ACPI derived rfkill device will be set to soft blocked.
+2021-11-25 13:33:13	TJ-	XATRIX: right now I expect "rfkill list" shows 2 wifi-related kill switches
+2021-11-25 13:33:36	<--	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has quit (Ping timeout: 260 seconds)
+2021-11-25 13:33:42	XATRIX	oh.. https://imgur.com/Ro8eP45.png
+2021-11-25 13:33:46	XATRIX	take a look please
+2021-11-25 13:34:41	TJ-	right, ideapad_wlan --- I bet this is soft blocked on initial boot
+2021-11-25 13:35:46	XATRIX	It seems to me , as well, but how can i override this ?
+2021-11-25 13:35:58	TJ-	XATRIX: Looking at the ideapad-laptop source code, that module does other things as well  but it very much depends on the features of each model  https://github.com/torvalds/linux/blob/master/drivers/platform/x86/ideapad-laptop.c
+2021-11-25 13:37:49	<--	retep (~Retep@155.143.182.238) has quit (Read error: Connection reset by peer)
+2021-11-25 13:38:59	TJ-	XATRIX: I suspect this function is reading a default internal firmware state from the firmware, and setting blocked as a result https://github.com/torvalds/linux/blob/5f53fa508db098c9d372423a6dac31c8a5679cdf/drivers/platform/x86/ideapad-laptop.c#L986
+2021-11-25 13:40:15	XATRIX	So, i should do some .sh script , and put in after the system start , to do some rfkill enable ?
+2021-11-25 13:41:16	TJ-	XATRIX: try blacklisting:  " echo "blacklist ideapad-laptop" | sudo tee -a /etc/modprobe.d/ideapad-laptop.conf "
+2021-11-25 13:41:48	TJ-	XATRIX: on reboot, assuming ideapad-laptop module is **NOT** included in the initialramfs, that will prevent that module loading
+2021-11-25 13:42:20	XATRIX	roger , i'll test it. tnks!
+2021-11-25 13:42:24	TJ-	XATRIX: if it turns out the module is included in the initialramfs you'd need to do "update-initramfs -u" to have that setting copied into the initrd.img
+2021-11-25 13:43:00	TJ-	XATRIX: the downside here is you may lose access to the special key functions and other firmware-specific functionality
+2021-11-25 13:43:40	TJ-	XATRIX: but, if this works I'd recommend contacting the maintainers of the ideapad-latop module with details of your device so they can add a workaround to fix this, or recommend how else to deal with it
+2021-11-25 13:43:52	XATRIX	I have Lenovo G50-70, so, it's a bit dated laptop. I don't think it has some cool, functionality :)
+2021-11-25 13:44:47	TJ-	Usually the Fn+ key sequences, media key options on F* keys, fan control, etc
+2021-11-25 13:46:24	TJ-	XATRIX: also see this, seems we're doing the 'standard' resolution https://community.linuxmint.com/hardware/view/21090
+2021-11-25 13:47:10	XATRIX	sound if that it is
+2021-11-25 13:47:13	XATRIX	i'll dig in
+2021-11-25 13:48:01	TJ-	this is interesting, a possible patch https://askubuntu.com/questions/580053/wireless-hardware-switch-lenovo-g50-30
+2021-11-25 13:48:50	TJ-	XATRIX: but that is VERY old so the model matching must be different - I'll try to find out what commit that patch is, so we can see if there's a simple patch can be done for your model too
+2021-11-25 13:49:13	<--	i0e (~is0ke3@user/is0ke3) has quit (Quit: WeeChat 3.3)
+2021-11-25 13:49:35	-->	elastic_dog (~elastic_d@2a01:118f:822:9c00:f583:aa51:9ad4:d4fb) has joined #ubuntu
+2021-11-25 13:49:58	jeremy31	TJ-: That code has gone through a big change a couple years ago
+2021-11-25 13:51:11	TJ-	jeremy31: I can see :)
+2021-11-25 13:51:31	jeremy31	That quirks list was annoying
+2021-11-25 13:54:05	-->	tobybl (~tobybl@dhcp-199-132.inf.ed.ac.uk) has joined #ubuntu
+2021-11-25 13:59:21	-->	elqelinho (~elqelinho@91.192.22.238) has joined #ubuntu
+2021-11-25 14:04:13	<--	weedmic (~weedmic@188.120.139.53) has quit (Quit: Konversation terminated!)
+2021-11-25 14:04:49	-->	i0e (~is0ke3@user/is0ke3) has joined #ubuntu
+2021-11-25 14:06:19	<--	elqelinho (~elqelinho@91.192.22.238) has quit (Quit: Leaving)
+2021-11-25 14:06:48	-->	moukhtar (~moukhtar@45.243.235.150) has joined #ubuntu
+2021-11-25 14:08:09	-->	ElQelinho (~ElQelinho@91.192.22.238) has joined #ubuntu
+2021-11-25 14:09:07	-->	chenshijie (~Thunderbi@111.207.172.18) has joined #ubuntu
+2021-11-25 14:09:23	<--	floown (~quassel@user/floown) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-25 14:09:24	-->	Aeilxyz (uid391113@user/aeilxyz) has joined #ubuntu
+2021-11-25 14:10:21	TJ-	Looks like the problem is "read_ec_data(priv->adev->handle, VPCCMD_R_RF, &hw_blocked) "
+2021-11-25 14:13:44	<--	binary01 (~binary01@192.110.171.216) has quit (Remote host closed the connection)
+2021-11-25 14:15:31	<--	magic_ninja (~sparkie1@ip24-255-219-188.ks.ks.cox.net) has quit (Read error: Connection reset by peer)
+2021-11-25 14:16:23	-->	magic_ninja (~sparkie1@ip24-255-219-188.ks.ks.cox.net) has joined #ubuntu
+2021-11-25 14:16:33	-->	dsrt^ (~dsrt@68.101.63.101) has joined #ubuntu
+2021-11-25 14:16:49	-->	binary01 (~binary01@192.110.171.216) has joined #ubuntu
+2021-11-25 14:17:30	<--	masber (~masber@vpn-42.cscs.ch) has quit (Ping timeout: 256 seconds)
+2021-11-25 14:17:34	-->	codex (~codex@user/codex) has joined #ubuntu
+2021-11-25 14:17:37	<--	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has quit (Quit: ZzzZ)
+2021-11-25 14:18:31	<--	p0indexter (~alpha@user/p0indexter) has quit (Quit: ars longa vita brevis)
+2021-11-25 14:19:31	<--	Ricardus (~rich@cpe-69-207-98-184.rochester.res.rr.com) has quit (Ping timeout: 250 seconds)
+2021-11-25 14:20:18	-->	Simplar (~Simplar@188.163.92.225) has joined #ubuntu
+2021-11-25 14:20:37	<--	SteelRose (~digitalbr@2a01:8b81:6401:1900:a1d2:9cce:a517:25c1) has quit (Ping timeout: 250 seconds)
+2021-11-25 14:20:56	-->	Gallomimia (~Gallomimi@node-1w7jra2a2gqpvs0r0o4tr2o53.ipv6.telus.net) has joined #ubuntu
+2021-11-25 14:21:37	-->	xu-help56w (~xu-help56@39.148.116.80) has joined #ubuntu
+2021-11-25 14:22:50	xu-help56w	Hello need help with install ati hd6470m drivers
+2021-11-25 14:24:12	xu-help56w	So i got the 4 deb files from AMD drivers, they wont fglrx-core wont install
+2021-11-25 14:24:53	xu-help56w	OS xubuntu 20.04
+2021-11-25 14:25:02	-->	SteelRose (~digitalbr@pub-151-248-221-127.dh-hfc.datazug.ch) has joined #ubuntu
+2021-11-25 14:25:13	KBar	`lsb_release -rd`
+2021-11-25 14:25:24	KBar	Oh, thanks.
+2021-11-25 14:25:36	xu-help56w	What
+2021-11-25 14:25:51	xu-help56w	That for me
+2021-11-25 14:26:11	hans	xu-help56w, pastebin the console output
+2021-11-25 14:26:43	xu-help56w	With which command
+2021-11-25 14:27:15	KBar	Just copy the output and visit pastebin.com and paste there. Share the link here.
+2021-11-25 14:27:18	hans	presumably `./amdgpu -install` or whatever you use to install the AMD drivers
+2021-11-25 14:27:49	xu-help56w	I used dpkg i
+2021-11-25 14:28:05	xu-help56w	A mmt
+2021-11-25 14:30:25	-->	masber (~masber@vpn-50.cscs.ch) has joined #ubuntu
+2021-11-25 14:30:40	KBar	xu-help56w, try this command: `dpkg -i path/to/deb/files |& pastebinit`
+2021-11-25 14:30:49	xu-help56w	I think my x server crashed alreasy
+2021-11-25 14:30:59	-->	webchat12 (~webchat12@p5b28f833.dip0.t-ipconnect.de) has joined #ubuntu
+2021-11-25 14:31:04	<--	webchat12 (~webchat12@p5b28f833.dip0.t-ipconnect.de) has quit (Client Quit)
+2021-11-25 14:31:16	jeremy31	TJ-: That will trigger the hard block, I doubt the Network Manager would clear that
+2021-11-25 14:34:21	-->	weedmic (~weedmic@188.120.139.53) has joined #ubuntu
+2021-11-25 14:37:41	-->	eima (~eima@78-57-30-220.static.zebra.lt) has joined #ubuntu
+2021-11-25 14:37:52	xu-help56w	I think it complained with my 5.1 kernel version with an error
+2021-11-25 14:38:29	<--	vsuojanen (~vsuojanen@cable-hml-585682-65.dhcp.inet.fi) has quit (Ping timeout: 256 seconds)
+2021-11-25 14:38:33	<--	eima (~eima@78-57-30-220.static.zebra.lt) has quit (Client Quit)
+2021-11-25 14:38:43	moukhtar	i have question because i am new user of linux ubuntu ,how can i make my external fax modem card to working in the system ...by the way i installed two or three software for it but still not working until now ...plus if anyone help me to configuration with this card please
+2021-11-25 14:39:22	<--	XATRIX (~xatrix@195.234.200.214) has quit (Quit: Goodbye and wish you luck!)
+2021-11-25 14:40:14	KBar	xu-help56w, well, it will be much easier for people to help you if you share such information instead of just thinking.
+2021-11-25 14:40:18	-->	vsuojanen (~vsuojanen@cable-hml-585682-65.dhcp.inet.fi) has joined #ubuntu
+2021-11-25 14:40:53	xu-help56w	My computer crashed now, black screen
+2021-11-25 14:41:29	xu-help56w	Got a command line
+2021-11-25 14:42:26	<--	masber (~masber@vpn-50.cscs.ch) has quit (Ping timeout: 256 seconds)
+2021-11-25 14:43:07	-->	tlacatlc6 (~tlacatlc6@097-101-132-062.res.spectrum.com) has joined #ubuntu
+2021-11-29 12:02:45	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-11-29 12:02:45	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-11-29 12:02:45	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-11-29 12:02:45	--	Channel #ubuntu: 1043 nicks (2 ops, 0 voices, 1041 normals)
+2021-11-29 12:02:46	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-29 12:02:46	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 12:03:02	-->	akaWolf (~akaWolf@akawolf.org) has joined #ubuntu
+2021-11-29 12:03:23	littlebit	ducasse: then y maintain a debian package at ubuntu?
+2021-11-29 12:04:57	<--	rainmanjam (~rainmanja@216.161.85.62) has quit (Remote host closed the connection)
+2021-11-29 12:05:05	<--	sharktamer (9bafe1e1bb@2604:bf00:561:2000::17) has quit (Remote host closed the connection)
+2021-11-29 12:05:44	-->	sharktamer (9bafe1e1bb@2604:bf00:561:2000::17) has joined #ubuntu
+2021-11-29 12:05:47	-->	rainmanjam (~rainmanja@216.161.85.62) has joined #ubuntu
+2021-11-29 12:10:42	<--	knidos (~knidos@85.98.19.38) has quit (Quit: WeeChat 3.3)
+2021-11-29 12:11:00	-->	yuta (~pi@user/yuta) has joined #ubuntu
+2021-11-29 12:11:19	-->	swinnenb (~swinnenb@user/swinnenb) has joined #ubuntu
+2021-11-29 12:13:05	ducasse	afaict there is no official package, you really should ask the cockpit guys
+2021-11-29 12:13:13	-->	gaurav_ (~gjain_7@103.78.137.22) has joined #ubuntu
+2021-11-29 12:13:23	ducasse	try #cockpit?
+2021-11-29 12:13:30	--	gaurav_ is now known as gjain_7
+2021-11-29 12:14:07	-->	quazimodo (~quazimodo@n1-41-223-188.bla2.nsw.optusnet.com.au) has joined #ubuntu
+2021-11-29 12:14:14	gjain_7	hi
+2021-11-29 12:14:18	<--	dragon2 (~quassel@fwa5c8d-86.bb.online.no) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-29 12:17:31	<--	zakame (~zakame@user/zakame) has quit (Ping timeout: 256 seconds)
+2021-11-29 12:17:32	<--	eroc1990 (~eroc1990@075-130-106-186.res.spectrum.com) has quit (Ping timeout: 240 seconds)
+2021-11-29 12:18:20	<--	ricky88 (~ricky88@129.182.140.77.rev.sfr.net) has quit (Ping timeout: 252 seconds)
+2021-11-29 12:19:24	-->	zakame (~zakame@user/zakame) has joined #ubuntu
+2021-11-29 12:19:34	<--	alocer (~anourzad@194-218-10-151.customer.telia.com) has quit (Quit: Leaving.)
+2021-11-29 12:20:16	-->	ccallahan (~ccallahan@redhat/ccallahan) has joined #ubuntu
+2021-11-29 12:20:16	-->	eroc1990 (~eroc1990@075-130-106-186.res.spectrum.com) has joined #ubuntu
+2021-11-29 12:20:21	<--	mankoff (~quassel@c-67-183-220-189.hsd1.wa.comcast.net) has quit (Ping timeout: 245 seconds)
+2021-11-29 12:20:22	--	NoSQL is now known as SQL
+2021-11-29 12:20:47	<--	Guest80 (~Guest80@193.163.235.202) has quit (Quit: Client closed)
+2021-11-29 12:20:54	<--	gjain_7 (~gjain_7@103.78.137.22) has quit (Quit: Leaving)
+2021-11-29 12:21:17	<--	rainmanjam (~rainmanja@216.161.85.62) has quit (Remote host closed the connection)
+2021-11-29 12:21:48	-->	rainmanjam (~rainmanja@216.161.85.62) has joined #ubuntu
+2021-11-29 12:23:24	-->	maret (~maret@nat-88-212-37-89.antik.sk) has joined #ubuntu
+2021-11-29 12:24:59	-->	mankoff (~quassel@c-67-183-220-189.hsd1.wa.comcast.net) has joined #ubuntu
+2021-11-29 12:26:24	-->	alocer (~anourzad@194-218-10-148.customer.telia.com) has joined #ubuntu
+2021-11-29 12:26:56	<--	alocer (~anourzad@194-218-10-148.customer.telia.com) has left #ubuntu
+2021-11-29 12:28:38	--	Guest9821 is now known as Znevna
+2021-11-29 12:28:38	<--	Znevna (viper@2a02:2f0f:4100:7800:9126:ee08:e475:88c6) has quit (Changing host)
+2021-11-29 12:28:38	-->	Znevna (viper@wireguard/tunneler/znevna) has joined #ubuntu
+2021-11-29 12:30:52	<--	theoceaniscool (~theoceani@119.12.232.133) has quit (Ping timeout: 264 seconds)
+2021-11-29 12:31:53	<--	samuelbernardo (~samuelber@nata01.lip.pt) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-29 12:31:56	<--	ThinkT510 (~auronanda@user/thinkt510) has quit (Quit: WeeChat 3.3)
+2021-11-29 12:33:28	-->	theoceaniscool (~theoceani@119.12.232.133) has joined #ubuntu
+2021-11-29 12:36:55	<--	mankoff (~quassel@c-67-183-220-189.hsd1.wa.comcast.net) has quit (Quit: quit)
+2021-11-29 12:37:28	-->	Guest79 (~Guest79@31.40.105.59) has joined #ubuntu
+2021-11-29 12:37:39	-->	samuelbernardo (~samuelber@nata01.lip.pt) has joined #ubuntu
+2021-11-29 12:38:12	<--	Guest79 (~Guest79@31.40.105.59) has quit (Client Quit)
+2021-11-29 12:40:37	-->	ThinkT510 (~auronanda@user/thinkt510) has joined #ubuntu
+2021-11-29 12:41:01	-->	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has joined #ubuntu
+2021-11-29 12:44:45	-->	Ad1Tech (~Ad1Tech@h104101.man.tk-internet.pl) has joined #ubuntu
+2021-11-29 12:44:58	<--	Colt (~Colt@user/colt) has quit (Quit: Leaving)
+2021-11-29 12:47:20	<--	nuh^ (~nuh@68.101.58.90) has quit (Remote host closed the connection)
+2021-11-29 12:50:00	<--	msknight (~michelle@user/msknight) has quit (Remote host closed the connection)
+2021-11-29 12:51:00	<--	kgiii (~quassel@dsl-74-209-2-162.fairpoint.net) has quit (Ping timeout: 256 seconds)
+2021-11-29 12:54:01	-->	mIk3_08 (~Thunderbi@user/mik3-08/x-2852566) has joined #ubuntu
+2021-11-29 12:54:02	<--	pntaylor (~quassel@101.114.54.141) has quit (Ping timeout: 265 seconds)
+2021-11-29 12:56:01	<--	theoceaniscool (~theoceani@119.12.232.133) has quit (Remote host closed the connection)
+2021-11-29 12:56:17	<--	sdfgsdfg (~sdfgsdfg@user/sdfgsdfg) has quit (Quit: ZzzZ)
+2021-11-29 12:56:50	-->	thaki (~thaki@185.212.220.221) has joined #ubuntu
+2021-11-29 12:57:29	-->	dsrt^ (~dsrt@68.101.58.90) has joined #ubuntu
+2021-11-29 12:57:42	<--	thaki (~thaki@185.212.220.221) has quit (Read error: Connection reset by peer)
+2021-11-29 12:59:21	-->	Colt (~Colt@user/colt) has joined #ubuntu
+2021-11-29 12:59:24	-->	theoceaniscool (~theoceani@119.12.232.133) has joined #ubuntu
+2021-11-29 13:02:09	-->	nizarus (~nizarus@ubuntu/member/nizarus) has joined #ubuntu
+2021-11-29 13:05:16	-->	pntaylor (~quassel@2405:6e00:1142:7600::2) has joined #ubuntu
+2021-11-29 13:05:38	<--	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has quit (Ping timeout: 252 seconds)
+2021-11-29 13:07:24	-->	razerwaron (~razerwaro@2a00:f41:1c3b:7c95:7182:32e1:ae14:4624) has joined #ubuntu
+2021-11-29 13:07:36	<--	cmbengue (~Thunderbi@207.191.249.160) has quit (Remote host closed the connection)
+2021-11-29 13:08:05	-->	cmbengue (~Thunderbi@207.191.249.160) has joined #ubuntu
+2021-11-29 13:09:54	-->	mjbatty (~mjbatty@82.2.17.205) has joined #ubuntu
+2021-11-29 13:11:16	-->	chraist (~chraist@user/chraist) has joined #ubuntu
+2021-11-29 13:12:27	-->	MrSassyPants (~Phil@2a02:1368:6200:32d8:3e98:a8d0:2a3f:d8d7) has joined #ubuntu
+2021-11-29 13:14:45	<--	ccallahan (~ccallahan@redhat/ccallahan) has quit (Ping timeout: 256 seconds)
+2021-11-29 13:14:48	<--	razerwaron (~razerwaro@2a00:f41:1c3b:7c95:7182:32e1:ae14:4624) has quit (Read error: Connection reset by peer)
+2021-11-29 14:37:01	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-11-29 14:37:01	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-11-29 14:37:01	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-11-29 14:37:01	--	Channel #ubuntu: 1051 nicks (2 ops, 0 voices, 1049 normals)
+2021-11-29 14:37:02	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 14:37:02	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-29 14:38:14	-->	polve (~polve@twcitalia/polve) has joined #ubuntu
+2021-11-29 14:39:04	-->	justache (~justache@user/justache) has joined #ubuntu
+2021-11-29 14:39:04	<--	justache (~justache@user/justache) has quit (Excess Flood)
+2021-11-29 14:40:53	<--	migul (~mig@user/migul) has quit (Quit: Leaving)
+2021-11-29 14:42:33	-->	justache (~justache@user/justache) has joined #ubuntu
+2021-11-29 14:43:16	<--	aniketgm (~Aniket@49.36.107.115) has left #ubuntu
+2021-11-29 14:44:17	<--	spammy (~pihahirot@mailserver.summitgrid.org) has quit (Changing host)
+2021-11-29 14:44:17	-->	spammy (~pihahirot@user/spammy) has joined #ubuntu
+2021-11-29 14:44:25	<--	mIk3_08 (~Thunderbi@user/mik3-08/x-2852566) has quit (Quit: mIk3_08)
+2021-11-29 14:47:07	<--	justache (~justache@user/justache) has quit (Ping timeout: 256 seconds)
+2021-11-29 14:47:58	<--	pycode1 (~pycode@2001:b07:5d28:551:aabe:a2e:f4d0:fe92) has quit (Ping timeout: 268 seconds)
+2021-11-29 14:48:01	-->	fassl (~fassl@2a02:8388:1987:9380:7d37:f3ce:8f29:dfc3) has joined #ubuntu
+2021-11-29 14:51:08	-->	dragon2 (~quassel@fwa5c8d-86.bb.online.no) has joined #ubuntu
+2021-11-29 14:52:12	-->	justache (~justache@user/justache) has joined #ubuntu
+2021-11-29 14:55:43	-->	diskin (~diskin@ec2-3-124-171-230.eu-central-1.compute.amazonaws.com) has joined #ubuntu
+2021-11-29 14:56:40	<--	justache (~justache@user/justache) has quit (Ping timeout: 264 seconds)
+2021-11-29 14:57:50	<--	aaruni (~aaruni@user/aaruni) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:00:08	<--	dragon2 (~quassel@fwa5c8d-86.bb.online.no) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-29 15:01:06	-->	ahso (~Thunderbi@user/ahso) has joined #ubuntu
+2021-11-29 15:02:14	-->	otisolsen70_ (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #ubuntu
+2021-11-29 15:02:45	-->	justache (~justache@user/justache) has joined #ubuntu
+2021-11-29 15:02:55	<--	xu-irc24w (~xu-irc24w@39.148.116.142) has quit (Quit: Connection closed)
+2021-11-29 15:03:34	-->	elstellino (~elstellin@78.30.20.40) has joined #ubuntu
+2021-11-29 15:04:28	<--	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has quit (Ping timeout: 264 seconds)
+2021-11-29 15:04:48	-->	gneeriiloeepdeer (~unnggreea@user/gneeriiloeepdeer) has joined #ubuntu
+2021-11-29 15:04:58	gneeriiloeepdeer	how do I paste a picture into a pdf file?
+2021-11-29 15:05:23	<--	sharktamer (9bafe1e1bb@2604:bf00:561:2000::17) has quit (Remote host closed the connection)
+2021-11-29 15:05:46	-->	sharktamer (9bafe1e1bb@2604:bf00:561:2000::17) has joined #ubuntu
+2021-11-29 15:06:20	-->	AngryTom (~tom@a89-183-13-220.net-htp.de) has joined #ubuntu
+2021-11-29 15:07:11	<--	justache (~justache@user/justache) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:07:53	-->	Guest12 (~Guest12@pool-96-253-74-73.rcmdva.fios.verizon.net) has joined #ubuntu
+2021-11-29 15:08:04	-->	yaaii (~andirc@2400:4052:8383:5c00:789e:f22b:a9e8:fe15) has joined #ubuntu
+2021-11-29 15:08:12	-->	vqueiroz (uid340368@id-340368.hampstead.irccloud.com) has joined #ubuntu
+2021-11-29 15:09:01	<--	zaden (~maddx@c-73-92-207-228.hsd1.ca.comcast.net) has quit (Quit: WeeChat 3.4-dev)
+2021-11-29 15:09:29	-->	src (~src@user/src) has joined #ubuntu
+2021-11-29 15:10:00	<--	otisolsen70_ (~otisolsen@xd4ed80b5.cust.hiper.dk) has quit (Read error: Connection reset by peer)
+2021-11-29 15:10:11	-->	pagios (~pagios@life.is-a.beauty) has joined #ubuntu
+2021-11-29 15:10:18	pagios	 hello, i am trying to install a CA certificate manually on linux, i should use the public cert and not the private .pem, when running update-ca-certificated i get 0 updated
+2021-11-29 15:13:40	<--	HyN0X (~HyNoX@151.57.72.248) has quit (Read error: Connection reset by peer)
+2021-11-29 15:15:59	<--	jay-m126_ (~jay-m@154.72.167.166) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:16:01	<--	jay-m126 (~jay-m@154.72.167.166) has quit (Ping timeout: 256 seconds)
+2021-11-29 15:16:29	-->	justache (~justache@user/justache) has joined #ubuntu
+2021-11-29 15:16:53	-->	HyN0X (~HyNoX@151.43.25.91) has joined #ubuntu
+2021-11-29 15:17:36	-->	jay-m126 (~jay-m@154.72.167.140) has joined #ubuntu
+2021-11-29 15:18:04	-->	jay-m126_ (~jay-m@154.72.167.140) has joined #ubuntu
+2021-11-29 15:18:55	-->	lucascastro (~lucascast@192-140-51-192.static.oncabo.net.br) has joined #ubuntu
+2021-11-29 15:22:48	-->	BluesKaj (~Blues@user/blueskaj) has joined #ubuntu
+2021-11-29 15:23:00	BluesKaj	Hi folks
+2021-11-29 15:25:04	<--	origintopleft (~otlhga@morrigan.otl-hga.net) has quit (Quit: ZNC 1.7.5+deb4 - https://znc.in)
+2021-11-29 15:25:19	-->	origintopleft (~otlhga@morrigan.otl-hga.net) has joined #ubuntu
+2021-11-29 15:26:00	-->	ioria (~hurt_lock@host-213-45-110-115.pool21345.interbusiness.it) has joined #ubuntu
+2021-11-29 15:57:04	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-11-29 15:57:04	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-11-29 15:57:04	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-11-29 15:57:04	--	Channel #ubuntu: 1063 nicks (2 ops, 0 voices, 1061 normals)
+2021-11-29 15:57:04	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-11-29 15:57:04	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-11-29 15:57:18	-->	weedmic_ (~weedmic@188.120.139.53) has joined #ubuntu
+2021-11-29 15:57:47	<--	weedmic (~weedmic@188.120.139.53) has quit (Ping timeout: 252 seconds)
+2021-11-29 15:58:10	-->	ccallahan (~ccallahan@redhat/ccallahan) has joined #ubuntu
+2021-11-29 15:59:13	-->	gschanuel21 (~gschanuel@user/gschanuel) has joined #ubuntu
+2021-11-29 15:59:58	<--	llorllale (~llorllale@2607:9880:3a18:69:4c2f:f9c9:ddfd:a47) has quit (Ping timeout: 260 seconds)
+2021-11-29 16:00:53	<--	locrian9 (~mike@99-153-255-194.lightspeed.irvnca.sbcglobal.net) has quit (Quit: Lost terminal)
+2021-11-29 16:01:39	-->	llorllale (~llorllale@97.108.193.189) has joined #ubuntu
+2021-11-29 16:01:45	<--	dbasinge (~dbasinge@ubuntu/member/dbasinge) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-29 16:02:40	<--	gschanuel2 (~gschanuel@user/gschanuel) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:02:40	--	gschanuel21 is now known as gschanuel2
+2021-11-29 16:03:25	-->	themetz (~beaker@72.32.180.176) has joined #ubuntu
+2021-11-29 16:04:20	-->	dbasinge (~dbasinge@ubuntu/member/dbasinge) has joined #ubuntu
+2021-11-29 16:06:17	<--	s0berage (~s0berage@135-23-213-77.cpe.pppoe.ca) has quit (Quit: Leaving)
+2021-11-29 16:07:01	-->	Tinker (~quassel@2603-8001-1d02-9800-4b20-0175-7fd4-ef4a.res6.spectrum.com) has joined #ubuntu
+2021-11-29 16:07:35	-->	mapu (~Mapu@c-73-167-238-214.hsd1.ma.comcast.net) has joined #ubuntu
+2021-11-29 16:09:21	-->	RangerBobVA (~bmaddox@user/rangerbobva) has joined #ubuntu
+2021-11-29 16:10:28	<--	eleventh (~eleventh@143.131.13.208) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:11:29	-->	eleventh (~eleventh@143.131.13.208) has joined #ubuntu
+2021-11-29 16:13:21	-->	samy1028b (~samy1028@068-184-115-031.res.spectrum.com) has joined #ubuntu
+2021-11-29 16:13:50	<--	alekksander (~aleksande@user/alekksander) has quit (Read error: Connection reset by peer)
+2021-11-29 16:14:32	<--	BrianG61UK (~BrianG61U@2a02:8010:66b7:dddd:4042:a7af:5016:5937) has quit (Read error: Connection reset by peer)
+2021-11-29 16:15:34	-->	srv (~cmd@user/srv) has joined #ubuntu
+2021-11-29 16:18:29	-->	icey (~icey@canonical/icey) has joined #ubuntu
+2021-11-29 16:19:28	<--	maret_ (~maret@static.85-10-193-148.clients.your-server.de) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:20:15	<--	withered_wolf (~withered_@1437135-v103.1561-static.stchilaa.metronetinc.net) has quit (Ping timeout: 265 seconds)
+2021-11-29 16:20:17	-->	maret (~maret@nat-88-212-37-89.antik.sk) has joined #ubuntu
+2021-11-29 16:24:45	-->	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has joined #ubuntu
+2021-11-29 16:25:03	<--	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has quit (Client Quit)
+2021-11-29 16:26:55	<--	ledeni (~ledeni@fedora/ledeni) has quit (Quit: ⚡ Leaving⚡)
+2021-11-29 16:28:36	-->	renan (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has joined #ubuntu
+2021-11-29 16:29:05	--	renan is now known as Super_Ape
+2021-11-29 16:29:45	<--	Super_Ape (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has quit (Client Quit)
+2021-11-29 16:30:33	-->	Super_Ape (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has joined #ubuntu
+2021-11-29 16:30:47	<--	srv (~cmd@user/srv) has quit (Quit: Leaving)
+2021-11-29 16:31:22	<--	TattooedTech_ (~TattooedT@2405:6584:6080:6c00:19ce:fc1f:e5e2:a4b9) has quit (Quit: Leaving)
+2021-11-29 16:31:39	<--	xet7 (~xet7@user/xet7) has quit (Quit: Leaving)
+2021-11-29 16:32:38	<--	weedmic_ (~weedmic@188.120.139.53) has quit (Quit: Konversation terminated!)
+2021-11-29 16:32:46	-->	xet7 (~xet7@user/xet7) has joined #ubuntu
+2021-11-29 16:33:04	-->	kvn_ (~weechat@cpc115982-dals23-2-0-cust605.20-2.cable.virginm.net) has joined #ubuntu
+2021-11-29 16:33:59	<--	timahvo1 (~rogue@105.163.2.171) has quit (Remote host closed the connection)
+2021-11-29 16:36:13	-->	ledeni (~ledeni@fedora/ledeni) has joined #ubuntu
+2021-11-29 16:37:56	<--	kvn_ (~weechat@cpc115982-dals23-2-0-cust605.20-2.cable.virginm.net) has quit (Ping timeout: 252 seconds)
+2021-11-29 16:41:10	-->	drustteerd (~unnggreea@user/gneeriiloeepdeer) has joined #ubuntu
+2021-11-29 16:42:52	<--	gneeriiloeepdeer (~unnggreea@user/gneeriiloeepdeer) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:43:28	<--	lsrtl__ (~lsrtl@user/lsrtl) has quit (Ping timeout: 264 seconds)
+2021-11-29 16:43:34	<--	Super_Ape (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has quit (Quit: Saindo)
+2021-11-29 16:44:29	-->	Super_Ape (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has joined #ubuntu
+2021-11-29 16:44:58	<--	Tinker (~quassel@2603-8001-1d02-9800-4b20-0175-7fd4-ef4a.res6.spectrum.com) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2021-11-29 16:47:40	-->	lsrtl__ (~lsrtl@user/lsrtl) has joined #ubuntu
+2021-11-29 16:48:36	<--	Super_Ape (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has quit (Client Quit)
+2021-11-29 16:49:17	-->	Super_Ape (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has joined #ubuntu
+2021-11-29 16:50:05	<--	drustteerd (~unnggreea@user/gneeriiloeepdeer) has quit (Ping timeout: 256 seconds)
+2021-11-29 16:50:25	-->	Libero (~Libero@77.49.77.131.dsl.dyn.forthnet.gr) has joined #ubuntu
+2021-11-29 16:50:40	<--	Super_Ape (~renan@2001:8a0:661b:2e00:b4d6:59f9:f419:9a7f) has quit (Client Quit)
+2021-11-29 16:52:07	-->	zer0bitz (~zer0bitz@dsl-hkibng31-54fabc-15.dhcp.inet.fi) has joined #ubuntu
+2021-11-29 16:52:43	-->	charlie_sando (~q@2603-8080-2901-f106-b43a-2850-18e0-07b7.res6.spectrum.com) has joined #ubuntu
+2021-11-29 16:55:40	<--	wrsuser (~wrsuser@195.62.218.122) has quit (Remote host closed the connection)
+2021-11-29 16:56:32	-->	j2bv16 (~Thunderbi@186.7.136.225) has joined #ubuntu
+2021-11-29 16:56:38	<--	multi8 (~dark@m90-129-195-192.cust.tele2.se) has quit (Quit: WeeChat 3.3)
+2021-11-29 16:57:20	-->	aaruni (~aaruni@2001:638:208:d000:73c8:239b:7a93:4340) has joined #ubuntu
+2021-11-29 16:57:20	<--	aaruni (~aaruni@2001:638:208:d000:73c8:239b:7a93:4340) has quit (Changing host)
+2021-11-29 16:57:20	-->	aaruni (~aaruni@user/aaruni) has joined #ubuntu
+2021-11-29 17:02:14	-->	trekkie1701c (~trekkie17@user/trekkie1701c) has joined #ubuntu
+2021-12-02 13:29:40	-->	Velkorq (~Velkorq@user/velkorumx) has joined #ubuntu
+2021-12-02 13:29:40	--	Topic for #ubuntu is "Official Ubuntu Support Channel | IRC Guidelines: https://ubottu.com/y/gl | #ubuntu supports Ubuntu and official flavors; versions 18.04, 20.04, 21.04, 21.10 | Unofficial derivatives: use your distro's support channel, not here. | IRC info: https://ubottu.com/y/irc | Pastes to https://paste.ubuntu.com/ | Download: https://ubottu.com/y/dl"
+2021-12-02 13:29:40	--	Topic set by krytarik on Thu, 14 Oct 2021 20:21:46
+2021-12-02 13:29:40	--	Channel #ubuntu: 1044 nicks (2 ops, 0 voices, 1042 normals)
+2021-12-02 13:29:40	--	PvNotice(ChanServ): Welcome to #ubuntu. This channel is logged. Use of this channel implies acceptance of terms at https://wiki.ubuntu.com/IRC/TermsOfService
+2021-12-02 13:29:41	--	Channel created on Wed, 19 May 2021 16:50:29
+2021-12-02 13:33:01	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:33:13	<--	retep (~Retep@155.143.182.238) has quit (Quit: Leaving)
+2021-12-02 13:33:36	-->	i0e (~is0ke3@user/is0ke3) has joined #ubuntu
+2021-12-02 13:35:13	-->	jess (~jess@libera/staff/jess) has joined #ubuntu
+2021-12-02 13:36:09	<--	axsuul (uid525261@id-525261.lymington.irccloud.com) has quit (Quit: Connection closed for inactivity)
+2021-12-02 13:36:49	-->	silv3r_m00n (~enlighten@157.40.193.99) has joined #ubuntu
+2021-12-02 13:37:11	<--	andygasman (~andygasma@88.97.30.94) has quit (Ping timeout: 256 seconds)
+2021-12-02 13:37:31	silv3r_m00n	hi there, i am using a usb wifi adapter, on my desktop pc and the internet is really slow, the ping results show lots of DUPS, what can i do to fix it, its a D-link usb wifi adapter, tiny little thing, usb 2
+2021-12-02 13:37:51	silv3r_m00n	dwa-131 is the model name
+2021-12-02 13:39:57	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 256 seconds)
+2021-12-02 13:41:00	-->	KBar (~KBar@213.230.102.66) has joined #ubuntu
+2021-12-02 13:41:56	-->	i0e (~is0ke3@user/is0ke3) has joined #ubuntu
+2021-12-02 13:43:22	-->	tobybl (~tobybl@213.31.134.21) has joined #ubuntu
+2021-12-02 13:44:32	-->	swinnenb (~swinnenb@user/swinnenb) has joined #ubuntu
+2021-12-02 13:44:52	<--	silv3r_m00n (~enlighten@157.40.193.99) has quit (Quit: Leaving.)
+2021-12-02 13:45:11	-->	silv3r_m00n (~enlighten@122.163.60.93) has joined #ubuntu
+2021-12-02 13:45:18	tomreyn	there are different hardware revisions for dwa-131, with different wireless chipsets. get yours:  lspci -knn | grep -EA3 '(Network|Ethernet) controller' | nc termbin.com 9999
+2021-12-02 13:46:30	tomreyn	usually this is due to power saving or a bad driver
+2021-12-02 13:47:31	lotuspsychje	silv3r_m00n: ubuntu release & kernel version might be interesting to know for the volunteers aswell
+2021-12-02 13:47:56	silv3r_m00n	lotuspsychje: Linux enlightened 5.11.0-40-generic #44-Ubuntu SMP Wed Oct 20 16:16:42 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+2021-12-02 13:48:48	silv3r_m00n	tomreyn: http://pastie.org/p/2JNwHuwRBRCnl0MAdc9SfX
+2021-12-02 13:49:07	-->	llorllale (~llorllale@2607:9880:3a18:69:a155:d417:1815:55b1) has joined #ubuntu
+2021-12-02 13:49:28	silv3r_m00n	http://pastie.org/p/0hn0zYA83QW0eWrtZDcPMK
+2021-12-02 13:49:28	-->	MrSassyPants (~Phil@2a02:1368:6200:32d8:4f29:e79e:f26b:758) has joined #ubuntu
+2021-12-02 13:49:45	silv3r_m00n	according to iwconfig, power management is disabled
+2021-12-02 13:49:48	silv3r_m00n	Off
+2021-12-02 13:49:53	<--	aaruni (~aaruni@user/aaruni) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:50:03	xu-irc67w	i want to upgrade kernel to 5.13, which files should i download?
+2021-12-02 13:50:17	xu-irc67w	https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.13/
+2021-12-02 13:50:59	tomreyn	silv3r_m00n: Sorry, we don't support Bodhi Linux here, just Ubuntu
+2021-12-02 13:51:06	silv3r_m00n	speedtest.net says 3.81 Mbps download speed, whereas i should be getting arround 30
+2021-12-02 13:51:18	silv3r_m00n	tomreyn: where is bodhi ?
+2021-12-02 13:51:25	silv3r_m00n	i am using Kubuntu
+2021-12-02 13:52:20	xu-irc67w	anyone can help
+2021-12-02 13:53:32	tomreyn	silv3r_m00n: oh, so maybe i got this wrong. "Linux enlightened" sounds like Bodhi.
+2021-12-02 13:53:35	<--	KBar (~KBar@213.230.102.66) has quit (Quit: Leaving.)
+2021-12-02 13:53:48	silv3r_m00n	tomreyn: thats my username on the system, enlightened
+2021-12-02 13:53:50	silv3r_m00n	:D
+2021-12-02 13:53:57	tomreyn	whoops, sorry
+2021-12-02 13:54:13	tomreyn	i need more sleep
+2021-12-02 13:54:18	silv3r_m00n	i just updated, all packages, so i suppose i have the latest drivers as provided by ubuntu, also this dlink wifi usb adapter, is a pretty popular piece
+2021-12-02 13:54:25	silv3r_m00n	so it should be supported fine on ubuntu
+2021-12-02 13:54:37	silv3r_m00n	internet is working, but speed is very slow, pings are very slow
+2021-12-02 13:56:12	tomreyn	xu-irc67w: for your architecture, locate the image, modules, headers in either the generic or lowlatency variant
+2021-12-02 13:56:29	<--	i0e (~is0ke3@user/is0ke3) has quit (Ping timeout: 252 seconds)
+2021-12-02 13:56:43	tomreyn	xu-irc67w: but you should not do this if you don't know the risks involved. those images should only be used for testing.
+2021-12-02 13:57:35	tomreyn	silv3r_m00n: bad link quality, maybe it's just far fromt he AP?
+2021-12-02 13:57:53	silv3r_m00n	about 20 feets max
+2021-12-02 13:58:04	silv3r_m00n	yes there is a wall in between, but window air path is there
+2021-12-02 13:58:17	<--	evert_ (~evert@86.20-247-81.adsl-static.isp.belgacom.be) has quit (Quit: Ex-Chat)
+2021-12-02 13:58:21	-->	i0e (~is0ke3@user/is0ke3) has joined #ubuntu
+2021-12-02 13:58:55	tomreyn	silv3r_m00n: well, does it get the specified throughput when you use it close to the AP?
+2021-12-02 13:59:09	silv3r_m00n	no, same speed
+2021-12-02 13:59:21	silv3r_m00n	but ipads, mobiles are pretty fast
+2021-12-02 14:00:27	tomreyn	silv3r_m00n: can you show the relevant lines form    lsusb    for the wireless dongle?
+2021-12-02 14:00:36	xu-irc67w	how fast on mobile
+2021-12-02 14:00:58	-->	user4242 (~user42@62.210.33.246) has joined #ubuntu
+2021-12-02 14:01:22	-->	multi8 (~dark@m90-129-212-153.cust.tele2.se) has joined #ubuntu
+2021-12-02 14:04:28	-->	adlancel (~user42@62.210.33.246) has joined #ubuntu

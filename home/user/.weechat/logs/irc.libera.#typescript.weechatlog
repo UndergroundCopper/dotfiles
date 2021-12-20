@@ -1,0 +1,63 @@
+2021-11-24 11:20:17	-->	Velkorq (~Velkorq@user/velkorumx) has joined #typescript
+2021-11-24 11:20:17	--	Topic for #typescript is "TypeScript support channel · https://www.typescriptlang.org · Please share code using https://www.typescriptlang.org/play (and use a shortener like is.gd) · If you came here to ask a question, please stick around for a bit to give someone a chance to answer and maybe help out someone with theirs"
+2021-11-24 11:20:17	--	Topic set by ross (sid305269@user/ross) on Mon, 11 Oct 2021 04:16:28
+2021-11-24 11:20:17	--	Channel #typescript: 109 nicks (1 op, 0 voices, 108 normals)
+2021-11-24 11:20:19	--	Channel created on Wed, 19 May 2021 16:51:18
+2021-11-24 11:35:22	-->	Swahili (~Swahili@cpc153693-lewi20-2-0-cust508.2-4.cable.virginm.net) has joined #typescript
+2021-11-24 11:38:05	-->	enoq (~enoq@2a05:1141:1f5:5600:b9c9:721a:599:bfe7) has joined #typescript
+2021-11-24 11:41:45	interop_madness	Are circular type dependencies such as this ok, or is there something I must be careful about? https://paste.ee/p/0PysM
+2021-11-24 11:45:25	biberu	interop_madness: why does your base class need to know of derived classes?
+2021-11-24 11:48:45	interop_madness	biberu, ultimately the base class will have a factory method for derived classes, this is just a nutshell exampel
+2021-11-24 11:48:47	interop_madness	le
+2021-11-24 11:50:12	<--	Swahili (~Swahili@cpc153693-lewi20-2-0-cust508.2-4.cable.virginm.net) has quit (Remote host closed the connection)
+2021-11-24 11:50:22	biberu	if you could use e.g. a regular function instead the circular dependency would be broken, and it'd smell much better
+2021-11-24 11:50:50	biberu	i.e. just remove create from Foo and put that in a free function
+2021-11-24 11:51:02	interop_madness	ok, I'm taking that into consideration, but if I weren't doing it, could there be a problem I should be aware of?
+2021-11-24 11:54:03	biberu	i'd just avoid circular references ¯\_(ツ)_/¯
+2021-11-24 12:00:35	-->	peteyboy1 (~peteyboy1@95.169.232.161) has joined #typescript
+2021-11-24 12:01:24	interop_madness	biberu, ok, but is there a reason that goes beyond aesthetics/maintainability?
+2021-11-24 12:02:34	-->	ubert (~Thunderbi@2a02:8109:9880:303c:ca5b:76ff:fe29:f233) has joined #typescript
+2021-11-24 12:06:11	biberu	interop_madness: do you know that all your tooling can handle circular references?
+2021-11-24 12:07:09	interop_madness	no, I don't know that. webpack is involved
+2021-11-24 12:08:06	biberu	maybe start there then
+2021-11-24 12:08:41	-->	BSaboia (~bsaboia@177.37.198.11) has joined #typescript
+2021-11-24 12:09:16	interop_madness	ok
+2021-11-24 12:09:48	biberu	or you know, just don't do it :D
+2021-11-24 12:28:28	<--	BSaboia (~bsaboia@177.37.198.11) has quit (Quit: This computer has gone to sleep)
+2021-11-24 12:32:01	<--	ubert (~Thunderbi@2a02:8109:9880:303c:ca5b:76ff:fe29:f233) has quit (Remote host closed the connection)
+2021-11-24 12:32:14	-->	ubert (~Thunderbi@2a02:8109:9880:303c:e6b3:18ff:fe83:8f33) has joined #typescript
+2021-11-24 12:37:53	<--	shokohsc8618 (~shokohsc@161.88.195.77.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2021-11-24 12:42:26	-->	BSaboia (~bsaboia@177.37.198.11) has joined #typescript
+2021-11-24 12:46:45	<--	BSaboia (~bsaboia@177.37.198.11) has quit (Client Quit)
+2021-11-24 12:58:25	-->	kogepan (~kogepan@user/kogepan) has joined #typescript
+2021-11-24 13:04:40	<--	gxt (~gxt@gateway/tor-sasl/gxt) has quit (Remote host closed the connection)
+2021-11-24 13:05:07	-->	gxt (~gxt@gateway/tor-sasl/gxt) has joined #typescript
+2021-11-24 13:26:01	<--	michele (~eraser@user/michele) has quit (Quit: restart)
+2021-11-24 13:40:34	-->	michele (~eraser@user/michele) has joined #typescript
+2021-11-24 14:04:31	-->	xet7_ (~xet7@user/xet7) has joined #typescript
+2021-11-24 14:05:30	-->	Swahili (~Swahili@cpc153693-lewi20-2-0-cust508.2-4.cable.virginm.net) has joined #typescript
+2021-11-24 14:07:46	<--	xet7 (~xet7@user/xet7) has quit (Ping timeout: 260 seconds)
+2021-11-24 14:30:21	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 14:36:36	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Ping timeout: 245 seconds)
+2021-11-24 14:41:52	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 14:53:38	<--	desolski (~nick@host86-130-219-192.range86-130.btcentralplus.com) has quit (Quit: Konversation terminated!)
+2021-11-24 14:56:23	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Remote host closed the connection)
+2021-11-24 14:57:57	-->	shokohsc8618 (~shokohsc@161.88.195.77.rev.sfr.net) has joined #typescript
+2021-11-24 14:59:24	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 15:03:39	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Remote host closed the connection)
+2021-11-24 15:03:54	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 15:25:44	-->	reallyme_ (~reallymem@2600:1017:b42c:e90:bd68:db1b:56fd:de01) has joined #typescript
+2021-11-24 15:27:26	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Ping timeout: 245 seconds)
+2021-11-24 15:44:14	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 15:46:08	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Remote host closed the connection)
+2021-11-24 15:48:27	<--	reallyme_ (~reallymem@2600:1017:b42c:e90:bd68:db1b:56fd:de01) has quit (Ping timeout: 264 seconds)
+2021-11-24 15:51:10	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 15:56:52	-->	BSaboia (~bsaboia@177.37.198.11) has joined #typescript
+2021-11-24 15:58:20	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Remote host closed the connection)
+2021-11-24 16:00:58	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 16:04:41	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Remote host closed the connection)
+2021-11-24 16:06:17	-->	reallymemorable (~reallymem@70.107.110.8) has joined #typescript
+2021-11-24 16:16:54	<--	reallymemorable (~reallymem@70.107.110.8) has quit (Remote host closed the connection)
+2021-11-24 16:36:25	-->	src (~src@user/src) has joined #typescript
+2021-11-24 17:12:10	<--	syrius (~syrius@titan.stormtek.net) has quit (Ping timeout: 256 seconds)
+2021-11-24 17:33:49	-->	syrius (syrius@titan.stormtek.net) has joined #typescript

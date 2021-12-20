@@ -1,0 +1,68 @@
+2021-11-24 11:21:52	-->	Velkorq (~Velkorq@user/velkorumx) has joined #qutebrowser
+2021-11-24 11:21:52	--	Topic for #qutebrowser is "Current: v2.4.0 (fixes RCE on Windows, CVE-2021-41146) - crowdfunding with shirts/stickers/swag: https://github.com/sponsors/The-Compiler/ - https://www.qutebrowser.org/ - Blog: https://blog.qutebrowser.org/ - Mailinglist: https://s.cmpl.cc/quteml - Roadmap: https://s.cmpl.cc/quteroadmap - Pastebin: https://p.cmpl.cc/ - bots: #qutebrowser-bots; offtopic: #qutebrowser-offtopic"
+2021-11-24 11:21:52	--	Topic set by The-Compiler (~compiler@the-compiler.org) on Thu, 21 Oct 2021 20:09:48
+2021-11-24 11:21:52	--	Channel #qutebrowser: 178 nicks (0 ops, 0 voices, 178 normals)
+2021-11-24 11:21:54	--	Channel created on Wed, 19 May 2021 16:51:40
+2021-11-24 11:22:45	Velkorq	Will there be implemented a way to block youtube video ads?
+2021-11-24 11:22:52	Velkorq	the builtin adblocker allows them
+2021-11-24 11:24:38	The-Compiler	Velkorq: https://github.com/qutebrowser/qutebrowser/issues/6480
+2021-11-24 11:29:12	Velkorq	The-Compiler: oh, can we use braves adblocker in the future then?
+2021-11-24 11:29:15	Velkorq	that would be nice
+2021-11-24 11:29:44	The-Compiler	Velkorq: you can already use brave's adblocker now, but only with network blocking
+2021-11-24 11:42:58	-->	emagex (~user@user/emagex) has joined #qutebrowser
+2021-11-24 11:47:15	Velkorq	The-Compiler: didn't know that. well i don't want to block all my network using that. don't trust it much
+2021-11-24 11:47:26	Velkorq	wanted something browser only maybe
+2021-11-24 11:47:43	Velkorq	also are chrome addons a possibility? since we use webengine
+2021-11-24 11:50:11	The-Compiler	Velkorq: I don't follow. Support for the brave adblocking library is integrated in qutebrowser v2.0.0.
+2021-11-24 11:50:28	The-Compiler	(i.e. since almost a year ago)
+2021-11-24 11:50:47	Velkorq	The-Compiler: emh. i just used the builtin :adblock-update
+2021-11-24 11:50:55	Velkorq	i have to read on how to enable that
+2021-11-24 11:51:35	The-Compiler	Velkorq: as for WebExtensions, see the FAQ in https://github.com/qutebrowser/qutebrowser/issues/30
+2021-11-24 11:51:53	The-Compiler	Velkorq: do you see the 'adblock' library in :version?
+2021-11-24 11:54:35	Velkorq	https://paste.the-compiler.org/view/53c3263d
+2021-11-24 11:54:38	Velkorq	not sure which one it is
+2021-11-24 11:55:20	The-Compiler	Velkorq: "qutebrowser v1.10.1"
+2021-11-24 11:56:03	Velkorq	oh i just have an ancient version ok
+2021-11-24 11:56:06	The-Compiler	yes
+2021-11-24 11:56:18	Velkorq	i am just using the latest lts of ubuntu 20.04 
+2021-11-24 11:56:30	Velkorq	not sure why the use such old version of qutebrowser
+2021-11-24 11:56:48	The-Compiler	well yes, that's how an LTS works, you get ancient versions of everything
+2021-11-24 11:57:02	Velkorq	anyway, great browser. i like it a lot!
+2021-11-24 11:58:20	The-Compiler	Velkorq: see https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#installing-qutebrowser-with-virtualenv for an easy way to get a newer version
+2021-11-24 12:04:19	Velkorq	thanks
+2021-11-24 12:04:54	<--	mord0d (~mord0d@gateway/tor-sasl/mord0d) has quit (Ping timeout: 276 seconds)
+2021-11-24 12:05:27	<--	mys_ (~mys@gateway/tor-sasl/mys) has quit (Remote host closed the connection)
+2021-11-24 12:05:31	-->	mord0d (~mord0d@gateway/tor-sasl/mord0d) has joined #qutebrowser
+2021-11-24 12:05:41	-->	mys (~mys@gateway/tor-sasl/mys) has joined #qutebrowser
+2021-11-24 12:19:47	<--	bedlam (~^C@user/bedlam) has quit (Ping timeout: 268 seconds)
+2021-11-24 12:21:23	-->	bedlam (~^C@user/bedlam) has joined #qutebrowser
+2021-11-24 12:54:58	-->	jnphilipp (~jnphilipp@gateway/tor-sasl/jnphilipp) has joined #qutebrowser
+2021-11-24 12:55:49	<--	ckardaris (~ckardaris@user/ckardaris) has quit (Read error: Connection reset by peer)
+2021-11-24 13:09:36	<--	jnphilipp (~jnphilipp@gateway/tor-sasl/jnphilipp) has quit (Quit: Leaving)
+2021-11-24 13:10:16	<--	xd1le (~xd1le@user/xd1le) has quit (Quit: xd1le)
+2021-11-24 13:11:08	-->	jnphilipp (~jnphilipp@gateway/tor-sasl/jnphilipp) has joined #qutebrowser
+2021-11-24 13:25:32	-->	noval (~noval@subs31-116-206-15-43.three.co.id) has joined #qutebrowser
+2021-11-24 13:27:11	<--	noval (~noval@subs31-116-206-15-43.three.co.id) has quit (Client Quit)
+2021-11-24 13:31:41	<--	scisssssssors_ (~scissssss@92.255.176.187) has quit (Ping timeout: 250 seconds)
+2021-11-24 13:33:34	-->	scisssssssors (~scissssss@92.255.176.187) has joined #qutebrowser
+2021-11-24 13:36:11	-->	earnestly (~earnest@user/earnestly) has joined #qutebrowser
+2021-11-24 13:57:46	-->	alpha_Aquilae (~ircII@user/alpha-aquilae/x-1057823) has joined #qutebrowser
+2021-11-24 14:06:44	<--	Haudegen (~quassel@178.115.237.87.static.drei.at) has quit (Read error: Connection reset by peer)
+2021-11-24 14:09:37	-->	Haudegen (~quassel@178.115.237.87.static.drei.at) has joined #qutebrowser
+2021-11-24 14:58:40	<--	winny (~weechat@user/winny) has quit (Remote host closed the connection)
+2021-11-24 14:59:08	-->	winny (~weechat@user/winny) has joined #qutebrowser
+2021-11-24 15:03:59	<--	jnphilipp (~jnphilipp@gateway/tor-sasl/jnphilipp) has quit (Remote host closed the connection)
+2021-11-24 15:28:00	<--	Haudegen (~quassel@178.115.237.87.static.drei.at) has quit (Quit: Bin weg.)
+2021-11-24 15:52:21	-->	ckardaris (~ckardaris@user/ckardaris) has joined #qutebrowser
+2021-11-24 16:04:13	<--	jasonwryan (jasonwryan@surfraw/jasonwryan) has quit (Ping timeout: 250 seconds)
+2021-11-24 16:36:54	<--	emagex (~user@user/emagex) has quit (Quit: ERC (IRC client for Emacs 27.1))
+2021-11-24 16:40:56	<--	pr-asadi (~pr-asadi@2602:fccf:1:1150::) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-24 16:43:31	-->	Haudegen (~quassel@91.114.49.10) has joined #qutebrowser
+2021-11-24 16:53:20	-->	sudoforge (~sudoforge@wireguard/tunneler/sudoforge) has joined #qutebrowser
+2021-11-24 16:53:54	-->	emagex (~user@user/emagex) has joined #qutebrowser
+2021-11-24 16:57:41	-->	pr-asadi (~pr-asadi@2602:fccf:1:1150::) has joined #qutebrowser
+2021-11-24 17:14:25	-->	guido (~guido@host-82-51-186-164.retail.telecomitalia.it) has joined #qutebrowser
+2021-11-24 17:27:27	<--	ckardaris (~ckardaris@user/ckardaris) has quit (Ping timeout: 256 seconds)
+2021-11-24 17:37:20	<--	kmarius (~kmarius@pc12498.Mathematik.Uni-Marburg.DE) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2021-11-24 17:40:00	-->	kmarius (~kmarius@pc12498.Mathematik.Uni-Marburg.DE) has joined #qutebrowser
+2021-11-24 17:44:43	-->	saufa (~saufa@m91-129-103-127.cust.tele2.ee) has joined #qutebrowser

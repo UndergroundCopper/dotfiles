@@ -1,0 +1,13 @@
+2021-11-24 13:49:20	-->	Velkorq (~Velkorq@user/velkorumx) has joined #mxlinux
+2021-11-24 13:49:20	--	Topic for #mxlinux is "https://mxlinux.org/blog/mx-21-wildflower-released/ https://mxmanuals.s3.us-east-2.amazonaws.com/user_manual_mx19/mxum.pdf (dated w mx21 out)"
+2021-11-24 13:49:20	--	Topic set by bromofo93 (~bromofo93@2602:ffc5::c67:863e) on Sat, 23 Oct 2021 00:03:37
+2021-11-24 13:49:20	--	Channel #mxlinux: 12 nicks (2 ops, 0 voices, 10 normals)
+2021-11-24 13:49:22	--	Channel created on Sat, 29 May 2021 19:33:24
+2021-11-24 13:49:22	Velkorq	hey
+2021-11-24 13:49:31	Velkorq	how many years of support does mxlinux have?
+2021-11-24 13:49:47	Velkorq	also are packages newer than debian stable? aka does it use testing repos as well from debian?
+2021-11-24 15:21:48	nR	[IRC-nERDs] <~sorcerer> you can probably turn on the testing repo's, but testing doesnt come on
+2021-11-24 15:21:53	nR	[IRC-nERDs] <~sorcerer> stable comes on by default
+2021-11-24 15:22:29	--	Notice -> #mxlinux: is this channel even active
+2021-11-24 15:23:06	Velkorq	mistake
+2021-11-24 18:08:04	<--	cx^mpm (uid302208@id-302208.lymington.irccloud.com) has quit (Quit: Connection closed for inactivity)
